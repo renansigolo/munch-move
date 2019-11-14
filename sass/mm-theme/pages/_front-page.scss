@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+# Front Page
+--------------------------------------------------------------*/
+
+.hero {
+  text-align: center;
+
+  &__title {
+    @extend %flex-column;
+    justify-content: center;
+    min-height: 30vh;
+    background: var(--bg-sky);
+    h1,
+    p {
+      color: var(--blue);
+      font-weight: bold;
+    }
+  }
+
+  &__banner {
+    background: var(--sky-dark) url("images/hills.png");
+
+    img {
+      max-width: 250px;
+      margin-top: -15%;
+      margin-bottom: 5%;
+    }
+  }
+
+  &__content {
+    color: #fff;
+    background-color: var(--green);
+  }
+
+  &__form {
+    @extend %flex-column;
+    button {
+      border: 6px solid #ffffff;
+      border-radius: 16px;
+      background-color: var(--orange);
+    }
+  }
+}

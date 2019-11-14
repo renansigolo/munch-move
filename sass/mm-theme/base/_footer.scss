@@ -1,0 +1,44 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.footer {
+  .container {
+    @extend %flex-column;
+  }
+
+  &__partners {
+    display: flex;
+    justify-content: center;
+    @include margin-y(2.5rem);
+
+    img {
+      @include margin-x(10px);
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+  }
+
+  @media (min-width: 1000px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__partners {
+      justify-content: flex-start;
+      min-width: 40%;
+    }
+
+    &__copyright p {
+      text-align: justify;
+      @include margin-y(2.5rem);
+    }
+
+    br {
+      display: none;
+    }
+  }
+}

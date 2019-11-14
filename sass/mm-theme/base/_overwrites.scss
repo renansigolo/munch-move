@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+# Overwrites Skeleton Framework
+--------------------------------------------------------------*/
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  height: 53px;
+  color: #fff;
+  background-color: var(--orange);
+  border: 6px solid #ffffff;
+  font-weight: bold;
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  border: 1px solid #fff;
+  border-radius: 16px;
+  background-color: transparent;
+
+  &::placeholder {
+    color: #fff;
+    font-weight: bold;
+  }
+}

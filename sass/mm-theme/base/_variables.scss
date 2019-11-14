@@ -1,0 +1,32 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+
+:root {
+  --blue: #0a6aae;
+  --grey: #484848;
+  --orange: #f7941f;
+  --green: #8cc73f;
+  --sky-light: #d3eefd;
+  --sky-dark: #b3dafe;
+  --bg-sky: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-dark) 100%);
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Mixins
+
+// x - for classes that set both *-left and *-right
+@mixin margin-x($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+// y - for classes that set both *-top and *-bottom
+@mixin margin-y($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
