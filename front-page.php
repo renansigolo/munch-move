@@ -13,11 +13,11 @@ get_header();
   <main id="main" class="site-main">
 </div>
 
-<!-- .container is main centered wrapper -->
-
-
 <section class="hero">
 
+  <!-- <div class="hero__clouds">
+    <div></div>
+  </div> -->
 
   <div class="hero__title">
     <h1>We’ve moved!</h1>
@@ -25,14 +25,23 @@ get_header();
   </div>
 
   <div class="hero__banner">
-    <img src="<?php echo get_template_directory_uri() . '/images/mm-logo.png' ?>" width="250px" alt="Munch & Move Logo">
+    <div class="container">
+      <div class="row">
+        <div class="eight columns u-max-full-width">
+          <img src="<?php echo get_template_directory_uri() . '/images/mm-hero.svg' ?>" alt="Munch & Move Logo">
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="hero__content">
     <div class="container">
-      <h2>Lorem Ipsum is simply<br />dummy text</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
+      <div class="row">
+        <div class="eight columns">
+          <h3>Lorem Ipsum is simply dummy text</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+      </div>
       <form action="submit" class="hero__form">
         <input type="text" name="firstName" id="firstName" placeholder="First Name" aria-placeholder="First Name">
         <input type="email" name="email" id="email" placeholder="Email" aria-placeholder="Email">
@@ -42,8 +51,6 @@ get_header();
   </div>
 
 </section>
-
-
 
 </main>
 </div>

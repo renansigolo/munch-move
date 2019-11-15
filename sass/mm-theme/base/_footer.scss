@@ -21,7 +21,7 @@
     text-align: center;
   }
 
-  @media (min-width: 1000px) {
+  @include desktop {
     .container {
       flex-direction: row;
       justify-content: space-between;

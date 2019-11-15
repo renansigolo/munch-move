@@ -12,12 +12,11 @@
   --bg-sky: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-dark) 100%);
 }
 
+// Mixins
 %flex-column {
   display: flex;
   flex-direction: column;
 }
-
-// Mixins
 
 // x - for classes that set both *-left and *-right
 @mixin margin-x($margin) {
