@@ -10,7 +10,7 @@
   &__partners {
     display: flex;
     justify-content: center;
-    @include margin-y(2.5rem);
+    @include margin-y(3rem);
 
     img {
       @include margin-x(10px);
@@ -34,7 +34,7 @@
 
     &__copyright p {
       text-align: justify;
-      @include margin-y(2.5rem);
+      @include margin-y(3rem);
     }
 
     br {
