@@ -39,24 +39,16 @@ function munch_move_pingback_header()
 }
 add_action('wp_head', 'munch_move_pingback_header');
 
-/**
- * Save Form Fields from the FrontPage to the Database
- */
-function save_user()
+function mycustom_wp_footer()
 {
-	global $wpdb;
-
-	// Insert a row into a table.
-	$wpdb->insert(
-		'mm_users',
-		array(
-			'name' => 'value1',
-			'email' => '123'
-		),
-		array(
-			'%s',
-			'%d'
-		)
-	);
+	?>
+	<script type="text/javascript">
+		document.addEventListener('wpcf7mailsent', function(event) {
+			if ('11' == event.detail.contactFormId) {
+				document.querySelector('.hero-form-fields').style.display = 'none'
+			}
+		}, false);
+	</script>
+<?php
 }
-add_action('wp_enqueue_scripts', 'save_user');
+add_action('wp_footer', 'mycustom_wp_footer');

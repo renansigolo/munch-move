@@ -92,7 +92,8 @@
     }
   }
 
-  &__form {    
+  &__form,
+  .hero-form-fields {
     @extend %flex-column;
 
     @include desktop {
@@ -104,12 +105,6 @@
         @include margin-x(10px);
         width: calc(100% - 10px);
       }
-    }
-
-    button {
-      border: 6px solid #ffffff;
-      border-radius: 16px;
-      background-color: var(--orange);
     }
   }
 }

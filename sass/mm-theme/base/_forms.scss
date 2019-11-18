@@ -16,6 +16,7 @@ select {
   font-size: 2rem;
   padding: 11px 17px;
   color: #fff;
+  max-width: 100%;
 
   &::placeholder {
     color: #fff;
@@ -23,15 +24,45 @@ select {
   }
 }
 
-input[type='email']:focus,
-input[type='number']:focus,
-input[type='search']:focus,
-input[type='text']:focus,
-input[type='tel']:focus,
-input[type='url']:focus,
-input[type='password']:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
 textarea:focus,
 select:focus {
   border: 1px solid var(--orange);
   outline: 0;
+}
+
+// WP CONTACT FORM 7
+.wpcf7-response-output {
+  height: 61px;
+  border-radius: 16px;
+}
+
+.wpcf7-mail-sent-ok {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 61px;
+  border: 6px solid #fff !important;
+  border-radius: 16px;
+  background-color: var(--green);
+  font-size: 2rem;
+  padding: 11px 17px;
+  color: #fff;
+}
+
+div.wpcf7-validation-errors {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.wpcf7-mail-sent-ok {
+  width: 50%;
 }

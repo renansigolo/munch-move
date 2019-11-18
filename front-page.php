@@ -42,11 +42,11 @@ get_header();
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
       </div>
-      <form action="submit" class="hero__form">
-        <input type="text" name="firstName" id="firstName" placeholder="First Name" aria-placeholder="First Name">
-        <input type="email" name="email" id="email" placeholder="Email" aria-placeholder="Email">
-        <button type="submit">Notify me when live!</button>
-      </form>
+
+      <div class="hero__form">
+        <?php echo do_shortcode( '[contact-form-7 id="11" title="Notify Form"]' ); ?>
+      </div>
+
     </div>
   </div>
 
