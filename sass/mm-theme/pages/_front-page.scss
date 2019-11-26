@@ -2,108 +2,76 @@
 # Front Page
 --------------------------------------------------------------*/
 
-.hero {
-  text-align: center;
-
-  &__clouds {
-    background-color: var(--sky-light);
-
-    div {
-      width: 200px;
-      height: 200px;
-      background-image: url("images/cloud-1.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      position: relative;
-      animation: left-to-right 10s linear 1s infinite;
-      overflow: hidden;
-
-      @keyframes left-to-right {
-        0% {
-          // background-color: red;
-          left: 0px;
-          top: 0px;
-        }
-        // 50% {
-        //   // background-color: yellow;
-        //   left: 100%;
-        //   top: 0px;
-        // }
-        100% {
-          // background-color: red;
-          left: 100%;
-          top: 0px;
+#front-page {
+  .moving {
+    &__header {
+      text-align: center;
+      margin-bottom: 50px;
+      @include mobile {
+        img {
+          display: none;
         }
       }
-    }
-  }
 
-  &__title {
-    @extend %flex-column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 33px;
-    background: var(--bg-sky);
-    h1,
-    p {
-      color: var(--blue);
-      font-weight: bold;
-    }
+      img {
+        width: 246px;
+        height: auto;
+        margin-top: 50px;
+      }
 
-    @include desktop {
-      padding-top: 125px;
       h1 {
-        font-size: 9.9rem;
-      }
-      p {
-        font-size: 2.8rem;
-      }
-    }
-  }
-
-  &__banner {
-    background: var(--sky-dark) url("images/hills.png") bottom no-repeat;
-    background-size: 100% auto;
-
-    .row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
-  &__content {
-    .row {
-      @include margin-y(3rem);
-      @extend %flex-column;
-      align-items: center;
-    }
-    color: #fff;
-    background-color: var(--green);
-    h3 {
-      font-weight: bold;
-    }
-
-    @include desktop {
-      p {
         font-size: 2.6rem;
+        color: var(--blue);
+        margin-top: 35px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.4rem;
       }
     }
-  }
 
-  &__form,
-  .hero-form-fields {
-    @extend %flex-column;
+    .resources h2 {
+      color: #a1000d;
+      background-color: #ffc7cd;
+    }
+    .schools h2 {
+      color: #573476;
+      background-color: #e5cefa;
+    }
+    .sports h2 {
+      color: #003867;
+      background-color: #cceffc;
+    }
 
-    @include desktop {
-      flex-direction: row;
-      justify-content: space-between;
-      margin-bottom: 10rem;
+    .card {
+      &__title {
+        h2 {
+          font-size: 1.8rem;
+          padding-left: 2.1rem;
+          @include padding-y(18px);
 
-      & * {
-        @include margin-x(10px);
-        width: calc(100% - 10px);
+          @include mobile {
+            text-align: center;
+          }
+        }
+
+        img {
+          @extend .u-full-width;
+          margin-bottom: 2.3rem;
+        }
+      }
+
+      &__content {
+        font-family: Arial, Helvetica, sans-serif;
+        div {
+          margin-bottom: 17px;
+        }
+        h6 {
+          color: var(--blue);
+          font-weight: 600;
+          font-size: 1.4rem;
+        }
       }
     }
   }

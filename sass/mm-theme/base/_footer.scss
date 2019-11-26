@@ -18,18 +18,18 @@
   }
 
   &__copyright {
-    text-align: center;
+    font-size: 0.8rem;
   }
 
   @include desktop {
     .container {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
 
     &__partners {
       justify-content: flex-start;
-      min-width: 40%;
     }
 
     &__copyright p {

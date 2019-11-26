@@ -9,50 +9,75 @@
 get_header();
 ?>
 
-<div id="front-page" class="content-area">
-  <main id="main" class="site-main">
-</div>
+<div id="front-page">
+  <main id="main">
 
-<section class="hero">
+    <section class="moving container">
+      <div class="moving__header">
+        <img src="<?php echo get_template_directory_uri() . '/images/logos/healthy-kids-logo.svg' ?>" alt="Healthy Kids Logo">
+        <h1>We've moved!</h1>
+        <p>Thank you for visiting us over the years. Our website is no longer around, but we have moved our most popular information to our partner websites.</p>
+        <p>Munch & Move content is still available, and you can access it here. </p>
+      </div>
 
-  <!-- <div class="hero__clouds">
-    <div></div>
-  </div> -->
-
-  <div class="hero__title">
-    <h1>We’ve moved!</h1>
-    <p>Welcome to munchandmove.com.au<br />(formerly healthykids.nsw.gov.au)</p>
-  </div>
-
-  <div class="hero__banner">
-    <div class="container">
       <div class="row">
-        <div class="eight columns u-max-full-width">
-          <img src="<?php echo get_template_directory_uri() . '/images/mm-hero.svg' ?>" alt="Munch & Move Logo">
+        <div class="one-third column">
+          <div class="card resources">
+            <div class="card__title">
+              <h2>Resources</h2>
+              <img src="<?php echo get_template_directory_uri() . '/images/front-page/resources.png' ?>" alt="Resources Image">
+            </div>
+            <div class="card__content">
+              <div>
+                <h6>Healthy Kids Factsheets</h6>
+                <p>Our factsheets can be found <a href="#!" target="_blank" rel="noopener noreferrer">here</a>.</p>
+              </div>
+              <div>
+                <h6>Supported Playgroups</h6>
+                <p>Resources are available <a href="#!" target="_blank" rel="noopener noreferrer">here</a>.</p>
+              </div>
+              <div>
+                <h6>Recipes</h6>
+                <p>TBA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="one-third column">
+          <div class="card schools">
+            <div class="card__title">
+              <h2>Schools</h2>
+              <img src="<?php echo get_template_directory_uri() . '/images/front-page/schools.png' ?>" alt="Resources Image">
+            </div>
+            <div class="card__content">
+              <div>
+                <p>Information on Live Life Well @ School, Crunch & Sip and Out of School Hours care (OOSH) can be found <a href="#!" target="_blank" rel="noopener noreferrer">here</a>.</p>
+              </div>
+              <div>
+                <h6>Healthy School Canteens</h6>
+                <p>Please visit <a href="#!" target="_blank" rel="noopener noreferrer">Healthy School Canteens</a> website for information.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="one-third column">
+          <div class="card sports">
+            <div class="card__title">
+              <h2>Sports</h2>
+              <img src="<?php echo get_template_directory_uri() . '/images/front-page/sports.png' ?>" alt="Resources Image">
+            </div>
+            <div class="card__content">
+              <div>
+                <h6>Active Kids Voucher</h6>
+                <p>Find information on Active Kids voucher <a href="#!" target="_blank" rel="noopener noreferrer">here</a>.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="hero__content">
-    <div class="container">
-      <div class="row">
-        <div class="eight columns">
-          <h3>Lorem Ipsum is simply dummy text</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-      </div>
-
-      <div class="hero__form">
-        <?php echo do_shortcode( '[contact-form-7 id="11" title="Notify Form"]' ); ?>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-</main>
+  </main>
 </div>
 
 <?php

@@ -36,24 +36,25 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 --------------------------------------------------------------*/
 @import "mm-theme/base/variables";
 
-
 /*--------------------------------------------------------------
 # General Styles
 --------------------------------------------------------------*/
 @import "mm-theme/base/typography";
 @import "mm-theme/base/scaffolding";
+@import "mm-theme/base/header";
 
 /*--------------------------------------------------------------
 # Overwrites Skeleton Framework
 --------------------------------------------------------------*/
-@import 'mm-theme/base/buttons';
-@import 'mm-theme/base/forms';
-@import 'mm-theme/base/media-queries';
+@import "mm-theme/base/buttons";
+@import "mm-theme/base/forms";
+@import "mm-theme/base/media-queries";
 
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
 @import "mm-theme/pages/front-page";
+@import "mm-theme/pages/single-page";
 
 /*--------------------------------------------------------------
 # Footer

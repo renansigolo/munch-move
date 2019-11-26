@@ -10,9 +10,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 2rem;
+h6,
+p {
+  margin: 0;
   font-weight: 300;
 }
 
@@ -52,7 +52,7 @@ p {
 }
 
 /* Larger than phablet */
-@media (min-width: 576px) {
+@media (min-width: 550px) {
   h1 {
     font-size: 5rem;
   }
@@ -75,6 +75,10 @@ p {
 
 p {
   margin-top: 0;
+}
+
+a {
+  color: #000;
 }
 
 body {

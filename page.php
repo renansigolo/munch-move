@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -15,26 +16,56 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
+		while (have_posts()) :
 			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
 
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		<section class="hero">
+
+			<!-- <div class="hero__clouds">
+    <div></div>
+  </div> -->
+
+			<div class="hero__title">
+				<h1>We’ve moved!</h1>
+				<p>Welcome to munchandmove.com.au<br />(formerly healthykids.nsw.gov.au)</p>
+			</div>
+
+			<div class="hero__banner">
+				<div class="container">
+					<div class="row">
+						<div class="eight columns u-max-full-width">
+							<img src="<?php echo get_template_directory_uri() . '/images/mm-hero.svg' ?>" alt="Munch & Move Logo">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero__content">
+				<div class="container">
+					<div class="row">
+						<div class="eight columns">
+							<h3>Lorem Ipsum is simply dummy text</h3>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+					</div>
+
+					<div class="hero__form">
+						<?php echo do_shortcode('[contact-form-7 id="11" title="Notify Form"]'); ?>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

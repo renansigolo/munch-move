@@ -24,8 +24,18 @@
   margin-right: $margin;
 }
 
+@mixin padding-x($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
 // y - for classes that set both *-top and *-bottom
 @mixin margin-y($margin) {
   margin-top: $margin;
   margin-bottom: $margin;
+}
+
+@mixin padding-y($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
 }
