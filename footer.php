@@ -15,17 +15,26 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="footer">
-
 	<div class="container">
 		<div class="footer__partners">
-			<img src="<?php echo get_template_directory_uri() . '/images/logos/nsw-logo.svg' ?>" width="47px" alt="NSW Logo">
-			<img src="<?php echo get_template_directory_uri() . '/images/logos/heart-foundation-logo.svg' ?>" width="118px" alt="Hearth Foundation Logo">
+			<div class="row"></div>
+			<div class="row"></div>
+			<img src="<?php echo get_template_directory_uri() . '/images/logos/nsw-logo.svg' ?>" height="60px" alt="NSW Logo">
+			<img src="<?php echo get_template_directory_uri() . '/images/logos/heart-foundation-logo.svg' ?>" height="60px" alt="Hearth Foundation Logo">
 		</div>
 		<div class="footer__copyright">
-			An initiative of NSW Ministry of Health, NSW Department of Education, Office of Sport and the Heart Foundation.
+			<p id="copyright-text">Copyright 2019 Healthy Kids</p>
+			<p>An initiative of NSW Ministry of Health, NSW Department of Education, Office of Sport and the Heart Foundation.</p>
 		</div>
 		<div class="footer__accessibility">
-			<div class="row">Share</div>
+			<div class="row footer__accessibility--actions">
+				<!-- <a href="#" onclick="window.print(); return false;" title="Print this page">Print this page</a> -->
+				<!-- <button onclick="window.print(); return false;">Print</button> -->
+				<button id="btn-print">P</button>
+				<button id="btn-zoom-out">A-</button>
+				<button id="btn-zoom-reset">A0</button>
+				<button id="btn-zoom-in">A+</button>
+			</div>
 			<div class="row">Copyright 2019 Healthy Kids</div>
 		</div>
 	</div>

@@ -3,42 +3,78 @@
 --------------------------------------------------------------*/
 
 .footer {
+  width: 100%;
+  font-size: 1.2rem;
+  @include margin-y(3rem);
   .container {
     @extend %flex-column;
+    align-items: center;
   }
 
   &__partners {
     display: flex;
     justify-content: center;
-    @include margin-y(3rem);
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 
     img {
-      @include margin-x(10px);
+      @include margin-x(1rem);
+      height: 60px;
+      width: auto;
     }
   }
 
   &__copyright {
-    font-size: 0.8rem;
+    max-width: 50%;
+    p {
+      text-align: center;
+    }
+  }
+
+  &__accessibility {
+    display: none;
   }
 
   @include desktop {
     .container {
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
     }
 
     &__partners {
       justify-content: flex-start;
+      flex-wrap: nowrap;
+      margin-bottom: 0;
     }
 
-    &__copyright p {
-      text-align: justify;
-      @include margin-y(3rem);
+    &__copyright {
+      #copyright-text {
+        display: none;
+      }
     }
 
-    br {
-      display: none;
+    &__accessibility {
+      display: flex;
+      flex-direction: column;
+      text-align: end;
+
+      &--actions {
+        button {
+          font-size: 1.2rem;
+          color: #005a92;
+          background-color: #b7effc;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+        }
+      }
+      @include mobile {
+        &--actions {
+          display: none;
+        }
+      }
     }
   }
 }
