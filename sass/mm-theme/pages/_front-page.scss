@@ -3,7 +3,17 @@
 --------------------------------------------------------------*/
 
 #front-page {
+  background-image: url(images/front-page/bg-bubbles.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include padding-y(10%);
+
   .moving {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    padding: 0 8% 2%;
+
     &__header {
       text-align: center;
       margin-bottom: 50px;
@@ -60,6 +70,10 @@
           @extend .u-full-width;
           margin-bottom: 2.3rem;
         }
+      }
+
+      @include tablet {
+        padding-left: 0;
       }
 
       &__content {
