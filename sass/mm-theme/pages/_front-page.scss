@@ -6,12 +6,10 @@
   background-image: url(images/front-page/bg-bubbles.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  @include padding-y(10%);
+  min-height: 80vh;
 
   .moving {
     background-color: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
     padding: 0 8% 2%;
 
     &__header {
@@ -58,11 +56,11 @@
       &__title {
         h2 {
           font-size: 1.8rem;
-          padding-left: 2.1rem;
+          text-align: center;
           @include padding-y(18px);
 
-          @include mobile {
-            text-align: center;
+          @include tablet {
+            text-align: left;
           }
         }
 
@@ -74,6 +72,9 @@
 
       @include tablet {
         padding-left: 0;
+        h2 {
+          padding-left: 2.1rem;
+        }
       }
 
       &__content {
@@ -87,6 +88,14 @@
           font-size: 1.4rem;
         }
       }
+    }
+  }
+
+  @media (min-width: 400px) {
+    @include padding-y(3%);
+    .moving {
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
     }
   }
 }
