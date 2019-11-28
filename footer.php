@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The template for displaying the footer
  *
@@ -9,7 +8,6 @@
  *
  * @package Munch_&_Move
  */
-
 ?>
 
 </div><!-- #content -->
@@ -19,8 +17,10 @@
 		<div class="footer__partners">
 			<div class="row"></div>
 			<div class="row"></div>
-			<img src="<?php echo get_template_directory_uri() . '/images/logos/nsw-logo.svg' ?>" height="60px" alt="NSW Logo">
-			<img src="<?php echo get_template_directory_uri() . '/images/logos/heart-foundation-logo.svg' ?>" height="60px" alt="Hearth Foundation Logo">
+			<img src="<?php echo get_template_directory_uri() .
+       '/images/logos/nsw-logo.svg'; ?>" height="60px" alt="NSW Logo">
+			<img src="<?php echo get_template_directory_uri() .
+       '/images/logos/heart-foundation-logo.svg'; ?>" height="60px" alt="Hearth Foundation Logo">
 		</div>
 		<div class="footer__copyright">
 			<p id="copyright-text">Copyright 2019 Healthy Kids</p>

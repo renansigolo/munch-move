@@ -6,15 +6,15 @@
  * @package YRTK
  */
 
-get_header();
-?>
+get_header(); ?>
 
 <div id="front-page">
   <main id="main">
 
     <section class="moving container">
       <div class="moving__header">
-        <img src="<?php echo get_template_directory_uri() . '/images/logos/healthy-kids-logo.svg' ?>" alt="Healthy Kids Logo">
+        <img src="<?php echo get_template_directory_uri() .
+            '/images/logos/healthy-kids-logo.svg'; ?>" alt="Healthy Kids Logo">
         <h1>We've moved!</h1>
         <p>Thank you for visiting us over the years. Our website is no longer around, but we have moved our most popular information to our partner websites.</p>
         <p>Munch & Move content is still available, and you can access it here. </p>
@@ -25,7 +25,8 @@ get_header();
           <div class="card resources">
             <div class="card__title">
               <h2>Resources</h2>
-              <img src="<?php echo get_template_directory_uri() . '/images/front-page/resources.png' ?>" alt="Resources Image">
+              <img src="<?php echo get_template_directory_uri() .
+                  '/images/front-page/resources.png'; ?>" alt="Resources Image">
             </div>
             <div class="card__content">
               <div>
@@ -47,7 +48,8 @@ get_header();
           <div class="card schools">
             <div class="card__title">
               <h2>Schools</h2>
-              <img src="<?php echo get_template_directory_uri() . '/images/front-page/schools.png' ?>" alt="Resources Image">
+              <img src="<?php echo get_template_directory_uri() .
+                  '/images/front-page/schools.png'; ?>" alt="Resources Image">
             </div>
             <div class="card__content">
               <div>
@@ -64,7 +66,8 @@ get_header();
           <div class="card sports">
             <div class="card__title">
               <h2>Sports</h2>
-              <img src="<?php echo get_template_directory_uri() . '/images/front-page/sports.png' ?>" alt="Resources Image">
+              <img src="<?php echo get_template_directory_uri() .
+                  '/images/front-page/sports.png'; ?>" alt="Resources Image">
             </div>
             <div class="card__content">
               <div>
@@ -80,5 +83,4 @@ get_header();
   </main>
 </div>
 
-<?php
-get_footer();
+<?php get_footer();

@@ -13,18 +13,16 @@
  * @package Munch_&_Move
  */
 
-get_header();
-?>
+get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-		<?php
-		while (have_posts()) :
-			the_post();
-
-		endwhile; // End of the loop.
-		?>
+		<?php while (have_posts()):
+      the_post();
+  endwhile;
+// End of the loop.
+?>
 
 		<section class="hero">
 
@@ -41,7 +39,8 @@ get_header();
 				<div class="container">
 					<div class="row">
 						<div class="eight columns u-max-full-width">
-							<img src="<?php echo get_template_directory_uri() . '/images/mm-hero.svg' ?>" alt="Munch & Move Logo">
+							<img src="<?php echo get_template_directory_uri() .
+           '/images/mm-hero.svg'; ?>" alt="Munch & Move Logo">
 						</div>
 					</div>
 				</div>
@@ -67,5 +66,4 @@ get_header();
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php
-get_footer();
+<?php get_footer();

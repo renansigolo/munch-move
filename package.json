@@ -14,7 +14,7 @@
     "compress-css": "node-sass css/style.prefix.css ./style.css --output-style compressed",
     "start": "node-sass sass/style.scss ./style.css --watch --output-style compressed",
     "build": "npm-run-all compile-sass prefix-css compress-css",
-    "prettier": "prettier --config ./.prettierrc.json --write '**/*.{html,scss,js,json,yml,md,php}'"
+    "prettier": "prettier --write '**/*.{html,scss,js,json,yml,md,php}'"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
