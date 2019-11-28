@@ -15,9 +15,16 @@ there.
 // }
 
 /* Mobile first queries */
-// Small devices (landscape phones, 550px and up)
+// Small devices (portrait phones, 440px and up)
 @mixin mobile {
-  @media (max-width: 576px) {
+  @media (min-width: 440px) {
+    @content;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin phablet {
+  @media (min-width: 550px) {
     @content;
   }
 }
@@ -31,7 +38,7 @@ there.
 
 // Large devices (desktops, 1000px and up)
 @mixin desktop {
-  @media (min-width: 992px) {
+  @media (min-width: 1000px) {
     @content;
   }
 }
@@ -46,6 +53,21 @@ there.
 /* Super large devices (large monitors, 1800px and up) */
 @mixin fullhd {
   @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+/* Max width queries */
+// Small devices (portrait phones, 399px and down)
+@mixin mobile-only {
+  @media (max-width: 399px) {
+    @content;
+  }
+}
+
+// Small devices (landscape phones, 549px and down)
+@mixin phablet-only {
+  @media (max-width: 549px) {
     @content;
   }
 }
