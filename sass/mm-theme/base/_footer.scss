@@ -2,6 +2,45 @@
 # Footer
 --------------------------------------------------------------*/
 
+$class-prefix: "custom-icon--";
+$sprite-image-url: "images/footer-accessibility-sprite.png";
+$sprite-grid-size: 24px;
+
+$icon-list: (
+    ("mail", 0, 0)
+    ("print", 1, 1)
+    ("font", 0, 2)
+    ("mail", 1, 0)
+    ("picture", 1, 1)
+);
+
+@mixin icon($row, $column) {
+    background-position: -$column*$sprite-grid-size -$row*$sprite-grid-size;
+}
+
+[class*='#{$class-prefix}'] {
+    display: inline-block;
+    width: $sprite-grid-size;
+    height: $sprite-grid-size;
+
+    line-height: $sprite-grid-size;
+
+    background-image: url(#{$sprite-image-url});
+    background-repeat: no-repeat;
+}
+
+
+
+@each $icon in $icon-list {
+    $name: nth($icon, 1);
+    $row: nth($icon, 2);
+    $column: nth($icon, 3);
+
+    .#{$class-prefix}#{name} {
+        @include icon($row, $column);
+    }
+}
+
 .footer {
   width: 100%;
   font-size: 1.2rem;

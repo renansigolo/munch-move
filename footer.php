@@ -30,10 +30,17 @@
 			<div class="row footer__accessibility--actions">
 				<!-- <a href="#" onclick="window.print(); return false;" title="Print this page">Print this page</a> -->
 				<!-- <button onclick="window.print(); return false;">Print</button> -->
-				<button id="btn-print">P</button>
-				<button id="btn-zoom-out">A-</button>
-				<button id="btn-zoom-reset">A0</button>
-				<button id="btn-zoom-in">A+</button>
+				<!-- <button id="btn-print">P</button> -->
+				<!-- <button id="btn-zoom-out">A-</button> -->
+				<!-- <button id="btn-zoom-reset">A0</button> -->
+				<!-- <button id="btn-zoom-in">A+</button> -->
+
+				<a href="#!" class="custom-icon--mail"></a>
+				<a href="#!" class="custom-icon--print"></a>
+				<a href="#!" class="custom-icon--font"></a>
+
+
+
 			</div>
 			<div class="row">Copyright 2019 Healthy Kids</div>
 		</div>
