@@ -4,28 +4,46 @@
  * Contains accessibility handlers for the footer.
  */
 
-(function() {
-  function print() {
-    window.print();
-  }
-  function zoomIn() {
-    console.log("ZoomIn");
-  }
-  function zoomOut() {
-    console.log("ZoomOut");
-  }
-  function zoomReset() {
-    console.log("ZoomReset");
-  }
-  window.addEventListener("load", function() {
-    var btnPrint = document.querySelector("#btn-print");
-    var btnZoomOut = document.querySelector("#btn-zoom-out");
-    var btnZoomReset = document.querySelector("#btn-zoom-reset");
-    var btnZoomIn = document.querySelector("#btn-zoom-in");
+;(function() {
+  let zoom = 1
+  let zoomStep = 0.2
 
-    btnPrint.addEventListener("click", print);
-    // btnZoomOut.addEventListener("click", zoomOut);
-    // btnZoomReset.addEventListener("click", zoomReset);
-    // btnZoomIn.addEventListener("click", zoomIn);
-  });
-})();
+  const print = () => {
+    window.print()
+    return false
+  }
+
+  const zoomIn = () => {
+    document.body.style.zoom = '1.1'
+  }
+
+  const zoomOut = () => {
+    document.body.style.zoom = '0.9'
+  }
+
+  const zoomReset = () => {
+    document.body.style.zoom = '0'
+  }
+
+  window.addEventListener('load', () => {
+    document.querySelector('.zoomIn').addEventListener('click', function() {
+      zoom += zoomStep
+      document.body.style.zoom = zoom
+    })
+
+    document.querySelector('.zoomReset').addEventListener('click', function() {
+      zoom = 1
+      document.body.style.zoom = 0
+    })
+
+    document.querySelector('.zoomOut').addEventListener('click', function() {
+      if (zoom > zoomStep) {
+        zoom -= zoomStep
+        document.body.style.zoom = zoom
+      }
+    })
+
+    let btnPrint = document.querySelector('.btn--print')
+    btnPrint.addEventListener('click', print)
+  })
+})()
