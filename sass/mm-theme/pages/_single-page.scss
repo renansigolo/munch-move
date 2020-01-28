@@ -1,0 +1,110 @@
+/*--------------------------------------------------------------
+# Front Page
+--------------------------------------------------------------*/
+
+.hero {
+  text-align: center;
+
+  &__clouds {
+    background-color: var(--sky-light);
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-image: url("images/cloud-1.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      animation: left-to-right 10s linear 1s infinite;
+      overflow: hidden;
+
+      @keyframes left-to-right {
+        0% {
+          // background-color: red;
+          left: 0px;
+          top: 0px;
+        }
+        // 50% {
+        //   // background-color: yellow;
+        //   left: 100%;
+        //   top: 0px;
+        // }
+        100% {
+          // background-color: red;
+          left: 100%;
+          top: 0px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @extend %flex-column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 33px;
+    background: var(--bg-sky);
+    h1,
+    p {
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    @include desktop {
+      padding-top: 125px;
+      h1 {
+        font-size: 9.9rem;
+      }
+      p {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  &__banner {
+    background: var(--sky-dark) url("images/hills.png") bottom no-repeat;
+    background-size: 100% auto;
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    .row {
+      @include margin-y(3rem);
+      @extend %flex-column;
+      align-items: center;
+    }
+    color: #fff;
+    background-color: var(--green);
+    h3 {
+      font-weight: bold;
+    }
+
+    @include desktop {
+      p {
+        font-size: 2.6rem;
+      }
+    }
+  }
+
+  &__form,
+  .hero-form-fields {
+    @extend %flex-column;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10rem;
+
+      & * {
+        @include margin-x(10px);
+        width: calc(100% - 10px);
+      }
+    }
+  }
+}

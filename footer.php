@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The template for displaying the footer
  *
@@ -9,20 +8,32 @@
  *
  * @package Munch_&_Move
  */
-
 ?>
 
 </div><!-- #content -->
 
 <footer id="colophon" class="footer">
-
 	<div class="container">
 		<div class="footer__partners">
-			<img src="https://placeholder.pics/svg/47x50" width="47px" alt="NSW Logo">
-			<img src="https://placeholder.pics/svg/118x50" width="118px" alt="Hearth Foundation Logo">
+			<div class="row"></div>
+			<div class="row"></div>
+			<img src="<?php echo get_template_directory_uri() .
+       '/images/logos/nsw-logo.svg'; ?>" height="60px" alt="NSW Logo">
+			<img src="<?php echo get_template_directory_uri() .
+       '/images/logos/heart-foundation-logo.svg'; ?>" height="60px" alt="Hearth Foundation Logo">
 		</div>
 		<div class="footer__copyright">
-			<p>An initiative of NSW Ministry of Health,<br /> NSW Department of Education, Office<br /> of Sport and the Heart Foundation.<br /> Copyright 2019 Healthy Kids.</p>
+			<p id="copyright-text">Copyright 2019 Healthy Kids</p>
+			<p>An initiative of NSW Ministry of Health, NSW Department of Education, Office of Sport and the Heart Foundation.</p>
+		</div>
+		<div class="footer__accessibility">
+			<div class="row footer__accessibility--actions">
+				<a href="#!" class="btn--print"></a>
+				<a href="#!" class="btn--font-small zoomOut"></a>
+				<a href="#!" class="btn--font-reset zoomReset"></a>
+				<a href="#!" class="btn--font-big zoomIn"></a>
+			</div>
+			<div class="row">Copyright 2019 Healthy Kids</div>
 		</div>
 	</div>
 

@@ -11,13 +11,9 @@ Text Domain: munch-move
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
 Munch & Move is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -32,13 +28,35 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 #### Front Page
 --------------------------------------------------------------*/
 
-@import "libs/normalize";
+@import "../node_modules/normalize.css/normalize";
 @import "libs/skeleton/skeleton.scss";
 
+/*--------------------------------------------------------------
+# Munch & Move Theme
+--------------------------------------------------------------*/
 @import "mm-theme/base/variables";
+
+/*--------------------------------------------------------------
+# General Styles
+--------------------------------------------------------------*/
 @import "mm-theme/base/typography";
-@import "mm-theme/base/overwrites";
-@import "mm-theme/base/footer";
+@import "mm-theme/base/scaffolding";
+@import "mm-theme/base/header";
 
+/*--------------------------------------------------------------
+# Overwrites Skeleton Framework
+--------------------------------------------------------------*/
+@import "mm-theme/base/buttons";
+@import "mm-theme/base/forms";
+@import "mm-theme/base/media-queries";
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
 @import "mm-theme/pages/front-page";
+@import "mm-theme/pages/single-page";
 
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import "mm-theme/base/footer";

@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+# Global Elements
+--------------------------------------------------------------*/
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+}

@@ -2,43 +2,125 @@
 # Footer
 --------------------------------------------------------------*/
 
+$class-prefix: 'btn--';
+$sprite-image-url: 'images/footer-accessibility-sprite.png';
+$sprite-grid-size: 26.4px;
+
+$icon-list: (
+  ('mail', 0, 0) 
+  ('print', 0, 1) 
+  ('font-small', 0, 2) 
+  ('font-reset', 0, 3)
+  ('font-big', 0, 4)
+);
+
+@mixin icon($row, $column) {
+  background-position: (-$column * $sprite-grid-size) (-$row * $sprite-grid-size);
+}
+
+@each $icon in $icon-list {
+  $name: nth($icon, 1);
+  $row: nth($icon, 2);
+  $column: nth($icon, 3);
+
+  .#{$class-prefix}#{$name} {
+    @include icon($row, $column);
+  }
+}
+
+[class*='#{$class-prefix}'] {
+  display: inline-block;
+  width: $sprite-grid-size;
+  height: $sprite-grid-size;
+
+  line-height: $sprite-grid-size;
+
+  background-image: url(#{$sprite-image-url});
+  background-repeat: no-repeat;
+}
+
+
 .footer {
+  width: 100%;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+
   .container {
     @extend %flex-column;
+    align-items: center;
   }
 
   &__partners {
     display: flex;
     justify-content: center;
-    @include margin-y(2.5rem);
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 
     img {
-      @include margin-x(10px);
+      @include margin-x(1rem);
+      height: 60px;
+      width: auto;
     }
   }
 
   &__copyright {
-    text-align: center;
+    p {
+      font-size: 1.2rem;
+      text-align: center;
+    }
   }
 
-  @media (min-width: 1000px) {
+  &__accessibility {
+    display: none;
+  }
+
+  @include desktop {
     .container {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-end;
     }
 
     &__partners {
       justify-content: flex-start;
-      min-width: 40%;
+      flex-wrap: nowrap;
+      margin-bottom: 0;
     }
 
-    &__copyright p {
-      text-align: justify;
-      @include margin-y(2.5rem);
+    &__copyright {
+      max-width: 50%;
+
+      p {
+        text-align: left;
+      }
+      #copyright-text {
+        display: none;
+      }
     }
 
-    br {
-      display: none;
+    &__accessibility {
+      display: flex;
+      flex-direction: column;
+      text-align: end;
+
+      &--actions {
+        button {
+          font-size: 1.2rem;
+          color: #005a92;
+          background-color: #b7effc;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+        }
+      }
+
+      @include mobile-only {
+        &--actions {
+          display: none;
+        }
+      }
     }
   }
 }

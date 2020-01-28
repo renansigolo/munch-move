@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+@media (min-width: 550px) {
+  .site-header {
+    display: none;
+  }
+}
+
+.site-branding {
+  display: flex;
+  justify-content: center;
+  border-bottom: 4px solid #19498d;
+  img {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 120px;
+    height: auto;
+  }
+}
