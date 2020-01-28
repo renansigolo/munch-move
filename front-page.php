@@ -3,7 +3,7 @@
 /**
  * The template for displaying the homepage
  *
- * @package YRTK
+ * @package Munch_&_Move
  */
 
 get_header(); ?>

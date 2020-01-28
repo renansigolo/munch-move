@@ -16,8 +16,9 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php /* translators: %s: search query. */
-     printf(
+					 /* translators: %s: search query. */<?php
+      /* translators: %s: search query. */
+      ?>printf(
          esc_html__('Search Results for: %s', 'munch-move'),
          '<span>' . get_search_query() . '</span>'
      ); ?>

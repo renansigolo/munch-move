@@ -11,7 +11,7 @@
     div {
       width: 200px;
       height: 200px;
-      background-image: url("images/cloud-1.svg");
+      background-image: url('images/cloud-1.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -63,7 +63,7 @@
   }
 
   &__banner {
-    background: var(--sky-dark) url("images/hills.png") bottom no-repeat;
+    background: var(--sky-dark) url('images/hills.png') bottom no-repeat;
     background-size: 100% auto;
 
     .row {

@@ -2,20 +2,19 @@
 # Footer
 --------------------------------------------------------------*/
 
+// Create Sprite Images
 $class-prefix: 'btn--';
 $sprite-image-url: 'images/footer-accessibility-sprite.png';
 $sprite-grid-size: 26.4px;
 
 $icon-list: (
-  ('mail', 0, 0) 
-  ('print', 0, 1) 
-  ('font-small', 0, 2) 
-  ('font-reset', 0, 3)
-  ('font-big', 0, 4)
+  ('mail', 0, 0) ('print', 0, 1) ('font-small', 0, 2) ('font-reset', 0, 3)
+    ('font-big', 0, 4)
 );
 
 @mixin icon($row, $column) {
-  background-position: (-$column * $sprite-grid-size) (-$row * $sprite-grid-size);
+  background-position: (-$column * $sprite-grid-size)
+    (-$row * $sprite-grid-size);
 }
 
 @each $icon in $icon-list {
@@ -39,7 +38,7 @@ $icon-list: (
   background-repeat: no-repeat;
 }
 
-
+// Footer
 .footer {
   width: 100%;
   font-size: 1.2rem;
