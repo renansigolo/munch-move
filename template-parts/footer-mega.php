@@ -10,7 +10,6 @@
 
 <section id="footer-mega">
         <!-- <?php munch_move_entry_footer(); ?> -->
-        
         <div class="container">
         <div class="row">
         <div class="three columns">
