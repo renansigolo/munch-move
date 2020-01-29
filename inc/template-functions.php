@@ -45,13 +45,25 @@ add_action('wp_head', 'munch_move_pingback_header');
 function mycustom_wp_footer()
 {
     ?>
-	<script type="text/javascript">
-		document.addEventListener('wpcf7mailsent', function(event) {
-			if ('11' == event.detail.contactFormId) {
-				document.querySelector('.hero-form-fields').style.display = 'none'
-			}
-		}, false);
-	</script>
+<script type="text/javascript">
+document.addEventListener('wpcf7mailsent', function(event) {
+    if ('11' == event.detail.contactFormId) {
+        document.querySelector('.hero-form-fields').style.display = 'none'
+    }
+}, false);
+</script>
 <?php
 }
 add_action('wp_footer', 'mycustom_wp_footer');
+
+function create_footer_menus() {
+    register_nav_menus(     array(
+        'footer_menu' => __( 'Footer - Menu' ),
+        'footer_mm_benefits' => __( 'Footer - Munch & Move Benefits' ),
+        'footer_information_support' => __( 'Footer - Information & Support' ),
+        'footer_training_development' => __( 'Footer - Training & Development' ),
+        'footer_resources_media' => __( 'Footer - Resources & Media' )
+      )
+    );
+  }
+  add_action( 'init', 'create_footer_menus' );

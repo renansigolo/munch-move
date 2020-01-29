@@ -9,37 +9,37 @@
 ?>
 
 <section id="footer-mega">
-        <!-- <?php munch_move_entry_footer(); ?> -->
-        <div class="container">
+    <!-- <?php munch_move_entry_footer(); ?> -->
+    <div class="container">
         <div class="row">
-        <div class="three columns">
-        <img src="https://placeholder.pics/svg/600x300" alt="Placeholder Img">
-        <?php wp_nav_menu(array(
-            'theme_location' => 'menu-1'
+            <div class="three columns">
+                <img src="https://placeholder.pics/svg/600x300" alt="Placeholder Img">
+                <?php wp_nav_menu(array(
+            'theme_location' => 'footer_menu'
         )); ?>
-        </div>
-        <div class="three columns">
-        <b>Munch and Move Benefits</b>
-        <?php wp_nav_menu(array(
-            'theme_location' => 'menu-2'
+            </div>
+            <div class="three columns">
+                <b>Munch and Move Benefits</b>
+                <?php wp_nav_menu(array(
+            'theme_location' => 'footer_mm_benefits'
         )); ?>
-        <b>Information & Support</b>
-        <?php wp_nav_menu(array(
-            'theme_location' => 'menu-3'
+                <b>Information & Support</b>
+                <?php wp_nav_menu(array(
+            'theme_location' => 'footer_information_support'
         )); ?>
-        </div>
-        <div class="three columns">
-        <b>Training & Development</b>
-        <?php wp_nav_menu(array(
-            'theme_location' => 'menu-4'
+            </div>
+            <div class="three columns">
+                <b>Training & Development</b>
+                <?php wp_nav_menu(array(
+            'theme_location' => 'footer_training_development'
         )); ?>
-        </div>
-        <div class="three columns">
-        <b>Resources & Media</b>
-        <?php wp_nav_menu(array(
-            'theme_location' => 'menu-5'
+            </div>
+            <div class="three columns">
+                <b>Resources & Media</b>
+                <?php wp_nav_menu(array(
+            'theme_location' => 'footer_resources_media'
         )); ?>
+            </div>
         </div>
-        </div>
-        </div>
+    </div>
 </section>

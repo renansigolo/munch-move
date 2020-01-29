@@ -13,20 +13,17 @@
     "prefix-css": "postcss --use autoprefixer -b 'defaults' css/style.comp.css -o css/style.prefix.css",
     "compress-css": "node-sass css/style.prefix.css ./style.css --output-style compressed",
     "start": "node-sass sass/style.scss ./style.css --watch --output-style compressed",
-    "build": "npm-run-all compile-sass prefix-css compress-css",
-    "prettier": "prettier --write '**/*.{html,scss,js,json,yml,md,php}'"
+    "build": "npm-run-all compile-sass prefix-css compress-css"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@prettier/plugin-php": "^0.12.0",
     "autoprefixer": "^9.7.4",
     "cpx": "^1.5.0",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.0",
-    "prettier": "^1.19.1"
+    "postcss-cli": "^7.1.0"
   },
   "engines": {
     "node": ">=10.15.0",
