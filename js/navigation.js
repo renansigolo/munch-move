@@ -28,6 +28,7 @@
   menu.setAttribute("aria-expanded", "false");
   if (-1 === menu.className.indexOf("nav-menu")) {
     menu.className += " nav-menu";
+    document.querySelector('#primary-menu').style.display = 'none'
   }
 
   button.onclick = function() {
@@ -35,10 +36,12 @@
       container.className = container.className.replace(" toggled", "");
       button.setAttribute("aria-expanded", "false");
       menu.setAttribute("aria-expanded", "false");
+      document.querySelector('#primary-menu').style.display = 'none'
     } else {
       container.className += " toggled";
       button.setAttribute("aria-expanded", "true");
       menu.setAttribute("aria-expanded", "true");
+      document.querySelector('#primary-menu').style.display = 'block'
     }
   };
 

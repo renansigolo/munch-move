@@ -9,17 +9,13 @@ input[type='url'],
 input[type='password'],
 textarea,
 select {
-  height: 61px;
-  border: 1px solid #fff;
-  border-radius: 16px;
+  border-radius: 2px;
   background-color: transparent;
   font-size: 2rem;
   padding: 11px 17px;
-  color: #fff;
   max-width: 100%;
 
   &::placeholder {
-    color: #fff;
     font-weight: bold;
   }
 }
@@ -35,6 +31,10 @@ textarea:focus,
 select:focus {
   border: 1px solid var(--orange);
   outline: 0;
+}
+
+.search {
+  align-self: flex-end;
 }
 
 // WP CONTACT FORM 7

@@ -8,6 +8,76 @@
   background-size: cover;
   min-height: 80vh;
 
+  input[type='email'],
+  input[type='number'],
+  input[type='search'],
+  input[type='text'],
+  input[type='tel'],
+  input[type='url'],
+  input[type='password'],
+  textarea,
+  select {
+    height: 61px;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    background-color: transparent;
+    font-size: 2rem;
+    padding: 11px 17px;
+    color: #fff;
+    max-width: 100%;
+  
+    &::placeholder {
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+  
+  input[type='email']:focus,
+  input[type='number']:focus,
+  input[type='search']:focus,
+  input[type='text']:focus,
+  input[type='tel']:focus,
+  input[type='url']:focus,
+  input[type='password']:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid var(--orange);
+    outline: 0;
+  }
+  
+  // .button,
+  // button,
+  // input[type="submit"],
+  // input[type="reset"],
+  // input[type="button"] {
+  //   display: inline-block;
+  //   height: 61px;
+  //   border-radius: 16px;
+  //   border: 6px solid #ffffff;
+  //   color: #fff;
+  //   background-color: var(--orange);
+  //   font-size: 2rem;
+  //   font-weight: bold;
+  //   cursor: pointer;
+  // }
+
+  // .button:hover,
+  // button:hover,
+  // input[type="submit"]:hover,
+  // input[type="reset"]:hover,
+  // input[type="button"]:hover,
+  // .button:focus,
+  // button:focus,
+  // input[type="submit"]:focus,
+  // input[type="reset"]:focus,
+  // input[type="button"]:focus {
+  //   color: #fff;
+  //   border-color: #fff;
+  //   box-shadow: 2px 2px 5px var(--grey);
+  //   transition: box-shadow 0.3s ease-in-out;
+  //   outline: 0;
+  // }
+
   .moving {
     background-color: #fff;
     padding: 0 7% 2%;

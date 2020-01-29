@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 @media (min-width: 550px) {
-  .site-header {
+  .site-branding {
     display: none;
   }
 }
@@ -12,10 +12,38 @@
   display: flex;
   justify-content: center;
   border-bottom: 4px solid #19498d;
+
   img {
     margin-top: 30px;
     margin-bottom: 10px;
     width: 120px;
     height: auto;
+  }
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+
+  &::after {
+    content: none;
+  }
+}
+
+.navbar {
+  border: 1px solid var(--grey);
+  @include margin-y(10px);
+
+  #primary-menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+
+    li {
+      @include margin-y(1rem);
+    }
   }
 }

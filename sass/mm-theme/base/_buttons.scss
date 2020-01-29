@@ -7,12 +7,7 @@ input[type='submit'],
 input[type='reset'],
 input[type='button'] {
   display: inline-block;
-  height: 61px;
-  border-radius: 16px;
-  border: 6px solid #ffffff;
-  color: #fff;
-  background-color: var(--orange);
-  font-size: 2rem;
+  border-radius: 2px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -27,8 +22,6 @@ button:focus,
 input[type='submit']:focus,
 input[type='reset']:focus,
 input[type='button']:focus {
-  color: #fff;
-  border-color: #fff;
   box-shadow: 2px 2px 5px var(--grey);
   transition: box-shadow 0.3s ease-in-out;
   outline: 0;

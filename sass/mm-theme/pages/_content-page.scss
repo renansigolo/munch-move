@@ -2,8 +2,15 @@
 # Content Page / Partial template
 --------------------------------------------------------------*/
 
-.featured-image {
+.site-main {
+  .featured-image {
     width: 100%;
     box-sizing: border-box;
     height: auto;
   }
+
+  .featured-image-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+}

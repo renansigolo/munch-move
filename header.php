@@ -23,38 +23,45 @@
 <body <?php body_class(); ?>>
     <div id="page" class="site">
         <header id="masthead" class="site-header">
+
+            <?php
+        if ( is_front_page() && is_home() ) :
+				?>
             <div class="site-branding">
                 <img src="<?php echo get_template_directory_uri() . '/images/logos/healthy-kids-logo.svg'; ?>"
                     alt="Healthy Kids Logo">
-                <!-- <?php the_custom_logo(); 
-				if (is_front_page() && is_home()): ?>
-					<h1 class="site-title"><a href="<?php echo esc_url(
-         home_url('/')
-     ); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<?php else: ?>
-					<p class="site-title"><a href="<?php echo esc_url(
-         home_url('/')
-     ); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-				<?php endif;
-    $munch_move_description = get_bloginfo('description', 'display');
-    if ($munch_move_description || is_customize_preview()): ?>
-					<p class="site-description"><?php echo $munch_move_description;
-        /* WPCS: xss ok. */
-        ?></p>
-				<?php endif;
-    ?> -->
             </div>
+            <?php
+			else :
+                ?>
+            <div class="page-header container">
+                <img src="https://placeholder.pics/svg/300x150" alt="Placeholder Img">
+                <?php  get_template_part('template-parts/content', 'search'); ?>
+            </div>
+            <div class="container">
+                <nav class="navbar">
+                <?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			) );
+			?>
+                </nav>
+            </div>
+            <?php endif; ?>
 
-            <nav id="site-navigation" class="main-navigation">
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e(
-        'Primary Menu',
-        'munch-move'
-    ); ?></button>
-                <?php wp_nav_menu(array(
-        'theme_location' => 'menu-1',
-        'menu_id' => 'primary-menu'
-    )); ?>
-            </nav>
+
+            <!-- <nav id="site-navigation" class="main-navigation">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">=</button>
+                    <?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			) );
+			?>
+                </nav> -->
+
+
         </header><!-- #masthead -->
 
         <div id="content" class="site-content">
