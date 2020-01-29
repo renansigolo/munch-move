@@ -9,14 +9,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-	</header><!-- .entry-header -->
 
-	<?php munch_move_post_thumbnail(); ?>
+    <?php the_post_thumbnail('large', [
+            'class' => 'featured-image'
+        ]); ?>
 
-	<div class="entry-content">
-		<?php
+
+    <header class="entry-header">
+        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content container">
+        <?php
   the_content();
 
   wp_link_pages(array(
@@ -25,11 +29,11 @@
       'after' => '</div>'
   ));
   ?>
-	</div><!-- .entry-content -->
+    </div><!-- .entry-content -->
 
-	<?php if (get_edit_post_link()): ?>
-		<footer class="entry-footer">
-			<?php edit_post_link(
+    <?php if (get_edit_post_link()): ?>
+    <footer class="entry-footer">
+        <?php edit_post_link(
        sprintf(
            wp_kses(
                /* translators: %s: Name of current post. Only visible to screen readers */
@@ -48,6 +52,6 @@
        '<span class="edit-link">',
        '</span>'
    ); ?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+    </footer><!-- .entry-footer -->
+    <?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

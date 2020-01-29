@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main container">
 
 		<?php
 		while ( have_posts() ) :
@@ -24,12 +24,11 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'page' );
 
-		endwhile; // End of the loop.
+		endwhile;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
-get_sidebar();
 get_footer();

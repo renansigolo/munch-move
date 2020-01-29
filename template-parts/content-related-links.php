@@ -10,6 +10,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+<h1>RELATED LINKS</h1>
+
 	<?php munch_move_post_thumbnail(); ?>
 	<?php munch_move_post_thumbnail(); ?>
 	<?php munch_move_post_thumbnail(); ?>
