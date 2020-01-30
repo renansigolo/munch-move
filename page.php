@@ -15,20 +15,19 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main container">
-
+<div id="primary" class="content-area">
+	<main id="main" class="site-main container">
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
 			get_template_part( 'template-parts/content', 'page' );
-
+			
+			get_template_part( 'template-parts/content', 'related-links' );
 		endwhile;
 		?>
-
-		</main>
-	</div>
+	</main>
+</div>
 
 <?php
 get_footer();

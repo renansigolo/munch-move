@@ -9,7 +9,7 @@
 ?>
 
 <div id="footer-copyright">
-<div class="container">
+	<div class="container">
 		<div class="footer__partners">
 			<div class="row"></div>
 			<div class="row"></div>
@@ -20,7 +20,8 @@
 		</div>
 		<div class="footer__copyright">
 			<p id="copyright-text">Copyright 2019 Healthy Kids</p>
-			<p>An initiative of NSW Ministry of Health, NSW Department of Education, Office of Sport and the Heart Foundation.</p>
+			<p>An initiative of NSW Ministry of Health, NSW Department of Education, Office of Sport and the Heart
+				Foundation.</p>
 		</div>
 		<div class="footer__accessibility">
 			<div class="row footer__accessibility--actions">

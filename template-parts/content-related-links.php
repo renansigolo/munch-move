@@ -10,16 +10,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<h1>RELATED LINKS</h1>
+    <h1>RELATED LINKS</h1>
+    <div class="grid__2">
+        <?php munch_move_post_thumbnail(); ?>
+        <?php munch_move_post_thumbnail(); ?>
+        <?php munch_move_post_thumbnail(); ?>
+        <?php munch_move_post_thumbnail(); ?>
+        <?php munch_move_post_thumbnail(); ?>
+    </div>
 
-	<?php munch_move_post_thumbnail(); ?>
-	<?php munch_move_post_thumbnail(); ?>
-	<?php munch_move_post_thumbnail(); ?>
-	<?php munch_move_post_thumbnail(); ?>
-	<?php munch_move_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
+    <div class="entry-content">
+        <?php
   the_content();
 
   wp_link_pages(array(
@@ -28,5 +29,5 @@
       'after' => '</div>'
   ));
   ?>
-	</div>
+    </div>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -150,8 +150,8 @@ function munch_move_scripts()
     );
 
     wp_enqueue_script(
-        'munch-move-footer',
-        get_template_directory_uri() . '/js/footer.js',
+        'munch-move-accessibility',
+        get_template_directory_uri() . '/js/accessibility.js',
         array(),
         '20151215',
         true

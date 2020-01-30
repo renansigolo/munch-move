@@ -46,11 +46,11 @@ function mycustom_wp_footer()
 {
     ?>
 <script type="text/javascript">
-document.addEventListener('wpcf7mailsent', function(event) {
-    if ('11' == event.detail.contactFormId) {
-        document.querySelector('.hero-form-fields').style.display = 'none'
-    }
-}, false);
+    document.addEventListener('wpcf7mailsent', function (event) {
+        if ('11' == event.detail.contactFormId) {
+            document.querySelector('.hero-form-fields').style.display = 'none'
+        }
+    }, false);
 </script>
 <?php
 }

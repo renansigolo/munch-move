@@ -10,55 +10,50 @@
  */
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes();?>>
 
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
-    <?php wp_head(); ?>
+    <?php wp_head();?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class();?>>
     <div id="page" class="site">
         <header id="masthead" class="site-header">
 
-            <?php
-        if ( is_front_page() && is_home() ) :
-				?>
+            <?php if (is_front_page() && is_home()): ?>
             <div class="site-branding">
                 <img src="<?php echo get_template_directory_uri() . '/images/logos/healthy-kids-logo.svg'; ?>"
                     alt="Healthy Kids Logo">
             </div>
-            <?php
-			else :
-                ?>
+            <?php else: ?>
             <div class="page-header container">
                 <img src="https://placeholder.pics/svg/300x150" alt="Placeholder Img">
-                <?php  get_template_part('template-parts/content', 'search'); ?>
+                <?php get_template_part('template-parts/content', 'search');?>
             </div>
             <div class="container">
                 <nav class="navbar">
-                <?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
+                    <?php
+wp_nav_menu(array(
+    'theme_location' => 'menu-1',
+    'menu_id' => 'primary-menu',
+));
+?>
                 </nav>
             </div>
-            <?php endif; ?>
-
+            <?php endif;?>
 
             <!-- <nav id="site-navigation" class="main-navigation">
                     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">=</button>
                     <?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
+wp_nav_menu(array(
+    'theme_location' => 'menu-1',
+    'menu_id' => 'primary-menu',
+));
+?>
                 </nav> -->
 
 

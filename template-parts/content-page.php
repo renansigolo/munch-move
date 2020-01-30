@@ -16,14 +16,17 @@
 
     <div class="featured-image-actions">
         <div>
-            Breadcrumbs > Home > etc
+            <?php
+if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+}
+?>
         </div>
         <div>
-            <button>Share</button>
-            <button>Print</button>
-            <button>A-</button>
-            <button>A0</button>
-            <button>A+</button>
+            <a href="#!" class="btn--print"></a>
+            <a href="#!" class="btn--font-small zoomOut"></a>
+            <a href="#!" class="btn--font-reset zoomReset"></a>
+            <a href="#!" class="btn--font-big zoomIn"></a>
         </div>
     </div>
 

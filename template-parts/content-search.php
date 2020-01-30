@@ -9,5 +9,3 @@
 ?>
 
 <input class="search" type="text" name="search" id="search" placeholder="Search">
-
-
