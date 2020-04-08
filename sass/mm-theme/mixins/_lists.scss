@@ -1,6 +1,32 @@
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: none;
+}
+ol {
+  list-style: none;
+}
+
+ol,
+ul {
+  // color: var(--dark-blue);
+  padding-left: 0;
+  // margin-top: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+li {
+  margin-bottom: 1rem;
+}
+
 @mixin list-icon($icon){
   li {
     
@@ -13,8 +39,8 @@
   }
 }
 
-main {
-  ol, ul {
-    list-style: none;
-  }
-}
+// main {
+//   ol, ul {
+//     list-style: none;
+//   }
+// }

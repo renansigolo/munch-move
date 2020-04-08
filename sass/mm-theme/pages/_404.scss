@@ -4,6 +4,9 @@
 
 .site-main {
   .error-404 {
+    a {
+      color: #fff;
+    }
     @extend %flex-column;
     h1 {
       text-align: center;

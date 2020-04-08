@@ -33,11 +33,11 @@ get_header(); ?>
                             <div class="card__content">
                                 <h4>Resources for families</h4>
                                 <ul>
-                                    <li>Heart Foundation Recipes</li>
-                                    <li>Active Kids voucher</li>
-                                    <li>Healthy Kids factsheets</li>
-                                    <li>Lunchbox ideas</li>
-                                    <li>Make Healthy Normal</li>
+                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Heart Foundation Recipes</a></li>
+                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Active Kids voucher</a></li>
+                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Healthy Kids factsheets</a></li>
+                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Lunchbox ideas</a></li>
+                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Make Healthy Normal</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -48,9 +48,9 @@ get_header(); ?>
                             <div class="card__content">
                                 <h4>Schools and Playgroups</h4>
                                 <ul>
-                                    <li>Live Life Well @ School, Crunch & Sip and Out of School Hours care (OOSH)</li>
-                                    <li>Healthy School Canteens</li>
-                                    <li>Supported Playgroups Resources</li>
+                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Live Life Well @ School, Crunch & Sip and Out of School Hours care (OOSH)</a></li>
+                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Healthy School Canteens</a></li>
+                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Supported Playgroups Resources</a></li>
                                 </ul>
                             </div>
                         </div>
