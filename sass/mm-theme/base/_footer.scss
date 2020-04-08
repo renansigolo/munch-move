@@ -31,9 +31,7 @@ $icon-list: (
   display: inline-block;
   width: $sprite-grid-size;
   height: $sprite-grid-size;
-
   line-height: $sprite-grid-size;
-
   background-image: url(#{$sprite-image-url});
   background-repeat: no-repeat;
 }
@@ -47,38 +45,44 @@ $icon-list: (
 
   .container {
     @extend %flex-column;
-    align-items: center;
   }
 
-  &__partners {
+  &__logo {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 32px;
+
+    @include desktop {
+      margin-bottom: 0;
+    }
 
     img {
-      @include margin-x(1rem);
       height: 60px;
       width: auto;
     }
   }
 
-  &__copyright {
-    p {
-      font-size: 1.2rem;
-      text-align: center;
-    }
-  }
+  &__navigation {
+    ul {
+      list-style: none;
+      font-weight: bold;
 
-  &__accessibility {
-    display: none;
+      @include desktop {
+        display: inline-flex;
+        margin-bottom: 0;
+      }
+
+      li {
+        margin-right: 12px;
+      }
+    }
+
   }
 
   @include desktop {
     .container {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: flex-end;
     }
 
@@ -86,40 +90,6 @@ $icon-list: (
       justify-content: flex-start;
       flex-wrap: nowrap;
       margin-bottom: 0;
-    }
-
-    &__copyright {
-      max-width: 50%;
-
-      p {
-        text-align: left;
-      }
-      #copyright-text {
-        display: none;
-      }
-    }
-
-    &__accessibility {
-      display: flex;
-      flex-direction: column;
-      text-align: end;
-
-      &--actions {
-        button {
-          font-size: 1.2rem;
-          color: #005a92;
-          background-color: #b7effc;
-          border-radius: 50%;
-          height: 40px;
-          width: 40px;
-        }
-      }
-
-      @include mobile-only {
-        &--actions {
-          display: none;
-        }
-      }
     }
   }
 }
