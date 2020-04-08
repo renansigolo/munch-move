@@ -8,14 +8,16 @@
   "main": "sass/style.scss",
   "scripts": {
     "clean": "rm -rf css/**",
+    "copy-fontawesome": "cpx node_modules/@fortawesome/fontawesome-free/scss/**/* fonts/fontawesome/scss/ && cpx node_modules/@fortawesome/fontawesome-free/webfonts/**/* fonts/fontawesome/webfonts",
     "watch-sass": "node-sass sass/style.scss css/style.css --watch",
     "compile-sass": "node-sass sass/style.scss css/style.comp.css",
     "prefix-css": "postcss --use autoprefixer -b 'defaults' css/style.comp.css -o css/style.prefix.css",
     "compress-css": "node-sass css/style.prefix.css ./style.css --output-style compressed",
-    "start": "node-sass sass/style.scss ./style.css --watch --output-style compressed",
+    "start": "npm run copy-fontawesome && node-sass sass/style.scss ./style.css --watch --output-style compressed",
     "build": "npm-run-all compile-sass prefix-css compress-css"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

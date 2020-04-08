@@ -21,6 +21,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 ----------------------------------------------------------------
 # Normalize
 # Skeleton
+# FontAwesome
 # Munch & Move Theme
 ## Variables
 ## Typography
@@ -32,9 +33,24 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import 'libs/skeleton/skeleton.scss';
 
 /*--------------------------------------------------------------
+# FontAwesome
+--------------------------------------------------------------*/
+$fa-font-path: "fonts/fontawesome/webfonts";
+@import 'fonts/fontawesome/scss/fontawesome';
+@import 'fonts/fontawesome/scss/solid';
+
+/*--------------------------------------------------------------
 # Munch & Move Theme
 --------------------------------------------------------------*/
 @import 'mm-theme/base/variables';
+
+// Mixins
+@import 'mm-theme/mixins/media-queries';
+@import 'mm-theme/mixins/spacing';
+@import 'mm-theme/mixins/grids';
+@import 'mm-theme/mixins/lists';
+@import 'mm-theme/mixins/buttons';
+@import 'mm-theme/mixins/cards';
 
 /*--------------------------------------------------------------
 # General Styles
@@ -48,7 +64,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 --------------------------------------------------------------*/
 @import 'mm-theme/base/buttons';
 @import 'mm-theme/base/forms';
-@import 'mm-theme/base/media-queries';
 
 /*--------------------------------------------------------------
 # Pages
@@ -56,6 +71,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import 'mm-theme/pages/front-page';
 @import 'mm-theme/pages/single-page';
 @import 'mm-theme/pages/content-page';
+@import 'mm-theme/pages/404';
 
 /*--------------------------------------------------------------
 # Footer

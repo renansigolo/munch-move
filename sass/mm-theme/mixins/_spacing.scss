@@ -1,26 +1,6 @@
 /*--------------------------------------------------------------
-# Variables
+# Spacing
 --------------------------------------------------------------*/
-
-:root {
-  --blue: #29abff;
-  --dark-blue: #0a73b7;
-  --grey: #484848;
-  --orange: #f79533;
-  --green: #86c555;
-  --dark-green: #529f17;
-  --red: #ee3436;
-  
-  --sky-light: #d3eefd;
-  --sky-dark: #b3dafe;
-  --bg-sky: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-dark) 100%);
-}
-
-// Mixins
-%flex-column {
-  display: flex;
-  flex-direction: column;
-}
 
 // x - for classes that set both *-left and *-right
 @mixin margin-x($margin) {
@@ -42,4 +22,14 @@
 @mixin padding-y($padding) {
   padding-top: $padding;
   padding-bottom: $padding;
+}
+
+// Spacing for sections
+@mixin section-spacing($mt, $mb) {
+  margin: $mt 0 $mb 0;
+}
+
+@mixin margin-tb($mt, $mb) {
+  margin-top: $mt;
+  margin-bottom: $mb;
 }

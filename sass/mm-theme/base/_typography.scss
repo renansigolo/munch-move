@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 // Import proxima-nova from Adobe
-@import url('https://use.typekit.net/wws1hcf.css');
+// @import url('https://use.typekit.net/wws1hcf.css');
 
 h1,
 h2,
@@ -18,71 +18,78 @@ h6 {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 2.0rem;
   line-height: 1.2;
+  font-weight: 900;
+  color: var(--dark-blue);
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   line-height: 1.25;
+  font-weight: 900;
+  color: var(--blue);
 }
 h3 {
-  font-size: 3rem;
+  font-size: 1.7rem;
   line-height: 1.3;
+  font-weight: 900;
+  color: var(--blue);
 }
 h4 {
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   line-height: 1.35;
+  font-weight: 800;
+  color: #fff;
 }
 h5 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 h6 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.6;
-}
-p {
-  margin-top: 0;
-  font-size: 1.6rem;
-}
-
-/* Larger than phablet */
-@media (min-width: 550px) {
-  h1 {
-    font-size: 5rem;
-  }
-  h2 {
-    font-size: 4.2rem;
-  }
-  h3 {
-    font-size: 3.6rem;
-  }
-  h4 {
-    font-size: 3rem;
-  }
-  h5 {
-    font-size: 2.4rem;
-  }
-  h6 {
-    font-size: 1.5rem;
-  }
 }
 
 p {
   margin: 0;
   color: #000;
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+  h4 {
+    font-size: 2.1rem;
+  }
+  h5 {
+    font-size: 1.8rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.9rem;
+  }
 }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: var(--blue);
+  color: var(--dark-blue);
   text-decoration: none;
 }
+
 a:hover {
-  color: var(--dark-blue);
   text-decoration: underline;
 }
 

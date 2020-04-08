@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying the footer in page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="footer__logo">
 			<img src="<?php echo get_template_directory_uri() .
-       '/images/logos/nsw-logo.svg'; ?>" height="60px" alt="NSW Logo">
+       '/images/logo/nsw-logo.svg'; ?>" height="60px" alt="NSW Logo">
 		</div>
 		<div class="footer__navigation">
 		<?php wp_nav_menu(array(

@@ -12,67 +12,59 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-        <section class="error-404 not-found">
-            <header class="page-header">
-                <h1 class="page-title"><?php esc_html_e(
-         'Oops! That page can&rsquo;t be found.',
-         'munch-move'
-     ); ?></h1>
-            </header><!-- .page-header -->
+        <div class="error-404 not-found container">
+            <section class="section-decomissioned-content">
+                <h1>Are you looking for the Healthy Kids website?</h1>
+                <img src="<?php echo get_template_directory_uri() . '/images/404/macbook.png'; ?>" alt="Macbook">
+                <div class="row flex-center">
+                    <div class="eight columns">
+                        <p>Thank you for visiting us over the years. Our website is no longer around, but we have moved our most popular information to our partner websites.</p>
+                    </div>
+                </div>
+            </section>
 
-            <div class="page-content">
-                <p><?php esc_html_e(
-         'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-         'munch-move'
-     ); ?></p>
+            <section class="section-quick-links">
+                <h1>Healthy Kids Quick Links</h1>
+                <div class="quick-links">
+                        <div class="card-blue">
+                            <div class="card__header">
+                                <img src="<?php echo get_template_directory_uri() . '/images/404/card-1.png'; ?>" alt="Card Image">
+                            </div>
+                            <div class="card__content">
+                                <h4>Resources for families</h4>
+                                <ul>
+                                    <li>Heart Foundation Recipes</li>
+                                    <li>Active Kids voucher</li>
+                                    <li>Healthy Kids factsheets</li>
+                                    <li>Lunchbox ideas</li>
+                                    <li>Make Healthy Normal</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-blue">
+                            <div class="card__header">
+                                <img src="<?php echo get_template_directory_uri() . '/images/404/card-2.png'; ?>" alt="Card Image">
+                            </div>
+                            <div class="card__content">
+                                <h4>Schools and Playgroups</h4>
+                                <ul>
+                                    <li>Live Life Well @ School, Crunch & Sip and Out of School Hours care (OOSH)</li>
+                                    <li>Healthy School Canteens</li>
+                                    <li>Supported Playgroups Resources</li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+            </section>
 
-                <?php
-     get_search_form();
+            <section class="section-mascots">
+                    <img src="<?php echo get_template_directory_uri() . '/images/404/divider-fruits.svg'; ?>" alt="Divider Fruits">
+                    <h1>Munch & Move Content is Still Available!</h1>
+                    <button class="btn-type-b">Visit Munch & Move</button>
+            </section>
+        </div>
 
-     the_widget('WP_Widget_Recent_Posts');
-     ?>
-
-                <div class="widget widget_categories">
-                    <h2 class="widget-title"><?php esc_html_e(
-          'Most Used Categories',
-          'munch-move'
-      ); ?></h2>
-                    <ul>
-                        <?php wp_list_categories(array(
-           'orderby' => 'count',
-           'order' => 'DESC',
-           'show_count' => 1,
-           'title_li' => '',
-           'number' => 10
-       )); ?>
-                    </ul>
-                </div><!-- .widget -->
-
-                <?php
-     /* translators: %1$s: smiley */
-     $munch_move_archive_content =
-         '<p>' .
-         sprintf(
-             esc_html__(
-                 'Try looking in the monthly archives. %1$s',
-                 'munch-move'
-             ),
-             convert_smilies(':)')
-         ) .
-         '</p>';
-     the_widget(
-         'WP_Widget_Archives',
-         'dropdown=1',
-         "after_title=</h2>$munch_move_archive_content"
-     );
-
-     the_widget('WP_Widget_Tag_Cloud');
-     ?>
-
-            </div><!-- .page-content -->
-        </section><!-- .error-404 -->
-
-    </main><!-- #main -->
-</div><!-- #primary -->
+    </main>
+</div>
 
 <?php get_footer();

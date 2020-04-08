@@ -3,13 +3,13 @@
 --------------------------------------------------------------*/
 
 // Create Sprite Images
-$class-prefix: 'btn--';
-$sprite-image-url: 'images/footer-accessibility-sprite.png';
+$class-prefix: "btn--";
+$sprite-image-url: "images/footer-accessibility-sprite.png";
 $sprite-grid-size: 26.4px;
 
 $icon-list: (
-  ('mail', 0, 0) ('print', 0, 1) ('font-small', 0, 2) ('font-reset', 0, 3)
-    ('font-big', 0, 4)
+  ("mail", 0, 0) ("print", 0, 1) ("font-small", 0, 2) ("font-reset", 0, 3)
+    ("font-big", 0, 4)
 );
 
 @mixin icon($row, $column) {
@@ -27,7 +27,7 @@ $icon-list: (
   }
 }
 
-[class*='#{$class-prefix}'] {
+[class*="#{$class-prefix}"] {
   display: inline-block;
   width: $sprite-grid-size;
   height: $sprite-grid-size;
@@ -74,9 +74,20 @@ $icon-list: (
 
       li {
         margin-right: 12px;
+
+        @include desktop {
+          &::after {
+            margin-left: 12px;
+            color: var(--dark-blue);
+            content: "|";
+          }
+
+          &:last-of-type::after {
+            content: "";
+          }
+        }
       }
     }
-
   }
 
   @include desktop {

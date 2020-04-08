@@ -1,0 +1,20 @@
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@mixin list-icon($icon){
+  li {
+    
+    &::before {
+      @extend %fa-icon;
+      @extend .fas;
+      content: fa-content($icon);
+      padding-right: 8px;
+    }
+  }
+}
+
+main {
+  ol, ul {
+    list-style: none;
+  }
+}

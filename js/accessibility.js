@@ -25,25 +25,25 @@
     document.body.style.zoom = "0";
   };
 
-  window.addEventListener("load", () => {
-    document.querySelector(".zoomIn").addEventListener("click", function() {
-      zoom += zoomStep;
-      document.body.style.zoom = zoom;
-    });
+  // window.addEventListener("load", () => {
+  //   document.querySelector(".zoomIn").addEventListener("click", function() {
+  //     zoom += zoomStep;
+  //     document.body.style.zoom = zoom;
+  //   });
 
-    document.querySelector(".zoomReset").addEventListener("click", function() {
-      zoom = 1;
-      document.body.style.zoom = 0;
-    });
+  //   document.querySelector(".zoomReset").addEventListener("click", function() {
+  //     zoom = 1;
+  //     document.body.style.zoom = 0;
+  //   });
 
-    document.querySelector(".zoomOut").addEventListener("click", function() {
-      if (zoom > zoomStep) {
-        zoom -= zoomStep;
-        document.body.style.zoom = zoom;
-      }
-    });
+  //   document.querySelector(".zoomOut").addEventListener("click", function() {
+  //     if (zoom > zoomStep) {
+  //       zoom -= zoomStep;
+  //       document.body.style.zoom = zoom;
+  //     }
+  //   });
 
-    let btnPrint = document.querySelector(".btn--print");
-    btnPrint.addEventListener("click", print);
-  });
+  //   let btnPrint = document.querySelector(".btn--print");
+  //   btnPrint.addEventListener("click", print);
+  // });
 })();

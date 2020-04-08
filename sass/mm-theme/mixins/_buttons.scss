@@ -1,0 +1,27 @@
+/* Buttons Mixins
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+%mm-btn {
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  padding: 14px 26px;
+}
+
+.btn-type-a {
+  @extend %mm-btn;
+  background-color: var(--dark-blue);
+}
+.btn-type-b {
+  @extend %mm-btn;
+  background-color: var(--blue);
+}
+.btn-type-c {
+  @extend %mm-btn;
+  background-color: var(--green);
+}
+.btn-type-d {
+  @extend %mm-btn;
+  background-color: var(--orange);
+}

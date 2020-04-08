@@ -14,6 +14,11 @@
 
             <?php get_search_form(); ?>
 
+            <div>
+                <i class="fas fa-search"></i>
+                <button class="btn-type-a">Service Support</button>
+            </div>
+
         </main><!-- #main -->
     </div><!-- #primary -->
 </div><!-- .wrap -->

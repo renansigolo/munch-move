@@ -1,0 +1,34 @@
+/*--------------------------------------------------------------
+# Grid Mixins
+--------------------------------------------------------------*/
+
+// Flex
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-column-grow {
+  @extend %flex-column;
+  flex-grow: 1;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+// Grid
+@mixin grid($columns) {
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  
+  @include desktop {
+    grid-template-columns: repeat($columns, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+}

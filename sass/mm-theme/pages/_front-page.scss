@@ -44,39 +44,6 @@
     border: 1px solid var(--orange);
     outline: 0;
   }
-  
-  // .button,
-  // button,
-  // input[type="submit"],
-  // input[type="reset"],
-  // input[type="button"] {
-  //   display: inline-block;
-  //   height: 61px;
-  //   border-radius: 16px;
-  //   border: 6px solid #ffffff;
-  //   color: #fff;
-  //   background-color: var(--orange);
-  //   font-size: 2rem;
-  //   font-weight: bold;
-  //   cursor: pointer;
-  // }
-
-  // .button:hover,
-  // button:hover,
-  // input[type="submit"]:hover,
-  // input[type="reset"]:hover,
-  // input[type="button"]:hover,
-  // .button:focus,
-  // button:focus,
-  // input[type="submit"]:focus,
-  // input[type="reset"]:focus,
-  // input[type="button"]:focus {
-  //   color: #fff;
-  //   border-color: #fff;
-  //   box-shadow: 2px 2px 5px var(--grey);
-  //   transition: box-shadow 0.3s ease-in-out;
-  //   outline: 0;
-  // }
 
   .moving {
     background-color: #fff;
@@ -122,43 +89,43 @@
       background-color: #cceffc;
     }
 
-    .card {
-      &__title {
-        h2 {
-          font-size: 1.8rem;
-          text-align: center;
-          @include padding-y(18px);
+    // .card {
+    //   &__title {
+    //     h2 {
+    //       font-size: 1.8rem;
+    //       text-align: center;
+    //       @include padding-y(18px);
 
-          @include tablet {
-            text-align: left;
-          }
-        }
+    //       @include tablet {
+    //         text-align: left;
+    //       }
+    //     }
 
-        img {
-          @extend .u-full-width;
-          margin-bottom: 2.3rem;
-        }
-      }
+    //     img {
+    //       @extend .u-full-width;
+    //       margin-bottom: 2.3rem;
+    //     }
+    //   }
 
-      @include tablet {
-        padding-left: 0;
-        h2 {
-          padding-left: 2.1rem;
-        }
-      }
+    //   @include tablet {
+    //     padding-left: 0;
+    //     h2 {
+    //       padding-left: 2.1rem;
+    //     }
+    //   }
 
-      &__content {
-        font-family: Arial, Helvetica, sans-serif;
-        div {
-          margin-bottom: 17px;
-        }
-        h6 {
-          color: #2f78ca;
-          font-weight: 600;
-          font-size: 1.4rem;
-        }
-      }
-    }
+    //   &__content {
+    //     font-family: Arial, Helvetica, sans-serif;
+    //     div {
+    //       margin-bottom: 17px;
+    //     }
+    //     h6 {
+    //       color: #2f78ca;
+    //       font-weight: 600;
+    //       font-size: 1.4rem;
+    //     }
+    //   }
+    // }
   }
 
   @media (min-width: 400px) {
