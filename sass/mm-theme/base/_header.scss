@@ -36,6 +36,10 @@
     margin-bottom: -10px;
     z-index: 2;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @include desktop {
       margin-bottom: -80px;
     }

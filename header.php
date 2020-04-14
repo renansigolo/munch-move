@@ -30,7 +30,7 @@
             <div class="container">
                     
                     <img src="<?php echo get_template_directory_uri() . '/images/logo/mm-logo.svg'; ?>"
-                        alt="Munch & Move Logo" class="nav-logo">
+                            alt="Munch & Move Logo" class="nav-logo">
 
                     <div class="nav-desktop" id="desktop">
                         <div class="menu-service">
