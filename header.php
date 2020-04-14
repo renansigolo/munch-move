@@ -24,54 +24,50 @@
 <body <?php body_class();?>>
     <div id="page" class="site">
         <header id="masthead" class="site-header">
-            <div class="page-header">
-                <div class="container">
-                    <img src="<?php echo get_template_directory_uri() . '/images/logo/mm-logo.svg'; ?>" alt="Munch & Move Logo">
+            
+        <div class="page-header">
+                
+            <div class="container">
+                    
+                    <img src="<?php echo get_template_directory_uri() . '/images/logo/mm-logo.svg'; ?>"
+                        alt="Munch & Move Logo" class="nav-logo">
 
-                    <div class="nav-header">
+                    <div class="nav-desktop" id="desktop">
                         <div>
-                            <i class="fas fa-search"></i>
-                            <button class="btn-type-a">Service Support</button>
+                            <i class="fas fa-search" id="navbar-search-icon"></i>
+                            <button class="btn-dark-blue">Service Support</button>
                         </div>
-                        <nav class="navbar">
+                        <nav class="menu-desktop">
                             <?php
-                            wp_nav_menu(array(
-                                'theme_location' => 'menu-1',
-                                'menu_id' => 'primary-menu',
-                            ));
+                              wp_nav_menu(array( 'menu_id' => 'menu-desktop' ));
                             ?>
                         </nav>
                     </div>
+
+                    <div class="navbar-mobile" id="mobile">
+                        <button class="menu-toggle" id="btn-menu" aria-controls="menu-desktop" aria-expanded="false">MENU</button>
+                    </div>
                 </div>
+
+
             </div>
-            <div class="container">
-            </div>
+            
+            <?php
+                /* The below code checks if a menu-mobile is set from the backend in the menu settings. If a menu has been set it will be displayed in the header. Or else, a menu has not been set then display a message.*/
+                if ( function_exists('has_nav_menu') && has_nav_menu('menu-mobile') ) {
+                    wp_nav_menu( array(
+                    'depth' => 6,
+                    'sort_column' => 'menu_order',
+                    'container' => 'ul',
+                    'menu_id' => 'menu-mobile',
+                    'menu_class' => 'nav menu-mobile',
+                    'theme_location' => 'menu-mobile'
+                    ) );
+                    } else {
+                    echo "<ul class='nav menu-mobile'> <font style='color:red'>Mobile Menu has not been set</font> </ul>";
+            } ?>
 
         </header>
 
         <div id="content" class="site-content">
-
-<!-- OLD NAV -->
-            <!-- <nav id="site-navigation" class="main-navigation">
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">=</button>
-                    <?php
-wp_nav_menu(array(
-    'theme_location' => 'menu-1',
-    'menu_id' => 'primary-menu',
-));
-?>
-                </nav> -->
-            <?php
-                /* The below code checks if a mobile-menu is set from the backend in the menu settings. If a menu has been set it will be displayed in the header. Or else, a menu has not been set then display a message.*/
-if ( function_exists('has_nav_menu') && has_nav_menu('mobile-menu') ) {
-    wp_nav_menu( array(
-      'depth' => 6,
-      'sort_column' => 'menu_order',
-      'container' => 'ul',
-      'menu_id' => 'main-nav',
-      'menu_class' => 'nav mobile-menu',
-      'theme_location' => 'mobile-menu'
-    ) );
-    } else {
-       echo "<ul class='nav mobile-menu'> <font style='color:red'>Mobile Menu has not been set</font> </ul>";
-} ?>
+ 

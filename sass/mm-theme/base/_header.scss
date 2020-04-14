@@ -2,46 +2,122 @@
 # Header
 --------------------------------------------------------------*/
 
-.nav-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
 .page-header {
-  background: url("images/backgrounds/bg-header.svg") bottom no-repeat;
+  background: url("images/backgrounds/bg-header.png") bottom no-repeat;
   background-size: cover;
+  padding-top: 10px;
 
-  img {
-    max-width: 250px;
-    margin-bottom: -80px;
+  &::after {
+    content: none;
   }
 
   .container {
     display: flex;
     justify-content: space-between;
+    max-width: 1366px !important;
   }
-  &::after {
-    content: none;
+
+  .nav-logo {
+    max-width: 40%;
+    margin-bottom: -10px;
+    z-index: 2;
+
+    @include desktop {
+      margin-bottom: -80px;
+    }
+  }
+
+  .nav-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+
+    .btn-dark-blue {
+      margin-left: 16px;
+    }
+
+    .menu-desktop {
+      @include margin-y(10px);
+      text-transform: uppercase;
+      width: 95%;
+
+      a {
+        color: #fff;
+        text-shadow: 0 1px 3px #589429;
+        font-weight: 800;
+      }
+
+      #menu-desktop {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        @include margin-y(0);
+
+        li {
+          @include margin-y(1rem);
+        }
+      }
+    }
+
+    .menu-toggle {
+      border: 0;
+      border-radius: 0;
+      color: #fff;
+      text-shadow: 0 1px 3px #589429;
+      font-weight: 800;
+      box-shadow: none;
+      background-color: transparent;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .navbar-mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
   }
 }
 
-.navbar {
-  @include margin-y(10px);
-  text-transform: uppercase;
-  a {
-    color: #fff;
-  }
+.menu-mobile {
+  color: #fff;
+  margin: 0;
 
-  #primary-menu {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 0;
+  @include list-icon($fa-var-chevron-right);
 
-    li {
-      @include margin-y(1rem);
+  .menu-item {
+    background-color: grey;
+
+    @include padding-x(10px);
+    @include padding-y(16px);
+    margin: 0;
+
+    a {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .sub-menu {
+
+      ul {
+        background-color: #fff;
+      }
+      
+      li {
+        color: red;
+        border-bottom: 1px solid orange;
+        background-color: #fff !important;
+        @include padding-y(12px);
+
+        a {
+          color: red;
+        }
+      }
     }
   }
 }

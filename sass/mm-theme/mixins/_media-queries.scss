@@ -31,7 +31,7 @@ there.
 
 // Medium devices (tablets, 750px and up)
 @mixin tablet {
-  @media (min-width: 768px) {
+  @media (min-width: 750px) {
     @content;
   }
 }
@@ -57,42 +57,9 @@ there.
   }
 }
 
-/* Max width queries */
-// Small devices (portrait phones, 399px and down)
+// Large devices (desktops, 1000px and up)
 @mixin mobile-only {
-  @media (max-width: 399px) {
+  @media (max-width: 1000px) {
     @content;
-  }
-}
-
-// Small devices (landscape phones, 549px and down)
-@mixin phablet-only {
-  @media (max-width: 549px) {
-    @content;
-  }
-}
-
-/* Mobile Menu */
-.mobile-menu {
-  display: none;
-}
-
-@media only screen and (min-width: 800px) {
-  .desktop-menu {
-    display: block !important;
-  }
-
-  .mobile-menu {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: 799px) {
-  .desktop-menu {
-    display: none !important;
-  }
-
-  .mobile-menu {
-    display: block !important;
   }
 }

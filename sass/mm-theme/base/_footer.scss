@@ -2,41 +2,6 @@
 # Footer
 --------------------------------------------------------------*/
 
-// Create Sprite Images
-$class-prefix: "btn--";
-$sprite-image-url: "images/footer-accessibility-sprite.png";
-$sprite-grid-size: 26.4px;
-
-$icon-list: (
-  ("mail", 0, 0) ("print", 0, 1) ("font-small", 0, 2) ("font-reset", 0, 3)
-    ("font-big", 0, 4)
-);
-
-@mixin icon($row, $column) {
-  background-position: (-$column * $sprite-grid-size)
-    (-$row * $sprite-grid-size);
-}
-
-@each $icon in $icon-list {
-  $name: nth($icon, 1);
-  $row: nth($icon, 2);
-  $column: nth($icon, 3);
-
-  .#{$class-prefix}#{$name} {
-    @include icon($row, $column);
-  }
-}
-
-[class*="#{$class-prefix}"] {
-  display: inline-block;
-  width: $sprite-grid-size;
-  height: $sprite-grid-size;
-  line-height: $sprite-grid-size;
-  background-image: url(#{$sprite-image-url});
-  background-repeat: no-repeat;
-}
-
-// Footer
 .footer {
   width: 100%;
   font-size: 1.4rem;
@@ -104,7 +69,7 @@ $icon-list: (
     .container {
       flex-direction: row;
       justify-content: space-evenly;
-      align-items: flex-end;
+      align-items: center;
     }
   }
 }

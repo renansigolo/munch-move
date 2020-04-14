@@ -16,7 +16,7 @@
 
             <div>
                 <i class="fas fa-search"></i>
-                <button class="btn-type-a">Service Support</button>
+                <button class="btn-dark-blue">Service Support</button>
             </div>
 
         </main><!-- #main -->

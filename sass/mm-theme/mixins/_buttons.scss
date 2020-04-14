@@ -7,21 +7,22 @@
   border-radius: 25px;
   border: none;
   padding: 14px 26px;
+  margin: 0;
 }
 
-.btn-type-a {
+.btn-dark-blue {
   @extend %mm-btn;
   background-color: var(--dark-blue);
 }
-.btn-type-b {
+.btn-blue {
   @extend %mm-btn;
   background-color: var(--blue);
 }
-.btn-type-c {
+.btn-green {
   @extend %mm-btn;
   background-color: var(--green);
 }
-.btn-type-d {
+.btn-orange {
   @extend %mm-btn;
   background-color: var(--orange);
 }

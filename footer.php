@@ -10,15 +10,13 @@
  */
 ?>
 
-</div><!-- #content -->
+</div>
 
 <footer id="colophon" class="footer">
-    <!-- <?php if ( !is_front_page() && !is_home() ) : ?>
-    <?php get_template_part('template-parts/footer-mega'); ?>
-    <?php endif; ?> -->
+    
     <?php get_template_part('template-parts/footer-copyright'); ?>
 </footer>
-</div><!-- #page -->
+</div>
 
 <?php wp_footer(); ?>
 

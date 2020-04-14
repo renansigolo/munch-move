@@ -62,23 +62,3 @@ function wdm_mm_toggle_scripts() {
     wp_enqueue_script( 'wdm-mm-toggle', get_stylesheet_directory_uri() . '/js/mobile-menu-toggle.js', array('jquery') );
 }
 add_action( 'wp_enqueue_scripts', 'wdm_mm_toggle_scripts' );
-
-// Register all Footer Menus
-function create_footer_menus() {
-    register_nav_menus(     array(
-        'footer_menu' => __( 'Footer - Menu' ),
-        'footer_mm_benefits' => __( 'Footer - Munch & Move Benefits' ),
-        'footer_information_support' => __( 'Footer - Information & Support' ),
-        'footer_training_development' => __( 'Footer - Training & Development' ),
-        'footer_resources_media' => __( 'Footer - Resources & Media' )
-      )
-    );
-  }
-  add_action( 'init', 'create_footer_menus' );
-
-// Register a mobile menu
-function wdm_register_mobile_menu() {
-    add_theme_support( 'nav-menus' );
-    register_nav_menus( array('mobile-menu' => __( 'Mobile Menu', 'wdm' )) );
-}
-add_action( 'init', 'wdm_register_mobile_menu' );

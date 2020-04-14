@@ -16,7 +16,7 @@
     </div>
     <div class="container">
         
-        <div class="row">
+        <!-- <div class="row">
             <div class="four columns">
                 <p class="menu-title">Munch and Move Benefits</p>
                 <hr>
@@ -45,6 +45,6 @@
             'theme_location' => 'footer_information_support'
             )); ?>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>

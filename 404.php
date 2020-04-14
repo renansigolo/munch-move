@@ -60,7 +60,7 @@ get_header(); ?>
             <section class="section-mascots">
                     <img src="<?php echo get_template_directory_uri() . '/images/404/divider-fruits.svg'; ?>" alt="Divider Fruits">
                     <h1>Munch & Move Content is Still Available!</h1>
-                    <button class="btn-type-b">Visit Munch & Move</button>
+                    <button class="btn-blue">Visit Munch & Move</button>
             </section>
         </div>
 

@@ -13,19 +13,16 @@ get_header(); ?>
 	<main id="main" class="site-main">
 
 		<?php while (have_posts()):
-      the_post();
-
-      get_template_part('template-parts/content', get_post_type());
-
-      the_post_navigation();
-  endwhile;
-// End of the loop.
+      // the_post();
+      // the_post_navigation();
+    endwhile;
+    // get_template_part('template-parts/content', get_post_type());
 ?>
 
 
 
-	</main><!-- #main -->
-</div><!-- #primary -->
+	</main>
+</div>
 
 <?php
 get_footer();

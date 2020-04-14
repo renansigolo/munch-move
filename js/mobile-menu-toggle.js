@@ -1,20 +1,22 @@
-// hide or display the mobile menu
-
-/* let's consider we want to toggle the menu displayed at 800 screen width, here's what we need to do (you can accordingly replace 800 with to a screen width you would need)..*/
+/** Hide or display the mobile menu */
 function toggle() {
-  if (jQuery(window).width() >= 800) {
-    jQuery(".nav.mobile-menu").hide();
-    jQuery(".nav.desktop-menu").show();
+  if (jQuery(window).width() <= 1400) {
+    jQuery("#desktop").hide();
+    jQuery("#mobile").show();
+    jQuery(".nav.menu-mobile").hide();
   } else {
-    jQuery(".nav.desktop-menu").hide();
-    jQuery(".nav.mobile-menu").show();
+    jQuery("#mobile").hide();
+    jQuery("#desktop").show();
   }
 }
 
-// on page load set the menu display initially
-toggle();
+/** On page load set the menu display initially */
+jQuery(window).load(function () {
+  jQuery(".nav.menu-mobile").hide();
+  toggle();
+});
 
-// toggle the menu display on browser resize
-jQuery(window).resize(function() {
+/** Toggle the menu display on browser resize */
+jQuery(window).resize(function () {
   toggle();
 });

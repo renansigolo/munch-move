@@ -17,7 +17,7 @@
     }
 
     .section-decomissioned-content {
-      @include section-spacing(52px, 56px);
+      @include margin-tb(52px, 56px);
 
       p {
         text-align: center;
@@ -42,7 +42,7 @@
     }
 
     .section-mascots {
-      @include section-spacing(32px, 72px);
+      @include margin-tb(32px, 72px);
       h1 {
         @include margin-tb(32px, 40px);
       }

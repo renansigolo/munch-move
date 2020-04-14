@@ -13,6 +13,16 @@
   padding-right: $padding;
 }
 
+@mixin margin-rl($mt, $mb) {
+  margin-top: $mt;
+  margin-bottom: $mb;
+}
+
+@mixin padding-rl($mt, $mb) {
+  padding-top: $mt;
+  padding-bottom: $mb;
+}
+
 // y - for classes that set both *-top and *-bottom
 @mixin margin-y($margin) {
   margin-top: $margin;
@@ -24,12 +34,12 @@
   padding-bottom: $padding;
 }
 
-// Spacing for sections
-@mixin section-spacing($mt, $mb) {
-  margin: $mt 0 $mb 0;
-}
-
 @mixin margin-tb($mt, $mb) {
   margin-top: $mt;
   margin-bottom: $mb;
+}
+
+@mixin padding-tb($mt, $mb) {
+  padding-top: $mt;
+  padding-bottom: $mb;
 }

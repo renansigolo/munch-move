@@ -14,36 +14,44 @@
             'class' => 'featured-image'
         ]); ?>
 
-    <div class="featured-image-actions">
-        <div>
-            <?php
-if ( function_exists('yoast_breadcrumb') ) {
-  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-}
-?>
-        </div>
-        <div>
-            <a href="#!" class="btn--print"></a>
-            <a href="#!" class="btn--font-small zoomOut"></a>
-            <a href="#!" class="btn--font-reset zoomReset"></a>
-            <a href="#!" class="btn--font-big zoomIn"></a>
+    <div class="utility">
+        <div class="container">
+            <div class="utility__menu">
+                <div>
+                    <?php
+                        if ( function_exists('yoast_breadcrumb') ) {
+                            yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+                        }
+                    ?>
+                </div>
+                <div class="utility__actions">
+                    <a href="#!" class="">
+                        <i class="fas fa-print"></i>
+                        Print
+                    </a>
+                    <a href="#!" class="">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </a>
+                    <a href="#!" class="">A-</a>
+                    <a href="#!" class="">Ao</a>
+                    <a href="#!" class="">A+</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <header class="entry-header">
-        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-    </header><!-- .entry-header -->
-
     <div class="entry-content container">
+        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
         <?php
-  the_content();
+            the_content();
 
-  wp_link_pages(array(
-      'before' =>
-          '<div class="page-links">' . esc_html__('Pages:', 'munch-move'),
-      'after' => '</div>'
-  ));
-  ?>
+            wp_link_pages(array(
+                'before' =>
+                    '<div class="page-links">' . esc_html__('Pages:', 'munch-move'),
+                'after' => '</div>'
+            ));
+        ?>
     </div><!-- .entry-content -->
 
     <?php if (get_edit_post_link()): ?>

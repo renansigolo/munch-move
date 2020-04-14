@@ -4,7 +4,13 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-(function() {
+(function () {
+  
+  // Toggle Mobile Menu
+  jQuery("#btn-menu").on("click", function () {
+    jQuery(".nav.menu-mobile").toggle();
+  });
+
   var container, button, menu, links, i, len;
 
   container = document.getElementById("site-navigation");
@@ -28,20 +34,20 @@
   menu.setAttribute("aria-expanded", "false");
   if (-1 === menu.className.indexOf("nav-menu")) {
     menu.className += " nav-menu";
-    document.querySelector('#primary-menu').style.display = 'none'
+    document.querySelector("#desktop-menu").style.display = "none";
   }
 
-  button.onclick = function() {
+  button.onclick = function () {
     if (-1 !== container.className.indexOf("toggled")) {
       container.className = container.className.replace(" toggled", "");
       button.setAttribute("aria-expanded", "false");
       menu.setAttribute("aria-expanded", "false");
-      document.querySelector('#primary-menu').style.display = 'none'
+      document.querySelector("#desktop-menu").style.display = "none";
     } else {
       container.className += " toggled";
       button.setAttribute("aria-expanded", "true");
       menu.setAttribute("aria-expanded", "true");
-      document.querySelector('#primary-menu').style.display = 'block'
+      document.querySelector("#desktop-menu").style.display = "block";
     }
   };
 
@@ -78,7 +84,7 @@
   /**
    * Toggles `focus` class to allow submenu access on tablets.
    */
-  (function(container) {
+  (function (container) {
     var touchStartFn,
       i,
       parentLink = container.querySelectorAll(
@@ -86,7 +92,7 @@
       );
 
     if ("ontouchstart" in window) {
-      touchStartFn = function(e) {
+      touchStartFn = function (e) {
         var menuItem = this.parentNode,
           i;
 
