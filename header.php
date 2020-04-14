@@ -33,7 +33,7 @@
                         alt="Munch & Move Logo" class="nav-logo">
 
                     <div class="nav-desktop" id="desktop">
-                        <div>
+                        <div class="menu-service">
                             <i class="fas fa-search" id="navbar-search-icon"></i>
                             <button class="btn-dark-blue">Service Support</button>
                         </div>

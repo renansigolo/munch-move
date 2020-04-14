@@ -42,8 +42,10 @@
     </div>
 
     <div class="entry-content container">
-        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-        <?php
+        <div class="row">
+            <div class="eight columns">
+                <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+            <?php
             the_content();
 
             wp_link_pages(array(
@@ -52,6 +54,21 @@
                 'after' => '</div>'
             ));
         ?>
+            </div>
+            <div class="four columns">
+                <div class="related-links">
+                    <h2>Related Links</h2>
+                    <ul>
+                        <li>Testing</li>
+                        <li>Testing</li>
+                        <li>Testing</li>
+                        <li>Testing</li>
+                        <li>Testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
     </div><!-- .entry-content -->
 
     <?php if (get_edit_post_link()): ?>

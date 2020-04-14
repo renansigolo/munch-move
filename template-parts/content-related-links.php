@@ -21,13 +21,13 @@
 
     <div class="entry-content">
         <?php
-  the_content();
+            the_content();
 
-  wp_link_pages(array(
-      'before' =>
-          '<div class="page-links">' . esc_html__('Pages:', 'munch-move'),
-      'after' => '</div>'
-  ));
-  ?>
+            wp_link_pages(array(
+                'before' =>
+                    '<div class="page-links">' . esc_html__('Pages:', 'munch-move'),
+                'after' => '</div>'
+            ));
+        ?>
     </div>
 </article><!-- #post-<?php the_ID(); ?> -->

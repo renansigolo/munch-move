@@ -2,61 +2,9 @@
 # Content Page / Partial template
 --------------------------------------------------------------*/
 
-.site-main {
-  .featured-image {
-    width: 100%;
-    box-sizing: border-box;
-    height: auto;
-  }
-
-  .utility {
-    background-color: var(--blue);
-    font-size: 1.9rem;
-
-    &__menu {
-      @include padding-y(15px);
-      display: flex;
-      justify-content: space-between;
-
-      a {
-        color: #fff;
-      }
-
-      #breadcrumbs {
-        color: #fff;
-        &:first-child {
-          font-weight: 800;
-        }
-
-        i {
-          color: var(--dark-blue);
-        }
-
-        a,
-        .breadcrumb_last {
-          text-decoration: underline;
-          font-weight: 300;
-        }
-      }
-    }
-
-    &__actions {
-      a {
-        padding-right: 10px;
-
-        &:nth-child(n + 3) {
-          &::before {
-            content: "";
-            border-left: 1px solid var(--dark-blue);
-            color: var(--dark-blue);
-            padding-right: 12px;
-          }
-        }
-      }
-
-      @include mobile-only {
-        display: none;
-      }
-    }
-  }
+.related-links {
+  border-left: 1px solid var(--blue);
+  padding-left: 31px;
+  
+  @include list-icon($fa-var-chevron-right);
 }

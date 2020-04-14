@@ -2,6 +2,20 @@
 # Header
 --------------------------------------------------------------*/
 
+%header-item {
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  text-shadow: 0 1px 3px #589429;
+  font-weight: 800;
+  box-shadow: none;
+  background-color: transparent;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 .page-header {
   background: url("images/backgrounds/bg-header.png") bottom no-repeat;
   background-size: cover;
@@ -33,8 +47,18 @@
     align-items: flex-end;
     width: 100%;
 
-    .btn-dark-blue {
-      margin-left: 16px;
+    .menu-service {
+      @extend .flex-center;
+      align-items: center;
+
+      .btn-dark-blue {
+        margin-left: 16px;
+      }
+  
+      i {
+        color: var(--dark-blue);
+        font-size: 2.5rem;
+      }
     }
 
     .menu-desktop {
@@ -42,10 +66,9 @@
       text-transform: uppercase;
       width: 95%;
 
+
       a {
-        color: #fff;
-        text-shadow: 0 1px 3px #589429;
-        font-weight: 800;
+        @extend %header-item;
       }
 
       #menu-desktop {
@@ -60,20 +83,6 @@
         }
       }
     }
-
-    .menu-toggle {
-      border: 0;
-      border-radius: 0;
-      color: #fff;
-      text-shadow: 0 1px 3px #589429;
-      font-weight: 800;
-      box-shadow: none;
-      background-color: transparent;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
   }
 
   .navbar-mobile {
@@ -81,33 +90,31 @@
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
+
+    .menu-toggle {
+      @extend %header-item;
+    }
   }
 }
 
 .menu-mobile {
   color: #fff;
   margin: 0;
-
+  
   @include list-icon($fa-var-chevron-right);
 
   .menu-item {
-    background-color: grey;
-
     @include padding-x(10px);
     @include padding-y(16px);
     margin: 0;
 
     a {
+      background-color: grey;
       color: #fff;
       font-weight: bold;
     }
 
     .sub-menu {
-
-      ul {
-        background-color: #fff;
-      }
-      
       li {
         color: red;
         border-bottom: 1px solid orange;
