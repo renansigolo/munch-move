@@ -14,9 +14,10 @@
   font-size: 1.9rem;
 
   &__menu {
-    @include padding-y(15px);
+    @include padding-y(10px);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     a {
       color: #fff;
@@ -24,25 +25,34 @@
 
     #breadcrumbs {
       color: #fff;
+      font-size: 1.6rem;
+
       &:first-child {
         font-weight: 800;
       }
-
+      
       i {
         color: var(--dark-blue);
+        font-size: 1.4rem;
       }
-
-      a,
-      .breadcrumb_last {
+      
+      a {
         text-decoration: underline;
         font-weight: 300;
+        @include padding-x(8px);
+      }
+
+      .breadcrumb_last {
+        font-weight: 300;
+        padding-left: 8px;
       }
     }
   }
 
   &__actions {
     a {
-      padding-right: 10px;
+      padding-right: 8px;
+      font-size: 1.6rem;
 
       &:nth-child(n + 3) {
         &::before {

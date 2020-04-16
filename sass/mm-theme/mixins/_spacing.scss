@@ -13,14 +13,14 @@
   padding-right: $padding;
 }
 
-@mixin margin-rl($mt, $mb) {
-  margin-top: $mt;
-  margin-bottom: $mb;
+@mixin margin-lr($ml, $mr) {
+  margin-left: $ml;
+  margin-right: $mr;
 }
 
-@mixin padding-rl($mt, $mb) {
-  padding-top: $mt;
-  padding-bottom: $mb;
+@mixin padding-lr($pl, $pr) {
+  padding-left: $pl;
+  padding-right: $pr;
 }
 
 // y - for classes that set both *-top and *-bottom
@@ -39,7 +39,7 @@
   margin-bottom: $mb;
 }
 
-@mixin padding-tb($mt, $mb) {
-  padding-top: $mt;
-  padding-bottom: $mb;
+@mixin padding-tb($pt, $pb) {
+  padding-top: $pt;
+  padding-bottom: $pb;
 }

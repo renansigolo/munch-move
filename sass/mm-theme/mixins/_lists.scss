@@ -5,6 +5,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
   list-style: none;
+  list-style-position: outside;
 }
 ol {
   list-style: none;
@@ -14,15 +15,17 @@ ol,
 ul {
   padding-left: 0;
 }
+
 ul ul,
 ul ol,
 ol ol,
 ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%;
 }
 li {
   margin-bottom: 1rem;
+  font-size: 1.9rem;
+  font-weight: 600;
 }
 
 @mixin list-icon($icon){

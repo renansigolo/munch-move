@@ -10,10 +10,37 @@
   --green: #86c555;
   --dark-green: #529f17;
   --red: #ee3436;
-  
+
+  --default-spacing: 8px;
+
   --sky-light: #d3eefd;
   --sky-dark: #b3dafe;
   --bg-sky: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-dark) 100%);
+
+  --regular: 400;
+  // font-family: proxima-nova, sans-serif;
+  // font-style: normal;
+  // font-weight: 400;
+
+  --semi-bold: 600;
+  // font-family: proxima-nova, sans-serif;
+  // font-style: normal;
+  // font-weight: 600;
+
+  --bold: 700;
+  // font-family: proxima-nova, sans-serif;
+  // font-style: normal;
+  // font-weight: 700;
+
+  --extra-bold: 800;
+  // font-family: proxima-nova, sans-serif;
+  // font-style: normal;
+  // font-weight: 800;
+
+  --black: 900;
+  // font-family: proxima-nova, sans-serif;
+  // font-style: normal;
+  // font-weight: 900;
 }
 
 // Mixins

@@ -27,9 +27,9 @@
             
         <div class="page-header">
                 
-            <div class="container">
+            <div class="page-header__container">
                     
-                    <img src="<?php echo get_template_directory_uri() . '/images/logo/mm-logo.svg'; ?>"
+                    <img src="<?php echo get_template_directory_uri() . '/images/logo/logo-header.svg'; ?>"
                             alt="Munch & Move Logo" class="nav-logo">
 
                     <div class="nav-desktop" id="desktop">

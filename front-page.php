@@ -11,13 +11,6 @@ get_header();?>
 <div id="front-page">
   <main id="main">
 
-    <!-- <section class="conatiner hero">
-      <div class="row">
-        <h1>Munch & Move is NSW Health initiative that supports the healthy development of children birth to 5 years</h1>
-        <button class="btn-dark-blue">Watch Video</button>
-      </div>
-    </section> -->
-
     <section class="container">
       <h1>Headings</h1>
       <h1>Heading - H1</h1>
@@ -28,6 +21,10 @@ get_header();?>
       <h6>Heading - H6</h6>
     </section>
 
+    <div class="container">
+        <hr />
+    </div>
+
     <section class="container">
       <h1>Buttons</h1> <br />
       <button class="btn-dark-blue">Click me</button> <br />
@@ -36,26 +33,38 @@ get_header();?>
       <button class="btn-orange">Click me</button> <br />
     </section>
 
+    <div class="container">
+        <hr />
+    </div>
+
     <section class="container">
     <h1>Lists</h1>
 
-  <h2>Unordered List</h2>
-    <ul>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-    </ul>
+    <div class="row">
+    <div class="six columns">
+    <h2>Unordered</h2>
+        <ul>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+        </ul>
+    </div>
+    <div class="six columns">
+    <h2>Ordered</h2>
+        <ol>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+        </ol>
+        </div>
+    </div>
+  
 
-  <h2>Ordered List</h2>
-    <ol>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-    </ol>
+
     </section>
 
   </main>

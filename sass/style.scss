@@ -29,8 +29,27 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 #### Front Page
 --------------------------------------------------------------*/
 
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
 @import '../node_modules/normalize.css/normalize';
-@import 'libs/skeleton/skeleton.scss';
+
+/*--------------------------------------------------------------
+# Skeleton
+--------------------------------------------------------------*/
+@import 'skeleton/grid';
+@import 'skeleton/base';
+// @import 'skeleton/typography';
+// @import 'skeleton/links';
+// @import 'skeleton/buttons';
+@import 'skeleton/forms';
+// @import 'skeleton/lists';
+// @import 'skeleton/code';
+@import 'skeleton/tables';
+@import 'skeleton/spacing';
+@import 'skeleton/utilities';
+@import 'skeleton/clearing';
 
 /*--------------------------------------------------------------
 # FontAwesome
