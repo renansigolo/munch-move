@@ -26,41 +26,41 @@ get_header(); ?>
             <section class="section-quick-links">
                 <h1>Healthy Kids Quick Links</h1>
                 <div class="quick-links">
-                        <div class="card-blue">
-                            <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/404/card-1.png'; ?>" alt="Card Image">
-                            </div>
-                            <div class="card__content">
-                                <h4>Resources for families</h4>
-                                <ul>
-                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Heart Foundation Recipes</a></li>
-                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Active Kids voucher</a></li>
-                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Healthy Kids factsheets</a></li>
-                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Lunchbox ideas</a></li>
-                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Make Healthy Normal</a></li>
-                                </ul>
-                            </div>
+                    <div class="card-blue">
+                        <div class="card__header">
+                            <img src="<?php echo get_template_directory_uri() . '/images/404/card-1.png'; ?>" alt="Card Image">
                         </div>
-                        <div class="card-blue">
-                            <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/404/card-2.png'; ?>" alt="Card Image">
-                            </div>
-                            <div class="card__content">
-                                <h4>Schools and Playgroups</h4>
-                                <ul>
-                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Live Life Well @ School, Crunch & Sip and Out of School Hours care (OOSH)</a></li>
-                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Healthy School Canteens</a></li>
-                                    <li><a href="#!" target="_blank" rel="noopener noreferrer">Supported Playgroups Resources</a></li>
-                                </ul>
-                            </div>
+                        <div class="card__content">
+                            <h4>Resources for families</h4>
+                            <ul>
+                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Heart Foundation Recipes</a></li>
+                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Active Kids voucher</a></li>
+                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Healthy Kids factsheets</a></li>
+                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Lunchbox ideas</a></li>
+                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Make Healthy Normal</a></li>
+                            </ul>
                         </div>
+                    </div>
+                    <div class="card-blue">
+                        <div class="card__header">
+                            <img src="<?php echo get_template_directory_uri() . '/images/404/card-2.png'; ?>" alt="Card Image">
+                        </div>
+                        <div class="card__content">
+                            <h4>Schools and Playgroups</h4>
+                            <ul>
+                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Live Life Well @ School, Crunch & Sip and Out of School Hours care (OOSH)</a></li>
+                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Healthy School Canteens</a></li>
+                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Supported Playgroups Resources</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="section-mascots">
-                    <img src="<?php echo get_template_directory_uri() . '/images/404/divider-fruits.svg'; ?>" alt="Divider Fruits">
-                    <h1>Munch & Move Content is Still Available!</h1>
-                    <button class="btn-blue">Visit Munch & Move</button>
+                <img src="<?php echo get_template_directory_uri() . '/images/404/divider-fruits.svg'; ?>" alt="Divider Fruits">
+                <h1>Munch & Move Content is Still Available!</h1>
+                <button class="btn-blue">Visit Munch & Move</button>
             </section>
         </div>
 

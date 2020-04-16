@@ -17,30 +17,15 @@
   --sky-dark: #b3dafe;
   --bg-sky: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-dark) 100%);
 
+  // Font Weights
+  --thin: 100;
+  --light: 300;
   --regular: 400;
-  // font-family: proxima-nova, sans-serif;
-  // font-style: normal;
-  // font-weight: 400;
-
+  --medium: 500;
   --semi-bold: 600;
-  // font-family: proxima-nova, sans-serif;
-  // font-style: normal;
-  // font-weight: 600;
-
   --bold: 700;
-  // font-family: proxima-nova, sans-serif;
-  // font-style: normal;
-  // font-weight: 700;
-
   --extra-bold: 800;
-  // font-family: proxima-nova, sans-serif;
-  // font-style: normal;
-  // font-weight: 800;
-
   --black: 900;
-  // font-family: proxima-nova, sans-serif;
-  // font-style: normal;
-  // font-weight: 900;
 }
 
 // Mixins

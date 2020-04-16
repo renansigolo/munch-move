@@ -13,7 +13,6 @@
 </div>
 
 <footer id="colophon" class="footer">
-    
     <?php get_template_part('template-parts/footer-copyright'); ?>
 </footer>
 </div>

@@ -16,7 +16,7 @@ select {
   max-width: 100%;
 
   &::placeholder {
-    font-weight: bold;
+    font-weight: var(--extra-bold);
   }
 }
 

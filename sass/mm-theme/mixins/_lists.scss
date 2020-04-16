@@ -1,31 +1,18 @@
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul {
-  list-style: none;
-  list-style-position: outside;
-}
-ol {
-  list-style: none;
-}
-
+ul,
 ol,
-ul {
-  padding-left: 0;
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-}
 li {
-  margin-bottom: 1rem;
+  margin-left: 1em;
+  margin-bottom: 8px;
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: var(--semi-bold);
 }
 
 @mixin list-icon($icon){
@@ -34,10 +21,42 @@ li {
       @extend %fa-icon;
       @extend .fas;
       content: fa-content($icon);
-      padding-right: 8px;
+      float: left;
+      margin-left: -1em;
+      line-height: 30.4px;
     }
   }
 }
+
+/* Lists BKP
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// main {
+//   ol, ul {
+//     list-style: none;
+//   }
+// }
+
+// @mixin list-icon($icon){
+//   li {
+//     // position: relative;
+//     // margin-bottom: 16px;
+//     // margin-left: 20px;
+
+//     &::before {
+//       @extend %fa-icon;
+//       @extend .fas;
+//       content: fa-content($icon);
+//       // position: absolute;
+//       // left: -20px;
+//       // font-size: 1.9rem;
+//       // line-height: 30.4px;
+
+//       float: left;
+//       margin-top: 0.25em;
+//       margin-left: -1.2em;
+//     }
+//   }
+// }
 
 // main {
 //   ol, ul {

@@ -11,17 +11,21 @@
     }
     &__content {
       @extend %flex-column-grow;
+      @include list-icon($fa-var-chevron-right);
       padding: 24px 16px 32px;
       background-color: $primaryColor;
       color: #fff;
-
-      @include list-icon($fa-var-chevron-right);
+      
       @include desktop {
         // display: flex;
         // flex-direction: column;
         // flex-grow: 1;
         padding: 24px 40px;
       }
+
+      // h4 {
+      //   margin-bottom: 16px;
+      // }
     }
   }
 }

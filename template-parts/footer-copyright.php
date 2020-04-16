@@ -18,7 +18,7 @@
 		<?php wp_nav_menu(array(
             'theme_location' => 'footer_menu'
         )); ?>
-		<p class="footer_copyright">Copyright © 2020 Munch & Move</p>
+		<p class="footer__copyright">Copyright © 2020 Munch & Move</p>
 		</div>
 	</div>
 </div>

@@ -18,6 +18,12 @@
   justify-content: center;
 }
 
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // Grid
 @mixin grid($columns) {
   display: grid;

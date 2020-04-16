@@ -34,7 +34,7 @@
   &__navigation {
     ul {
       list-style: none;
-      font-weight: bold;
+      font-weight: var(--bold);
 
       @include desktop {
         display: inline-flex;
@@ -60,6 +60,15 @@
     }
   }
 
+  &__copyright {
+    margin-top: 24px;
+    margin-left: 14px;
+
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+
   @include desktop {
     a,
     p {
@@ -70,43 +79,6 @@
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
-    }
-  }
-}
-
-.mega-footer {
-  background-image: url('./images/footer/bg-megafooter.svg');
-  background-size: contain;
-  padding-bottom: 100px;
-  
-  &__logo {
-    @include margin-tb(-80px, 48px);
-  }
-
-  a,
-  p {
-    font-size: 1.4rem;
-  }
-
-  @include list-icon($fa-var-chevron-right);
-
-  .menu-title {
-    color: var(--dark-blue);
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  hr {
-    height: 1px;
-    border: none;
-    color: var(--blue);
-    background-color: var(--blue);
-  }
-
-  @include desktop {
-    a,
-    p {
-      font-size: 1.4rem;
     }
   }
 }

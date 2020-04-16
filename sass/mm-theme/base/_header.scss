@@ -8,7 +8,7 @@
   color: #fff;
   text-shadow: 0 1px 3px #589429;
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: var(--black);
   box-shadow: none;
   background-color: transparent;
 
@@ -21,12 +21,10 @@
   background: url("images/backgrounds/bg-header.png") bottom no-repeat;
   background-size: cover;
   padding-top: 4px;
-  margin-bottom: 12px;
 
   @include desktop {
     @include padding-lr(43px, 36px);
     padding-top: 14px;
-    margin-bottom: 23px;
   }
 
   &::after {
@@ -43,9 +41,9 @@
     max-width: 147px;
     margin-bottom: -12px;
     z-index: 2;
-    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=3, Color='#000')";
-    -webkit-filter: drop-shadow(0 3px 3px rgba(0,0,0,0.4));
-    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=3, Color='#000')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=1, Color='#000')";
+    -webkit-filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.4));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=1, Color='#000')";
 
     &:hover {
       cursor: pointer;
@@ -66,8 +64,7 @@
     width: 100%;
 
     .menu-service {
-      @extend .flex-center;
-      align-items: center;
+      @extend .flex-centered;
 
       .btn-dark-blue {
         margin-left: 16px;
@@ -80,7 +77,6 @@
     }
 
     .menu-desktop {
-      // @include margin-y(10px);
       text-transform: uppercase;
 
       a {
@@ -117,10 +113,9 @@
 }
 
 .menu-mobile {
+  @include list-icon($fa-var-chevron-right);
   color: #fff;
   margin: 0;
-
-  @include list-icon($fa-var-chevron-right);
 
   .menu-item {
     @include padding-x(10px);
@@ -130,7 +125,7 @@
     a {
       background-color: grey;
       color: #fff;
-      font-weight: bold;
+      // font-weight: bold;
     }
 
     .sub-menu {
