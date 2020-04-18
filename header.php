@@ -29,12 +29,16 @@
                 
             <div class="page-header__container">
                     
-                    <img src="<?php echo get_template_directory_uri() . '/images/logo/logo-header.svg'; ?>"
+                    <img src="<?php echo get_template_directory_uri() . '/images/logo/mm-logo.svg'; ?>"
                             alt="Munch & Move Logo" class="nav-logo">
 
                     <div class="nav-desktop" id="desktop">
                         <div class="menu-service">
-                            <i class="fas fa-search" id="navbar-search-icon"></i>
+                            <div id="navbar-search">
+                                <input class="search-bar" type="text" name="Search" id="search" placeholder="Munch & Move Resources">
+                                <button class="btn-blue">Search</button>
+                            </div>
+                            <i class="fas fa-search" id="search-icon"></i>
                             <button class="btn-dark-blue">Service Support</button>
                         </div>
                         <nav class="menu-desktop">

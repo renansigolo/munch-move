@@ -4,46 +4,48 @@
  * Contains accessibility handlers.
  */
 
-(function() {
+(function () {
   let zoom = 1;
-  let zoomStep = 0.2;
+  let zoomStep = 0.1;
+
+  const btnPrint = document.querySelector("#print");
+  const btnShare = document.querySelector("#share");
+  const btnZoomIn = document.querySelector("#zoomIn");
+  const btnZoomReset = document.querySelector("#zoomReset");
+  const btnZoomOut = document.querySelector("#zoomOut");
 
   const print = () => {
     window.print();
     return false;
   };
 
-  const zoomIn = () => {
-    document.body.style.zoom = "1.1";
+  const share = () => {
+    console.log("Share button clicked");
+    return false;
   };
 
   const zoomOut = () => {
-    document.body.style.zoom = "0.9";
+    if (zoom > zoomStep) {
+      zoom -= zoomStep;
+      document.body.style.zoom = zoom;
+    }
   };
 
   const zoomReset = () => {
-    document.body.style.zoom = "0";
+    zoom = 1;
+    document.body.style.zoom = 0;
   };
 
-  // window.addEventListener("load", () => {
-  //   document.querySelector(".zoomIn").addEventListener("click", function() {
-  //     zoom += zoomStep;
-  //     document.body.style.zoom = zoom;
-  //   });
+  const zoomIn = () => {
+    zoom += zoomStep;
+    document.body.style.zoom = zoom;
+  };
 
-  //   document.querySelector(".zoomReset").addEventListener("click", function() {
-  //     zoom = 1;
-  //     document.body.style.zoom = 0;
-  //   });
-
-  //   document.querySelector(".zoomOut").addEventListener("click", function() {
-  //     if (zoom > zoomStep) {
-  //       zoom -= zoomStep;
-  //       document.body.style.zoom = zoom;
-  //     }
-  //   });
-
-  //   let btnPrint = document.querySelector(".btn--print");
-  //   btnPrint.addEventListener("click", print);
-  // });
+  window.addEventListener("load", () => {
+    btnPrint.addEventListener("click", print);
+    btnShare.addEventListener("click", share);
+    btnZoomIn.addEventListener("click", zoomIn);
+    btnZoomReset.addEventListener("click", zoomReset);
+    btnZoomOut.addEventListener("click", zoomOut);
+  });
 })();

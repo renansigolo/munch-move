@@ -1,10 +1,20 @@
 /*--------------------------------------------------------------
-# Content Page / Partial template
+# Partial template / Content Page
 --------------------------------------------------------------*/
 
 .related-links {
-  border-left: 1px solid var(--blue);
-  padding-left: 31px;
-  
   @include list-icon($fa-var-chevron-right);
+  border-left: 1px solid var(--blue);
+  padding-left: 32px;
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  li {
+    font-size: 2.1rem;
+    font-weight: var(--bold);
+    color: var(--dark-blue);
+    margin-bottom: 16px;
+  }
 }

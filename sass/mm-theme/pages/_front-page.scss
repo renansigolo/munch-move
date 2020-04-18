@@ -1,7 +1,43 @@
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
+.entry-content {
+  h1,
+  .entry-title {
+    margin-bottom: 24px;
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+  }
+}
 
 #front-page {
-  background-color: #e7e7e7;
+  @extend .featured-image;
+
+  .section-intro {
+    margin-bottom: 64px;
+  }
+
+  .section-category {
+    &__header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .columns {
+        margin: 0;
+      }
+    }
+
+    h2 {
+      @include margin-tb(32px, 16px);
+    }
+
+    .cards {
+      @include grid(3);
+      @include margin-tb(40px, 56px);
+    }
+  }
 }

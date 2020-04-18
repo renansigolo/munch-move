@@ -47,7 +47,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 // @import 'skeleton/lists';
 // @import 'skeleton/code';
 @import 'skeleton/tables';
-@import 'skeleton/spacing';
+// @import 'skeleton/spacing';
 @import 'skeleton/utilities';
 @import 'skeleton/clearing';
 
@@ -82,7 +82,7 @@ $fa-font-path: "fonts/fontawesome/webfonts";
 @import 'mm-theme/base/typography';
 @import 'mm-theme/base/scaffolding';
 @import 'mm-theme/base/header';
-@import 'mm-theme/base/hero';
+@import 'mm-theme/base/banner';
 
 /*--------------------------------------------------------------
 # Overwrites Skeleton Framework

@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 
 :root {
+  // Branding Colors
   --blue: #29abff;
   --dark-blue: #0a73b7;
   --grey: #484848;
@@ -11,11 +12,11 @@
   --dark-green: #529f17;
   --red: #ee3436;
 
-  --default-spacing: 8px;
-
-  --sky-light: #d3eefd;
-  --sky-dark: #b3dafe;
-  --bg-sky: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-dark) 100%);
+  // Hover Colors
+  --dark-blue-hover: #09639e;
+  --blue-hover: #259ae6;
+  --green-hover: #74ab4a;
+  --orange-hover: #de862e;
 
   // Font Weights
   --thin: 100;
@@ -26,32 +27,9 @@
   --bold: 700;
   --extra-bold: 800;
   --black: 900;
-}
 
-// Mixins
-%flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-// x - for classes that set both *-left and *-right
-@mixin margin-x($margin) {
-  margin-left: $margin;
-  margin-right: $margin;
-}
-
-@mixin padding-x($padding) {
-  padding-left: $padding;
-  padding-right: $padding;
-}
-
-// y - for classes that set both *-top and *-bottom
-@mixin margin-y($margin) {
-  margin-top: $margin;
-  margin-bottom: $margin;
-}
-
-@mixin padding-y($padding) {
-  padding-top: $padding;
-  padding-bottom: $padding;
+  // Branding Extra
+  --paragraph-text: #282d39;
+  --green-shadow: #589429;
+  --default-spacing: 8px;
 }

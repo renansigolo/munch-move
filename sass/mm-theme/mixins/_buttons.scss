@@ -13,16 +13,35 @@
 .btn-dark-blue {
   @extend %mm-btn;
   background-color: var(--dark-blue);
+
+  &:hover {
+    background-color: var(--dark-blue-hover);
+  }
 }
+
 .btn-blue {
   @extend %mm-btn;
   background-color: var(--blue);
+
+  &:hover {
+    background-color: var(--blue-hover);
+  }
 }
+
 .btn-green {
   @extend %mm-btn;
   background-color: var(--green);
+
+  &:hover {
+    background-color: var(--green-hover);
+  }
 }
+
 .btn-orange {
   @extend %mm-btn;
   background-color: var(--orange);
+
+  &:hover {
+    background-color: var(--orange-hover);
+  }
 }

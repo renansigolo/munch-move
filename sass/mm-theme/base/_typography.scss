@@ -13,12 +13,12 @@ h5,
 h6 {
   margin: 0;
   font-weight: 300;
-  font-family: proxima-nova, sans-serif, 'HelveticaNeue', 'Helvetica Neue',
-  Helvetica, Arial;
+  font-family: proxima-nova, sans-serif, "HelveticaNeue", "Helvetica Neue",
+    Helvetica, Arial;
 }
 
 h1 {
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 1.2;
   font-weight: var(--black);
   color: var(--dark-blue);
@@ -52,7 +52,7 @@ h6 {
 
 p {
   margin: 0;
-  color: #000;
+  color: var(--paragraph-text);
   font-weight: var(--regular);
   font-size: 1.5rem;
 }

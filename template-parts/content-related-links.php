@@ -9,7 +9,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
     <h1>RELATED LINKS</h1>
     <div class="grid__2">
         <?php munch_move_post_thumbnail(); ?>

@@ -46,13 +46,13 @@ add_action('wp_head', 'munch_move_pingback_header');
 function mycustom_wp_footer()
 {
     ?>
-<script type="text/javascript">
-    document.addEventListener('wpcf7mailsent', function (event) {
-        if ('11' == event.detail.contactFormId) {
-            document.querySelector('.hero-form-fields').style.display = 'none'
-        }
-    }, false);
-</script>
+    <script type="text/javascript">
+        document.addEventListener('wpcf7mailsent', function (event) {
+            if ('11' == event.detail.contactFormId) {
+                document.querySelector('.hero-form-fields').style.display = 'none'
+            }
+        }, false);
+    </script>
 <?php
 }
 add_action('wp_footer', 'mycustom_wp_footer');

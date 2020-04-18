@@ -21,6 +21,7 @@ li {
       @extend %fa-icon;
       @extend .fas;
       content: fa-content($icon);
+      font-size: 1.6rem;
       float: left;
       margin-left: -1em;
       line-height: 30.4px;

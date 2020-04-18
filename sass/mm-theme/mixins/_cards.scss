@@ -8,6 +8,9 @@
     &__header {
       line-height: 0;
       border-bottom: 12px solid $secondaryColor;
+      img {
+        width: 100%;
+      }
     }
     &__content {
       @extend %flex-column-grow;
@@ -23,9 +26,18 @@
         padding: 24px 40px;
       }
 
-      // h4 {
-      //   margin-bottom: 16px;
-      // }
+      h4 {
+        color: inherit;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: inherit;
+      }
+
+      button {
+        margin-top: 16px;
+      }
     }
   }
 }

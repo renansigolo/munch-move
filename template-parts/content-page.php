@@ -15,46 +15,44 @@
         ]); ?>
 
     <div class="utility">
-        <div class="container">
-            <div class="utility__menu">
-                <div>
-                    <?php
-                        if ( function_exists('yoast_breadcrumb') ) {
-                            yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-                        }
-                    ?>
-                </div>
-                <div class="utility__actions">
-                    <a href="#!" class="">
-                        <i class="fas fa-print"></i>
-                        Print
-                    </a>
-                    <a href="#!" class="">
-                        <i class="fas fa-share-alt"></i>
-                        Share
-                    </a>
-                    <a href="#!" class="">A-</a>
-                    <a href="#!" class="">Ao</a>
-                    <a href="#!" class="">A+</a>
-                </div>
-            </div>
-        </div>
+          <div class="container">
+              <div class="utility__menu">
+                  <div>
+                      <?php
+                          if ( function_exists('yoast_breadcrumb') ) {
+                              yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+                          }
+                      ?>
+                  </div>
+                  <div class="utility__actions">
+                    <ul>
+                      <li id="print"><i class="fas fa-print"></i>Print</li>
+                      <li id="share"><i class="fas fa-share-alt"></i>Share</li>
+                      <li id="zoomOut">A-</li>
+                      <li id="zoomReset">Ao</li>
+                      <li id="zoomIn">A+</li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
     </div>
 
-    <div class="entry-content container">
+    <div class="container entry-content">
         <div class="row">
             <div class="eight columns">
                 <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-            <?php
-            the_content();
+                <?php
+                    the_content();
 
-            wp_link_pages(array(
-                'before' =>
-                    '<div class="page-links">' . esc_html__('Pages:', 'munch-move'),
-                'after' => '</div>'
-            ));
-        ?>
+                    wp_link_pages(array(
+                        'before' =>
+                            '<div class="page-links">' . esc_html__('Pages:', 'munch-move'),
+                        'after' => '</div>'
+                    ));
+                ?>
             </div>
+
+            <!-- Related Links -->
             <div class="four columns">
                 <div class="related-links">
                     <h2>Related Links</h2>

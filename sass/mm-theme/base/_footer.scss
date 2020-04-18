@@ -5,8 +5,7 @@
 .footer {
   width: 100%;
   font-size: 1.4rem;
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+  @include margin-tb(5rem, 3rem);
 
   a,
   p {
@@ -42,7 +41,6 @@
       }
 
       li {
-        margin-right: 12px;
         font-size: 1.4rem;
 
         @include desktop {

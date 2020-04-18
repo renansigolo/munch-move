@@ -6,7 +6,7 @@
   border: 0;
   border-radius: 0;
   color: #fff;
-  text-shadow: 0 1px 3px #589429;
+  text-shadow: 0 1px 3px var(--green-shadow);
   font-size: 1.6rem;
   font-weight: var(--black);
   box-shadow: none;
@@ -18,7 +18,7 @@
 }
 
 .page-header {
-  background: url("images/backgrounds/bg-header.png") bottom no-repeat;
+  background: url("images/backgrounds/bg-header.png") center no-repeat;
   background-size: cover;
   padding-top: 4px;
 
@@ -70,9 +70,27 @@
         margin-left: 16px;
       }
 
-      i {
+      #navbar-search {
+        display: none
+      }
+
+      #search-icon {
         color: var(--dark-blue);
-        font-size: 2.5rem;
+        font-size: 2rem;
+      }
+
+      .search-bar {
+        background: #ffffff;
+        border: 1px solid var(--dark-blue);
+        border-radius: 25px;
+        font-weight: var(--extra-bold);
+        font-size: 1.5rem;
+        color: var(--blue);
+        margin-right: 8px;
+
+        &::placeholder {
+          color: var(--dark-blue);
+        }
       }
     }
 
@@ -81,6 +99,10 @@
 
       a {
         @extend %header-item;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
 
       #menu-desktop {
@@ -108,6 +130,7 @@
 
     .menu-toggle {
       @extend %header-item;
+      margin-bottom: 8px;
     }
   }
 }
