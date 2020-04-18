@@ -10,8 +10,6 @@
  */
 ?>
 
-<!-- </div> -->
-
 <footer id="colophon" class="footer">
     <div class="container">
         <div class="footer__logo">

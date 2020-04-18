@@ -51,12 +51,17 @@ get_header();?>
 
     <section class="section-intro">
       <div class="container">
-        <div class="eight columns">
-          <?php the_content(); ?>
-        </div>
-        <div class="four columns">
-        If you represent a large ECEC service provider/organisation, ECEC policy company, food service provider or related organisation, and are interested in working with us to help provide a healthier future for children across NSW, please contact us at: SWSLHD-MunchAndMoveOPH@health.nsw.gov.au
-        If you are seeking local implementation support, please refer the Munch & Move Support page to contact a local Munch & Move Support Officer.
+        <div class="row">
+          <div class="seven columns">
+            <?php the_content(); ?>
+          </div>
+          <div class="one column"></div>
+          <div class="four columns">
+            <div class="side-article">
+            If you represent a large ECEC service provider/organisation, ECEC policy company, food service provider or related organisation, and are interested in working with us to help provide a healthier future for children across NSW, please contact us at: <a href="mailto:SWSLHD-MunchAndMoveOPH@health.nsw.gov.au">SWSLHD-MunchAndMoveOPH@health.nsw.gov.au</a>
+            If you are seeking local implementation support, please refer the <a href="#!" target="_blank" rel="noopener noreferrer">Munch & Move Support</a> page to contact a local Munch & Move Support Officer.
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -66,6 +71,7 @@ get_header();?>
         <div class="row section-category__header">
           <div class="twelve columns">
             <img src="<?php echo get_template_directory_uri() . '/images/mascots/carrot.svg'; ?>" alt="">
+            <hr>
           </div>
           <div class="eight columns">
             <h2>About Munch & Move</h2>
