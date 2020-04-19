@@ -116,6 +116,52 @@ get_header();?>
         </div>
       </div>
     </section>
+    
+    <section class="section-video">
+      <div class="container">
+        <div class="row section-category__header">
+          <div class="twelve columns">
+            <h2><span>Introduction</span></h2>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="cards">
+                    <div class="card-red">
+                        <div class="card__header">
+                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
+                        </div>
+                        <div class="card__content">
+                            <h4>Resources for families</h4>
+                            <button class="btn-orange">Download Transcript</button>
+                        </div>
+                    </div>
+                    <div class="card-red">
+                        <div class="card__header">
+                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
+                        </div>
+                        <div class="card__content">
+                            <h4>Resources for families</h4>
+                            <button class="btn-orange">Download Transcript</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="accordion-list">
+			<div class="container">
+            <button class="accordion">Section 3</button>
+                <div class="panel">
+                <ul>
+                    <li>Helloe</li>
+                    <li>Helloe</li>
+                    <li>Helloe</li>
+                </ul>
+                </div>
+			</div>
+		</section>
 
   </main>
   
