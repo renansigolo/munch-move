@@ -4,7 +4,7 @@
  * Munch and Move Scripts
  */
 
-(() => {
+(function() {
   console.log("Init Munch Move Scripts");
   /**
    * Accordion
@@ -13,18 +13,17 @@
    * to highlight the button that controls the panel
    */
   const accordion = () => {
-    let accordionClasses = document.getElementsByClassName("accordion");
-    let i;
-
-    for (const accElement of accordionClasses) {
-      accElement.addEventListener("click", function () {
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
-
-        let panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
         } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.style.display = "block";
         }
       });
     }
@@ -42,4 +41,7 @@
     jQuery("#navbar-search").toggle();
     jQuery("#search-icon").toggle();
   });
+
+  accordion()
+
 })();

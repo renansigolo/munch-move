@@ -40,6 +40,20 @@
     <div class="container entry-content">
         <div class="row">
             <div class="eight columns">
+
+            <section class="accordion-list">
+			<div class="container">
+            <button class="accordion">Section 3</button>
+                <div class="panel">
+                <ul>
+                    <li>Helloe</li>
+                    <li>Helloe</li>
+                    <li>Helloe</li>
+                </ul>
+                </div>
+			</div>
+		</section>
+
                 <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
                 <?php
                     the_content();
@@ -51,6 +65,8 @@
                     ));
                 ?>
             </div>
+
+
 
             <!-- Related Links -->
             <div class="four columns">

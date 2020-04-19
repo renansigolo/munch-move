@@ -1,9 +1,37 @@
 /*--------------------------------------------------------------
-# Partial template / Content Page
+# Content Page
 --------------------------------------------------------------*/
 
+// Defaults for the content that will be added by the user
+.content {
+  ul {
+    li {
+      font-weight: var(--regular);
+      &::before {
+        content: "\2022";
+        color: var(--blue);
+        font-weight: bold;
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+      }
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+
+  h2 {
+    @include margin-tb(32px, 24px);
+  }
+}
+
 .related-links {
-  @include list-icon($fa-var-chevron-right);
   border-left: 1px solid var(--blue);
   padding-left: 32px;
 
@@ -11,10 +39,51 @@
     margin-bottom: 32px;
   }
 
-  li {
-    font-size: 2.1rem;
-    font-weight: var(--bold);
-    color: var(--dark-blue);
-    margin-bottom: 16px;
+  ul {
+    @include list-icon($fa-var-chevron-right);
+
+    li {
+      font-size: 2.1rem;
+      font-weight: var(--bold);
+      color: var(--dark-blue);
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.accordion {
+  color: var(--dark-blue);
+  cursor: pointer;
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--dark-blue);
+  font-size: 1.9rem;
+  font-weight: var(--bold);
+
+  &::after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-plus);
+    font-size: 1.4rem;
+    margin-left: 5px;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 16px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  color: var(--blue);
+
+  ul {
+    @include list-icon($fa-var-chevron-right);
   }
 }

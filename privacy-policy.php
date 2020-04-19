@@ -1,24 +1,20 @@
 <?php
-/* Template Name: Privacy Policy - Page */
-?>
-
 /**
-* The template for displaying the homepage
-*
-* @package Munch_&_Move
-*/<?php
-/**
- * The template for displaying the homepage
+ * 
+ * Template Name: Privacy Policy - Page
+ * 
+ * The template for displaying the Privacy Policy
  *
  * @package Munch_&_Move
  */
-?>get_header(); ?>
+
+get_header();
+?>
 
 <div id="privacy-policy-template">
   <main id="main">
 
-    <section class="container">
-
+    <section class="content">
       <?php while (have_posts()):
         the_post();
         get_template_part('template-parts/content', 'page');
