@@ -52,7 +52,6 @@
 }
 
 .accordion {
-  color: var(--dark-blue);
   cursor: pointer;
   padding: 8px 0;
   width: 100%;
@@ -60,12 +59,14 @@
   border: none;
   outline: none;
   transition: 0.4s;
+  font-size: 1.9rem;
+  font-weight: var(--bold);
+  color: var(--dark-blue);
+  background-color: #fff;
+  border-bottom: 1px solid var(--dark-blue);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 1px solid var(--dark-blue);
-  font-size: 1.9rem;
-  font-weight: var(--bold);
 
   &::after {
     @extend %fa-icon;

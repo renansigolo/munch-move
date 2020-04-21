@@ -126,6 +126,10 @@
     .cards {
       @include grid(3);
       @include margin-tb(40px, 56px);
+
+      .card__content {
+        justify-content: space-between;
+      }
     }
   }
 

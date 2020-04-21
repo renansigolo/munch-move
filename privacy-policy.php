@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 
  * Template Name: Privacy Policy - Page
@@ -15,10 +16,10 @@ get_header();
   <main id="main">
 
     <section class="content">
-      <?php while (have_posts()):
+      <?php while (have_posts()) :
         the_post();
         get_template_part('template-parts/content', 'page');
-    endwhile; ?>
+      endwhile; ?>
 
     </section>
 
