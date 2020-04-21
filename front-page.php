@@ -6,16 +6,16 @@
  * @package Munch_&_Move
  */
 
-get_header();?>
+get_header(); ?>
 
 <div id="front-page" class="content-area">
     <main id="main" class="site-main">
         <section class="hero">
-            <div class="background-banner" style="background-image: url(<?php echo the_post_thumbnail_url() ?>)">
-                <div>
+            <div class="hero__desktop">
+                <div class="background-banner" style="background-image: url(<?php echo the_post_thumbnail_url() ?>)">
                     <div class="row">
                         <div class="five columns">
-                            <div class="hero__content">
+                            <div class="hero-content">
                                 <h1>Munch & Move is NSW Health initiative that supports the healthy development of
                                     children birth to 5 years</h1>
                                 <button class="btn-blue">Watch Video</button>
@@ -24,17 +24,34 @@ get_header();?>
                     </div>
                 </div>
             </div>
+
+            <div class="hero__mobile">
+                <img src="<?php echo the_post_thumbnail_url() ?>" alt="">
+                <div class="mobile-hero-content">
+                    <div class="container">
+                        <h1>Munch & Move is NSW Health initiative that supports the healthy development of
+                            children birth to 5 years</h1>
+                        <div class="row flex-center">
+                            <div class="ten columns">
+                                <button class="btn-blue">Watch Video</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+
 
         <div class="utility">
             <div class="container">
                 <div class="utility__menu">
                     <div>
                         <?php
-                          if (function_exists('yoast_breadcrumb')) {
-                              yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-                          }
-                      ?>
+                        if (function_exists('yoast_breadcrumb')) {
+                            yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+                        }
+                        ?>
                     </div>
                     <div class="utility__actions">
                         <ul>
@@ -60,10 +77,8 @@ get_header();?>
                         <div class="side-article">
                             If you represent a large ECEC service provider/organisation, ECEC policy company, food
                             service provider or related organisation, and are interested in working with us to help
-                            provide a healthier future for children across NSW, please contact us at: <a
-                                href="mailto:SWSLHD-MunchAndMoveOPH@health.nsw.gov.au">SWSLHD-MunchAndMoveOPH@health.nsw.gov.au</a>
-                            If you are seeking local implementation support, please refer the <a href="#!"
-                                target="_blank" rel="noopener noreferrer">Munch & Move Support</a> page to contact a
+                            provide a healthier future for children across NSW, please contact us at: <a href="mailto:SWSLHD-MunchAndMoveOPH@health.nsw.gov.au">SWSLHD-MunchAndMoveOPH@health.nsw.gov.au</a>
+                            If you are seeking local implementation support, please refer the <a href="#!" target="_blank" rel="noopener noreferrer">Munch & Move Support</a> page to contact a
                             local Munch & Move Support Officer.
                         </div>
                     </div>
@@ -89,8 +104,7 @@ get_header();?>
                     <div class="cards">
                         <div class="card-blue">
                             <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>"
-                                    alt="Card Image">
+                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
                             </div>
                             <div class="card__content">
                                 <div>
@@ -102,8 +116,7 @@ get_header();?>
                         </div>
                         <div class="card-blue">
                             <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>"
-                                    alt="Card Image">
+                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
                             </div>
                             <div class="card__content">
                                 <h4>Resources for families</h4>
@@ -115,8 +128,7 @@ get_header();?>
                         </div>
                         <div class="card-blue">
                             <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>"
-                                    alt="Card Image">
+                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
                             </div>
                             <div class="card__content">
                                 <div>
@@ -143,8 +155,7 @@ get_header();?>
                     <div class="cards">
                         <div class="card-red">
                             <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>"
-                                    alt="Card Image">
+                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
                             </div>
                             <div class="card__content">
                                 <h4>Resources for families</h4>
@@ -153,8 +164,7 @@ get_header();?>
                         </div>
                         <div class="card-red">
                             <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>"
-                                    alt="Card Image">
+                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
                             </div>
                             <div class="card__content">
                                 <h4>Resources for families</h4>

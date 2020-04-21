@@ -34,10 +34,8 @@
 
                     <div class="nav-desktop" id="desktop">
                         <div class="menu-service">
-                            <div id="navbar-search">
-                                <input class="search-bar" type="text" name="Search" id="search">
-                                <button class="btn-blue">Search</button>
-                            </div>
+                            <input class="search-bar" type="text" name="Search" id="navbar-search" placeholder="Munch & Move Resources">
+                            <button class="btn-blue" id="navbar-btn-search">Search</button>
                             <i class="fas fa-search" id="search-icon"></i>
                             <button class="btn-dark-blue">Service Support</button>
                         </div>
@@ -54,7 +52,85 @@
                 </div>
             </div>
 
-            <section class="menu-mobile accordion-list">
+            <section class="mega-menu">
+                <div class="row container tab-content" id="about">
+                    <div class="three columns">
+                        <div class="card-blue">
+                            <div class="card__content">
+                                <div>
+                                    <p>We are a NSW Health initiative that supports the healthy development of children birth to 5 years by promoting physical activity, healthy eating and reduced small screen time.</p>
+                                </div>
+                                <button class="btn-blue">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four columns">
+                        <ul class="mega-menu__list">
+                            <li>What is Munch & Move</li>
+                            <li>Benefits for early childhood services</li>
+                            <li>Success Stories</li>
+                            <li>Reports</li>
+                            <li>Munch & Move Support</li>
+                        </ul>
+                    </div>
+                    <div class="five columns">
+                        <div class="mega-menu__article">
+                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
+                            <div>
+                                <h4>Munch & Move Benefits</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="mega-menu__article">
+                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
+                            <div>
+                                <h4>Munch & Move Benefits</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row container tab-content" id="program">
+                    <div class="three columns">
+                        <div class="card-green">
+                            <div class="card__content">
+                                <div>
+                                    <p>We are a NSW Health initiative that supports the healthy development of children birth to 5 years by promoting physical activity, healthy eating and reduced small screen time.</p>
+                                </div>
+                                <button class="btn-blue">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four columns">
+                        <ul class="mega-menu__list">
+                            <li>What is Munch & Move</li>
+                            <li>Benefits for early childhood services</li>
+                            <li>Success Stories</li>
+                            <li>Reports</li>
+                            <li>Munch & Move Support</li>
+                        </ul>
+                    </div>
+                    <div class="five columns">
+                        <div class="mega-menu__article">
+                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
+                            <div>
+                                <h4>Munch & Move Benefits</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="mega-menu__article">
+                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
+                            <div>
+                                <h4>Munch & Move Benefits</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="menu-mobile accordion-list">
                 <div class="container">
                     <button class="accordion">Section 3</button>
                     <div class="panel">
@@ -65,7 +141,7 @@
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <?php
             /* The below code checks if a menu-mobile is set from the backend in the menu settings. If a menu has been set it will be displayed in the header. Or else, a menu has not been set then display a message.*/

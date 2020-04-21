@@ -15,7 +15,7 @@ li {
   font-weight: var(--semi-bold);
 }
 
-@mixin list-icon($icon){
+@mixin list-icon($icon) {
   li {
     &::before {
       @extend %fa-icon;
@@ -28,6 +28,20 @@ li {
       color: inherit;
     }
   }
+}
+
+.list-chevron-blue {
+  @include list-icon($fa-var-chevron-right);
+  color: var(--blue);
+}
+
+.list-chevron-green {
+  @include list-icon($fa-var-chevron-right);
+  color: var(--green);
+}
+.list-chevron-red {
+  @include list-icon($fa-var-chevron-right);
+  color: var(--red);
 }
 
 /* Lists BKP

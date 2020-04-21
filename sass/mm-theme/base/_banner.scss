@@ -6,11 +6,6 @@
   width: 100%;
   box-sizing: border-box;
   height: auto;
-
-  @include desktop {
-    // height: calc(100vh - 180px); // Correct Code to Go to Prod
-    height: calc(100vh - 212px); // With the WP Top Bar
-  }
 }
 
 .background-banner {
@@ -21,19 +16,53 @@
 }
 
 .hero {
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: calc(100vh - 212px);
-    width: auto;
-    margin-left: 83px;
+  &__desktop {
+    @include mobile-only {
+      display: none;
+    }
 
-    h1 {
-      color: #fff;
-      margin-bottom: 24px;
-      font-size: 4rem;
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: auto;
+      margin-left: 83px;
+      // height: calc(100vh - 180px); // Correct Code to Go to Prod
+      height: calc(100vh - 212px); // With the WP Top Bar
+
+      h1 {
+        color: #fff;
+        margin-bottom: 24px;
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__mobile {
+    display: contents;
+
+    image {
+      object-fit: cover;
+    }
+
+    .mobile-hero-content {
+      @include padding-y(24px);
+      background-color: var(--dark-blue);
+      text-align: center;
+
+      h1 {
+        color: #fff;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 16px;
+      }
+    }
+
+    @include desktop {
+      display: none;
     }
   }
 }
