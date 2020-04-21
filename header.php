@@ -128,6 +128,44 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="row container tab-content" id="resources">
+                    <div class="three columns">
+                        <div class="card-red">
+                            <div class="card__content">
+                                <div>
+                                    <p>We are a NSW Health initiative that supports the healthy development of children birth to 5 years by promoting physical activity, healthy eating and reduced small screen time.</p>
+                                </div>
+                                <button class="btn-blue">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four columns">
+                        <ul class="mega-menu__list">
+                            <li>What is Munch & Move</li>
+                            <li>Benefits for early childhood services</li>
+                            <li>Success Stories</li>
+                            <li>Reports</li>
+                            <li>Munch & Move Support</li>
+                        </ul>
+                    </div>
+                    <div class="five columns">
+                        <div class="mega-menu__article">
+                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
+                            <div>
+                                <h4>Munch & Move Benefits</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="mega-menu__article">
+                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
+                            <div>
+                                <h4>Munch & Move Benefits</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- <section class="menu-mobile accordion-list">

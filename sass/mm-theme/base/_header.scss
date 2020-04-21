@@ -82,6 +82,10 @@
       #search-icon {
         color: var(--dark-blue);
         font-size: 2rem;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .search-bar {
@@ -148,27 +152,31 @@
   }
 }
 
+.menu-mobile li::before {
+  margin-left: 0 !important;
+}
+
 .menu-mobile {
   @include list-icon($fa-var-chevron-right);
   color: #fff;
-  margin: 0;
 
   .menu-item {
-    @include padding-x(10px);
-    @include padding-y(16px);
+    padding: 16px 10px;
+    background-color: var(--blue);
+    border-bottom: 1px solid #fff;
     margin: 0;
 
     a {
-      background-color: grey;
-      color: #fff;
-      // font-weight: bold;
+      color: inherit;
+      padding: 16px 10px 16px 6px;
     }
 
     .sub-menu {
+      background-color: #fff;
       li {
         color: red;
         border-bottom: 1px solid orange;
-        background-color: #fff !important;
+        background-color: #fff;
         @include padding-y(12px);
 
         a {
