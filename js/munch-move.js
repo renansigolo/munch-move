@@ -67,16 +67,26 @@
   $("#menu-desktop")
     .find(".nav-tab a")
     .mouseenter(function () {
-      // Hide all Content
+      let menuTab = this.parentNode;
+
+      // Hide all .active classes in the Mega Menu Tabs/Links
+      let tabLinks = document.querySelectorAll(".menu-item");
+      for (const tabLink of tabLinks) {
+        tabLink.classList.remove("active");
+      }
+
+      // Hide all Content in the Mega Menu
       const tabContent = document.querySelectorAll(".tab-content");
       for (const tab of tabContent) {
         tab.style.display = "none";
       }
 
       // Show only the respective content
+      menuTab.classList.add("active");
       $(`#${this.title}`).show();
       $(`#${this.title}`).mouseleave(function () {
         $(".tab-content").hide();
+        menuTab.classList.remove("active");
       });
     });
 })(jQuery);

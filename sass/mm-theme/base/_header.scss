@@ -17,6 +17,13 @@
   }
 }
 
+%menu-on-top {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
 .page-header {
   background: url("images/backgrounds/bg-header.png") center no-repeat;
   background-size: cover;
@@ -128,11 +135,14 @@
 
         li {
           margin-bottom: 0;
-          padding-bottom: 20px;
-
-          .active {
+          padding: 20px;
+          // padding-bottom: 20px;
+        }
+        .active {
+          background-color: #fff;
+          a {
             color: var(--blue);
-            background-color: #fff;
+            text-shadow: none;
           }
         }
       }
@@ -158,6 +168,7 @@
 
 .menu-mobile {
   @include list-icon($fa-var-chevron-right);
+  @extend %menu-on-top;
   color: #fff;
 
   .menu-item {
@@ -188,6 +199,7 @@
 }
 
 .mega-menu {
+  @extend %menu-on-top;
   .tab-content {
     display: none;
     @include margin-y(55px);
