@@ -41,8 +41,6 @@ get_header(); ?>
             </div>
         </section>
 
-
-
         <div class="utility">
             <div class="container">
                 <div class="utility__menu">

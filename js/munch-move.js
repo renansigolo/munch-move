@@ -13,21 +13,41 @@
    * to highlight the button that controls the panel
    */
   const accordion = () => {
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    const accElements = document.getElementsByClassName("accordion");
 
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
+    for (const accEl of accElements) {
+      accEl.addEventListener("click", function () {
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
+        let panel = this.nextElementSibling;
+
+        // Toogle Panel Visibility
+        panel.style.display =
+          panel.style.display === "block" ? "none" : "block";
       });
     }
   };
+
+  $(document).ready(function () {
+    $("#menu-mobile li.has-sub>a").on("click", function () {
+      console.log("Clicked");
+      $(this).removeAttr("href");
+      var element = $(this).parent("li");
+      if (element.hasClass("open")) {
+        element.removeClass("open");
+        element.find("li").removeClass("open");
+        element.find("ul").slideUp();
+      } else {
+        element.addClass("open");
+        element.children("ul").slideDown();
+        element.siblings("li").children("ul").slideUp();
+        element.siblings("li").removeClass("open");
+        element.siblings("li").find("li").removeClass("open");
+        element.siblings("li").find("ul").slideUp();
+      }
+    });
+
+    $("#cssmenu>ul>li.has-sub>a").append('<span class="holder"></span>');
+  });
 
   // Enable Click on the Navbar Logo
   const navLogo = document.querySelector(".nav-logo");
@@ -61,8 +81,6 @@
     hideSearchBar();
   });
 
-  accordion();
-
   // Desktop Mega Menu Tabs
   $("#menu-desktop")
     .find(".nav-tab a")
@@ -89,4 +107,7 @@
         menuTab.classList.remove("active");
       });
     });
+
+  accordion();
+  // accordionMenu();
 })(jQuery);

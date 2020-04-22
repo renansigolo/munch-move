@@ -128,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row container tab-content" id="resources">
                     <div class="three columns">
                         <div class="card-red">
@@ -168,33 +168,21 @@
                 </div>
             </section>
 
-            <!-- <section class="menu-mobile accordion-list">
-                <div class="container">
-                    <button class="accordion">Section 3</button>
-                    <div class="panel">
-                        <ul>
-                            <li>Helloe</li>
-                            <li>Helloe</li>
-                            <li>Helloe</li>
-                        </ul>
-                    </div>
-                </div>
-            </section> -->
-
-            <?php
-            /* The below code checks if a menu-mobile is set from the backend in the menu settings. If a menu has been set it will be displayed in the header. Or else, a menu has not been set then display a message.*/
-            if (function_exists('has_nav_menu') && has_nav_menu('menu-mobile')) {
-                wp_nav_menu(array(
-                    'depth' => 6,
-                    'sort_column' => 'menu_order',
-                    'container' => 'ul',
-                    'menu_id' => 'menu-mobile',
-                    'menu_class' => 'nav menu-mobile',
-                    'theme_location' => 'menu-mobile',
-                ));
-            } else {
-                echo "<ul class='nav menu-mobile'> <font style='color:red'>Mobile Menu has not been set</font> </ul>";
-            } ?>
+            <section class="menu-mobile">
+                <?php
+                /* The below code checks if a menu-mobile is set from the backend in the menu settings. If a menu has been set it will be displayed in the header. Or else, a menu has not been set then display a message.*/
+                if (function_exists('has_nav_menu') && has_nav_menu('menu-mobile')) {
+                    $menu_ID = 'menu-mobile';
+                    $nav_menu = wp_get_nav_menu_object($menu_ID);
+                    wp_nav_menu(array(
+                        'menu_id' => 'menu-mobile',
+                        'menu_class' => 'nav first-menu-mobile',
+                        'theme_location' => 'menu-mobile',
+                    ));
+                } else {
+                    echo "<ul class='nav menu-mobile'> <font style='color:red'>Mobile Menu has not been set</font> </ul>";
+                } ?>
+            </section>
 
         </header>
 

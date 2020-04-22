@@ -75,6 +75,7 @@
       justify-content: flex-end;
       align-items: center;
       width: 100%;
+      margin-bottom: 16px;
 
       .btn-dark-blue {
         margin-left: 16px;
@@ -134,9 +135,9 @@
         @include margin-y(0);
 
         li {
+          text-align: center;
           margin-bottom: 0;
           padding: 20px;
-          // padding-bottom: 20px;
         }
         .active {
           background-color: #fff;
@@ -172,27 +173,31 @@
   color: #fff;
 
   .menu-item {
-    padding: 16px 10px;
     background-color: var(--blue);
     border-bottom: 1px solid #fff;
     margin: 0;
 
+    &:nth-child(n) {
+      padding: 16px 10px 0;
+    }
+
     a {
       color: inherit;
-      padding: 16px 10px 16px 6px;
+      padding: 16px 10px;
     }
 
     .sub-menu {
+      display: none;
       background-color: #fff;
       li {
-        color: red;
-        border-bottom: 1px solid orange;
+        color: var(--red);
+        border-bottom: 1px solid var(--orange);
         background-color: #fff;
         @include padding-y(12px);
 
-        a {
-          color: red;
-        }
+        // a {
+        //   color: red;
+        // }
       }
     }
   }
