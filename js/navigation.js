@@ -5,12 +5,6 @@
  * navigation support for dropdown menus.
  */
 (function () {
-  
-  // Toggle Mobile Menu
-  jQuery("#btn-menu").on("click", function () {
-    jQuery(".nav.menu-mobile").toggle();
-  });
-
   var container, button, menu, links, i, len;
 
   container = document.getElementById("site-navigation");

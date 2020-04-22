@@ -27,9 +27,13 @@
     }
   };
 
+  // Toggle Mobile Menu
+  $("#btn-menu").on("click", function () {
+    $("#menu-mobile").toggle("fast");
+  });
+
   $(document).ready(function () {
     $("#menu-mobile li.has-sub>a").on("click", function () {
-      console.log("Clicked");
       $(this).removeAttr("href");
       var element = $(this).parent("li");
       if (element.hasClass("open")) {
@@ -46,7 +50,7 @@
       }
     });
 
-    $("#cssmenu>ul>li.has-sub>a").append('<span class="holder"></span>');
+    $("#menu-mobile>ul>li.has-sub>a").append('<span class="holder"></span>');
   });
 
   // Enable Click on the Navbar Logo
@@ -74,12 +78,12 @@
     showSearchBar();
   });
 
-  // $("#masthead").mouseleave(function () {
-  //   toggleNavbarSearch();
-  // });
   $(".menu-service").mouseleave(function () {
     hideSearchBar();
   });
+  // $("#masthead").mouseleave(function () {
+  //   toggleNavbarSearch();
+  // });
 
   // Desktop Mega Menu Tabs
   $("#menu-desktop")
@@ -109,5 +113,4 @@
     });
 
   accordion();
-  // accordionMenu();
 })(jQuery);
