@@ -46,36 +46,17 @@ li {
 
 /* Lists BKP
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-// main {
-//   ol, ul {
-//     list-style: none;
-//   }
-// }
-
-// @mixin list-icon($icon){
-//   li {
-//     // position: relative;
-//     // margin-bottom: 16px;
-//     // margin-left: 20px;
-
-//     &::before {
-//       @extend %fa-icon;
-//       @extend .fas;
-//       content: fa-content($icon);
-//       // position: absolute;
-//       // left: -20px;
-//       // font-size: 1.9rem;
-//       // line-height: 30.4px;
-
-//       float: left;
-//       margin-top: 0.25em;
-//       margin-left: -1.2em;
-//     }
-//   }
-// }
-
-// main {
-//   ol, ul {
-//     list-style: none;
-//   }
-// }
+@mixin list-header-icon($icon) {
+  li {
+    &::before {
+      @extend %fa-icon;
+      @extend .fas;
+      content: fa-content($icon);
+      position: absolute;
+      left: 10px;
+      font-size: 1.2rem;
+      line-height: 26px;
+      // padding-left: 10px;
+    }
+  }
+}

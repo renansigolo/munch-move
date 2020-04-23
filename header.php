@@ -36,7 +36,7 @@
                         <div class="menu-service">
                             <input class="search-bar" type="text" name="Search" id="navbar-search" placeholder="Munch & Move Resources">
                             <button class="btn-blue" id="navbar-btn-search">Search</button>
-                            <i class="fas fa-search" id="search-icon"></i>
+                            <i class="fas fa-search search-icon" id="search-icon"></i>
                             <button class="btn-dark-blue">Service Support</button>
                         </div>
                         <nav class="menu-desktop">
@@ -168,7 +168,11 @@
                 </div>
             </section>
 
-            <section class="menu-mobile">
+            <section class="menu-mobile" id="display-mobile-menu">
+                <div class="mobile-search-bar">
+                    <input class="search-bar" type="text" name="Search" id="navbar-search" placeholder="Munch & Move Resources">
+                    <i class="fas fa-search search-icon" id="search-icon"></i>
+                </div>
                 <?php
                 /* The below code checks if a menu-mobile is set from the backend in the menu settings. If a menu has been set it will be displayed in the header. Or else, a menu has not been set then display a message.*/
                 if (function_exists('has_nav_menu') && has_nav_menu('menu-mobile')) {

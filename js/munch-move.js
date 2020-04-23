@@ -29,20 +29,20 @@
 
   // Toggle Mobile Menu
   $("#btn-menu").on("click", function () {
-    $("#menu-mobile").toggle("fast");
+    $("#display-mobile-menu").slideDown("fast");
   });
 
   $(document).ready(function () {
     $("#menu-mobile li.has-sub>a").on("click", function () {
       $(this).removeAttr("href");
-      var element = $(this).parent("li");
+      let element = $(this).parent("li");
       if (element.hasClass("open")) {
         element.removeClass("open");
         element.find("li").removeClass("open");
-        element.find("ul").slideUp();
+        element.find("ul").slideUp(50);
       } else {
         element.addClass("open");
-        element.children("ul").slideDown();
+        element.children("ul").slideDown(50);
         element.siblings("li").children("ul").slideUp();
         element.siblings("li").removeClass("open");
         element.siblings("li").find("li").removeClass("open");
@@ -50,7 +50,7 @@
       }
     });
 
-    $("#menu-mobile>ul>li.has-sub>a").append('<span class="holder"></span>');
+    // $("#menu-mobile>ul>li.has-sub>a").append('<span class="holder"></span>');
   });
 
   // Enable Click on the Navbar Logo
