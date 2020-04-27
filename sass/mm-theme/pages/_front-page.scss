@@ -80,14 +80,14 @@
 
   @mixin mascot-hr($color) {
     position: absolute;
-    top: calc(var(--mascot-size) / 2);
+    top: calc(90 / 2);
     left: 0;
     width: 100%;
     z-index: -1;
     border: 1px solid var($color);
 
     @include desktop {
-      top: calc(var(--mascot-desktop) / 2);
+      top: 75px;
     }
   }
 
@@ -103,10 +103,10 @@
       img {
         @include padding-x(24px);
         background-color: #fff;
-        max-height: var(--mascot-size);
+        max-height: 90px;
 
         @include desktop {
-          max-height: var(--mascot-size + 60);
+          max-height: 150px;
         }
       }
 
@@ -142,3 +142,5 @@
     }
   }
 }
+
+

@@ -8,6 +8,10 @@
 
 get_header(); ?>
 
+<?php
+$homePage = get_field('home-page');
+?>
+
 <div id="front-page" class="content-area">
     <main id="main" class="site-main">
         <section class="hero">
@@ -86,62 +90,61 @@ get_header(); ?>
 
         <section class="section-category">
             <div class="container">
-                <div class="row section-category__header">
-                    <div class="twelve columns">
-                        <img src="<?php echo get_template_directory_uri() . '/images/mascots/carrot.svg'; ?>" alt="">
-                        <hr>
-                    </div>
-                    <div class="eight columns">
-                        <h2>About Munch & Move</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit massa id ante porta,
-                            in commodo velit pellentesque. Duis in rhoncus magna, nec molestie velit.</p>
-                    </div>
-                </div>
+                <?php     // Loop through rows.
+                while (have_rows('content-rows')) : the_row();
+                    // Case: Paragraph layout.
+                    if (get_row_layout() == 'mascot_section') :
+                        $image = get_sub_field('image');
+                        $title = get_sub_field('title');
+                        $description = get_sub_field('description');
+                        $cards = get_sub_field('mascot_section_cards');
+                ?>
+                        <div class="row section-category__header">
+                            <div class="twelve columns">
+                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                                <hr>
+                            </div>
+                            <div class="eight columns">
+                                <h2><?php echo $title; ?></h2>
+                                <p><?php echo $description; ?></p>
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="cards">
-                        <div class="card-blue">
-                            <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            </div>
-                            <div class="card__content">
-                                <div>
-                                    <h4>Resources for families</h4>
-                                    <p>Find out why Munch & Move is being offered to NSW early childhood services.</p>
-                                </div>
-                                <button class="btn-blue">Learn More</button>
-                            </div>
-                        </div>
-                        <div class="card-blue">
-                            <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            </div>
-                            <div class="card__content">
-                                <h4>Resources for families</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsa sequi iusto porro
-                                    aspernatur facere quaerat corporis eveniet, recusandae optio exercitationem
-                                    praesentium aperiam voluptate labore corrupti hic eius minus dolorem?</p>
-                                <button class="btn-blue">Learn More</button>
+                        <div class="row">
+                            <div class="cards">
+                                <?php while (have_rows('cards')) : the_row(); ?>
+                                    <div class="card-blue">
+                                        <div class="card__header">
+                                            <img src="<?php echo get_sub_field('image')['url'];  ?>" alt="<?php echo get_sub_field('image')['alt'];  ?>">
+                                        </div>
+                                        <div class="card__content">
+                                            <div>
+                                                <h4><?php the_sub_field('title'); ?></h4>
+                                                <p><?php the_sub_field('description'); ?></p>
+                                            </div>
+                                            <button class="btn-blue">Learn More</button>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
                             </div>
                         </div>
-                        <div class="card-blue">
-                            <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            </div>
-                            <div class="card__content">
-                                <div>
-                                    <h4>Resources for families</h4>
-                                    <p>Find out why Munch & Move is being offered to NSW early childhood services.</p>
-                                </div>
-                                <button class="btn-blue">Learn More</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <?php
+                    // Case: Download layout.
+                    elseif (get_row_layout() == 'download') :
+                        $file = get_sub_field('file');
+                    // Do something...
+
+                    endif;
+
+                // End loop.
+                endwhile;
+
+                ?>
             </div>
         </section>
 
-        <section class="section-video">
+        <!-- <section class="section-video">
             <div class="container">
                 <div class="row section-category__header">
                     <div class="twelve columns">
@@ -185,7 +188,7 @@ get_header(); ?>
                     </ul>
                 </div>
             </div>
-        </section>
+        </section> -->
 
     </main>
 
