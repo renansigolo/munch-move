@@ -75,16 +75,13 @@
   }
 
   // Brand Mascot Horizontal Line
-  --mascot-size: 90px;
-  --mascot-desktop: 150px;
-
   @mixin mascot-hr($color) {
     position: absolute;
-    top: calc(90 / 2);
+    top: 45px;
     left: 0;
     width: 100%;
     z-index: -1;
-    border: 1px solid var($color);
+    border: 1px solid $color;
 
     @include desktop {
       top: 75px;
@@ -110,9 +107,18 @@
         }
       }
 
-      hr {
-        @include mascot-hr(--blue);
+      .mascot-hr-blue {
+        @include mascot-hr(var(--blue));
       }
+      .mascot-hr-red {
+        @include mascot-hr(var(--orange));
+      }
+      .mascot-hr-green {
+        @include mascot-hr(var(--green));
+      }
+      // hr {
+      //   @include mascot-hr(--blue);
+      // }
 
       .columns {
         margin: 0;
@@ -142,5 +148,3 @@
     }
   }
 }
-
-

@@ -93,16 +93,17 @@ $homePage = get_field('home-page');
                 <?php     // Loop through rows.
                 while (have_rows('content-rows')) : the_row();
                     // Case: Paragraph layout.
-                    if (get_row_layout() == 'mascot_section') :
+                    if (get_row_layout() == 'highlighted_content_row') :
                         $image = get_sub_field('image');
                         $title = get_sub_field('title');
                         $description = get_sub_field('description');
-                        $cards = get_sub_field('mascot_section_cards');
+                        $category_color = get_sub_field('category');
+                        $cards = get_sub_field('highlighted_content_row_cards');
                 ?>
                         <div class="row section-category__header">
                             <div class="twelve columns">
                                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-                                <hr>
+                                <hr class="mascot-hr-<?php echo $category_color ?>">
                             </div>
                             <div class="eight columns">
                                 <h2><?php echo $title; ?></h2>
@@ -110,10 +111,11 @@ $homePage = get_field('home-page');
                             </div>
                         </div>
 
+
                         <div class="row">
                             <div class="cards">
                                 <?php while (have_rows('cards')) : the_row(); ?>
-                                    <div class="card-blue">
+                                <div class="card-<?php echo $category_color ?>">
                                         <div class="card__header">
                                             <img src="<?php echo get_sub_field('image')['url'];  ?>" alt="<?php echo get_sub_field('image')['alt'];  ?>">
                                         </div>
@@ -122,7 +124,7 @@ $homePage = get_field('home-page');
                                                 <h4><?php the_sub_field('title'); ?></h4>
                                                 <p><?php the_sub_field('description'); ?></p>
                                             </div>
-                                            <button class="btn-blue">Learn More</button>
+                                            <button class="btn-<?php echo $category_color ?>">Learn More</button>
                                         </div>
                                     </div>
                                 <?php endwhile; ?>

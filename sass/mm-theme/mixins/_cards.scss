@@ -43,12 +43,15 @@
   }
 }
 
-.card-blue {
+.card-blue,
+.card-general {
   @include mm-card(var(--dark-blue), var(--blue));
 }
-.card-green {
+.card-green,
+.card-training {
   @include mm-card(var(--dark-green), var(--green));
 }
-.card-red {
+.card-red,
+.card-resources {
   @include mm-card(var(--red), var(--orange));
 }
