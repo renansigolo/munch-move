@@ -34,7 +34,7 @@
 
                     <div class="nav-desktop" id="desktop">
                         <div class="menu-service">
-                            <input class="search-bar" type="text" name="Search" id="navbar-search" placeholder="Munch & Move Resources">
+                            <input class="search-bar" type="text" name="Search" id="navbar-search">
                             <button class="btn-blue" id="navbar-btn-search">Search</button>
                             <i class="fas fa-search search-icon" id="search-icon"></i>
                             <button class="btn-dark-blue">Service Support</button>
@@ -53,7 +53,7 @@
             </div>
 
             <section class="mega-menu">
-                <div class="row container tab-content" id="about">
+                <div class="row container tab-content tab-general" id="about">
                     <div class="three columns">
                         <div class="card-blue">
                             <div class="card__content">
@@ -170,7 +170,7 @@
 
             <section class="menu-mobile" id="display-mobile-menu">
                 <div class="mobile-search-bar">
-                    <input class="search-bar" type="text" name="Search" id="navbar-search" placeholder="Munch & Move Resources">
+                    <input class="search-bar" type="text" name="Search" id="navbar-search">
                     <i class="fas fa-search search-icon" id="search-icon"></i>
                 </div>
                 <?php

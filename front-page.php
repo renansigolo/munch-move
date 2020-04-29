@@ -36,7 +36,7 @@ if ($banner_button) :
             </div>
 
             <div class="hero__mobile">
-                <img src="<?php echo the_post_thumbnail_url() ?>" alt="">
+                <img src="<?php echo the_post_thumbnail_url() ?>" height="160px" alt="Hero Image">
                 <div class="mobile-hero-content">
                     <div class="container">
                         <h1><?php the_field('banner_title') ?></h1>
@@ -120,7 +120,7 @@ if ($banner_button) :
                                 <hr class="mascot-hr-<?php echo $category_color ?>">
                             </div>
                             <div class="eight columns">
-                                <h2><?php echo $title; ?></h2>
+                                <h1><?php echo $title; ?></h1>
                                 <p><?php echo $description; ?></p>
                             </div>
                         </div>

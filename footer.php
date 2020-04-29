@@ -16,7 +16,7 @@
 <footer id="colophon" class="footer">
     <div class="container">
         <div class="footer__logo">
-            <img src="<?php echo $logo['url'] ?>" height="60px" alt="<?php echo $logo['alt'] ?>">
+            <img src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['alt'] ?>">
         </div>
         <div class="footer__navigation">
             <?php wp_nav_menu(array(

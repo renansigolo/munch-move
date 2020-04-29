@@ -5,7 +5,7 @@
 .footer {
   width: 100%;
   font-size: 1.4rem;
-  @include margin-tb(5rem, 3rem);
+  @include margin-tb(5rem, 3.3rem);
 
   a,
   p {
@@ -19,14 +19,17 @@
   &__logo {
     @extend .flex-center;
     margin-bottom: 32px;
-
-    @include desktop {
-      margin-bottom: 0;
-    }
-
     img {
       height: 60px;
       width: auto;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+
+      img {
+        height: 100px;
+      }
     }
   }
 
@@ -34,6 +37,10 @@
     ul {
       list-style: none;
       font-weight: var(--bold);
+
+      li {
+        margin-left: 0;
+      }
 
       @include desktop {
         display: inline-flex;
@@ -45,7 +52,7 @@
 
         @include desktop {
           &::after {
-            margin-left: 12px;
+            margin: 0 12px;
             color: var(--dark-blue);
             content: "|";
           }
@@ -60,7 +67,6 @@
 
   &__copyright {
     margin-top: 24px;
-    margin-left: 14px;
 
     @include desktop {
       margin-top: 0;

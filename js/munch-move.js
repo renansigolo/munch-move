@@ -5,9 +5,15 @@
 (function ($) {
   console.log("Init Munch Move Scripts");
 
+  let lastBread = document.querySelector(".breadcrumb_last");
+  if (lastBread.innerHTML === "Home") {
+    lastBread.innerHTML = " ";
+    $(".fa-angle-right").hide();
+  }
+
   /** Hide or display the mobile menu */
   function toggle() {
-    if ($(window).width() <= 1400) {
+    if ($(window).width() <= 1365) {
       $("#desktop").hide();
       $("#mobile").show();
       $("#display-mobile-menu").hide();

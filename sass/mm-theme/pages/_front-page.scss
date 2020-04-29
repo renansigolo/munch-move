@@ -85,7 +85,7 @@
     left: 0;
     width: 100%;
     z-index: -1;
-    border: 1px solid $color;
+    border: 3px solid $color;
 
     @include desktop {
       top: 75px;
@@ -120,16 +120,13 @@
       .mascot-hr-green {
         @include mascot-hr(var(--green));
       }
-      // hr {
-      //   @include mascot-hr(--blue);
-      // }
 
       .columns {
         margin: 0;
       }
     }
 
-    h2 {
+    h1 {
       @include margin-tb(32px, 16px);
     }
 
