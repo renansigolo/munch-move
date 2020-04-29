@@ -9,8 +9,13 @@
 get_header(); ?>
 
 <?php
-$homePage = get_field('home-page');
+$banner_button = get_field('banner_button');
+if ($banner_button) :
+    $banner_button_url = $banner_button['url'];
+    $banner_button_title = $banner_button['title'];
+    $banner_button_target = $banner_button['target'] ? $banner_button['target'] : '_self';
 ?>
+<?php endif ?>
 
 <div id="front-page" class="content-area">
     <main id="main" class="site-main">
@@ -20,10 +25,9 @@ $homePage = get_field('home-page');
                     <div class="row">
                         <div class="five columns">
                             <div class="hero-content">
-                                <h1>Munch & Move is NSW Health initiative that supports the healthy development of
-                                    children birth to 5 years</h1>
-                                <a href="<?php the_field('button_url'); ?>" target="<?php echo $button_target; ?>">
-                                    <button class="btn-blue">Watch Video</button>
+                                <h1><?php the_field('banner_title') ?></h1>
+                                <a href="<?php echo $banner_button_url; ?>" target="<?php echo $banner_button_target; ?>">
+                                    <button class="btn-blue"><?php echo $banner_button_title ?></button>
                                 </a>
                             </div>
                         </div>
@@ -35,12 +39,11 @@ $homePage = get_field('home-page');
                 <img src="<?php echo the_post_thumbnail_url() ?>" alt="">
                 <div class="mobile-hero-content">
                     <div class="container">
-                        <h1>Munch & Move is NSW Health initiative that supports the healthy development of
-                            children birth to 5 years</h1>
+                        <h1><?php the_field('banner_title') ?></h1>
                         <div class="row flex-center">
                             <div class="ten columns">
-                                <a href="<?php echo $button_url; ?>" target="<?php echo $button_target; ?>">
-                                    <button class="btn-blue">Watch Video</button>
+                                <a href="<?php echo $banner_button_url; ?>" target="<?php echo $banner_button_target; ?>">
+                                    <button class="btn-blue"><?php echo $banner_button_title ?></button>
                                 </a>
                             </div>
                         </div>

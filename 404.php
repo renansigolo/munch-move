@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 
  * The template for displaying 404 pages (not found)
@@ -10,16 +11,23 @@
 
 get_header(); ?>
 
+<?php
+    $main_content = get_field('404_main_content', 'option');
+    if ($main_content) {
+        $image = $main_content['image'];
+    }
+?>
+
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
         <div class="error-404 not-found container">
             <section class="section-decomissioned-content">
-                <h1>Are you looking for the Healthy Kids website?</h1>
-                <img src="<?php echo get_template_directory_uri() . '/images/404/macbook.png'; ?>" alt="Macbook">
+                <h1><?php echo $main_content['title']; ?></h1>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                 <div class="row flex-center">
                     <div class="eight columns">
-                        <p>Thank you for visiting us over the years. Our website is no longer around, but we have moved our most popular information to our partner websites.</p>
+                        <p><?php echo $main_content['description']; ?></p>
                     </div>
                 </div>
             </section>

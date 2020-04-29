@@ -188,3 +188,15 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * ACF Functions - Options Page
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	acf_add_options_sub_page('Header');
+	acf_add_options_sub_page('Footer');
+	acf_add_options_sub_page('404 Page');
+	
+}

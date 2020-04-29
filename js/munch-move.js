@@ -1,6 +1,5 @@
 /**
  * Custom JS for Munch & Move Theme
- *
  */
 
 (function ($) {
