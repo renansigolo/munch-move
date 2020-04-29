@@ -96,9 +96,9 @@
                         <div class="card-green">
                             <div class="card__content">
                                 <div>
-                                    <p>We are a NSW Health initiative that supports the healthy development of children birth to 5 years by promoting physical activity, healthy eating and reduced small screen time.</p>
+                                    <p>We offer free professional development to educators and service leaders working in early childhood services in NSW.</p>
                                 </div>
-                                <button class="btn-blue">Learn More</button>
+                                <button class="btn-green">Learn More</button>
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                                 <div>
                                     <p>We are a NSW Health initiative that supports the healthy development of children birth to 5 years by promoting physical activity, healthy eating and reduced small screen time.</p>
                                 </div>
-                                <button class="btn-blue">Learn More</button>
+                                <button class="btn-orange">Learn More</button>
                             </div>
                         </div>
                     </div>

@@ -56,7 +56,7 @@
   padding-top: 4px;
 
   @include desktop {
-    padding: 14px 43px 0 36px;
+    padding: 14px 40px 0 36px;
   }
 
   &::after {
@@ -272,8 +272,13 @@
   }
 }
 
+// .tab-general {
+
+// }
+
 .mega-menu {
   @extend %menu-on-top;
+
   .tab-content {
     display: none;
     @include margin-y(55px);

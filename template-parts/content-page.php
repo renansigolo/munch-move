@@ -60,11 +60,11 @@
                 <div class="related-links">
                     <h2>Related Links</h2>
                     <ul>
-                        <li>Testing</li>
-                        <li>Testing</li>
-                        <li>Testing</li>
-                        <li>Testing</li>
-                        <li>Testing</li>
+                        <li>About Munch & Move</li>
+                        <li>Munch & Move Training</li>
+                        <li>Munch & Move Resources</li>
+                        <li>Munch & Move Case Studies</li>
+                        <li>Munch & Move Reports</li>
                     </ul>
                 </div>
             </div>
