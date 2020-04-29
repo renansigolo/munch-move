@@ -2,7 +2,7 @@
 
 /**
  * 
- * Template Name: Privacy Policy - Page
+ * Template Name: Privacy Policy
  * 
  * The template for displaying the Privacy Policy
  *

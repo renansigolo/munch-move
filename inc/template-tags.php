@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Custom template tags for this theme
  *
@@ -7,7 +8,7 @@
  * @package Munch_&_Move
  */
 
-if (!function_exists('munch_move_posted_on')):
+if (!function_exists('munch_move_posted_on')) :
     /**
      * Prints HTML with meta information for the current post-date/time.
      */
@@ -42,7 +43,7 @@ if (!function_exists('munch_move_posted_on')):
     }
 endif;
 
-if (!function_exists('munch_move_posted_by')):
+if (!function_exists('munch_move_posted_by')) :
     /**
      * Prints HTML with meta information for the current author.
      */
@@ -62,7 +63,7 @@ if (!function_exists('munch_move_posted_by')):
     }
 endif;
 
-if (!function_exists('munch_move_entry_footer')):
+if (!function_exists('munch_move_entry_footer')) :
     /**
      * Prints HTML with meta information for the categories, tags and comments.
      */
@@ -148,7 +149,7 @@ if (!function_exists('munch_move_entry_footer')):
     }
 endif;
 
-if (!function_exists('munch_move_post_thumbnail')):
+if (!function_exists('munch_move_post_thumbnail')) :
     /**
      * Displays an optional post thumbnail.
      *
@@ -165,21 +166,21 @@ if (!function_exists('munch_move_post_thumbnail')):
             return;
         }
 
-        if (is_singular()): ?>
+        if (is_singular()) : ?>
 
-<div class="post-thumbnail">
-    <?php the_post_thumbnail(); ?>
-</div><!-- .post-thumbnail -->
+            <div class="post-thumbnail">
+                <?php the_post_thumbnail(); ?>
+            </div><!-- .post-thumbnail -->
 
-<?php else: ?>
+        <?php else : ?>
 
-<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-    <?php the_post_thumbnail('post-thumbnail', array(
-       'alt' => the_title_attribute(array(
-           'echo' => false
-       ))
-   )); ?>
-</a>
+            <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+                <?php the_post_thumbnail('post-thumbnail', array(
+                    'alt' => the_title_attribute(array(
+                        'echo' => false
+                    ))
+                )); ?>
+            </a>
 
 <?php endif; // End is_singular().
     }

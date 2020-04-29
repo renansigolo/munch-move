@@ -1,37 +1,40 @@
 /**
- * File munch-move.js.
+ * Custom JS for Munch & Move Theme
  *
- * Munch and Move Scripts
  */
 
 (function ($) {
   console.log("Init Munch Move Scripts");
-  /**
-   * Accordion
-   *
-   * Toggle between adding and removing the "active" class,
-   * to highlight the button that controls the panel
-   */
-  const accordion = () => {
-    const accElements = document.getElementsByClassName("accordion");
 
-    for (const accEl of accElements) {
-      accEl.addEventListener("click", function () {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-
-        // Toogle Panel Visibility
-        panel.style.display =
-          panel.style.display === "block" ? "none" : "block";
-      });
+  /** Hide or display the mobile menu */
+  function toggle() {
+    if ($(window).width() <= 1400) {
+      $("#desktop").hide();
+      $("#mobile").show();
+      $("#display-mobile-menu").hide();
+    } else {
+      $("#mobile").hide();
+      $("#desktop").show();
     }
-  };
+  }
+
+  /** On page load set the menu display initially */
+  $(window).load(function () {
+    $("#display-mobile-menu").hide();
+    toggle();
+  });
+
+  /** Toggle the menu display on browser resize */
+  $(window).resize(function () {
+    toggle();
+  });
 
   // Toggle Mobile Menu
   $("#btn-menu").on("click", function () {
-    $("#display-mobile-menu").slideDown("fast");
+    $("#display-mobile-menu").toggle("fast");
   });
 
+  // Mobile Menu
   $(document).ready(function () {
     $("#menu-mobile li.has-sub>a").on("click", function () {
       $(this).removeAttr("href");
@@ -49,8 +52,6 @@
         element.siblings("li").find("ul").slideUp();
       }
     });
-
-    // $("#menu-mobile>ul>li.has-sub>a").append('<span class="holder"></span>');
   });
 
   // Enable Click on the Navbar Logo
@@ -81,9 +82,6 @@
   $(".menu-service").mouseleave(function () {
     hideSearchBar();
   });
-  // $("#masthead").mouseleave(function () {
-  //   toggleNavbarSearch();
-  // });
 
   // Desktop Mega Menu Tabs
   $("#menu-desktop")
@@ -111,6 +109,27 @@
         menuTab.classList.remove("active");
       });
     });
+
+  /**
+   * Accordion
+   *
+   * Toggle between adding and removing the "active" class,
+   * to highlight the button that controls the panel
+   */
+  const accordion = () => {
+    const accElements = document.getElementsByClassName("accordion");
+
+    for (const accEl of accElements) {
+      accEl.addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+
+        // Toogle Panel Visibility
+        panel.style.display =
+          panel.style.display === "block" ? "none" : "block";
+      });
+    }
+  };
 
   accordion();
 })(jQuery);

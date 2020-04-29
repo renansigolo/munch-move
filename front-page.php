@@ -22,7 +22,9 @@ $homePage = get_field('home-page');
                             <div class="hero-content">
                                 <h1>Munch & Move is NSW Health initiative that supports the healthy development of
                                     children birth to 5 years</h1>
-                                <button class="btn-blue">Watch Video</button>
+                                <a href="<?php the_field('button_url'); ?>" target="<?php echo $button_target; ?>">
+                                    <button class="btn-blue">Watch Video</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -37,7 +39,9 @@ $homePage = get_field('home-page');
                             children birth to 5 years</h1>
                         <div class="row flex-center">
                             <div class="ten columns">
-                                <button class="btn-blue">Watch Video</button>
+                                <a href="<?php echo $button_url; ?>" target="<?php echo $button_target; ?>">
+                                    <button class="btn-blue">Watch Video</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -68,32 +72,39 @@ $homePage = get_field('home-page');
             </div>
         </div>
 
-        <section class="section-intro">
-            <div class="container">
-                <div class="row">
-                    <div class="seven columns">
-                        <?php the_content(); ?>
-                    </div>
-                    <div class="one column"></div>
-                    <div class="four columns">
-                        <div class="side-article">
-                            If you represent a large ECEC service provider/organisation, ECEC policy company, food
-                            service provider or related organisation, and are interested in working with us to help
-                            provide a healthier future for children across NSW, please contact us at: <a href="mailto:SWSLHD-MunchAndMoveOPH@health.nsw.gov.au">SWSLHD-MunchAndMoveOPH@health.nsw.gov.au</a>
-                            If you are seeking local implementation support, please refer the <a href="#!" target="_blank" rel="noopener noreferrer">Munch & Move Support</a> page to contact a
-                            local Munch & Move Support Officer.
+        <?php
+        while (have_rows('content-rows')) : the_row();
+            if (get_row_layout() == 'home_intro') :
+                $title = get_sub_field('title');
+                $description = get_sub_field('description');
+                $excerpt = get_sub_field('excerpt');
+        ?>
+                <section class="section-intro">
+                    <div class="container">
+                        <div class="row">
+                            <div class="seven columns">
+                                <h1><?php echo $title ?></h1>
+                                <p><?php echo $description ?></p>
+                            </div>
+                            <div class="one column"></div>
+                            <div class="four columns">
+                                <div class="side-article">
+                                    <?php echo $excerpt ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
+        <?php
+            endif;
+        endwhile;
+        ?>
 
         <section class="section-category">
             <div class="container">
-                <?php     // Loop through rows.
+                <?php
                 while (have_rows('content-rows')) : the_row();
-                    // Case: Paragraph layout.
-                    if (get_row_layout() == 'highlighted_content_row') :
+                    if (get_row_layout() == 'highlighted_content') :
                         $image = get_sub_field('image');
                         $title = get_sub_field('title');
                         $description = get_sub_field('description');
@@ -111,20 +122,34 @@ $homePage = get_field('home-page');
                             </div>
                         </div>
 
-
                         <div class="row">
                             <div class="cards">
                                 <?php while (have_rows('cards')) : the_row(); ?>
-                                <div class="card-<?php echo $category_color ?>">
-                                        <div class="card__header">
-                                            <img src="<?php echo get_sub_field('image')['url'];  ?>" alt="<?php echo get_sub_field('image')['alt'];  ?>">
-                                        </div>
+                                    <div class="card-<?php echo $category_color ?>">
+                                        <?php
+                                        $card_image = get_sub_field('card_image');
+                                        if ($card_image) :
+                                        ?>
+                                            <div class="card__header">
+                                                <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>">
+                                            </div>
+                                        <?php endif; ?>
                                         <div class="card__content">
                                             <div>
-                                                <h4><?php the_sub_field('title'); ?></h4>
-                                                <p><?php the_sub_field('description'); ?></p>
+                                                <h4><?php the_sub_field('card_title'); ?></h4>
+                                                <p><?php the_sub_field('card_description'); ?></p>
                                             </div>
-                                            <button class="btn-<?php echo $category_color ?>">Learn More</button>
+                                            <?php
+                                            $button = get_sub_field('card_button');
+                                            if ($button) :
+                                                $button_url = $button['url'];
+                                                $button_title = $button['title'];
+                                                $button_target = $button['target'] ? $button['target'] : '_self';
+                                            ?>
+                                                <a href="<?php echo $button_url; ?>" target="<?php echo $button_target; ?>">
+                                                    <button class="btn-<?php echo $category_color ?>"><?php echo $button_title; ?></button>
+                                                </a>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 <?php endwhile; ?>
@@ -132,16 +157,9 @@ $homePage = get_field('home-page');
                         </div>
 
                 <?php
-                    // Case: Download layout.
-                    elseif (get_row_layout() == 'download') :
-                        $file = get_sub_field('file');
-                    // Do something...
-
                     endif;
-
                 // End loop.
                 endwhile;
-
                 ?>
             </div>
         </section>
