@@ -19,8 +19,7 @@
   }
 }
 
-.btn-blue,
-.btn-general {
+.btn-blue {
   @extend %mm-btn;
   background-color: var(--blue);
 
@@ -29,8 +28,7 @@
   }
 }
 
-.btn-green,
-.btn-training {
+.btn-green {
   @extend %mm-btn;
   background-color: var(--green);
 
@@ -40,8 +38,7 @@
 }
 
 .btn-orange,
-.btn-red,
-.btn-resources {
+.btn-red {
   @extend %mm-btn;
   background-color: var(--orange);
 

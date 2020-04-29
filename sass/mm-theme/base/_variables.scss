@@ -33,3 +33,44 @@
   --green-shadow: #589429;
   --default-spacing: 8px;
 }
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+.bg-blue {
+  background-color: var(--blue);
+}
+.bg-dark-green {
+  background-color: var(--dark-green);
+}
+.bg-red {
+  background-color: var(--red);
+}
+
+// Colors for the mobile Menu Items
+@mixin mm-menu-item($primaryColor, $secondaryColor) {
+  background-color: $primaryColor;
+  .sub-menu {
+    li {
+      color: $primaryColor;
+      &:not(:last-child) {
+        &::after {
+          border-bottom: 1px solid $secondaryColor;
+        }
+      }
+    }
+  }
+}
+
+.mm-item-dark-blue {
+  @include mm-menu-item(var(--dark-blue), var(--blue));
+}
+.mm-item-dark-green {
+  @include mm-menu-item(var(--dark-green), var(--green));
+}
+.mm-item-red {
+  @include mm-menu-item(var(--red), var(--orange));
+}
+.mm-item-blue {
+  @include mm-menu-item(var(--blue), var(--dark-blue));
+}
