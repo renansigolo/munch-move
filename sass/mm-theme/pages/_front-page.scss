@@ -85,7 +85,7 @@
     left: 0;
     width: 100%;
     z-index: -1;
-    border: 3px solid $color;
+    border: 1.5px solid $color;
 
     @include desktop {
       top: 75px;

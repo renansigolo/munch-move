@@ -53,119 +53,52 @@
             </div>
 
             <section class="mega-menu">
-                <div class="row container tab-content tab-general" id="about">
-                    <div class="three columns">
-                        <div class="card-blue">
-                            <div class="card__content">
-                                <div>
-                                    <p>We are a NSW Health initiative that supports the healthy development of children birth to 5 years by promoting physical activity, healthy eating and reduced small screen time.</p>
-                                </div>
-                                <button class="btn-blue">Learn More</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="four columns">
-                        <ul class="mega-menu__list">
-                            <li>What is Munch & Move</li>
-                            <li>Benefits for early childhood services</li>
-                            <li>Success Stories</li>
-                            <li>Reports</li>
-                            <li>Munch & Move Support</li>
-                        </ul>
-                    </div>
-                    <div class="five columns">
-                        <div class="mega-menu__article">
-                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            <div>
-                                <h4>Munch & Move Benefits</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </div>
-                        <div class="mega-menu__article">
-                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            <div>
-                                <h4>Munch & Move Benefits</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row container tab-content" id="program">
-                    <div class="three columns">
-                        <div class="card-green">
-                            <div class="card__content">
-                                <div>
-                                    <p>We offer free professional development to educators and service leaders working in early childhood services in NSW.</p>
+                <?php while (have_rows('mega-menu', 'option')) : the_row(); ?>
+                    <?php
+                    $category = get_sub_field('menu_category');
+                    ?>
+                    <div class="row container tab-content tab-<?php echo esc_attr($category['value']); ?>" id="<?php echo esc_attr($category['value']); ?>">
+                        <div class="three columns">
+                            <div class="card-<?php echo esc_attr($category['value']); ?>">
+                                <div class="card__content">
+                                    <div>
+                                        <p><?php echo get_sub_field('card')['description'] ?></p>
+                                    </div>
+                                    <button class="btn-<?php echo esc_attr($category['value']); ?>">Learn More</button>
                                 </div>
-                                <button class="btn-green">Learn More</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="four columns">
-                        <ul class="mega-menu__list">
-                            <li>What is Munch & Move</li>
-                            <li>Benefits for early childhood services</li>
-                            <li>Success Stories</li>
-                            <li>Reports</li>
-                            <li>Munch & Move Support</li>
-                        </ul>
-                    </div>
-                    <div class="five columns">
-                        <div class="mega-menu__article">
-                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            <div>
-                                <h4>Munch & Move Benefits</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </div>
-                        <div class="mega-menu__article">
-                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            <div>
-                                <h4>Munch & Move Benefits</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row container tab-content" id="resources">
-                    <div class="three columns">
-                        <div class="card-red">
-                            <div class="card__content">
-                                <div>
-                                    <p>We are a NSW Health initiative that supports the healthy development of children birth to 5 years by promoting physical activity, healthy eating and reduced small screen time.</p>
+
+                        </div>
+                        <div class="four columns">
+                            <ul class="mega-menu__list">
+                                <?php
+                                while (have_rows('related_links')) : the_row();
+                                ?>
+                                    <a href="<?php echo get_sub_field('link')['url']; ?>">
+                                        <li><?php echo get_sub_field('link')['title']; ?></li>
+                                    </a>
+                                <?php endwhile; ?>
+                            </ul>
+                        </div>
+                        <div class="five columns">
+                            <?php
+                            while (have_rows('featured')) : the_row();
+                            ?>
+
+                                <div class="mega-menu__article">
+                                    <img src="<?php echo get_sub_field('image')['url']; ?>" alt="Card Image">
+                                    <div>
+                                        <h4><?php echo get_sub_field('title'); ?></h4>
+                                        <p><?php echo get_sub_field('description'); ?></p>
+                                    </div>
                                 </div>
-                                <button class="btn-orange">Learn More</button>
-                            </div>
+                            <?php endwhile; ?>
                         </div>
                     </div>
-                    <div class="four columns">
-                        <ul class="mega-menu__list">
-                            <li>What is Munch & Move</li>
-                            <li>Benefits for early childhood services</li>
-                            <li>Success Stories</li>
-                            <li>Reports</li>
-                            <li>Munch & Move Support</li>
-                        </ul>
-                    </div>
-                    <div class="five columns">
-                        <div class="mega-menu__article">
-                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            <div>
-                                <h4>Munch & Move Benefits</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </div>
-                        <div class="mega-menu__article">
-                            <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            <div>
-                                <h4>Munch & Move Benefits</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+
             </section>
 
             <section class="menu-mobile" id="display-mobile-menu">

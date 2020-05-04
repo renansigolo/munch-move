@@ -5,12 +5,6 @@
 (function ($) {
   console.log("Init Munch Move Scripts");
 
-  let lastBread = document.querySelector(".breadcrumb_last");
-  if (lastBread.innerHTML === "Home") {
-    lastBread.innerHTML = " ";
-    $(".fa-angle-right").hide();
-  }
-
   /** Hide or display the mobile menu */
   function toggle() {
     if ($(window).width() <= 1365) {
@@ -105,6 +99,8 @@
       for (const tab of tabContent) {
         tab.style.display = "none";
       }
+
+console.log($(`#${this.title}`))
 
       // Show only the respective content
       menuTab.classList.add("active");

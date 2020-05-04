@@ -246,7 +246,7 @@
         &:first-child {
           padding-top: 0;
         }
-        
+
         &:last-child {
           padding-bottom: 0;
         }
@@ -271,10 +271,6 @@
     }
   }
 }
-
-// .tab-general {
-
-// }
 
 .mega-menu {
   @extend %menu-on-top;
@@ -308,12 +304,44 @@
       padding-right: 16px;
     }
 
-    h4 {
-      color: var(--dark-blue);
-    }
+    // h4 {
+    //   color: var(--dark-blue);
+    // }
 
     &:first-child {
       margin-bottom: 32px;
     }
   }
+}
+
+@mixin menu-tab($primaryColor, $secondaryColor) {
+  .active {
+    a {
+      color: $primaryColor;
+    }
+  }
+
+  .mega-menu {
+    &__list {
+      li {
+        border-bottom: 1px solid $primaryColor;
+      }
+    }
+
+    &__article {
+      h4 {
+        color: $secondaryColor;
+      }
+    }
+  }
+}
+
+.tab-general {
+  @include menu-tab(var(--blue), var(--dark-blue))
+}
+.tab-training {
+  @include menu-tab(var(--green), var(--dark-green))
+}
+.tab-resources {
+  @include menu-tab(var(--red), var(--orange))
 }
