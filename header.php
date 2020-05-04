@@ -53,7 +53,6 @@
             </div>
 
             <section class="mega-menu">
-
                 <?php while (have_rows('mega-menu', 'option')) : the_row(); ?>
                     <?php
                     $category = get_sub_field('menu_category');
@@ -68,9 +67,8 @@
                                     <button class="btn-<?php echo esc_attr($category['value']); ?>">Learn More</button>
                                 </div>
                             </div>
-
-
                         </div>
+
                         <div class="four columns">
                             <ul class="mega-menu__list">
                                 <?php
@@ -82,13 +80,13 @@
                                 <?php endwhile; ?>
                             </ul>
                         </div>
+
                         <div class="five columns">
                             <?php
                             while (have_rows('featured')) : the_row();
                             ?>
-
                                 <div class="mega-menu__article">
-                                    <img src="<?php echo get_sub_field('image')['url']; ?>" alt="Card Image">
+                                    <img src="<?php echo get_sub_field('image')['url']; ?>" width="260" height="150" alt="Card Image">
                                     <div>
                                         <h4><?php echo get_sub_field('title'); ?></h4>
                                         <p><?php echo get_sub_field('description'); ?></p>

@@ -153,7 +153,7 @@
         .active {
           background-color: #fff;
           a {
-            color: var(--blue);
+            color: inherit;
             text-shadow: none;
           }
         }
@@ -291,7 +291,7 @@
       font-size: 1.6rem;
       font-weight: var(--extra-bold);
       padding-bottom: 16px;
-      border-bottom: 1px solid var(--blue);
+      border-bottom: 1px solid inherit;
       text-transform: uppercase;
     }
   }
@@ -323,25 +323,34 @@
 
   .mega-menu {
     &__list {
+      a {
+        color: $primaryColor;
+      }
+
       li {
-        border-bottom: 1px solid $primaryColor;
+        border-bottom: 1px solid $secondaryColor;
       }
     }
 
     &__article {
       h4 {
-        color: $secondaryColor;
+        color: $primaryColor;
       }
     }
   }
 }
 
 .tab-general {
-  @include menu-tab(var(--blue), var(--dark-blue))
+  color: var(--dark-blue);
+  @include menu-tab(var(--dark-blue), var(--blue));
 }
+
 .tab-training {
-  @include menu-tab(var(--green), var(--dark-green))
+  color: var(--dark-green);
+  @include menu-tab(var(--dark-green), var(--green));
 }
+
 .tab-resources {
-  @include menu-tab(var(--red), var(--orange))
+  color: var(--red);
+  @include menu-tab(var(--red), var(--orange));
 }
