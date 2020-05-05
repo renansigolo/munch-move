@@ -9,25 +9,15 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <h1>RELATED LINKS</h1>
-    <div class="grid__2">
-        <?php munch_move_post_thumbnail(); ?>
-        <?php munch_move_post_thumbnail(); ?>
-        <?php munch_move_post_thumbnail(); ?>
-        <?php munch_move_post_thumbnail(); ?>
-        <?php munch_move_post_thumbnail(); ?>
+<aside>
+    <div class="related-links">
+        <h2>Related Links</h2>
+        <ul>
+            <li>About Munch & Move</li>
+            <li>Munch & Move Training</li>
+            <li>Munch & Move Resources</li>
+            <li>Munch & Move Case Studies</li>
+            <li>Munch & Move Reports</li>
+        </ul>
     </div>
-
-    <div class="entry-content">
-        <?php
-        the_content();
-
-        wp_link_pages(array(
-            'before' =>
-            '<div class="page-links">' . esc_html__('Pages:', 'munch-move'),
-            'after' => '</div>'
-        ));
-        ?>
-    </div>
-</article><!-- #post-<?php the_ID(); ?> -->
+</aside>

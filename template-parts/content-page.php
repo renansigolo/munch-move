@@ -15,7 +15,12 @@
         'class' => 'featured-image'
     ]); ?>
 
-    <div class="utility">
+    <!-- Utilities Bar -->
+    <?php
+    get_template_part('template-parts/content', 'utilities');
+    ?>
+
+    <!-- <div class="utility">
         <div class="container">
             <div class="utility__menu">
                 <div>
@@ -36,37 +41,21 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="container entry-content">
         <div class="row">
             <div class="eight columns">
-                <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
                 <?php
                 the_content();
-
-                wp_link_pages(array(
-                    'before' =>
-                    '<div class="page-links">' . esc_html__('Pages:', 'munch-move'),
-                    'after' => '</div>'
-                ));
                 ?>
             </div>
 
-
-
             <!-- Related Links -->
             <div class="four columns">
-                <div class="related-links">
-                    <h2>Related Links</h2>
-                    <ul>
-                        <li>About Munch & Move</li>
-                        <li>Munch & Move Training</li>
-                        <li>Munch & Move Resources</li>
-                        <li>Munch & Move Case Studies</li>
-                        <li>Munch & Move Reports</li>
-                    </ul>
-                </div>
+                <?php
+                get_template_part('template-parts/content', 'related-links');
+                ?>
             </div>
         </div>
 

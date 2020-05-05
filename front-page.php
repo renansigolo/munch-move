@@ -52,28 +52,9 @@ if ($banner_button) :
             </div>
         </section>
 
-        <div class="utility">
-            <div class="container">
-                <div class="utility__menu">
-                    <div>
-                        <?php
-                        if (function_exists('yoast_breadcrumb')) {
-                            yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-                        }
-                        ?>
-                    </div>
-                    <div class="utility__actions">
-                        <ul>
-                            <li id="print"><i class="fas fa-print"></i>Print</li>
-                            <li id="share"><i class="fas fa-share-alt"></i>Share</li>
-                            <li id="zoomOut">A-</li>
-                            <li id="zoomReset">Ao</li>
-                            <li id="zoomIn">A+</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+        get_template_part('template-parts/content', 'utilities');
+        ?>
 
         <?php
         while (have_rows('content-rows')) : the_row();
@@ -130,7 +111,7 @@ if ($banner_button) :
                                 <?php while (have_rows('cards')) : the_row(); ?>
                                     <div class="card-<?php echo $category_color ?>">
                                         <?php
-                                        $card_image = get_sub_field('card_image');
+                                        $card_image = get_sub_field('image');
                                         if ($card_image) :
                                         ?>
                                             <div class="card__header">
@@ -139,11 +120,11 @@ if ($banner_button) :
                                         <?php endif; ?>
                                         <div class="card__content">
                                             <div>
-                                                <h4><?php the_sub_field('card_title'); ?></h4>
-                                                <p><?php the_sub_field('card_description'); ?></p>
+                                                <h4><?php the_sub_field('title'); ?></h4>
+                                                <p><?php the_sub_field('description'); ?></p>
                                             </div>
                                             <?php
-                                            $button = get_sub_field('card_button');
+                                            $button = get_sub_field('button');
                                             if ($button) :
                                                 $button_url = $button['url'];
                                                 $button_title = $button['title'];

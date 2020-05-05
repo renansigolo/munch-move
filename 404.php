@@ -12,10 +12,13 @@
 get_header(); ?>
 
 <?php
-    $main_content = get_field('404_main_content', 'option');
-    if ($main_content) {
-        $image = $main_content['image'];
-    }
+$main_content = get_field('404_main_content', 'option');
+$quick_links = get_field('404_quick_links', 'option');
+$bottom_content = get_field('404_bottom_content', 'option');
+if ($main_content) {
+    $image = $main_content['image'];
+}
+
 ?>
 
 <div id="primary" class="content-area">
@@ -33,43 +36,45 @@ get_header(); ?>
             </section>
 
             <section class="section-quick-links">
-                <h1>Healthy Kids Quick Links</h1>
+                <h1><?php echo $quick_links['title'] ?></h1>
+
                 <div class="quick-links">
-                    <div class="card-blue">
-                        <div class="card__header">
-                            <img src="<?php echo get_template_directory_uri() . '/images/404/card-1.png'; ?>" alt="Card Image">
-                        </div>
-                        <div class="card__content">
-                            <h4>Resources for families</h4>
-                            <ul>
-                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Heart Foundation Recipes</a></li>
-                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Active Kids voucher</a></li>
-                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Healthy Kids factsheets</a></li>
-                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Lunchbox ideas</a></li>
-                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Make Healthy Normal</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card-blue">
-                        <div class="card__header">
-                            <img src="<?php echo get_template_directory_uri() . '/images/404/card-2.png'; ?>" alt="Card Image">
-                        </div>
-                        <div class="card__content">
-                            <h4>Schools and Playgroups</h4>
-                            <ul>
-                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Live Life Well @ School, Crunch & Sip and Out of School Hours care (OOSH)</a></li>
-                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Healthy School Canteens</a></li>
-                                <li><a href="#!" target="_blank" rel="noopener noreferrer">Supported Playgroups Resources</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <?php
+                    while (have_rows('404_quick_links', 'option')) : the_row();
+                        while (have_rows('cards')) : the_row();
+                            $title = get_sub_field('title');
+                    ?>
+                            <div class="card-blue">
+                                <div class="card__header">
+                                    <?php
+                                    $card_image = get_sub_field('image');
+                                    if ($card_image) :
+                                    ?>
+                                        <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>">
+                                </div>
+                                <div class="card__content">
+                                    <h4><?php echo $title ?></h4>
+                                    <ul>
+                                        <?php while (have_rows('links')) : the_row(); ?>
+                                            <li><a href="<?php echo get_sub_field('link')['url'] ?>" rel="noopener noreferrer"><?php echo get_sub_field('link')['title'] ?></a></li>
+                                        <?php endwhile; ?>
+                                    </ul>
+                                <?php endif; ?>
+                                </div>
+                            </div>
+
+                        <?php endwhile; ?>
+                    <?php endwhile; ?>
+
                 </div>
             </section>
 
             <section class="section-mascots">
                 <img src="<?php echo get_template_directory_uri() . '/images/404/divider-fruits.svg'; ?>" alt="Divider Fruits">
-                <h1>Munch & Move Content is Still Available!</h1>
-                <button class="btn-blue">Visit Munch & Move</button>
+                <h1><?php echo $bottom_content['title'] ?></h1>
+                <a href="<?php echo $bottom_content['button']['url']; ?>">
+                    <button class="btn-blue"><?php echo $bottom_content['button']['title']; ?></button>
+                </a>
             </section>
         </div>
 
