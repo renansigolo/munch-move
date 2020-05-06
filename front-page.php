@@ -27,7 +27,7 @@ if ($banner_button) :
                             <div class="hero-content">
                                 <h1><?php the_field('banner_title') ?></h1>
                                 <a href="<?php echo $banner_button_url; ?>" target="<?php echo $banner_button_target; ?>">
-                                    <button class="btn-blue"><?php echo $banner_button_title ?></button>
+                                    <button class="btn-general"><?php echo $banner_button_title ?></button>
                                 </a>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ if ($banner_button) :
                         <div class="row flex-center">
                             <div class="ten columns">
                                 <a href="<?php echo $banner_button_url; ?>" target="<?php echo $banner_button_target; ?>">
-                                    <button class="btn-blue"><?php echo $banner_button_title ?></button>
+                                    <button class="btn-general"><?php echo $banner_button_title ?></button>
                                 </a>
                             </div>
                         </div>
@@ -97,13 +97,14 @@ if ($banner_button) :
                         $image = get_sub_field('image');
                         $title = get_sub_field('title');
                         $description = get_sub_field('description');
-                        $category_color = get_sub_field('category');
+                        $category = get_sub_field('category');
                         $cards = get_sub_field('highlighted_content_row_cards');
+                        $grid_rows = get_sub_field_object('cards_per_row')['value'];
                 ?>
                         <div class="row section-category__header">
                             <div class="twelve columns">
                                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-                                <hr class="mascot-hr-<?php echo $category_color ?>">
+                                <hr class="mascot-hr-<?php echo $category ?>">
                             </div>
                             <div class="eight columns">
                                 <h1><?php echo $title; ?></h1>
@@ -112,9 +113,9 @@ if ($banner_button) :
                         </div>
 
                         <div class="row">
-                            <div class="cards">
+                            <div class="grid-<?php echo $grid_rows ?> cards">
                                 <?php while (have_rows('cards')) : the_row(); ?>
-                                    <div class="card-<?php echo $category_color ?>">
+                                    <div class="card-<?php echo $category ?>">
                                         <?php
                                         $card_image = get_sub_field('image');
                                         if ($card_image) :
@@ -136,7 +137,7 @@ if ($banner_button) :
                                                 $button_target = $button['target'] ? $button['target'] : '_self';
                                             ?>
                                                 <a href="<?php echo $button_url; ?>" target="<?php echo $button_target; ?>">
-                                                    <button class="btn-<?php echo $category_color ?>"><?php echo $button_title; ?></button>
+                                                    <button class="btn-<?php echo $category ?>"><?php echo $button_title; ?></button>
                                                 </a>
                                             <?php endif; ?>
                                         </div>
@@ -163,41 +164,29 @@ if ($banner_button) :
 
                 <div class="row">
                     <div class="cards">
-                        <div class="card-red">
+                        <div class="card-resources">
                             <div class="card__header">
                                 <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
                             </div>
                             <div class="card__content">
                                 <h4>Resources for families</h4>
-                                <button class="btn-orange">Download Transcript</button>
+                                <button class="btn-resources">Download Transcript</button>
                             </div>
                         </div>
-                        <div class="card-red">
+                        <div class="card-resources">
                             <div class="card__header">
                                 <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
                             </div>
                             <div class="card__content">
                                 <h4>Resources for families</h4>
-                                <button class="btn-orange">Download Transcript</button>
+                                <button class="btn-resources">Download Transcript</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="accordion-list">
-            <div class="container">
-                <button class="accordion">Section 3</button>
-                <div class="panel">
-                    <ul>
-                        <li>Helloe</li>
-                        <li>Helloe</li>
-                        <li>Helloe</li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
+ -->
 
     </main>
 

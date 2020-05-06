@@ -44,7 +44,7 @@ if ($main_content) {
                         while (have_rows('cards')) : the_row();
                             $title = get_sub_field('title');
                     ?>
-                            <div class="card-blue">
+                            <div class="card-general">
                                 <div class="card__header">
                                     <?php
                                     $card_image = get_sub_field('image');
@@ -73,7 +73,7 @@ if ($main_content) {
                 <img src="<?php echo get_template_directory_uri() . '/images/404/divider-fruits.svg'; ?>" alt="Divider Fruits">
                 <h1><?php echo $bottom_content['title'] ?></h1>
                 <a href="<?php echo $bottom_content['button']['url']; ?>">
-                    <button class="btn-blue"><?php echo $bottom_content['button']['title']; ?></button>
+                    <button class="btn-general"><?php echo $bottom_content['button']['title']; ?></button>
                 </a>
             </section>
         </div>

@@ -26,6 +26,11 @@
         <div class="row">
             <!-- WP Content -->
             <div class="eight columns">
+                <header class="entry-header">
+                    <?php
+                    the_title('<h1 class="entry-title">', '</h1>');
+                    ?>
+                </header>
                 <?php
                 the_content();
                 ?>
@@ -34,58 +39,27 @@
             <!-- Related Links -->
             <div class="four columns">
                 <?php
-                get_template_part('template-parts/content', 'related-links');
+                get_template_part('template-parts/component', 'related-links');
                 ?>
             </div>
         </div>
 
         <?php
-        while (have_rows('content_sections')) : the_row();
+        while (have_rows('content_blocks')) : the_row();
         ?>
-            <?php if (get_row_layout() == 'cards_section') : ?>
-                <div class="row">
-                    <div class="cards">
-                        <?php while (have_rows('cards')) : the_row(); ?>
-                            <div class="card-<?php echo $category_color ?>">
-                                <?php
-                                $card_image = get_sub_field('image');
-                                if ($card_image) :
-                                ?>
-                                    <div class="card__header">
-                                        <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>">
-                                    </div>
-                                <?php endif; ?>
-                                <div class="card__content">
-                                    <div>
-                                        <h4><?php the_sub_field('title'); ?></h4>
-                                        <p><?php the_sub_field('description'); ?></p>
-                                    </div>
-                                    <?php
-                                    $button = get_sub_field('button');
-                                    if ($button) :
-                                        $button_url = $button['url'];
-                                        $button_title = $button['title'];
-                                        $button_target = $button['target'] ? $button['target'] : '_self';
-                                    ?>
-                                        <a href="<?php echo $button_url; ?>" target="<?php echo $button_target; ?>">
-                                            <button class="btn-<?php echo $category_color ?>"><?php echo $button_title; ?></button>
-                                        </a>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        <?php endwhile; ?>
-                    </div>
-                </div>
-        <?php
-            endif;
-        endwhile;
-        ?>
+            <?php
+            get_template_part('template-parts/component', 'cards');
+            ?>
 
+            <?php
+            get_template_part('template-parts/component', 'accordion');
+            ?>
 
-
+            <?php
+            get_template_part('template-parts/component', 'info');
+            ?>
+        <?php endwhile; ?>
     </div>
 
-    <?php if (get_edit_post_link()) : ?>
-
-    <?php endif; ?>
+    <?php if (get_edit_post_link()) : ?><?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

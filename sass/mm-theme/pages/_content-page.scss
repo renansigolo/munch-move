@@ -2,6 +2,25 @@
 # Content Page
 --------------------------------------------------------------*/
 
+.entry-title {
+  margin-bottom: 24px;
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.entry-content {
+  h6 {
+    display: inline-flex;
+    margin-top: 24px;
+
+    a {
+      @extend .btn-general;
+    }
+  }
+}
+
 // Defaults for the content that will be added by the user
 .content {
   ul {
@@ -32,8 +51,13 @@
 }
 
 .related-links {
-  border-left: 1px solid var(--blue);
-  padding-left: 32px;
+  display: none;
+
+  @include desktop {
+    display: block;
+    padding-left: 32px;
+    border-left: 1px solid var(--blue);
+  }
 
   h2 {
     margin-bottom: 32px;
@@ -63,7 +87,8 @@
   font-weight: var(--bold);
   color: var(--dark-blue);
   background-color: #fff;
-  border-bottom: 1px solid var(--dark-blue);
+  border-radius: 0;
+  border-bottom: 3px solid var(--dark-blue);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -86,5 +111,9 @@
 
   ul {
     @include list-icon($fa-var-chevron-right);
+
+    a {
+      color: var(--blue);
+    }
   }
 }

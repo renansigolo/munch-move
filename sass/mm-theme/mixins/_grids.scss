@@ -24,7 +24,7 @@
   align-items: center;
 }
 
-// Grid
+// Grids
 @mixin grid($columns) {
   display: grid;
   grid-template-columns: repeat(1fr, 1fr);
@@ -37,4 +37,14 @@
     grid-column-gap: 30px;
     grid-row-gap: 30px;
   }
+}
+
+.grid-1 {
+  @include grid(1);
+}
+.grid-2 {
+  @include grid(2);
+}
+.grid-3 {
+  @include grid(3);
 }

@@ -35,7 +35,7 @@
                     <div class="nav-desktop" id="desktop">
                         <div class="menu-service">
                             <input class="search-bar" type="text" name="Search" id="navbar-search">
-                            <button class="btn-blue" id="navbar-btn-search">Search</button>
+                            <button class="btn-general" id="navbar-btn-search">Search</button>
                             <i class="fas fa-search search-icon" id="search-icon"></i>
                             <button class="btn-dark-blue">Service Support</button>
                         </div>

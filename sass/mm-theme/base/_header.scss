@@ -2,54 +2,6 @@
 # Header
 --------------------------------------------------------------*/
 
-%header-item {
-  border: 0;
-  border-radius: 0;
-  color: #fff;
-  text-shadow: 0 1px 3px var(--green-shadow);
-  font-size: 1.6rem;
-  font-weight: var(--black);
-  box-shadow: none;
-  background-color: transparent;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-%menu-on-top {
-  position: absolute;
-  width: 100%;
-  background-color: #fff;
-  z-index: 1;
-}
-
-%search-bar {
-  background: #ffffff;
-  border: 1px solid var(--dark-blue);
-  border-radius: 25px;
-  font-weight: var(--extra-bold);
-  font-size: 1.5rem;
-  color: var(--blue);
-  margin-right: 8px;
-  width: 100%;
-  height: 100%;
-
-  &::placeholder {
-    color: var(--blue);
-    // color: var(--dark-blue);
-  }
-}
-
-%search-icon {
-  color: var(--dark-blue);
-  font-size: 2rem;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 .page-header {
   background: url("images/backgrounds/bg-header.png") center no-repeat;
   background-size: cover;
@@ -95,6 +47,7 @@
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
+    max-width: fit-content;
 
     .menu-service {
       display: flex;

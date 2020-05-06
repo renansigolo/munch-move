@@ -43,21 +43,19 @@
   }
 }
 
-.card-blue,
 .card-general {
   @include mm-card(var(--dark-blue), var(--blue));
 }
-.card-green,
+
 .card-training {
   @include mm-card(var(--dark-green), var(--green));
 }
-.card-red,
+
 .card-resources {
   @include mm-card(var(--red), var(--orange));
 }
 
 .cards {
-  @include grid(3);
   @include margin-tb(40px, 56px);
 
   .card__content {
@@ -65,11 +63,38 @@
   }
 }
 
-.section-video {
-  @extend %line-behind-title;
-
-  .cards {
-    @include grid(2);
-    @include margin-tb(32px, 56px);
+/* Video
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+video {
+  max-width: 100%;
+  &:focus {
+      outline: none;
   }
 }
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// .section-video {
+//   @extend %line-behind-title;
+
+//   .cards {
+//     @include grid(2);
+//     @include margin-tb(32px, 56px);
+//   }
+// }
