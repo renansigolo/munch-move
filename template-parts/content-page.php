@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+    <!-- Featured Image -->
     <?php the_post_thumbnail('large', [
         'class' => 'featured-image'
     ]); ?>
@@ -20,31 +21,10 @@
     get_template_part('template-parts/content', 'utilities');
     ?>
 
-    <!-- <div class="utility">
-        <div class="container">
-            <div class="utility__menu">
-                <div>
-                    <?php
-                    if (function_exists('yoast_breadcrumb')) {
-                        yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-                    }
-                    ?>
-                </div>
-                <div class="utility__actions">
-                    <ul>
-                        <li id="print"><i class="fas fa-print"></i>Print</li>
-                        <li id="share"><i class="fas fa-share-alt"></i>Share</li>
-                        <li id="zoomOut">A-</li>
-                        <li id="zoomReset">Ao</li>
-                        <li id="zoomIn">A+</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <div class="container entry-content">
         <div class="row">
+            <!-- WP Content -->
             <div class="eight columns">
                 <?php
                 the_content();
@@ -59,7 +39,51 @@
             </div>
         </div>
 
-    </div><!-- .entry-content -->
+        <?php
+        while (have_rows('content_sections')) : the_row();
+        ?>
+            <?php if (get_row_layout() == 'cards_section') : ?>
+                <div class="row">
+                    <div class="cards">
+                        <?php while (have_rows('cards')) : the_row(); ?>
+                            <div class="card-<?php echo $category_color ?>">
+                                <?php
+                                $card_image = get_sub_field('image');
+                                if ($card_image) :
+                                ?>
+                                    <div class="card__header">
+                                        <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>">
+                                    </div>
+                                <?php endif; ?>
+                                <div class="card__content">
+                                    <div>
+                                        <h4><?php the_sub_field('title'); ?></h4>
+                                        <p><?php the_sub_field('description'); ?></p>
+                                    </div>
+                                    <?php
+                                    $button = get_sub_field('button');
+                                    if ($button) :
+                                        $button_url = $button['url'];
+                                        $button_title = $button['title'];
+                                        $button_target = $button['target'] ? $button['target'] : '_self';
+                                    ?>
+                                        <a href="<?php echo $button_url; ?>" target="<?php echo $button_target; ?>">
+                                            <button class="btn-<?php echo $category_color ?>"><?php echo $button_title; ?></button>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                </div>
+        <?php
+            endif;
+        endwhile;
+        ?>
+
+
+
+    </div>
 
     <?php if (get_edit_post_link()) : ?>
 

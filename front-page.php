@@ -52,6 +52,7 @@ if ($banner_button) :
             </div>
         </section>
 
+        <!-- Utilities Bar -->
         <?php
         get_template_part('template-parts/content', 'utilities');
         ?>
@@ -68,6 +69,10 @@ if ($banner_button) :
                         <div class="row">
                             <div class="seven columns">
                                 <h1><?php echo $title ?></h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="seven columns">
                                 <p><?php echo $description ?></p>
                             </div>
                             <div class="one column"></div>

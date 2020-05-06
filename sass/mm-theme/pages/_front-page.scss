@@ -10,8 +10,8 @@
     &:before {
       border-top: 2px solid var(--dark-blue);
       content: "";
-      margin: 0 auto; /* this centers the line to the full width specified */
-      position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+      margin: 0 auto;
+      position: absolute;
       top: 50%;
       left: 0;
       right: 0;
@@ -21,7 +21,6 @@
     }
 
     span {
-      /* to hide the lines from behind the text, you have to set the background color the same as the container */
       background: #fff;
       padding: 0 40px;
     }
@@ -68,7 +67,7 @@
       .row {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
       }
 
       .side-article {
@@ -111,15 +110,14 @@
         }
       }
 
-      .mascot-hr-blue,
       .mascot-hr-general {
         @include mascot-hr(var(--blue));
       }
-      .mascot-hr-red,
+
       .mascot-hr-resources {
         @include mascot-hr(var(--orange));
       }
-      .mascot-hr-green,
+
       .mascot-hr-training {
         @include mascot-hr(var(--green));
       }
@@ -131,24 +129,6 @@
 
     h1 {
       @include margin-tb(32px, 16px);
-    }
-
-    .cards {
-      @include grid(3);
-      @include margin-tb(40px, 56px);
-
-      .card__content {
-        justify-content: space-between;
-      }
-    }
-  }
-
-  .section-video {
-    @extend %line-behind-title;
-
-    .cards {
-      @include grid(2);
-      @include margin-tb(32px, 56px);
     }
   }
 }

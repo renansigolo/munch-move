@@ -18,7 +18,7 @@
       padding: 24px 16px 32px;
       background-color: $primaryColor;
       color: #fff;
-      
+
       @include desktop {
         // display: flex;
         // flex-direction: column;
@@ -54,4 +54,22 @@
 .card-red,
 .card-resources {
   @include mm-card(var(--red), var(--orange));
+}
+
+.cards {
+  @include grid(3);
+  @include margin-tb(40px, 56px);
+
+  .card__content {
+    justify-content: space-between;
+  }
+}
+
+.section-video {
+  @extend %line-behind-title;
+
+  .cards {
+    @include grid(2);
+    @include margin-tb(32px, 56px);
+  }
 }
