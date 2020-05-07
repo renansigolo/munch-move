@@ -56,6 +56,7 @@
                     <?php while (have_rows('content_blocks')) : the_row() ?>
                         <?php get_template_part('template-parts/component', 'accordion') ?>
                         <?php get_template_part('template-parts/component', 'info') ?>
+                        <?php get_template_part('template-parts/component', 'playlist') ?>
                     <?php endwhile ?>
                 </div>
             </div>

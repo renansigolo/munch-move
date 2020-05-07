@@ -5,7 +5,8 @@
 .featured-image {
   width: 100%;
   box-sizing: border-box;
-  height: auto;
+  object-fit: cover;
+  height: calc(100vh - 210px);
 }
 
 .background-banner {
@@ -29,7 +30,7 @@
       width: auto;
       margin-left: 83px;
       // height: calc(100vh - 180px); // Correct Code to Go to Prod
-      height: calc(100vh - 212px); // With the WP Top Bar
+      height: calc(100vh - 210px); // With the WP Top Bar
 
       h1 {
         color: #fff;

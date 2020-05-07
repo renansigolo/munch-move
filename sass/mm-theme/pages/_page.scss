@@ -125,6 +125,72 @@
   }
 }
 
+.playlist {
+  margin-top: 24px;
+
+  table {
+    border-collapse: collapse;
+  }
+  &__header {
+    th {
+      padding: 0 0 16px 0;
+      border-bottom: none;
+    }
+  }
+
+  &__song {
+    border-bottom: 3px solid var(--dark-blue) !important;
+
+    td {
+      padding: 8px 0 8px 10px;
+      font-size: 1.9rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--dark-blue);
+      font-weight: var(--bold);
+      font-size: 1.9rem;
+
+      &::before {
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-chevron-right);
+        font-size: 1.4rem;
+        float: left;
+        margin: 0 0.5em 0 -0.5em;
+        line-height: 29px;
+        color: inherit;
+      }
+    }
+  }
+
+  audio {
+    margin-top: 32px;
+
+    &::-webkit-media-controls-panel {
+      background-color: #fff;
+    }
+    &::-webkit-media-controls-play-button {
+      background-color: var(--blue);
+      padding: 25px;
+      border-radius: 25px;
+    }
+
+    &::-webkit-media-controls-current-time-display,
+    &::-webkit-media-controls-time-remaining-display {
+      display: none;
+    }
+
+    // &::-webkit-media-controls-volume-slider {
+    //   background-color: var(--blue);
+    //   border-radius: 15px;
+    //   padding: 18px 30px;
+    //   color: #fff;
+    // }
+  }
+}
+
 .search-content {
   h4 {
     margin-top: 32px;
