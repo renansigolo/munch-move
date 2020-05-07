@@ -78,6 +78,11 @@ video {
   overflow: hidden;
   max-width: 100%;
   height: auto;
+  margin-top: 10px;
+
+  @include desktop {
+    margin-top: 30px;
+  }
 }
 
 .embed-container iframe,
@@ -89,12 +94,3 @@ video {
   width: 100%;
   height: 100%;
 }
-
-// .section-video {
-//   @extend %line-behind-title;
-
-//   .cards {
-//     @include grid(2);
-//     @include margin-tb(32px, 56px);
-//   }
-// }

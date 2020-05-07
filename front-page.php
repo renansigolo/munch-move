@@ -17,8 +17,8 @@ if ($banner_button) :
 ?>
 <?php endif ?>
 
-<div id="front-page" class="content-area">
-    <main id="main" class="site-main">
+<div id="front-page">
+    <main id="main">
         <section class="hero">
             <div class="hero__desktop">
                 <div class="background-banner" style="background-image: url(<?php echo the_post_thumbnail_url() ?>)">
@@ -54,7 +54,7 @@ if ($banner_button) :
 
         <!-- Utilities Bar -->
         <?php
-        get_template_part('template-parts/content', 'utilities');
+        get_template_part('template-parts/component', 'utilities');
         ?>
 
         <?php
@@ -148,46 +148,10 @@ if ($banner_button) :
 
                 <?php
                     endif;
-                // End loop.
                 endwhile;
                 ?>
             </div>
         </section>
-
-        <!-- <section class="section-video">
-            <div class="container">
-                <div class="row section-category__header">
-                    <div class="twelve columns">
-                        <h2><span>Introduction</span></h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="cards">
-                        <div class="card-resources">
-                            <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            </div>
-                            <div class="card__content">
-                                <h4>Resources for families</h4>
-                                <button class="btn-resources">Download Transcript</button>
-                            </div>
-                        </div>
-                        <div class="card-resources">
-                            <div class="card__header">
-                                <img src="<?php echo get_template_directory_uri() . '/images/why.png'; ?>" alt="Card Image">
-                            </div>
-                            <div class="card__content">
-                                <h4>Resources for families</h4>
-                                <button class="btn-resources">Download Transcript</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
- -->
-
     </main>
 
     <?php get_footer();

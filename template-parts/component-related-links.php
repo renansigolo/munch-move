@@ -25,4 +25,17 @@ if (have_rows('related_links')) :
             ?>
         </ul>
     </aside>
+
+<?php else : ?>
+    <aside class="related-links">
+        <h2>Related Links</h2>
+        <ul>
+            <li><a href="#">About Munch & Move</a></li>
+            <li><a href="#">Munch & Move Training</a></li>
+            <li><a href="#">Munch & Move Resources</a></li>
+            <li><a href="#">Munch & Move Case Studies</a></li>
+            <li><a href="#">Munch & Move Reports</a></li>
+        </ul>
+    </aside>
+
 <?php endif; ?>

@@ -44,7 +44,7 @@ li {
   color: var(--red);
 }
 
-/* Lists BKP
+/* List Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @mixin list-header-icon($icon) {
   li {
@@ -57,6 +57,55 @@ li {
       font-size: 1.2rem;
       line-height: 26px;
       // padding-left: 10px;
+    }
+  }
+}
+
+/* Accordion
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.accordion {
+  cursor: pointer;
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 1.9rem;
+  font-weight: var(--bold);
+  color: var(--dark-blue);
+  background-color: #fff;
+  border-radius: 0;
+  border-bottom: 3px solid var(--dark-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &::after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-plus);
+    font-size: 1.4rem;
+    margin-left: 5px;
+  }
+
+  &.active::after {
+    content: fa-content($fa-var-minus);
+  }
+}
+
+.panel {
+  display: none;
+  padding: 16px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  color: var(--blue);
+
+  ul {
+    @include list-icon($fa-var-chevron-right);
+
+    a {
+      color: var(--blue);
     }
   }
 }

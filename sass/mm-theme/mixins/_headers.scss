@@ -54,14 +54,15 @@
 // Content Headers
 %line-behind-title {
   h2 {
+    text-align: center;
     position: relative;
     z-index: 1;
 
     &:before {
       border-top: 2px solid var(--dark-blue);
       content: "";
-      margin: 0 auto; /* this centers the line to the full width specified */
-      position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+      margin: 0 auto;
+      position: absolute;
       top: 50%;
       left: 0;
       right: 0;
@@ -71,9 +72,12 @@
     }
 
     span {
-      /* to hide the lines from behind the text, you have to set the background color the same as the container */
       background: #fff;
       padding: 0 40px;
     }
   }
+}
+
+.line-throught-text {
+  @extend %line-behind-title;
 }

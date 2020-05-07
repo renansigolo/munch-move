@@ -18,9 +18,8 @@
 
     <!-- Utilities Bar -->
     <?php
-    get_template_part('template-parts/content', 'utilities');
+    get_template_part('template-parts/component', 'utilities');
     ?>
-
 
     <div class="container entry-content">
         <div class="row">
@@ -31,9 +30,10 @@
                     the_title('<h1 class="entry-title">', '</h1>');
                     ?>
                 </header>
-                <?php
-                the_content();
-                ?>
+
+                <div class="mm-content">
+                    <?php the_content() ?>
+                </div>
             </div>
 
             <!-- Related Links -->
@@ -44,21 +44,24 @@
             </div>
         </div>
 
-        <?php
-        while (have_rows('content_blocks')) : the_row();
-        ?>
-            <?php
-            get_template_part('template-parts/component', 'cards');
-            ?>
+        <div class="cards">
+            <?php while (have_rows('content_blocks')) : the_row() ?>
+                <?php get_template_part('template-parts/component', 'cards') ?>
+            <?php endwhile ?>
+        </div>
 
-            <?php
-            get_template_part('template-parts/component', 'accordion');
-            ?>
+        <div class="row">
+            <!-- ACF Content -->
+            <div class="eight columns">
+                <div class="mm-content">
+                    <?php while (have_rows('content_blocks')) : the_row() ?>
+                        <?php get_template_part('template-parts/component', 'accordion') ?>
+                        <?php get_template_part('template-parts/component', 'info') ?>
+                    <?php endwhile ?>
+                </div>
+            </div>
+        </div>
 
-            <?php
-            get_template_part('template-parts/component', 'info');
-            ?>
-        <?php endwhile; ?>
     </div>
 
     <?php if (get_edit_post_link()) : ?><?php endif; ?>

@@ -1,0 +1,90 @@
+/*--------------------------------------------------------------
+# Content Page
+--------------------------------------------------------------*/
+
+// .entry-title {
+//   margin-bottom: 24px;
+
+//   @include desktop {
+//     margin-bottom: 40px;
+//   }
+// }
+
+// .entry-content {
+//   h6 {
+//     display: inline-flex;
+//     margin-top: 24px;
+
+//     a {
+//       @extend .btn-general;
+//     }
+//   }
+// }
+
+// .related-links {
+//   display: none;
+
+//   @include desktop {
+//     display: block;
+//     padding-left: 32px;
+//     border-left: 1px solid var(--blue);
+//   }
+
+//   h2 {
+//     margin-bottom: 32px;
+//   }
+
+//   ul {
+//     @include list-icon($fa-var-chevron-right);
+
+//     li {
+//       font-size: 2.1rem;
+//       font-weight: var(--bold);
+//       color: var(--dark-blue);
+//       margin-bottom: 16px;
+//     }
+//   }
+// }
+
+// .accordion {
+//   cursor: pointer;
+//   padding: 8px 0;
+//   width: 100%;
+//   text-align: left;
+//   border: none;
+//   outline: none;
+//   transition: 0.4s;
+//   font-size: 1.9rem;
+//   font-weight: var(--bold);
+//   color: var(--dark-blue);
+//   background-color: #fff;
+//   border-radius: 0;
+//   border-bottom: 3px solid var(--dark-blue);
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-start;
+
+//   &::after {
+//     @extend %fa-icon;
+//     @extend .fas;
+//     content: fa-content($fa-var-plus);
+//     font-size: 1.4rem;
+//     margin-left: 5px;
+//   }
+// }
+
+// .panel {
+//   display: none;
+//   padding: 16px;
+//   overflow: hidden;
+//   transition: max-height 0.2s ease-out;
+//   color: var(--blue);
+
+//   ul {
+//     @include list-icon($fa-var-chevron-right);
+
+//     a {
+//       color: var(--blue);
+//     }
+//   }
+// }

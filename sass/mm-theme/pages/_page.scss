@@ -1,0 +1,126 @@
+/*--------------------------------------------------------------
+# Content Page
+--------------------------------------------------------------*/
+
+/* Global Classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// .content-area{
+// }
+
+// .site-main {
+// }
+
+// .entry-header,
+.entry-title {
+  margin-bottom: 24px;
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+// Defaults for the content that will be added by the user
+.mm-content {
+  hr {
+    border: 1px solid var(--blue);
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+
+  h2 {
+    @include margin-tb(32px, 24px);
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: 24px;
+  }
+
+  li {
+    font-size: 1.5rem;
+
+    @include desktop {
+      font-size: 1.9rem;
+    }
+  }
+
+  ul {
+    li {
+      font-weight: var(--regular);
+
+      &::before {
+        content: "\2022";
+        color: var(--blue);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+
+  ol {
+    @extend .list-chevron-blue;
+    color: var(--dark-blue);
+
+    a {
+      font-weight: var(--bold);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--dark-blue);
+      }
+    }
+  }
+}
+
+/* Template Partials
+      content-page.php
+      content.php
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.entry-content {
+  h6 {
+    display: inline-flex;
+    margin-top: 8px;
+
+    a {
+      @extend .btn-general;
+    }
+  }
+}
+
+/* Template Partials Components
+      component-related-links.php
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.related-links {
+  display: none;
+
+  @include desktop {
+    display: block;
+    padding-left: 32px;
+    border-left: 1px solid var(--blue);
+  }
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  ul {
+    @include list-icon($fa-var-chevron-right);
+
+    li {
+      font-size: 2.1rem;
+      font-weight: var(--bold);
+      color: var(--dark-blue);
+      margin-bottom: 16px;
+    }
+  }
+}

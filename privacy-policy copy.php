@@ -2,7 +2,7 @@
 
 /**
  * 
- * Template Name: Privacy Policy
+ * Template Name: Sitemap
  * 
  * The template for displaying the Privacy Policy
  *
@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-<div id="privacy-policy-template">
+<div id="sitemap-template">
   <main id="main">
 
     <section>

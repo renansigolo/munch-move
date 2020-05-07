@@ -35,7 +35,7 @@
         color: #fff;
         margin-bottom: 24px;
         font-size: 4rem;
-        text-shadow: 0 0 4px rgba(0,0,0,0.3);
+        text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
       }
     }
   }
@@ -91,12 +91,12 @@
       color: #fff;
       font-size: 1.2rem;
 
-      @include desktop {
-        font-size: 1.6rem;
-      }
-
       &:first-child {
         font-weight: var(--extra-bold);
+      }
+
+      @include desktop {
+        font-size: 1.6rem;
       }
 
       i {
@@ -112,6 +112,7 @@
         text-decoration: underline;
         font-weight: var(--semi-bold);
         line-height: 15px;
+        color: #fff;
         @include padding-x(8px);
       }
 
