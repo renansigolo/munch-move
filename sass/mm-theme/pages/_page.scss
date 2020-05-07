@@ -124,3 +124,36 @@
     }
   }
 }
+
+.search-content {
+  h4 {
+    margin-top: 32px;
+    color: var(--dark-blue);
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    span {
+      display: none;
+    }
+
+    label {
+      width: 100%;
+      margin: 0;
+      margin-right: 16px;
+    }
+  }
+
+  .search-field {
+    // width: 80%;
+    @extend %search-bar;
+  }
+
+  .search-submit {
+    @extend .btn-general;
+  }
+}

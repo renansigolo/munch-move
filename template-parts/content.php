@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template part for displaying posts
+ * Template part for displaying page content in page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -10,61 +10,58 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
-        <?php
-        if (is_singular()) :
-            the_title('<h1 class="entry-title">', '</h1>');
-        else :
-            the_title(
-                '<h2 class="entry-title"><a href="' .
-                    esc_url(get_permalink()) .
-                    '" rel="bookmark">',
-                '</a></h2>'
-            );
-        endif;
 
-        if ('post' === get_post_type()) : ?>
-            <div class="entry-meta">
+    <?php
+    // Featured Image
+    the_post_thumbnail('large', [
+        'class' => 'featured-image'
+    ]);
+    // Utilities Bar
+    get_template_part('template-parts/component', 'utilities');
+    ?>
+
+    <div class="container entry-content">
+        <div class="row">
+            <!-- WP Content -->
+            <div class="eight columns">
+                <header class="entry-header">
+                    <?php
+                    the_title('<h1 class="entry-title">', '</h1>');
+                    ?>
+                </header>
+
+                <div class="mm-content">
+                    <?php the_content() ?>
+                </div>
+            </div>
+
+            <!-- Related Links -->
+            <div class="four columns">
                 <?php
-                munch_move_posted_on();
-                munch_move_posted_by();
+                get_template_part('template-parts/component', 'related-links');
                 ?>
-            </div><!-- .entry-meta -->
-        <?php endif;
-        ?>
-    </header><!-- .entry-header -->
+            </div>
+        </div>
 
-    <?php munch_move_post_thumbnail(); ?>
+        <div class="cards">
+            <?php while (have_rows('content_blocks')) : the_row() ?>
+                <?php get_template_part('template-parts/component', 'cards') ?>
+            <?php endwhile ?>
+        </div>
 
-    <div class="entry-content">
-        <?php
-        the_content(
-            sprintf(
-                wp_kses(
-                    /* translators: %s: Name of current post. Only visible to screen readers */
-                    __(
-                        'Continue reading<span class="screen-reader-text"> "%s"</span>',
-                        'munch-move'
-                    ),
-                    array(
-                        'span' => array(
-                            'class' => array()
-                        )
-                    )
-                ),
-                get_the_title()
-            )
-        );
+        <div class="row">
+            <!-- ACF Content -->
+            <div class="eight columns">
+                <div class="mm-content">
+                    <?php while (have_rows('content_blocks')) : the_row() ?>
+                        <?php get_template_part('template-parts/component', 'accordion') ?>
+                        <?php get_template_part('template-parts/component', 'info') ?>
+                    <?php endwhile ?>
+                </div>
+            </div>
+        </div>
 
-        wp_link_pages(array(
-            'before' =>
-            '<div class="page-links">' . esc_html__('Pages:', 'munch-move'),
-            'after' => '</div>'
-        ));
-        ?>
-    </div><!-- .entry-content -->
+    </div>
 
-    <footer class="entry-footer">
-        <?php munch_move_entry_footer(); ?>
-    </footer><!-- .entry-footer -->
+    <?php if (get_edit_post_link()) : ?><?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

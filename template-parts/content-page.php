@@ -11,13 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <!-- Featured Image -->
-    <?php the_post_thumbnail('large', [
-        'class' => 'featured-image'
-    ]); ?>
-
-    <!-- Utilities Bar -->
     <?php
+    // Featured Image
+    the_post_thumbnail('large', [
+        'class' => 'featured-image'
+    ]);
+    // Utilities Bar
     get_template_part('template-parts/component', 'utilities');
     ?>
 

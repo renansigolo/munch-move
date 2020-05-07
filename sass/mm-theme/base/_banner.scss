@@ -73,6 +73,7 @@
   background-color: var(--blue);
   margin-bottom: 32px;
   font-size: 1.9rem;
+
   @include desktop {
     margin-bottom: 72px;
   }

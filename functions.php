@@ -8,7 +8,7 @@
  * @package Munch_&_Move
  */
 
-if (!function_exists('munch_move_setup')):
+if (!function_exists('munch_move_setup')) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -50,9 +50,9 @@ if (!function_exists('munch_move_setup')):
         // This theme uses wp_nav_menu() in one location.
         // Register all Custom Menus
         register_nav_menus(array(
-            'menu-desktop' => esc_html__( 'Desktop', 'munch-move' ),
-            'menu-mobile' => esc_html__( 'Mobile', 'munch-move' ),
-            'menu-footer' => esc_html__( 'Footer', 'munch-move' )
+            'menu-desktop' => esc_html__('Desktop', 'munch-move'),
+            'menu-mobile' => esc_html__('Mobile', 'munch-move'),
+            'menu-footer' => esc_html__('Footer', 'munch-move')
         ));
 
         /*
@@ -159,7 +159,7 @@ function munch_move_scripts()
         '20151215',
         true
     );
-    
+
     wp_enqueue_script(
         'munch-move',
         get_template_directory_uri() . '/js/munch-move.js',
@@ -180,23 +180,57 @@ add_action('wp_enqueue_scripts', 'munch_move_scripts');
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
- * ACF Functions - Options Page
+ * ACF Functions
  */
-if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page();
-	acf_add_options_sub_page('Header');
-	acf_add_options_sub_page('Footer');
-	acf_add_options_sub_page('404 Page');
-	
+
+// Options Page
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page();
+    acf_add_options_sub_page('Header');
+    acf_add_options_sub_page('Footer');
+    acf_add_options_sub_page('404 Page');
 }
+
+// Register a Block.
+function register_acf_block_types()
+{
+    // register a related links block.
+    acf_register_block_type(array(
+        'name'              => 'related-links',
+        'title'             => __('Related Links'),
+        'description'       => __('A custom block for related links.'),
+        'render_template'   => 'template-parts/blocks/related-links.php',
+        'category'          => 'widgets',
+        'icon'              => 'editor-ul',
+        'keywords'          => array('related-links', 'munch-and-move-theme'),
+    ));
+}
+
+if (function_exists('acf_register_block_type')) {
+    add_action('acf/init', 'register_acf_block_types');
+}
+
+// add_action('registered_post_type', 'igy2411_make_posts_hierarchical', 10, 2 );
+
+// // Runs after each post type is registered
+// function igy2411_make_posts_hierarchical($post_type, $pto){
+
+//     // Return, if not post type posts
+//     if ($post_type != 'post') return;
+
+//     // access $wp_post_types global variable
+//     global $wp_post_types;
+
+//     // Set post type "post" to be hierarchical
+//     $wp_post_types['post']->hierarchical = 1;
+
+//     // Add page attributes to post backend
+//     // This adds the box to set up parent and menu order on edit posts.
+//     add_post_type_support( 'post', 'page-attributes' );
+
+// }
