@@ -67,8 +67,10 @@
   }
 
   ol {
-    @extend .list-chevron-blue;
-    color: var(--dark-blue);
+    li {
+      @include list-icon($fa-var-chevron-right);
+      color: var(--dark-blue);
+    }
 
     a {
       font-weight: var(--bold);
@@ -114,9 +116,8 @@
   }
 
   ul {
-    @include list-icon($fa-var-chevron-right);
-
     li {
+      @include list-icon($fa-var-chevron-right);
       font-size: 2.1rem;
       font-weight: var(--bold);
       color: var(--dark-blue);
@@ -226,5 +227,61 @@
 
   .search-submit {
     @extend .btn-general;
+  }
+}
+
+/* Accordion
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.accordion {
+  cursor: pointer;
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 1.9rem;
+  font-weight: var(--bold);
+  color: var(--dark-blue);
+  background-color: #fff;
+  border-radius: 0;
+  border-bottom: 3px solid var(--dark-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &::after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-plus);
+    font-size: 1.4rem;
+    margin-left: 5px;
+  }
+
+  &.active::after {
+    content: fa-content($fa-var-minus);
+  }
+}
+
+.panel {
+  display: none;
+  padding: 16px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  color: var(--blue);
+
+  ul {
+    
+    li::before {
+      content: "";
+    }
+
+    a {
+      @include list-icon($fa-var-chevron-right);
+      list-style: none;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: var(--bold);
+    }
   }
 }

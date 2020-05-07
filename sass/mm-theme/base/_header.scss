@@ -238,9 +238,8 @@
   }
 
   &__list {
-    @extend .list-chevron-blue;
-
     li {
+      @include list-icon($fa-var-chevron-right);
       font-size: 1.6rem;
       font-weight: var(--extra-bold);
       padding-bottom: 16px;

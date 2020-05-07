@@ -25,16 +25,20 @@
             <!-- WP Content -->
             <div class="eight columns">
                 <header class="entry-header">
-                    <?php
-                    the_title('<h1 class="entry-title">', '</h1>');
-                    ?>
+                    <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
                 </header>
 
                 <div class="mm-content">
-                    <?php the_content() ?>
+                    <?php
+                    // WP Default Content Block
+                    the_content();
+
+                    // Accordion Block
+                    while (have_rows('content_blocks')) : the_row();
+                        get_template_part('template-parts/component', 'accordion');
+                    endwhile ?>
                 </div>
             </div>
-
             <!-- Related Links -->
             <div class="four columns">
                 <?php
@@ -44,25 +48,23 @@
         </div>
 
         <div class="cards">
-            <?php while (have_rows('content_blocks')) : the_row() ?>
-                <?php get_template_part('template-parts/component', 'cards') ?>
-            <?php endwhile ?>
+            <!-- Cards Block -->
+            <?php while (have_rows('content_blocks')) : the_row();
+                get_template_part('template-parts/component', 'cards');
+            endwhile; ?>
         </div>
 
         <div class="row">
             <!-- ACF Content -->
             <div class="eight columns">
                 <div class="mm-content">
-                    <?php while (have_rows('content_blocks')) : the_row() ?>
-                        <?php get_template_part('template-parts/component', 'accordion') ?>
-                        <?php get_template_part('template-parts/component', 'info') ?>
-                        <?php get_template_part('template-parts/component', 'playlist') ?>
-                    <?php endwhile ?>
+                    <?php while (have_rows('content_blocks')) : the_row();
+                        get_template_part('template-parts/component', 'info');
+                        get_template_part('template-parts/component', 'playlist');
+                    endwhile ?>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <?php if (get_edit_post_link()) : ?><?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -14,13 +14,16 @@
     }
     &__content {
       @extend %flex-column-grow;
-      @include list-icon($fa-var-chevron-right);
       padding: 24px 16px 32px;
       background-color: $primaryColor;
       color: #fff;
 
       @include desktop {
         padding: 24px 40px;
+      }
+
+      li {
+        @include list-icon($fa-var-chevron-right);
       }
 
       h4 {
@@ -65,7 +68,7 @@
 video {
   max-width: 100%;
   &:focus {
-      outline: none;
+    outline: none;
   }
 }
 
