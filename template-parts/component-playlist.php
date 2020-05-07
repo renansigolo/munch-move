@@ -18,10 +18,10 @@
                         <th>
                             <h3>Song Title</h3>
                         </th>
-                        <th>
+                        <th class="text-center">
                             <h3>Runtime</h3>
                         </th>
-                        <th>
+                        <th class="text-right">
                             <h3>Song & Lyrics</h3>
                         </th>
                     </tr>
@@ -31,8 +31,8 @@
                     <?php while (have_rows('audio')) : the_row() ?>
                         <tr class="playlist__song">
                             <td><?php the_sub_field('song_title') ?></td>
-                            <td>01:00</td>
-                            <td><a href="#">Download Track</a></td>
+                            <td class="text-center">01:00</td>
+                            <td class="float-right"><a href="#">Download Track</a></td>
                         </tr>
                     <?php endwhile ?>
                 </tbody>

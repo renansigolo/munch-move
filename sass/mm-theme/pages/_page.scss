@@ -142,15 +142,20 @@
     border-bottom: 3px solid var(--dark-blue) !important;
 
     td {
-      padding: 8px 0 8px 10px;
-      font-size: 1.9rem;
+      @include desktop {
+        padding: 8px 0 8px 10px;
+        font-size: 1.9rem;
+      }
     }
 
     a {
       text-decoration: none;
       color: var(--dark-blue);
       font-weight: var(--bold);
-      font-size: 1.9rem;
+
+      @include desktop {
+        font-size: 1.9rem;
+      }
 
       &::before {
         @extend %fa-icon;
