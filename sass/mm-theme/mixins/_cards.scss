@@ -56,7 +56,11 @@
 }
 
 .cards {
-  @include margin-tb(40px, 56px);
+  margin: 32px 0;
+
+  @include desktop {
+    margin: 40px 0 56px 0;
+  }
 
   .card__content {
     justify-content: space-between;

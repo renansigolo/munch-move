@@ -6,7 +6,12 @@
   width: 100%;
   box-sizing: border-box;
   object-fit: cover;
-  height: calc(100vh - 210px);
+  max-height: 160px;
+
+  @include desktop {
+    max-height: unset;
+    height: calc(100vh - 210px);
+  }
 }
 
 .background-banner {
@@ -116,9 +121,15 @@
         line-height: 15px;
         color: #fff;
         @include padding-x(8px);
+        font-size: 1.2rem;
+
+        @include desktop {
+          font-size: 1.6rem;
+        }
       }
 
       .breadcrumb_last {
+        font-size: inherit;
         font-weight: var(--semi-bold);
         padding-left: 8px;
       }
