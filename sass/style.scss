@@ -38,7 +38,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /*--------------------------------------------------------------
 # Skeleton
 --------------------------------------------------------------*/
-@import 'skeleton/grid';
+@import 'mm-theme/base/grid';
+// @import 'skeleton/grid';
+
 @import 'skeleton/base';
 // @import 'skeleton/typography';
 // @import 'skeleton/links';
@@ -48,7 +50,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 // @import 'skeleton/code';
 // @import 'skeleton/tables';
 // @import 'skeleton/spacing';
-@import 'skeleton/utilities';
+// @import 'skeleton/utilities';
 @import 'skeleton/clearing';
 
 /*--------------------------------------------------------------
@@ -66,12 +68,14 @@ $fa-font-path: "fonts/fontawesome/webfonts";
 /*--------------------------------------------------------------
 # Munch & Move Theme
 --------------------------------------------------------------*/
+// @import 'mm-theme/base/grid';
 @import 'mm-theme/base/variables';
+
 
 // Mixins
 @import 'mm-theme/mixins/media-queries';
-@import 'mm-theme/mixins/helpers';
-@import 'mm-theme/mixins/grids';
+@import 'mm-theme/mixins/spacing';
+@import 'mm-theme/mixins/flex';
 @import 'mm-theme/mixins/lists';
 @import 'mm-theme/mixins/buttons';
 @import 'mm-theme/mixins/cards';
@@ -85,6 +89,7 @@ $fa-font-path: "fonts/fontawesome/webfonts";
 @import 'mm-theme/base/header';
 @import 'mm-theme/base/banner';
 @import 'mm-theme/base/tables';
+@import 'mm-theme/base/utilities';
 
 /*--------------------------------------------------------------
 # Overwrites Skeleton Framework

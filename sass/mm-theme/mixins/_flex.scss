@@ -1,8 +1,9 @@
 /*--------------------------------------------------------------
-# Grid Mixins
+# Flex and Grid Mixins
 --------------------------------------------------------------*/
 
-// Flex
+/* Flex
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 %flex-column {
   display: flex;
   flex-direction: column;
@@ -24,7 +25,8 @@
   align-items: center;
 }
 
-// Grids
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 @mixin grid($columns) {
   display: grid;
   grid-template-columns: repeat(1fr, 1fr);

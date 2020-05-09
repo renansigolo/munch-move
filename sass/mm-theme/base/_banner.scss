@@ -6,7 +6,7 @@
   width: 100%;
   box-sizing: border-box;
   object-fit: cover;
-  max-height: 160px;
+  height: 50vw;
 
   @include desktop {
     max-height: unset;
@@ -51,6 +51,7 @@
 
     img {
       object-fit: cover;
+      height: 50vw;
     }
 
     .mobile-hero-content {

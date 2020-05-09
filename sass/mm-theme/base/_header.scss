@@ -79,10 +79,6 @@
       text-transform: uppercase;
       width: 100%;
 
-      ul {
-        margin-right: -15.5px;
-      }
-
       a {
         @extend %header-item;
 
@@ -102,9 +98,19 @@
           text-align: center;
           margin: 0;
           padding: 15px;
+
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
         }
+
         .active {
           background-color: #fff;
+          padding: 15px !important;
+
           a {
             color: inherit;
             text-shadow: none;

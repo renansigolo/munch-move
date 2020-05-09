@@ -15,11 +15,20 @@ get_header();
 <div id="sitemap-template">
   <main id="main">
 
+    <!-- Hero Banner -->
+    <?php get_template_part('template-parts/component', 'hero'); ?>
+
     <section>
       <?php while (have_posts()) :
-        the_post();
-        get_template_part('template-parts/content', 'page');
-      endwhile; ?>
+        the_post(); ?>
+
+        <div class="container">
+          <div class="row">
+            <?php the_content(); ?>
+          </div>
+        </div>
+
+      <?php endwhile; ?>
 
     </section>
 

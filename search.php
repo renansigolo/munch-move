@@ -15,11 +15,9 @@ get_header();
     <main id="main" class="site-main">
 
         <img src="<?php echo get_template_directory_uri() . '/images/search.jpg' ?>" class="featured-image" alt="Search banner">
-
-        <?php
-        // Utilities Bar
-        get_template_part('template-parts/component', 'utilities');
-        ?>
+        
+        <!-- Utilities Bar -->
+        <?php get_template_part('template-parts/component', 'utilities'); ?>
 
         <div class="container">
             <?php if (have_posts()) : ?>

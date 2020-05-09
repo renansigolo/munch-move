@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# Spacing
+# Helpers
 --------------------------------------------------------------*/
 
 // x - for classes that set both *-left and *-right
@@ -42,23 +42,4 @@
 @mixin padding-tb($pt, $pb) {
   padding-top: $pt;
   padding-bottom: $pb;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.float-left {
-  float: left;
-}
-.float-right {
-  float: right;
 }

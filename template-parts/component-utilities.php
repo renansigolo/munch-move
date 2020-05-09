@@ -12,13 +12,13 @@
 <div class="utility">
     <div class="container">
         <div class="utility__menu">
-            <div>
-                <?php
-                if (function_exists('yoast_breadcrumb')) {
-                    yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-                }
-                ?>
-            </div>
+
+            <?php
+            if (function_exists('yoast_breadcrumb')) {
+                yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+            }
+            ?>
+
             <div class="utility__actions">
                 <ul>
                     <li id="print"><i class="fas fa-print"></i>Print</li>

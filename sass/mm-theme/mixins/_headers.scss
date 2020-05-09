@@ -2,7 +2,8 @@
 # Headers
 --------------------------------------------------------------*/
 
-// Navigation Headers
+/* Header Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 %header-item {
   border: 0;
   border-radius: 0;
@@ -51,9 +52,12 @@
   }
 }
 
-// Content Headers
+/* Header Content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 %line-behind-title {
   h2 {
+    display: flex;
+    justify-content: center;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -72,8 +76,14 @@
     }
 
     span {
+      width: 50%;
       background: #fff;
-      padding: 0 40px;
+      padding: 0 10px;
+
+      @include desktop {
+        width: unset;
+        padding: 0 40px;
+      }
     }
   }
 }

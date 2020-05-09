@@ -15,25 +15,23 @@
     $video_cards_heading = get_sub_field('video_cards_heading');
 ?>
     <div class="row">
-        <?php if ($grid_rows == 1) : ?>
-            <div class="columns eight">
-            <?php endif ?>
+        <?php if ($grid_rows == 1) : ?> <div class="columns eight"> <?php endif ?>
+
             <?php if ($video_cards_heading) : ?>
-                <div class="line-throught-text">
+                <div class="line-throught-text cards__heading">
                     <h2><span><?php echo $video_cards_heading ?></span></h2>
                 </div>
             <?php endif ?>
+
             <div class="grid-<?php echo $grid_rows ?>">
                 <?php while (have_rows('cards')) : the_row(); ?>
-                    <?php if (get_sub_field('video_card_title')) : ?>
-                        <h2><?php echo get_sub_field('video_card_title') ?></h2>
-                    <?php endif ?>
-
                     <div class="card-<?php echo $category ?>">
-                        <?php
-                        $card_image = get_sub_field('image');
-                        ?>
+                        <?php if (get_sub_field('individual_card_title')) : ?>
+                            <h2 class="card__heading"><?php echo get_sub_field('individual_card_title') ?></h2>
+                        <?php endif ?>
                         <div class="card__header">
+                            <?php $card_image = get_sub_field('image'); ?>
+
                             <?php if (!$has_video) : ?>
                                 <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>">
                             <?php else :  ?>
@@ -48,8 +46,7 @@
                                 <h4><?php the_sub_field('title'); ?></h4>
                                 <p><?php the_sub_field('description'); ?></p>
                             </div>
-                            <?php
-                            $button = get_sub_field('button');
+                            <?php $button = get_sub_field('button');
                             if ($button) :
                                 $button_url = $button['url'];
                                 $button_title = $button['title'];

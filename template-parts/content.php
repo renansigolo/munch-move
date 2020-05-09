@@ -11,14 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php
-    // Featured Image
-    the_post_thumbnail('large', [
-        'class' => 'featured-image'
-    ]);
-    // Utilities Bar
-    get_template_part('template-parts/component', 'utilities');
-    ?>
+    <!-- Hero Banner -->
+    <?php get_template_part('template-parts/component', 'hero'); ?>
 
     <div class="container entry-content">
         <div class="row">
