@@ -18,20 +18,32 @@ get_header();
     <!-- Hero Banner -->
     <?php get_template_part('template-parts/component', 'hero'); ?>
 
+    <!-- Sitemap Content -->
     <section>
-      <?php while (have_posts()) :
-        the_post(); ?>
+      <?php while (have_posts()) : the_post(); ?>
 
-        <div class="container">
+        <div class="container entry-content">
           <div class="row">
-            <?php the_content(); ?>
+
+            <!-- WP Content -->
+            <div class="eight columns">
+              <header class="entry-header">
+                <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+              </header>
+
+              <div>
+                <?php the_content(); ?>
+              </div>
+            </div>
+
+            <!-- Related Links -->
+            <div class="four columns">
+              <?php get_template_part('template-parts/component', 'related-links'); ?>
+            </div>
           </div>
         </div>
-
       <?php endwhile; ?>
-
     </section>
-
   </main>
 </div>
 

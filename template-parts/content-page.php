@@ -33,6 +33,7 @@
                     endwhile ?>
                 </div>
             </div>
+
             <!-- Related Links -->
             <div class="four columns">
                 <?php

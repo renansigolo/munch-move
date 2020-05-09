@@ -3,7 +3,52 @@
 --------------------------------------------------------------*/
 
 #sitemap-template {
-  a {
-    color: #0075bd;
+  .wsp-pages-title {
+    display: none;
   }
+
+  .wsp-pages-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // First Level
+  .wsp-pages-list {
+    a {
+      @include list-icon($fa-var-chevron-right);
+    }
+  }
+
+  // Second Level
+  .page_item_has_children {
+    border-bottom: 3px solid var(--blue);
+    a {
+      color: var(--blue);
+    }
+
+    // Third Level
+    .page_item_has_children {
+      > a {
+        color: var(--blue);
+        // color: pink;
+      }
+
+      // Fourth Level
+      // .children {
+      //   a {
+      //     color: magenta;
+      //   }
+      // }
+    }
+  }
+
+  .children {
+    a {
+      color: #8c8c8c;
+    }
+  }
+
+  // a {
+  //   color: #0075bd;
+  // }
 }
