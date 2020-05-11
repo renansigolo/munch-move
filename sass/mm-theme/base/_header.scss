@@ -66,10 +66,6 @@
         display: none;
       }
 
-      .search-icon {
-        @extend %search-icon;
-      }
-
       .search-bar {
         @extend %search-bar;
       }
@@ -154,10 +150,6 @@
 
     .search-bar {
       @extend %search-bar;
-    }
-
-    .search-icon {
-      @extend %search-icon;
     }
   }
 
