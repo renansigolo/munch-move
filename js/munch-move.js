@@ -5,32 +5,9 @@
 (function ($) {
   console.log("Init Munch Move Scripts");
 
-  /** Hide or display the mobile menu */
-  function toggle() {
-    if ($(window).width() <= 1365) {
-      $("#desktop").hide();
-      $("#mobile").show();
-      $("#display-mobile-menu").hide();
-    } else {
-      $("#mobile").hide();
-      $("#desktop").show();
-    }
-  }
-
-  /** On page load set the menu display initially */
-  $(window).load(function () {
-    $("#display-mobile-menu").hide();
-    toggle();
-  });
-
-  /** Toggle the menu display on browser resize */
-  $(window).resize(function () {
-    toggle();
-  });
-
   // Toggle Mobile Menu
   $("#btn-menu").on("click", function () {
-    $("#display-mobile-menu").toggle("fast");
+    $("#mobile-menu").toggle();
   });
 
   // Mobile Menu
@@ -125,9 +102,11 @@
         this.classList.toggle("active");
         let panel = this.nextElementSibling;
 
-        // Toogle Panel Visibility
-        panel.style.display =
-          panel.style.display === "block" ? "none" : "block";
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
       });
     }
   };
@@ -136,9 +115,9 @@
   let songs = document.getElementsByClassName("js-song-title");
   console.log("songs", songs);
   for (const song of songs) {
-    let songData = getAttribute('data-song')
-    console.log('songData', songData)
-    
+    let songData = getAttribute("data-song");
+    console.log("songData", songData);
+
     song.addEventListener("click", function () {
       console.log("playAudio -> url", url);
     });

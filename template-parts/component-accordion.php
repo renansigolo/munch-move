@@ -12,7 +12,7 @@
     <section>
         <div class="row">
             <?php while (have_rows('accordions')) : the_row(); ?>
-                <div>
+                <div class="accordion-row">
                     <button class="accordion"><?php the_sub_field('accordion_title') ?></button>
                     <div class="panel">
                         <ul>

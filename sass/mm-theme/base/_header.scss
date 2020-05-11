@@ -18,7 +18,8 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    margin: 0 10px;
+    max-width: 1366px;
+    margin: 0 auto;
   }
 
   .nav-logo {
@@ -129,17 +130,14 @@
   }
 }
 
-.menu-mobile li::before {
-  margin-left: 0 !important;
-}
-
 .menu-mobile {
+  display: none;
   @include list-header-icon($fa-var-chevron-right);
   @extend %menu-on-top;
   color: #fff;
 
-  #display-mobile-menu {
-    display: none;
+  li::before {
+    margin-left: 0 !important;
   }
 
   .mobile-search-bar {
@@ -223,6 +221,7 @@
   }
 }
 
+// Mega Menu
 .mega-menu {
   @extend %menu-on-top;
 
@@ -254,10 +253,6 @@
       padding-right: 16px;
       object-fit: cover;
     }
-
-    // h4 {
-    //   color: var(--dark-blue);
-    // }
 
     &:first-child {
       margin-bottom: 32px;
@@ -304,4 +299,17 @@
 .tab-resources {
   color: var(--red);
   @include menu-tab(var(--red), var(--orange));
+}
+
+// Toggle Visibility
+@media (max-width: 1365px) {
+  #desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 1366px) {
+  #mobile {
+    display: none;
+  }
 }

@@ -99,13 +99,13 @@
 
             </section>
 
-            <section class="menu-mobile" id="display-mobile-menu">
+            <section class="menu-mobile" id="mobile-menu">
                 <div class="mobile-search-bar">
                     <input class="search-bar" type="text" name="Search" id="navbar-search">
                     <i class="fas fa-search search-icon" id="search-icon"></i>
                 </div>
                 <?php
-                /* The below code checks if a menu-mobile is set from the backend in the menu settings. If a menu has been set it will be displayed in the header. Or else, a menu has not been set then display a message.*/
+                /* If a menu has been set it will be displayed in the header.*/
                 if (function_exists('has_nav_menu') && has_nav_menu('menu-mobile')) {
                     $menu_ID = 'menu-mobile';
                     $nav_menu = wp_get_nav_menu_object($menu_ID);
@@ -114,9 +114,7 @@
                         'menu_class' => 'nav first-menu-mobile',
                         'theme_location' => 'menu-mobile',
                     ));
-                } else {
-                    echo "<ul class='nav menu-mobile'> <font style='color:red'>Mobile Menu has not been set</font> </ul>";
-                } ?>
+                }?>
             </section>
 
         </header>
