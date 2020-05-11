@@ -124,12 +124,14 @@
   }
 
   ul {
-    li {
+    li,
+    a {
       @include list-icon($fa-var-chevron-right);
       font-size: 2.1rem;
       font-weight: var(--bold);
       color: var(--dark-blue);
       margin-bottom: 16px;
+      line-height: 26px;
     }
   }
 }
@@ -255,6 +257,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: #fff;
+  display: flex;
+  align-items: baseline;
 
   &::after {
     @extend %fa-icon;
