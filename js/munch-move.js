@@ -100,7 +100,7 @@
         tab.style.display = "none";
       }
 
-console.log($(`#${this.title}`))
+      console.log($(`#${this.title}`));
 
       // Show only the respective content
       menuTab.classList.add("active");
@@ -132,5 +132,23 @@ console.log($(`#${this.title}`))
     }
   };
 
+  console.log("song");
+  let songs = document.getElementsByClassName("js-song-title");
+  console.log("songs", songs);
+  for (const song of songs) {
+    let songData = getAttribute('data-song')
+    console.log('songData', songData)
+    
+    song.addEventListener("click", function () {
+      console.log("playAudio -> url", url);
+    });
+    console.log("song", song);
+  }
+
   accordion();
 })(jQuery);
+
+function playAudio(url) {
+  console.log("playAudio -> url", url);
+  // new Audio(url).play();
+}

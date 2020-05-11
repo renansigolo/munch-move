@@ -12,7 +12,6 @@
     <section class="playlist">
         <div class="row">
             <table class="full-width">
-
                 <thead>
                     <tr class="playlist__header">
                         <th>
@@ -30,9 +29,15 @@
                 <tbody>
                     <?php while (have_rows('audio')) : the_row() ?>
                         <tr class="playlist__song">
-                            <td><?php the_sub_field('song_title') ?></td>
-                            <td class="text-center">01:00</td>
-                            <td class="float-right"><a href="#">Download Track</a></td>
+                            <?php
+                            $file = get_sub_field('audio_file');
+                            if ($file) : ?>
+                                <td class="js-song-title" data-song="<?php echo $file['url']; ?>"><?php the_sub_field('song_title') ?></td>
+                                <td class="text-center">01:00</td>
+                                <td class="float-right">
+                                    <a href="<?php echo $file['url']; ?>" download>Download Track</a>
+                                <?php endif; ?>
+                                </td>
                         </tr>
                     <?php endwhile ?>
                 </tbody>

@@ -144,7 +144,9 @@
   }
 
   &__song {
-    border-bottom: 3px solid var(--dark-blue) !important;
+    &:not(:last-child) {
+      border-bottom: 3px solid var(--dark-blue) !important;
+    }
 
     td {
       @include desktop {
