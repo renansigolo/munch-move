@@ -2,7 +2,7 @@
 # Search - Page Template
 --------------------------------------------------------------*/
 
-#tpl-search-template {
+#tpl-search {
   .search-form {
     display: flex;
     flex-direction: column;
@@ -14,8 +14,8 @@
     }
     &__content {
       display: flex;
-      .search-bar {
-        width: 80%;
+      #search {
+        width: 84%;
         @extend %search-bar;
       }
     }

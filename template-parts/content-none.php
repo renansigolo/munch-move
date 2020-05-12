@@ -20,9 +20,7 @@
                     'Sorry, but nothing matched your search terms. Please try again with some different keywords.',
                     'munch-move'
                 ); ?></p>
-
-            <h4>Enter keywords to search this site:</h4>
-        <?php get_search_form();
+        <?php
         endif; ?>
     </div>
 </section>

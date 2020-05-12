@@ -50,6 +50,10 @@
     width: 100%;
     max-width: fit-content;
 
+    form {
+      width: 100%;
+    }
+
     .menu-service {
       display: flex;
       justify-content: flex-end;
@@ -145,6 +149,10 @@
     justify-content: center;
     align-items: center;
     margin: 16px;
+
+    > button {
+      border-radius: unset;
+    }
 
     .search-bar {
       @extend %search-bar;

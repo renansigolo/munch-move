@@ -33,12 +33,14 @@
                     <img src="<?php echo get_template_directory_uri() . '/images/logo/mm-logo.svg'; ?>" alt="Munch & Move Logo" class="nav-logo">
 
                     <div class="nav-desktop" id="desktop">
-                        <div class="menu-service">
-                            <input class="search-bar" type="text" name="Search" id="navbar-search">
-                            <button class="btn-general" id="navbar-btn-search">Search</button>
-                            <i class="fas fa-search search-icon" id="search-icon"></i>
-                            <button class="btn-dark-blue">Service Support</button>
-                        </div>
+                        <form action="/" method="get">
+                            <div class="menu-service">
+                                <input class="search-bar" type="text" name="s" id="navbar-search" value="<?php the_search_query(); ?>">
+                                <button class="btn-general" id="navbar-btn-search">Search</button>
+                                <i class="fas fa-search search-icon" id="search-icon"></i>
+                                <button class="btn-dark-blue" type="button">Service Support</button>
+                            </div>
+                        </form>
                         <nav class="menu-desktop">
                             <?php
                             wp_nav_menu(array('menu_id' => 'menu-desktop'));
@@ -100,10 +102,12 @@
             </section>
 
             <section class="menu-mobile" id="mobile-menu">
-                <div class="mobile-search-bar">
-                    <input class="search-bar" type="text" name="Search" id="navbar-search">
-                    <i class="fas fa-search search-icon" id="search-icon"></i>
-                </div>
+                <form action="/" method="get">
+                    <div class="mobile-search-bar">
+                        <input class="search-bar" type="text" name="s" id="navbar-search" value="<?php the_search_query(); ?>">
+                        <button><i class="fas fa-search search-icon" id="search-icon"></i></button>
+                    </div>
+                </form>
                 <?php
                 /* If a menu has been set it will be displayed in the header.*/
                 if (function_exists('has_nav_menu') && has_nav_menu('menu-mobile')) {
@@ -114,7 +118,7 @@
                         'menu_class' => 'nav first-menu-mobile',
                         'theme_location' => 'menu-mobile',
                     ));
-                }?>
+                } ?>
             </section>
 
         </header>
