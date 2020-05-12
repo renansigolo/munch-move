@@ -197,23 +197,23 @@ if (function_exists('acf_add_options_page')) {
 }
 
 // Register a Block.
-function register_acf_block_types()
-{
-    // register a related links block.
-    acf_register_block_type(array(
-        'name'              => 'related-links',
-        'title'             => __('Related Links'),
-        'description'       => __('A custom block for related links.'),
-        'render_template'   => 'template-parts/blocks/related-links.php',
-        'category'          => 'widgets',
-        'icon'              => 'editor-ul',
-        'keywords'          => array('related-links', 'munch-and-move-theme'),
-    ));
-}
+// function register_acf_block_types()
+// {
+//     // register a related links block.
+//     acf_register_block_type(array(
+//         'name'              => 'related-links',
+//         'title'             => __('Related Links'),
+//         'description'       => __('A custom block for related links.'),
+//         'render_template'   => 'template-parts/blocks/related-links.php',
+//         'category'          => 'widgets',
+//         'icon'              => 'editor-ul',
+//         'keywords'          => array('related-links', 'munch-and-move-theme'),
+//     ));
+// }
 
-if (function_exists('acf_register_block_type')) {
-    add_action('acf/init', 'register_acf_block_types');
-}
+// if (function_exists('acf_register_block_type')) {
+//     add_action('acf/init', 'register_acf_block_types');
+// }
 
 // add_action('registered_post_type', 'igy2411_make_posts_hierarchical', 10, 2 );
 

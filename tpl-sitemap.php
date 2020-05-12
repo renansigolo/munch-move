@@ -33,6 +33,10 @@ get_header();
 
               <div>
                 <?php the_content(); ?>
+
+
+                <?php wp_list_pages(); ?>
+
               </div>
             </div>
 

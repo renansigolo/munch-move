@@ -23,7 +23,6 @@
 
             <h4>Enter keywords to search this site:</h4>
         <?php get_search_form();
-
         endif; ?>
     </div>
 </section>

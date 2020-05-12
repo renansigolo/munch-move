@@ -44,10 +44,11 @@ get_header();
             <?php else : ?>
               <div class="search-form">
                 <h4>Enter keywords to search this site:</h4>
-                <div class="search-form__content">
+                <?php get_search_form(); ?>
+                <!-- <div class="search-form__content">
                   <input class="search-bar" type="text" name="Search">
                   <button class="btn-general" id="navbar-btn-search">Search</button>
-                </div>
+                </div> -->
               </div>
 
               <div class="search-results">
