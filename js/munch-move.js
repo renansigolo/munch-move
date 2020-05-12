@@ -124,10 +124,41 @@
     console.log("song", song);
   }
 
+  // Form Munch & Move to italic
+  $.fn.wrapInTag = function (opts) {
+    let tag = opts.tag || "italic",
+      words = opts.words || [],
+      replacement = `<${tag}>${words}</${tag}>`;
+
+    return this.html(function () {
+      return $(this).html().replace(words, replacement);
+    });
+  };
+
+  const elements = [
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "p",
+    "a",
+    "small",
+    "span",
+  ];
+
+  elements.forEach((element) => {
+    $(element).wrapInTag({
+      tag: "i",
+      words: ["Munch &amp; Move"],
+    });
+  });
+
   accordion();
 })(jQuery);
 
-function playAudio(url) {
-  console.log("playAudio -> url", url);
-  // new Audio(url).play();
-}
+// function playAudio(url) {
+//   console.log("playAudio -> url", url);
+//   // new Audio(url).play();
+// }
