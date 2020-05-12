@@ -300,36 +300,3 @@
     }
   }
 }
-
-/* Search Template
-      tpl-search.php
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-#search-template {
-  .search-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    h4 {
-      color: var(--dark-blue);
-      margin-bottom: 24px;
-    }
-    &__content {
-      display: flex;
-      .search-bar {
-        width: 80%;
-        @extend %search-bar;
-      }
-    }
-  }
-
-  .search-results {
-    margin-top: 56px;
-    padding-top: 56px;
-    border-top: 3px solid var(--dark-blue);
-
-    h2 {
-      padding: 32px 0 24px;
-    }
-  }
-}

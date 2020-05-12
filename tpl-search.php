@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-<div id="search-template">
+<div id="tpl-search">
   <main id="main">
     <!-- Hero Banner -->
     <?php get_template_part('template-parts/component', 'hero'); ?>

@@ -48,7 +48,6 @@
         endwhile; ?>
 
         <div class="row">
-            <!-- ACF Content -->
             <div class="eight columns">
                 <div class="mm-content">
                     <?php while (have_rows('content_blocks')) : the_row();
