@@ -42,12 +42,10 @@
             </div>
         </div>
 
-        <div class="cards">
-            <!-- Cards Block -->
-            <?php while (have_rows('content_blocks')) : the_row();
-                get_template_part('template-parts/component', 'cards');
-            endwhile; ?>
-        </div>
+        <!-- Cards Block -->
+        <?php while (have_rows('content_blocks')) : the_row();
+            get_template_part('template-parts/component', 'cards');
+        endwhile; ?>
 
         <div class="row">
             <!-- ACF Content -->

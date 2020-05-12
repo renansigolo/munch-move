@@ -107,7 +107,7 @@
         font-size: 1.6rem;
       }
 
-      i {
+      i.fas {
         color: var(--dark-blue);
         font-size: 1.2rem;
         line-height: 15px;
@@ -147,7 +147,7 @@
 
         &:nth-child(-n + 2) {
           padding-right: 16px;
-          i {
+          i.fas {
             padding-right: 8px;
           }
         }

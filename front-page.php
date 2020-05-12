@@ -25,8 +25,7 @@ if ($banner_button) :
                     <div class="row">
                         <div class="five columns">
                             <div class="hero-content">
-                                <!-- <h1><?php the_field('banner_title') ?></h1> -->
-                                <h1>Munch & Move is NSW Health initiative that supports the healthy development of children birth to 5 years</h1>
+                                <h1><?php the_field('banner_title') ?></h1>
                                 <a href="<?php echo $banner_button_url; ?>" target="<?php echo $banner_button_target; ?>">
                                     <button class="btn-general"><?php echo $banner_button_title ?></button>
                                 </a>
