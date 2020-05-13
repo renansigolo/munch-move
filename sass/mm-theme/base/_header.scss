@@ -243,7 +243,8 @@
   }
 
   &__list {
-    li, a {
+    li,
+    a {
       @include list-icon($fa-var-chevron-right);
       font-size: 1.6rem;
       font-weight: var(--extra-bold);
@@ -265,6 +266,10 @@
 
     &:first-child {
       margin-bottom: 32px;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }

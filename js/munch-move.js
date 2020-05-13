@@ -184,7 +184,7 @@
     });
   }
 
-  console.log('songs', songs)
+  console.log("songs", songs);
 
   function playAudio(url) {
     document.getElementById(
@@ -211,4 +211,8 @@ function pauseSong() {
   document.querySelector("#player").pause();
   jQuery(".play").show();
   jQuery(".pause").hide();
+}
+
+function redirectTo(url) {
+  return window.location = url;
 }

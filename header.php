@@ -89,7 +89,7 @@
                             <?php
                             while (have_rows('featured')) : the_row();
                             ?>
-                                <div class="mega-menu__article">
+                                <div class="mega-menu__article" onclick="redirectTo('<?php the_sub_field('button')['url'] ?>')">
                                     <img src="<?php echo get_sub_field('image')['url']; ?>" width="260" height="150" alt="Card Image">
                                     <div>
                                         <h4><?php echo get_sub_field('title'); ?></h4>

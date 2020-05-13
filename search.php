@@ -48,7 +48,7 @@ get_header();
                                 while (have_posts()) :
                                     the_post();
                                 ?>
-                                    <div style="cursor: pointer;" onclick="window.location='<?php the_permalink() ?>'">
+                                    <div style="cursor: pointer;" onclick="redirectTo('<?php the_permalink() ?>')">
                                         <?php the_title('<h2>', '</h2>'); ?>
                                         <?php the_excerpt(); ?>
                                     </div>
