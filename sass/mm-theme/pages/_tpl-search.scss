@@ -15,7 +15,9 @@
     }
     &__content {
       display: flex;
-      #search {
+      
+      input[type='text'],
+      input[type='password'] {
         width: 84%;
         @extend %search-bar;
       }

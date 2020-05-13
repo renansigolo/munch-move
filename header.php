@@ -56,9 +56,7 @@
 
             <section class="mega-menu">
                 <?php while (have_rows('mega-menu', 'option')) : the_row(); ?>
-                    <?php
-                    $category = get_sub_field('menu_category');
-                    ?>
+                    <?php $category = get_sub_field('menu_category'); ?>
                     <div class="row container tab-content tab-<?php echo esc_attr($category['value']); ?>" id="<?php echo esc_attr($category['value']); ?>">
                         <div class="three columns">
                             <div class="card-<?php echo esc_attr($category['value']); ?>">
@@ -66,7 +64,9 @@
                                     <div>
                                         <p><?php echo get_sub_field('card')['description'] ?></p>
                                     </div>
-                                    <button class="btn-<?php echo esc_attr($category['value']); ?>"><?php echo get_sub_field('card')['button']['title'] ?></button>
+                                    <a href="<?php echo get_sub_field('card')['button']['url'] ?>">
+                                        <button class="btn-<?php echo esc_attr($category['value']); ?>"><?php echo get_sub_field('card')['button']['title'] ?></button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

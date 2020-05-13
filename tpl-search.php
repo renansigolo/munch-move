@@ -26,10 +26,8 @@ get_header();
           </header>
 
           <div class="mm-content">
-            <?php
-            // WP Default Content Block
-            the_content();
-            ?>
+            <!-- WP Content -->
+            <?php the_content() ?>
 
             <?php
             $page_id = get_the_ID();
@@ -37,7 +35,7 @@ get_header();
               <div class="search-form">
                 <h4>Enter password:</h4>
                 <div class="search-form__content">
-                  <input class="search-bar" type="password" name="password">
+                  <input type="password" name="password">
                   <button class="btn-general" id="navbar-btn-search">Login</button>
                 </div>
               </div>
@@ -53,15 +51,11 @@ get_header();
               </div>
             <?php endif ?>
           </div>
-
-
         </div>
 
         <!-- Related Links -->
         <div class="four columns">
-          <?php
-          get_template_part('template-parts/component', 'related-links');
-          ?>
+          <?php get_template_part('template-parts/component', 'related-links') ?>
         </div>
       </div>
     </div>

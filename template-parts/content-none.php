@@ -10,7 +10,7 @@
 ?>
 
 <section class="no-results not-found">
-    <header>
+    <header class="container" style="margin-top: 32px">
         <h2><?php esc_html_e('Nothing Found', 'munch-move'); ?></h2>
     </header>
 
