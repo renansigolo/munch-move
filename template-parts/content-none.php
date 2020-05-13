@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
     <header>
-        <h1 class="page-title"><?php esc_html_e('Nothing Found', 'munch-move'); ?></h1>
+        <h2><?php esc_html_e('Nothing Found', 'munch-move'); ?></h2>
     </header>
 
     <div class="search-content">

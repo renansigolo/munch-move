@@ -26,13 +26,7 @@ get_header();
             <div class="row">
                 <div class="eight columns">
                     <header>
-                        <h1 class="page-title">
-                            <!-- <?php
-                                    /* translators: %s: search query. */
-                                    printf(esc_html__('Search Results for: %s', 'munch-move'), '<span>' . get_search_query() . '</span>');
-                                    ?> -->
-                            Search:
-                        </h1>
+                        <h1 class="entry-title">Search</h1>
                     </header>
 
                     <div class="mm-content">
@@ -53,17 +47,11 @@ get_header();
                                 /* Start the Loop */
                                 while (have_posts()) :
                                     the_post();
-                                    the_title('<h1 class="entry-title">', '</h1>'); ?>
-                                    <?php the_excerpt(); ?>
-                                    <a href="<?php the_permalink() ?>">Read More...</a>
-
-                                    <!-- <p>
-                                    <?php
-                                    $my_content = apply_filters('the_content', get_the_content());
-                                    $my_content = wp_strip_all_tags($my_content);
-                                    echo wp_trim_words($my_content, 55, $moreLink);
-                                    ?>
-                                </p> -->
+                                ?>
+                                    <div style="cursor: pointer;" onclick="window.location='<?php the_permalink() ?>'">
+                                        <?php the_title('<h2>', '</h2>'); ?>
+                                        <?php the_excerpt(); ?>
+                                    </div>
                                 <?php
                                 endwhile;
                                 ?>
