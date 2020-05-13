@@ -31,14 +31,37 @@ get_header();
                 <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
               </header>
 
-              <div>
+              <div class="sitemap-content">
                 <!-- <?php the_content(); ?> -->
+                <?php
+                // Exclude the Following pages with their respectives ID
+                // - Accessibility -> 80
+                // - Copyright Notice -> 98
+                // - Disclaimer -> 78
+                // - Privacy -> 3
+                // - Search -> 85
+                // - Sitemap -> 89
 
+                $args = array(
+                  'depth'        => 0,
+                  'date_format'  => get_option('date_format'),
+                  'child_of'     => 0,
+                  'exclude'      => '80,98,78,3,85,89',
+                  'title_li'     => __(''),
+                  'echo'         => 1,
+                  'sort_column'  => 'menu_order, post_title',
+                  'link_before'  => '',
+                  'link_after'   => '',
+                  'item_spacing' => 'preserve',
+                  'walker'       => '',
+                );
 
-                <?php wp_list_pages(); ?>
+                wp_list_pages($args);
+
+                ?>
 
               </div>
-            </div>
+            </div><!-- #ID-<?php the_ID(); ?> -->
 
             <!-- Related Links -->
             <div class="four columns">

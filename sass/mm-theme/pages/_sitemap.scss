@@ -3,48 +3,35 @@
 --------------------------------------------------------------*/
 
 #sitemap-template {
-  .wsp-pages-title {
-    display: none;
-  }
-
-  .wsp-pages-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  // First Level
-  .wsp-pages-list {
+  .sitemap-content {
     a {
       @include list-icon($fa-var-chevron-right);
     }
-  }
-
-  // Second Level
-  .page_item_has_children {
-    border-bottom: 3px solid var(--blue);
-    a:not(:first-child) {
-      color: var(--blue);
+    li {
+      padding: 8px 0;
+      margin-bottom: 0;
     }
 
-    // Third Level
+    > li {
+      color: var(--dark-blue);
+      border-bottom: 3px solid var(--dark-blue);
+      // line-height: 26px;
+    }
+
     .page_item_has_children {
-      > a {
-        color: var(--blue);
-        // color: pink;
+      .children {
+        a {
+          color: var(--blue);
+        }
+
+        .page_item_has_children {
+          .children {
+            a {
+              color: #8c8c8c;
+            }
+          }
+        }
       }
-
-      // Fourth Level
-      // .children {
-      //   a {
-      //     color: magenta;
-      //   }
-      // }
-    }
-  }
-
-  .children {
-    a {
-      color: #8c8c8c;
     }
   }
 }

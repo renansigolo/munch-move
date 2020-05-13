@@ -197,41 +197,14 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_sub_page('Related Links');
 }
 
-// Register a Block.
-// function register_acf_block_types()
-// {
-//     // register a related links block.
-//     acf_register_block_type(array(
-//         'name'              => 'related-links',
-//         'title'             => __('Related Links'),
-//         'description'       => __('A custom block for related links.'),
-//         'render_template'   => 'template-parts/blocks/related-links.php',
-//         'category'          => 'widgets',
-//         'icon'              => 'editor-ul',
-//         'keywords'          => array('related-links', 'munch-and-move-theme'),
-//     ));
-// }
-
-// if (function_exists('acf_register_block_type')) {
-//     add_action('acf/init', 'register_acf_block_types');
-// }
-
-// add_action('registered_post_type', 'igy2411_make_posts_hierarchical', 10, 2 );
-
-// // Runs after each post type is registered
-// function igy2411_make_posts_hierarchical($post_type, $pto){
-
-//     // Return, if not post type posts
-//     if ($post_type != 'post') return;
-
-//     // access $wp_post_types global variable
-//     global $wp_post_types;
-
-//     // Set post type "post" to be hierarchical
-//     $wp_post_types['post']->hierarchical = 1;
-
-//     // Add page attributes to post backend
-//     // This adds the box to set up parent and menu order on edit posts.
-//     add_post_type_support( 'post', 'page-attributes' );
-
-// }
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length($length)
+{
+    return 40;
+}
+add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);

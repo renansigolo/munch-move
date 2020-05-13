@@ -51,33 +51,6 @@ get_header();
                   </div>
                 </form>
               </div>
-
-              <div class="search-results">
-                <div>
-                  <h2>
-                    Munch & Move Resources
-                  </h2>
-                  <p>
-                    There are a range of Munch & Move resources available to assist educators working in early childhood services to implement the Munch & Move key messages…
-                  </p>
-                </div>
-                <div>
-                  <h2>
-                    Resource Order Forms
-                  </h2>
-                  <p>
-                    Preschools and long day care services located in NSW can order Munch & Move program resources by completing and emailing or faxing the Order Form listed...
-                  </p>
-                </div>
-                <div>
-                  <h2>
-                    Staff Development Kit and Resource Manual
-                  </h2>
-                  <p>
-                    Please enter the password supplied to you by your Munch & Move Support Officer to access the Munch & Move Staff Development Kit and Munch & Move Resource Manual…
-                  </p>
-                </div>
-              </div>
             <?php endif ?>
           </div>
 
