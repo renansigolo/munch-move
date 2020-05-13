@@ -22,7 +22,7 @@
   // Second Level
   .page_item_has_children {
     border-bottom: 3px solid var(--blue);
-    a {
+    a:not(:first-child) {
       color: var(--blue);
     }
 
@@ -47,8 +47,4 @@
       color: #8c8c8c;
     }
   }
-
-  // a {
-  //   color: #0075bd;
-  // }
 }

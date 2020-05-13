@@ -66,7 +66,7 @@
                                     <div>
                                         <p><?php echo get_sub_field('card')['description'] ?></p>
                                     </div>
-                                    <button class="btn-<?php echo esc_attr($category['value']); ?>">Learn More</button>
+                                    <button class="btn-<?php echo esc_attr($category['value']); ?>"><?php echo get_sub_field('card')['button']['title'] ?></button>
                                 </div>
                             </div>
                         </div>
@@ -76,9 +76,11 @@
                                 <?php
                                 while (have_rows('related_links')) : the_row();
                                 ?>
-                                    <a href="<?php echo get_sub_field('link')['url']; ?>">
-                                        <li><?php echo get_sub_field('link')['title']; ?></li>
-                                    </a>
+                                    <li>
+                                        <a href="<?php echo get_sub_field('link')['url']; ?>">
+                                            <?php echo get_sub_field('link')['title']; ?>
+                                        </a>
+                                    </li>
                                 <?php endwhile; ?>
                             </ul>
                         </div>

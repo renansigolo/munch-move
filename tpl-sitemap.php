@@ -32,7 +32,7 @@ get_header();
               </header>
 
               <div>
-                <?php the_content(); ?>
+                <!-- <?php the_content(); ?> -->
 
 
                 <?php wp_list_pages(); ?>

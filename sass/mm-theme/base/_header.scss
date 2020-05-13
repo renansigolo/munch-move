@@ -243,13 +243,14 @@
   }
 
   &__list {
-    li {
+    li, a {
       @include list-icon($fa-var-chevron-right);
       font-size: 1.6rem;
       font-weight: var(--extra-bold);
-      padding-bottom: 16px;
-      border-bottom: 1px solid inherit;
+      padding: 16px 0;
+      margin-bottom: 0;
       text-transform: uppercase;
+      line-height: 26px;
     }
   }
 
@@ -281,7 +282,7 @@
         color: $primaryColor;
       }
 
-      li {
+      li:not(:last-child) {
         border-bottom: 1px solid $secondaryColor;
       }
     }
