@@ -141,19 +141,6 @@
   });
 
   // Audio Player
-  // console.log("song");
-  // let songs = document.getElementsByClassName("js-song-title");
-  // // console.log("songs", songs);
-  // for (const song of songs) {
-  //   let songData = getAttribute("data-song");
-  //   // console.log("songData", songData);
-
-  //   song.addEventListener("click", function () {
-  //     // console.log("playAudio -> url", url);
-  //   });
-  //   // console.log("song", song);
-  // }
-
   const parseTime = (timestamp) => {
     timestamp = timestamp.toFixed(0);
 
@@ -172,9 +159,9 @@
     return formatted;
   };
 
-  let trackRows = document.querySelectorAll(".js-track-row");
-  console.log('trackRows', trackRows)
+  songs = [];
 
+  let trackRows = document.querySelectorAll(".js-song-title");
   function clearStyle() {
     for (const song of trackRows) {
       song.style.fontWeight = "300";
@@ -182,29 +169,29 @@
   }
 
   for (const song of trackRows) {
-    song.addEventListener("click", function () {
-      console.log(this);
+    songs.push({
+      index: song.getAttribute("data-song-index"),
+      title: song.getAttribute("data-song-title"),
+      url: song.getAttribute("data-song-url"),
+    });
+
+    song.addEventListener("click", function (evt) {
       clearStyle();
-      this.style.fontWeight = "800";
+      this.style.fontWeight = "700";
+      // document.querySelector(`.track-${this.getAttribute("data-song-index")} .js-song-length`).style.fontWeight = "800";
       let songUrl = this.getAttribute("data-song-url");
       playAudio(songUrl);
     });
   }
 
+  console.log('songs', songs)
+
   function playAudio(url) {
-    console.log("playAudio -> url", url);
-    // new Audio(url).play();
     document.getElementById(
-      "songPlayer"
+      "song-player"
     ).innerHTML = `<audio src="${url}" id="player" controls controlsList="nodownload">`;
     playSong();
   }
-
-  // let audioElement = document.querySelector("#player");
-  // console.log("audioElement", audioElement);
-  // audioElement.addEventListener("loadeddata", () => {
-  //   let duration = audioElement.duration;
-  // });
 
   accordion();
 })(jQuery);

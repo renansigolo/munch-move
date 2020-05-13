@@ -28,17 +28,17 @@
 
                 <tbody>
                     <?php while (have_rows('audio')) : the_row() ?>
-                        <tr class="playlist__song js-track-row" data-song-title="<?php echo $file['title']; ?>" data-song-url="<?php echo $file['url']; ?>">
-                            <?php
-                            $file = get_sub_field('audio_file');
-                            if ($file) : ?>
-                                <td class="song-title js-song-title"><?php the_sub_field('song_title') ?></td>
+                        <?php
+                        $file = get_sub_field('audio_file');
+                        if ($file) : ?>
+                            <tr class="playlist__song track-<?php echo get_row_index() - 1; ?>">
+                                <td class="song-title js-song-title" data-song-title="<?php the_sub_field('song_title') ?>" data-song-url="<?php echo $file['url']; ?>" data-song-index="<?php echo get_row_index() - 1; ?>"><?php the_sub_field('song_title') ?></td>
                                 <td class="text-center js-song-length">01:00</td>
                                 <td class="float-right">
                                     <a href="<?php echo $file['url']; ?>" download>Download Track</a>
-                                <?php endif; ?>
                                 </td>
-                        </tr>
+                            </tr>
+                        <?php endif; ?>
                     <?php endwhile ?>
                 </tbody>
 
@@ -57,13 +57,12 @@
             </button>
             <button class="btn-rounded forward"><i class="fas fa-forward"></i></button>
 
-            <div id="songPlayer">
+            <div id="song-player">
                 <audio id="player" controls controlsList="nodownload">
-                    <source src="#" type="audio/mpeg">
+                    <source src="<?php echo get_template_directory_uri() . '/images/1.MunchMove.mp3' ?>" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
-
 
             <!-- <button class="btn-rounded volume" onclick="document.getElementById('player').volume += 0.1">
                 <i class="fas fa-volume-up"></i>
@@ -79,8 +78,6 @@
             <button class="btn-rounded volume" onclick="document.getElementById('player').volume += 0.1">
                 <i class="fas fa-volume-up"></i>
             </button> -->
-
-            <div></div>
         </div>
 
     </section>

@@ -188,6 +188,8 @@
   }
 
   audio {
+    width: 100%;
+    
     &::-webkit-media-controls-panel {
       background-color: #fff;
     }
@@ -222,6 +224,10 @@
 
     .pause {
       display: none;
+    }
+
+    #song-player {
+      width: 100%;
     }
   }
 }
