@@ -77,8 +77,6 @@
         tab.style.display = "none";
       }
 
-      console.log($(`#${this.title}`));
-
       // Show only the respective content
       menuTab.classList.add("active");
       $(`#${this.title}`).show();
@@ -111,17 +109,17 @@
     }
   };
 
-  console.log("song");
+  // console.log("song");
   let songs = document.getElementsByClassName("js-song-title");
-  console.log("songs", songs);
+  // console.log("songs", songs);
   for (const song of songs) {
     let songData = getAttribute("data-song");
-    console.log("songData", songData);
+    // console.log("songData", songData);
 
     song.addEventListener("click", function () {
-      console.log("playAudio -> url", url);
+      // console.log("playAudio -> url", url);
     });
-    console.log("song", song);
+    // console.log("song", song);
   }
 
   // Form Munch & Move to italic

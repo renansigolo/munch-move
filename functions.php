@@ -194,6 +194,7 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_sub_page('Header');
     acf_add_options_sub_page('Footer');
     acf_add_options_sub_page('404 Page');
+    acf_add_options_sub_page('Related Links');
 }
 
 // Register a Block.
