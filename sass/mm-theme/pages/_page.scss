@@ -142,6 +142,7 @@
   table {
     border-collapse: collapse;
   }
+
   &__header {
     th {
       padding: 0 0 16px 0;
@@ -150,6 +151,9 @@
   }
 
   &__song {
+    .song-title:hover {
+      cursor: pointer;
+    }
     &:not(:last-child) {
       border-bottom: 3px solid var(--dark-blue) !important;
     }
@@ -184,28 +188,41 @@
   }
 
   audio {
-    margin-top: 32px;
-
     &::-webkit-media-controls-panel {
       background-color: #fff;
     }
-    &::-webkit-media-controls-play-button {
-      background-color: var(--blue);
-      padding: 25px;
-      border-radius: 25px;
-    }
 
+    &::-webkit-media-controls-play-button,
     &::-webkit-media-controls-current-time-display,
     &::-webkit-media-controls-time-remaining-display {
       display: none;
     }
+  }
 
-    // &::-webkit-media-controls-volume-slider {
-    //   background-color: var(--blue);
-    //   border-radius: 15px;
-    //   padding: 18px 30px;
-    //   color: #fff;
-    // }
+  .player {
+    display: flex;
+    margin-top: 32px;
+    width: 100%;
+    height: 50px;
+
+    .btn-rounded {
+      background-color: var(--blue);
+      padding: 15px;
+      margin: 0 5px;
+      border-radius: 25px;
+      border: none;
+      color: #fff;
+
+      i.fas {
+        font-size: 2rem;
+        height: 21px;
+        width: 21px;
+      }
+    }
+
+    .pause {
+      display: none;
+    }
   }
 }
 

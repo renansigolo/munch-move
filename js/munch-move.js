@@ -109,19 +109,6 @@
     }
   };
 
-  // console.log("song");
-  let songs = document.getElementsByClassName("js-song-title");
-  // console.log("songs", songs);
-  for (const song of songs) {
-    let songData = getAttribute("data-song");
-    // console.log("songData", songData);
-
-    song.addEventListener("click", function () {
-      // console.log("playAudio -> url", url);
-    });
-    // console.log("song", song);
-  }
-
   // Form Munch & Move to italic
   $.fn.wrapInTag = function (opts) {
     let tag = opts.tag || "italic",
@@ -153,10 +140,88 @@
     });
   });
 
+  // Audio Player
+  // console.log("song");
+  // let songs = document.getElementsByClassName("js-song-title");
+  // // console.log("songs", songs);
+  // for (const song of songs) {
+  //   let songData = getAttribute("data-song");
+  //   // console.log("songData", songData);
+
+  //   song.addEventListener("click", function () {
+  //     // console.log("playAudio -> url", url);
+  //   });
+  //   // console.log("song", song);
+  // }
+
+  const parseTime = (timestamp) => {
+    timestamp = timestamp.toFixed(0);
+
+    let hours = Math.floor(timestamp / 60 / 60);
+    let minutes = Math.floor(timestamp / 60) - hours * 60;
+    let seconds = timestamp % 60;
+
+    // let formatted = hours + ":" + minutes + ":" + seconds;
+    let formatted =
+      // hours.toString().padStart(2, "0") +
+      // ":" +
+      minutes.toString().padStart(2, "0") +
+      ":" +
+      seconds.toString().padStart(2, "0");
+
+    return formatted;
+  };
+
+  let trackRows = document.querySelectorAll(".js-track-row");
+  console.log('trackRows', trackRows)
+
+  function clearStyle() {
+    for (const song of trackRows) {
+      song.style.fontWeight = "300";
+    }
+  }
+
+  for (const song of trackRows) {
+    song.addEventListener("click", function () {
+      console.log(this);
+      clearStyle();
+      this.style.fontWeight = "800";
+      let songUrl = this.getAttribute("data-song-url");
+      playAudio(songUrl);
+    });
+  }
+
+  function playAudio(url) {
+    console.log("playAudio -> url", url);
+    // new Audio(url).play();
+    document.getElementById(
+      "songPlayer"
+    ).innerHTML = `<audio src="${url}" id="player" controls controlsList="nodownload">`;
+    playSong();
+  }
+
+  // let audioElement = document.querySelector("#player");
+  // console.log("audioElement", audioElement);
+  // audioElement.addEventListener("loadeddata", () => {
+  //   let duration = audioElement.duration;
+  // });
+
   accordion();
 })(jQuery);
 
-// function playAudio(url) {
-//   console.log("playAudio -> url", url);
-//   // new Audio(url).play();
-// }
+function togglePlay() {
+  jQuery(".play").toggle();
+  jQuery(".pause").toggle();
+}
+
+function playSong() {
+  document.querySelector("#player").play();
+  jQuery(".pause").show();
+  jQuery(".play").hide();
+}
+
+function pauseSong() {
+  document.querySelector("#player").pause();
+  jQuery(".play").show();
+  jQuery(".pause").hide();
+}

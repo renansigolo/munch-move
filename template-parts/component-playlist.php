@@ -28,12 +28,12 @@
 
                 <tbody>
                     <?php while (have_rows('audio')) : the_row() ?>
-                        <tr class="playlist__song">
+                        <tr class="playlist__song js-track-row" data-song-title="<?php echo $file['title']; ?>" data-song-url="<?php echo $file['url']; ?>">
                             <?php
                             $file = get_sub_field('audio_file');
                             if ($file) : ?>
-                                <td class="js-song-title" data-song="<?php echo $file['url']; ?>"><?php the_sub_field('song_title') ?></td>
-                                <td class="text-center">01:00</td>
+                                <td class="song-title js-song-title"><?php the_sub_field('song_title') ?></td>
+                                <td class="text-center js-song-length">01:00</td>
                                 <td class="float-right">
                                     <a href="<?php echo $file['url']; ?>" download>Download Track</a>
                                 <?php endif; ?>
@@ -44,11 +44,44 @@
 
             </table>
         </div>
-        <div class="row">
-            <audio class="full-width" controls>
-                <source src="<?php echo get_template_directory_uri() . '/images/1.MunchMove.mp3' ?>" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+
+        <div class="row player">
+            <button class="btn-rounded previous">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button class="btn-rounded play" onclick="playSong()">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="btn-rounded pause" onclick="pauseSong()">
+                <i class="fas fa-pause"></i>
+            </button>
+            <button class="btn-rounded forward"><i class="fas fa-forward"></i></button>
+
+            <div id="songPlayer">
+                <audio id="player" controls controlsList="nodownload">
+                    <source src="#" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+
+            <!-- <button class="btn-rounded volume" onclick="document.getElementById('player').volume += 0.1">
+                <i class="fas fa-volume-up"></i>
+            </button> -->
+            <!-- <div class="volume-slider">
+                <input type="range" id="vol" name="vol" min="0" max="50">
+            </div> -->
+
+            <!-- <button class="btn-rounded volume" onclick="document.getElementById('player').volume -= 0.1">
+                <i class="fas fa-volume-down"></i>
+            </button>
+
+            <button class="btn-rounded volume" onclick="document.getElementById('player').volume += 0.1">
+                <i class="fas fa-volume-up"></i>
+            </button> -->
+
+            <div></div>
         </div>
+
     </section>
 <?php endif ?>
