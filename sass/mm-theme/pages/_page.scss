@@ -75,20 +75,7 @@
   }
 
   ol {
-    li {
-      @include list-icon($fa-var-chevron-right);
-      color: var(--dark-blue);
-    }
-
-    a {
-      font-weight: var(--bold);
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-        color: var(--dark-blue);
-      }
-    }
+    @include arrow-list;
   }
 }
 
@@ -344,5 +331,13 @@
       text-decoration: none;
       font-weight: var(--bold);
     }
+  }
+}
+
+.arrow-list {
+  ul {
+    @include arrow-list;
+    margin: 0;
+    padding: 0;
   }
 }

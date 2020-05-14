@@ -43,3 +43,20 @@ li {
     }
   }
 }
+
+@mixin arrow-list {
+  li {
+    @include list-icon($fa-var-chevron-right);
+    color: var(--dark-blue);
+  }
+
+  a {
+    font-weight: var(--bold);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--dark-blue);
+    }
+  }
+}

@@ -4,7 +4,7 @@
  * 
  * Template Name: Characters Poster
  * 
- * The template for displaying the Case Studies Pages
+ * The template for displaying the Characters Poster Page
  *
  * @package Munch_&_Move
  */
@@ -40,10 +40,10 @@ get_header();
 
         <div class="mm-content">
           <?php while (have_rows('common_blocks')) : the_row();
-
             get_template_part('template-parts/common/component', 'heading');
-            get_template_part('template-parts/component', 'cards');
-            
+            get_template_part('template-parts/common/component', 'text-area');
+            get_template_part('template-parts/common/component', 'list');
+            get_template_part('template-parts/common/component', 'cards');
           endwhile; ?>
         </div>
       </div>

@@ -4,7 +4,7 @@
  * 
  * Template Name: Sitemap
  * 
- * The template for displaying the Privacy Policy
+ * The template for displaying the Sitemap
  *
  * @package Munch_&_Move
  */
