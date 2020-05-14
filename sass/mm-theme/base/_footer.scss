@@ -23,16 +23,12 @@
     margin-bottom: 32px;
 
     img {
-      height: 60px;
-      width: auto;
+      width: 100px;
+      height: auto;
     }
 
     @include desktop {
       margin-bottom: 0;
-
-      img {
-        height: 100px;
-      }
     }
 
     @include widescreen {
