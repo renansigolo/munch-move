@@ -98,6 +98,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .entry-content {
   h6 {
+    text-align: center;
     display: inline-flex;
     margin-top: 8px;
 
@@ -189,7 +190,7 @@
 
   audio {
     width: 100%;
-    
+
     &::-webkit-media-controls-panel {
       background-color: #fff;
     }
@@ -257,6 +258,28 @@
 
   .search-submit {
     @extend .btn-general;
+  }
+}
+
+.staff-content {
+  &__authenticated,
+  &__error {
+    display: none;
+  }
+
+  &__authenticated {
+    flex-direction: column;
+
+    button {
+      margin-top: 16px;
+    }
+  }
+
+  &__error {
+    margin: 16px 8px;
+    p {
+      color: var(--red);
+    }
   }
 }
 

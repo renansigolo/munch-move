@@ -214,5 +214,22 @@ function pauseSong() {
 }
 
 function redirectTo(url) {
-  return window.location = url;
+  return (window.location = url);
+}
+
+function authStaff() {
+  let staffAuthenticated = document.querySelector(
+    ".staff-content__authenticated"
+  );
+  let staffError = document.querySelector(".staff-content__error");
+
+  let userPassword = document.querySelector(".staff-form__content input")
+    .value;
+
+  if (userPassword === "Oranges") {
+    staffError.style.display = "none";
+    staffAuthenticated.style.display = "flex";
+  } else {
+    staffError.style.display = "flex";
+  }
 }

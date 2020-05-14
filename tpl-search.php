@@ -32,11 +32,25 @@ get_header();
             <?php
             $page_id = get_the_ID();
             if ($page_id  === 131) : ?>
-              <div class="search-form">
+              <div class="staff-form">
                 <h4>Enter password:</h4>
-                <div class="search-form__content">
+                <div class="staff-form__content">
                   <input type="password" name="password">
-                  <button class="btn-general" id="navbar-btn-search">Login</button>
+                  <button class="btn-general" id="navbar-btn-search" onclick="authStaff()">Login</button>
+                </div>
+              </div>
+
+              <div class="staff-content">
+                <div class="staff-content__authenticated">
+                  <button class="btn-general">
+                    Click here to access the NEW Munch & Move Staff Development Kit
+                  </button>
+                  <button class="btn-training">
+                    Click here to access the Munch & Move Resource Manual
+                  </button>
+                </div>
+                <div class="staff-content__error">
+                  <p>It looks like this password is not valid</p>
                 </div>
               </div>
             <?php else : ?>
