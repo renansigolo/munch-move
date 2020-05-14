@@ -21,6 +21,7 @@
       input[type='password'] {
         width: 84%;
         @extend %search-bar;
+        height: 45px;
       }
     }
   }

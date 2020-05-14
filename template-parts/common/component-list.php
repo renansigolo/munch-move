@@ -20,7 +20,7 @@
                         $link_target = $link['target'] ? $link['target'] : '_self';
                 ?>
                         <li>
-                            <a href="<?php echo $link_url ?>"><?php echo $link_title ?></a>
+                            <a href="<?php echo $link_url ?>" target="<?php echo $link_target ?>"><?php echo $link_title ?></a>
                         </li>
                 <?php
                     endif;

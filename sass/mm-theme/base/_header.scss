@@ -101,7 +101,7 @@
         justify-content: flex-end;
         align-items: center;
         list-style: none;
-        @include margin-y(0);
+        margin: 0;
 
         li {
           text-align: center;
@@ -243,7 +243,7 @@
 
   .tab-content {
     display: none;
-    @include margin-y(55px);
+    margin: 55px auto;
   }
 
   .card__content {

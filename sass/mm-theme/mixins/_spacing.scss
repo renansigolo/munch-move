@@ -2,44 +2,7 @@
 # Helpers
 --------------------------------------------------------------*/
 
-// x - for classes that set both *-left and *-right
-@mixin margin-x($margin) {
-  margin-left: $margin;
-  margin-right: $margin;
-}
-
-@mixin padding-x($padding) {
-  padding-left: $padding;
-  padding-right: $padding;
-}
-
-@mixin margin-lr($ml, $mr) {
-  margin-left: $ml;
-  margin-right: $mr;
-}
-
-@mixin padding-lr($pl, $pr) {
-  padding-left: $pl;
-  padding-right: $pr;
-}
-
-// y - for classes that set both *-top and *-bottom
-@mixin margin-y($margin) {
-  margin-top: $margin;
-  margin-bottom: $margin;
-}
-
-@mixin padding-y($padding) {
-  padding-top: $padding;
-  padding-bottom: $padding;
-}
-
 @mixin margin-tb($mt, $mb) {
   margin-top: $mt;
   margin-bottom: $mb;
-}
-
-@mixin padding-tb($pt, $pb) {
-  padding-top: $pt;
-  padding-bottom: $pb;
 }
