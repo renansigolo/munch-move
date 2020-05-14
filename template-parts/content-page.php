@@ -19,7 +19,15 @@
             <!-- WP Content -->
             <div class="eight columns">
                 <header class="entry-header">
-                    <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+                    <h1 class="entry-title">
+                        <?php
+                        if (get_field('main_title')) {
+                            the_field('main_title');
+                        } else {
+                            the_title();
+                        }
+                        ?>
+                    </h1>
                 </header>
 
                 <div class="mm-content">
