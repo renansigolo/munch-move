@@ -5,7 +5,11 @@
 #sitemap-template {
   .sitemap-content {
     a {
+      padding-left: 8px;
       @include list-icon($fa-var-chevron-right);
+      &::before {
+        margin-left: 0em;
+      }
     }
     li {
       padding: 8px 0;

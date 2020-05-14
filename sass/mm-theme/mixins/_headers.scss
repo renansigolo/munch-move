@@ -39,8 +39,12 @@
 
   &::placeholder {
     color: var(--blue);
-    // color: var(--dark-blue);
   }
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
 }
 
 .search-icon {

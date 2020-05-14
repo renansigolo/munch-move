@@ -19,7 +19,12 @@
     display: flex;
     justify-content: space-between;
     max-width: 1366px;
+    height: 64px;
     margin: 0 auto;
+
+    @include desktop {
+      height: 130px;
+    }
   }
 
   .nav-logo {
@@ -30,6 +35,9 @@
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=1, Color='#000')";
     -webkit-filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.4));
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=1, Color='#000')";
+    position: relative;
+    left: 10px;
+    top: 4px;
 
     &:hover {
       cursor: pointer;

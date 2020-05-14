@@ -107,7 +107,7 @@
                 <form action="/" method="get">
                     <div class="mobile-search-bar">
                         <input class="search-bar" type="text" name="s" id="navbar-search" value="<?php the_search_query(); ?>">
-                        <button><i class="fas fa-search search-icon" id="search-icon"></i></button>
+                        <button class="btn"><i class="fas fa-search search-icon" id="search-icon"></i></button>
                     </div>
                 </form>
                 <?php
