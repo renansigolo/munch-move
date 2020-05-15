@@ -7,7 +7,8 @@
   "license": "ISC",
   "main": "sass/style.scss",
   "scripts": {
-    "clean": "rm -rf css/**",
+    "clean": "rm -rf css/** node_modules package-lock.json",
+    "clean:install": "npm-run-all clean install build",
     "copy-fontawesome": "cpx node_modules/@fortawesome/fontawesome-free/scss/**/* fonts/fontawesome/scss/ && cpx node_modules/@fortawesome/fontawesome-free/webfonts/**/* fonts/fontawesome/webfonts",
     "watch-sass": "node-sass sass/style.scss css/style.css --watch",
     "compile-sass": "node-sass sass/style.scss css/style.comp.css",
