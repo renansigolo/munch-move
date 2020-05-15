@@ -1,0 +1,84 @@
+/**
+ * Print Stylesheet fuer Deinewebsite.de
+* @version         1.0
+* @lastmodified    16.06.2016
+*/
+
+@media print {
+  /* Defining all page breaks */
+  a {
+    page-break-inside: avoid;
+  }
+  blockquote {
+    page-break-inside: avoid;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  img {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+  ul,
+  ol,
+  dl {
+    page-break-before: avoid;
+  }
+
+
+  /**
+ * Making intergated videos disappear, and removing the iframes' whitespace to zero. 
+ */
+//   .entry iframe,
+//   ins {
+//     display: none;
+//     width: 0 !important;
+//     height: 0 !important;
+//     overflow: hidden !important;
+//     line-height: 0pt !important;
+//     white-space: nowrap;
+//   }
+//   .embed-youtube,
+//   .embed-responsive {
+//     position: absolute;
+//     height: 0;
+//     overflow: hidden;
+//   }
+
+  /* Hiding unnecessary elements for the print */
+
+  #header-widgets,
+  nav,
+  aside.mashsb-container,
+  .sidebar,
+  .mashshare-top,
+  .mashshare-bottom,
+  .content-ads,
+  .make-comment,
+  .author-bio,
+  .heading,
+  .related-posts,
+  #decomments-form-add-comment,
+  #breadcrumbs,
+  #footer,
+  .post-byline,
+  .meta-single,
+  .site-title img,
+  .post-tags,
+  .readability,
+  #hero,
+  #btn-menu,
+  .nav-logo {
+    display: none;
+  }
+}

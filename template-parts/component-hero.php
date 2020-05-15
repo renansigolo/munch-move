@@ -9,7 +9,7 @@
  */
 ?>
 
-<section>
+<section id="hero">
     <!-- Featured Image -->
     <?php the_post_thumbnail('large', ['class' => 'featured-image']); ?>
 
