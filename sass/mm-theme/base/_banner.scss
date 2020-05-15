@@ -79,7 +79,6 @@
 // Utility Bar
 .utility {
   background-color: var(--blue);
-  margin-bottom: 32px;
   font-size: 1.9rem;
 
   @include desktop {
@@ -176,6 +175,85 @@
 
     @include mobile-only {
       display: none;
+    }
+  }
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* The actual popup */
+  .popuptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: var(--blue);
+    border: 1px solid var(--dark-blue);
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    // top: 125%;
+    left: 50%;
+    margin-left: -80px;
+
+    /* Popup arrow */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      // bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: var(--dark-blue) transparent transparent transparent;
+      // border-color: transparent transparent var(--dark-blue) transparent;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      margin: 0 8px;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--dark-blue);
+      }
+    }
+  }
+
+  /* Toggle this class - hide and show the popup */
+  .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+  }
+
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }

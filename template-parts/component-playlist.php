@@ -47,18 +47,18 @@
         </div>
 
         <div class="row player">
-            <button class="btn-rounded previous">
+            <!-- <button class="btn-rounded previous">
                 <i class="fas fa-backward"></i>
-            </button>
+            </button> -->
             <button class="btn-rounded play" onclick="playSong()">
                 <i class="fas fa-play"></i>
             </button>
             <button class="btn-rounded pause" onclick="pauseSong()">
                 <i class="fas fa-pause"></i>
             </button>
-            <button class="btn-rounded forward"><i class="fas fa-forward"></i></button>
+            <!-- <button class="btn-rounded forward"><i class="fas fa-forward"></i></button> -->
 
-            <div id="song-player">
+            <div id="player-container">
                 <audio id="player" controls controlsList="nodownload">
                     <source src="<?php echo get_template_directory_uri() . '/images/1.MunchMove.mp3' ?>" type="audio/mpeg">
                     Your browser does not support the audio element.

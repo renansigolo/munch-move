@@ -6430,7 +6430,7 @@ div.wpcf7-mail-sent-ok {
         width: 21px; }
     .playlist .player .pause {
       display: none; }
-    .playlist .player #song-player {
+    .playlist .player #player-container {
       width: 100%; }
 
 .search-content h4 {

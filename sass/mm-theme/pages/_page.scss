@@ -229,8 +229,13 @@
       display: none;
     }
 
-    #song-player {
+    #player-container {
+      display: flex;
       width: 100%;
+
+      #player {
+        align-self: center;
+      }
     }
   }
 }

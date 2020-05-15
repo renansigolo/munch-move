@@ -160,7 +160,7 @@ function munch_move_scripts()
     );
 
     wp_enqueue_script(
-        'munch-move-accessibility',
+        'mm-utilities',
         get_template_directory_uri() . '/js/accessibility.js',
         array(),
         '20151215',

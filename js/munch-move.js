@@ -2,6 +2,43 @@
  * Custom JS for Munch & Move Theme
  */
 
+function togglePlay() {
+  jQuery(".play").toggle();
+  jQuery(".pause").toggle();
+}
+
+function playSong() {
+  document.querySelector("#player").play();
+  jQuery(".pause").show();
+  jQuery(".play").hide();
+}
+
+function pauseSong() {
+  document.querySelector("#player").pause();
+  jQuery(".play").show();
+  jQuery(".pause").hide();
+}
+
+function redirectTo(url) {
+  return (window.location = url);
+}
+
+function authStaff() {
+  let staffAuthenticated = document.querySelector(
+    ".staff-content__authenticated"
+  );
+  let staffError = document.querySelector(".staff-content__error");
+
+  let userPassword = document.querySelector(".staff-form__content input").value;
+
+  if (userPassword === "Oranges") {
+    staffError.style.display = "none";
+    staffAuthenticated.style.display = "flex";
+  } else {
+    staffError.style.display = "flex";
+  }
+}
+
 (function ($) {
   console.log("Init Munch Move Scripts");
 
@@ -159,7 +196,7 @@
     return formatted;
   };
 
-  songs = [];
+  let songs = [];
 
   let trackRows = document.querySelectorAll(".js-song-title");
   function clearStyle() {
@@ -184,52 +221,12 @@
     });
   }
 
-  console.log("songs", songs);
-
   function playAudio(url) {
     document.getElementById(
-      "song-player"
+      "player-container"
     ).innerHTML = `<audio src="${url}" id="player" controls controlsList="nodownload">`;
     playSong();
   }
 
   accordion();
 })(jQuery);
-
-function togglePlay() {
-  jQuery(".play").toggle();
-  jQuery(".pause").toggle();
-}
-
-function playSong() {
-  document.querySelector("#player").play();
-  jQuery(".pause").show();
-  jQuery(".play").hide();
-}
-
-function pauseSong() {
-  document.querySelector("#player").pause();
-  jQuery(".play").show();
-  jQuery(".pause").hide();
-}
-
-function redirectTo(url) {
-  return (window.location = url);
-}
-
-function authStaff() {
-  let staffAuthenticated = document.querySelector(
-    ".staff-content__authenticated"
-  );
-  let staffError = document.querySelector(".staff-content__error");
-
-  let userPassword = document.querySelector(".staff-form__content input")
-    .value;
-
-  if (userPassword === "Oranges") {
-    staffError.style.display = "none";
-    staffAuthenticated.style.display = "flex";
-  } else {
-    staffError.style.display = "flex";
-  }
-}
