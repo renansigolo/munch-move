@@ -70,7 +70,7 @@
       margin-bottom: 16px;
 
       .btn-dark-blue {
-        margin-left: 16px;
+        margin: 0 16px;
         white-space: nowrap;
       }
 
@@ -110,9 +110,6 @@
 
           &:first-child {
             padding-left: 0;
-          }
-          &:last-child {
-            padding-right: 0;
           }
         }
 

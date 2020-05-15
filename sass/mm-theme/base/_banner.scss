@@ -80,6 +80,7 @@
 .utility {
   background-color: var(--blue);
   font-size: 1.9rem;
+  margin-bottom: 32px;
 
   @include desktop {
     margin-bottom: 72px;

@@ -4,44 +4,6 @@
  * Contains accessibility handlers in the Utilities Bar.
  */
 
-function bookmarkPage(el) {
-  pageTitle = document.title;
-  pageURL = document.location;
-  try {
-    // Internet Explorer solution
-    eval("window.external.AddFa-vorite(pageURL, pageTitle)".replace(/-/g, ""));
-  } catch (e) {
-    try {
-      // Mozilla Firefox solution
-      window.sidebar.addPanel(pageTitle, pageURL, "");
-    } catch (e) {
-      // Opera solution
-      if (typeof opera == "object") {
-        el.rel = "sidebar";
-        el.title = pageTitle;
-        el.url = pageURL;
-        return true;
-      } else {
-        // The rest browsers (i.e Chrome, Safari)
-        alert(
-          "You can add this page to your bookmarks by pressing" +
-            (navigator.userAgent.toLowerCase().indexOf("mac") != -1
-              ? "Cmd"
-              : "Ctrl") +
-            "+D on your keyboard."
-        );
-      }
-    }
-  }
-  return false;
-}
-
-// When the user clicks on div, open the popup
-function showPopup() {
-  let popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-
 (function () {
   let zoom = 1;
   let zoomStep = 0.1;
@@ -58,8 +20,8 @@ function showPopup() {
   };
 
   const share = () => {
-    console.log("Share button clicked");
-    return false;
+    let popup = document.getElementById("mmPopup");
+    popup.classList.toggle("show");
   };
 
   const zoomOut = () => {

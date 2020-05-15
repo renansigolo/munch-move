@@ -23,10 +23,10 @@
                     <ul>
                         <li id="print"><i class="fas fa-print"></i>Print</li>
                         <div class="popup">
-                            <li id="share" onclick="showPopup()"><i class="fas fa-share-alt"></i>Share</li>
-                            <span class="popuptext" id="myPopup">
+                            <li id="share"><i class="fas fa-share-alt"></i>Share</li>
+                            <span class="popuptext" id="mmPopup">
                                 <div class="popup__content">
-                                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check it out&url=<?php the_permalink() ?>" target="_blank">
+                                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=The%20Healthy%20Kids%20website%20is%20a%20one%20stop%20shop%20of%20current%20and%20credible%20information%20about%20healthy%20eating%20and%20physical%20activity.%20&url=<?php the_permalink() ?>" target="_blank">
                                         <i class="fab fa-twitter"></i>
                                     </a>
 
@@ -38,16 +38,12 @@
                                         <i class="fab fa-pinterest"></i>
                                     </a>
 
-                                    <!-- <a href="http://" target="_blank">
+                                    <a href="#" target="_blank">
                                         <i class="fas fa-star"></i>
-                                    </a> -->
-
-                                    <a href="mailto:no-reply@munch-and-move.com.au">
-                                        <i class="fas fa-envelope"></i>
                                     </a>
 
-                                    <a href="javascript:void(0)" onClick="return bookmarkPage(this);">
-                                        <i class="fas fa-bookmark"></i>
+                                    <a href="mailto:no-reply@healthykids.nsw.gov.au?subject=<?php the_title() ?>&body=Check%20out%20this%20page%20from%20Munch%20%26%20Move%20<?php the_permalink() ?>">
+                                        <i class="fas fa-envelope"></i>
                                     </a>
                                 </div>
                             </span>
@@ -61,10 +57,3 @@
         </div>
     </div>
 </div>
-
-<!-- <script async src="https://cdn.ampproject.org/v0.js"></script>
-<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-<amp-social-share type="system"></amp-social-share>
-<amp-social-share type="twitter"></amp-social-share>
-<amp-social-share type="facebook"></amp-social-share>
-<amp-social-share type="pinterest"></amp-social-share> -->

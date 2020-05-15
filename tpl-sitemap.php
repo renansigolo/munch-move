@@ -49,7 +49,7 @@ get_header();
                   'exclude'      => '80,98,78,3,85,89',
                   'title_li'     => __(''),
                   'echo'         => 1,
-                  'sort_column'  => 'menu_order, post_title',
+                  'sort_column'  => 'menu_order',
                   'link_before'  => '',
                   'link_after'   => '',
                   'item_spacing' => 'preserve',

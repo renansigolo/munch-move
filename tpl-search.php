@@ -42,12 +42,16 @@ get_header();
 
               <div class="staff-content">
                 <div class="staff-content__authenticated">
-                  <button class="btn-general">
-                    Click here to access the NEW Munch & Move Staff Development Kit
-                  </button>
-                  <button class="btn-training">
-                    Click here to access the Munch & Move Resource Manual
-                  </button>
+                  <a href="https://www.healthykids.nsw.gov.au/campaigns-programs/munch-move-program-training/staff-development-kit-and-resource-manual/staff-development-kit.aspx" target="_blank">
+                    <button class="btn-general">
+                      Click here to access the NEW Munch & Move Staff Development Kit
+                    </button>
+                  </a>
+                  <a href="https://www.healthykids.nsw.gov.au/campaigns-programs/munch-move-program-training/staff-development-kit-and-resource-manual/munch-move-resource-manual.aspx" target="_blank">
+                    <button class="btn-training">
+                      Click here to access the Munch & Move Resource Manual
+                    </button>
+                  </a>
                 </div>
                 <div class="staff-content__error">
                   <p>It looks like this password is not valid</p>
