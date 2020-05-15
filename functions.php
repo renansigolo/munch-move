@@ -90,6 +90,13 @@ if (!function_exists('munch_move_setup')) :
             'flex-width' => true,
             'flex-height' => true
         ));
+
+        /**
+         * Enable Yoast SEO Breadcrumbs
+         *
+         * @link https://yoast.com/help/add-theme-support-for-yoast-seo-breadcrumbs/
+         */
+        add_theme_support( 'yoast-seo-breadcrumbs' );
     }
 endif;
 add_action('after_setup_theme', 'munch_move_setup');

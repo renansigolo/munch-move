@@ -131,6 +131,21 @@
     border-collapse: collapse;
   }
 
+  .download {
+    &__mobile {
+      @include desktop {
+        display: none;
+      }
+    }
+
+    &__desktop {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+
   &__header {
     th {
       padding: 0 0 16px 0;

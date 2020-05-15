@@ -25,6 +25,7 @@
     img {
       width: 100px;
       height: auto;
+      max-height: 106px;
     }
 
     @include desktop {

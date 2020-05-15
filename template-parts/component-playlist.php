@@ -35,7 +35,8 @@
                                 <td class="song-title js-song-title" data-song-title="<?php the_sub_field('song_title') ?>" data-song-url="<?php echo $file['url']; ?>" data-song-index="<?php echo get_row_index() - 1; ?>"><?php the_sub_field('song_title') ?></td>
                                 <td class="text-center js-song-length">01:00</td>
                                 <td class="float-right">
-                                    <a href="<?php echo $file['url']; ?>" download>Download Track</a>
+                                    <a href="<?php echo $file['url']; ?>" class="download__mobile" download>Download</a>
+                                    <a href="<?php echo $file['url']; ?>" class="download__desktop" download>Download Track</a>
                                 </td>
                             </tr>
                         <?php endif; ?>
