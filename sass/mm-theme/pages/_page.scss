@@ -193,15 +193,15 @@
   audio {
     width: 100%;
 
-    &::-webkit-media-controls-panel {
-      background-color: #fff;
-    }
+    // &::-webkit-media-controls-panel {
+    //   background-color: #fff;
+    // }
 
-    &::-webkit-media-controls-play-button,
-    &::-webkit-media-controls-current-time-display,
-    &::-webkit-media-controls-time-remaining-display {
-      display: none;
-    }
+    // &::-webkit-media-controls-play-button,
+    // &::-webkit-media-controls-current-time-display,
+    // &::-webkit-media-controls-time-remaining-display {
+    //   display: none;
+    // }
   }
 
   .player {

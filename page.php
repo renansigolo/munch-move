@@ -17,6 +17,7 @@ get_header();
 ?>
 
 <div id="primary" class="content-area">
+	<div id="menu-overlay" class="active"></div>
 	<main id="main" class="site-main">
 		<?php get_template_part('template-parts/content', 'page'); ?>
 	</main>

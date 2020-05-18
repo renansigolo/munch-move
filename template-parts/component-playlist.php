@@ -50,12 +50,12 @@
             <!-- <button class="btn-rounded previous">
                 <i class="fas fa-backward"></i>
             </button> -->
-            <button class="btn-rounded play" onclick="playSong()">
+            <!-- <button class="btn-rounded play" onclick="playSong()">
                 <i class="fas fa-play"></i>
             </button>
             <button class="btn-rounded pause" onclick="pauseSong()">
                 <i class="fas fa-pause"></i>
-            </button>
+            </button> -->
             <!-- <button class="btn-rounded forward"><i class="fas fa-forward"></i></button> -->
 
             <div id="player-container">

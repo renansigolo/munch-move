@@ -31,7 +31,7 @@
     max-width: 147px;
     margin-bottom: -12px;
     margin-right: 62px;
-    z-index: 2;
+    z-index: 10;
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=1, Color='#000')";
     -webkit-filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.4));
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=1, Color='#000')";
@@ -144,6 +144,7 @@
   @include list-header-icon($fa-var-chevron-right);
   @extend %menu-on-top;
   color: #fff;
+  z-index: 2;
 
   li::before {
     margin-left: 0 !important;
@@ -336,4 +337,17 @@
   #mobile {
     display: none;
   }
+}
+
+#menu-overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: hidden;
+  transition: 0.5s;
+  display: none;
 }

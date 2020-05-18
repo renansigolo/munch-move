@@ -45,6 +45,7 @@ function authStaff() {
   // Toggle Mobile Menu
   $("#btn-menu").on("click", function () {
     $("#mobile-menu").toggle();
+    // $("#menu-overlay").toggle();
   });
 
   // Mobile Menu
@@ -201,6 +202,8 @@ function authStaff() {
   let trackRows = document.querySelectorAll(".js-song-title");
   function clearStyle() {
     for (const song of trackRows) {
+      song.parentNode.style.backgroundColor = '#fff'
+      song.nextElementSibling.style.fontWeight = "300"
       song.style.fontWeight = "300";
     }
   }
@@ -212,10 +215,11 @@ function authStaff() {
       url: song.getAttribute("data-song-url"),
     });
 
-    song.addEventListener("click", function (evt) {
+    song.addEventListener("click", function () {
       clearStyle();
+      this.parentNode.style.backgroundColor = '#DAF0FF'
+      this.nextElementSibling.style.fontWeight = "700"
       this.style.fontWeight = "700";
-      // document.querySelector(`.track-${this.getAttribute("data-song-index")} .js-song-length`).style.fontWeight = "800";
       let songUrl = this.getAttribute("data-song-url");
       playAudio(songUrl);
     });
