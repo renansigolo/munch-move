@@ -88,15 +88,21 @@
                         <div class="five columns">
                             <?php
                             while (have_rows('featured')) : the_row();
+                                $button = get_sub_field('button');
+                                if ($button) :
+                                    $button_url = $button['url'];
+                                    $button_title = $button['title'];
                             ?>
-                                <div class="mega-menu__article" onclick="redirectTo('<?php the_sub_field('button')['url'] ?>')">
-                                    <img src="<?php echo get_sub_field('image')['url']; ?>" width="260" height="150" alt="Card Image">
-                                    <div>
-                                        <h4><?php echo get_sub_field('title'); ?></h4>
-                                        <p><?php echo get_sub_field('description'); ?></p>
+
+                                    <div class="mega-menu__article" onclick="redirectTo('<?php echo $button_url; ?>')">
+                                        <img src="<?php echo get_sub_field('image')['url']; ?>" width="260" height="150" alt="Card Image">
+                                        <div>
+                                            <h4><?php echo get_sub_field('title'); ?></h4>
+                                            <p><?php echo get_sub_field('description'); ?></p>
+                                        </div>
                                     </div>
-                                </div>
-                            <?php endwhile; ?>
+                            <?php endif;
+                            endwhile; ?>
                         </div>
                     </div>
                 <?php endwhile; ?>
