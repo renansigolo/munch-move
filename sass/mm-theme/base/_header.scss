@@ -245,6 +245,11 @@
 
   .card__content {
     padding: 24px 30px;
+
+    button {
+      white-space: nowrap;
+      padding: 14px 16px;
+    }
   }
 
   &__list {
