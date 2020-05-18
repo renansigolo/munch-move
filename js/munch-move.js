@@ -43,9 +43,13 @@ function authStaff() {
   console.log("Init Munch Move Scripts");
 
   // Toggle Mobile Menu
-  $("#btn-menu").on("click", function () {
+  $("#btn-menu").on("click", function (e) {
     $("#mobile-menu").toggle();
-    // $("#menu-overlay").toggle();
+    let bodyEl = document.querySelector("body");
+    let bodyOverflow = bodyEl.style.overflow;
+
+    bodyEl.style.overflow = bodyOverflow === "hidden" ? "auto" : "hidden";
+    $("#overlay").toggle();
   });
 
   // Mobile Menu
@@ -202,8 +206,8 @@ function authStaff() {
   let trackRows = document.querySelectorAll(".js-song-title");
   function clearStyle() {
     for (const song of trackRows) {
-      song.parentNode.style.backgroundColor = '#fff'
-      song.nextElementSibling.style.fontWeight = "300"
+      song.parentNode.style.backgroundColor = "#fff";
+      song.nextElementSibling.style.fontWeight = "300";
       song.style.fontWeight = "300";
     }
   }
@@ -217,8 +221,8 @@ function authStaff() {
 
     song.addEventListener("click", function () {
       clearStyle();
-      this.parentNode.style.backgroundColor = '#DAF0FF'
-      this.nextElementSibling.style.fontWeight = "700"
+      this.parentNode.style.backgroundColor = "#DAF0FF";
+      this.nextElementSibling.style.fontWeight = "700";
       this.style.fontWeight = "700";
       let songUrl = this.getAttribute("data-song-url");
       playAudio(songUrl);

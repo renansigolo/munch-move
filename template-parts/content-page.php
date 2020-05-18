@@ -43,7 +43,7 @@
             </div>
 
             <!-- Related Links -->
-            <div class="four columns" style="height: 60vh;">
+            <div class="four columns">
                 <?php get_template_part('template-parts/component', 'related-links'); ?>
             </div>
         </div>
