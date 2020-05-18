@@ -10,7 +10,6 @@
 ?>
 
 <?php
-
 // Get the Category Selected on each page
 $category_selected = get_field('related_links_category');
 
