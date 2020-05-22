@@ -199,16 +199,6 @@
 
   audio {
     width: 100%;
-
-    // &::-webkit-media-controls-panel {
-    //   background-color: #fff;
-    // }
-
-    // &::-webkit-media-controls-play-button,
-    // &::-webkit-media-controls-current-time-display,
-    // &::-webkit-media-controls-time-remaining-display {
-    //   display: none;
-    // }
   }
 
   .player {
@@ -367,4 +357,17 @@
     margin: 0;
     padding: 0;
   }
+}
+
+.content-center {
+  h1, h2 {
+    text-align: center;
+  }
+}
+
+.mascots-space-around {
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

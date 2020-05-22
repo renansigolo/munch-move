@@ -2,7 +2,7 @@
 
 /**
  * 
- * Template Name: Characters Poster
+ * Template Name: Munch & Move
  * 
  * The template for displaying the Characters Poster Page
  *
@@ -42,8 +42,11 @@ get_header();
           <?php while (have_rows('common_blocks')) : the_row();
             get_template_part('template-parts/common/component', 'heading');
             get_template_part('template-parts/common/component', 'text-area');
+            get_template_part('template-parts/common/component', 'button');
             get_template_part('template-parts/common/component', 'list');
             get_template_part('template-parts/common/component', 'cards');
+            get_template_part('template-parts/common/component', 'accordion');
+            get_template_part('template-parts/common/component', 'article');
           endwhile; ?>
         </div>
       </div>

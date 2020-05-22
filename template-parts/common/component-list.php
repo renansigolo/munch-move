@@ -10,7 +10,7 @@
 ?>
 <?php if (get_row_layout() == 'list_block') : ?>
     <div class="row">
-        <div class="eight columns <?php if (the_sub_field('list_style')) ?>">
+        <div class="<?php if (the_sub_field('columns')) ?> columns <?php if (the_sub_field('list_style')) ?>">
             <ul>
                 <?php while (have_rows('list')) : the_row();
                     $link = get_sub_field('arrow_list_item');
@@ -26,6 +26,7 @@
                     endif;
                 endwhile;
                 ?>
+            </ul>
         </div>
     </div>
 <?php endif ?>
