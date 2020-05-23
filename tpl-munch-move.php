@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-<div id="tpl-characters-poster">
+<div id="tpl-munch-move-common">
   <main id="main">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

@@ -9,7 +9,7 @@
  */
 ?>
 <?php if (get_row_layout() == 'article_block') : ?>
-    <div class="row">
+    <div class="row article">
         <div class="six columns">
             <?php $image = get_sub_field('image');
             if (!empty($image)) : ?>
