@@ -16,7 +16,7 @@
                 <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
             <?php endif; ?>
         </div>
-        <div class="six columns">
+        <div class="six columns article__text-area">
             <?php the_sub_field('text_area') ?>
         </div>
     </div>

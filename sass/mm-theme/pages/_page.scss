@@ -367,6 +367,11 @@
 }
 
 .article {
+  @include mobile-only {
+    &__text-area {
+      margin-top: 16px;
+    }
+  }
   @include desktop {
     margin: 50px 0 40px;
   }
