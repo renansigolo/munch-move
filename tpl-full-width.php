@@ -47,10 +47,12 @@ get_header();
         <div class="row">
           <section class="section-mascots text-center mascots-space-around">
             <img src="<?php echo get_template_directory_uri() . '/images/404/divider-fruits.svg'; ?>" alt="Divider Fruits">
-            <h1>Not what you were after?</h1>
-            <p>If you are an early childhood educator, you may wish to learn more about the Munch & Move program.</p>
-            <a href="<?php echo $bottom_content['button']['url']; ?>">
-              <button class="btn-general">Visit Munch & Move</button>
+            <h1><?php the_field('mascot_title') ?></h1>
+            <p><?php the_field('mascot_text') ?></p>
+            <a href="<?php echo get_field('mascot_link')['url'] ?>" target="<?php echo get_field('mascot_link')['target'] ?>">
+              <button class="btn-general">
+                <?php echo get_field('mascot_link')['title'] ?>
+              </button>
             </a>
           </section>
         </div>
