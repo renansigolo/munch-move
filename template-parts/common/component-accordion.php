@@ -22,9 +22,9 @@
                                     if ($item) :
                                         $item_url = $item['url'];
                                         $item_title = $item['title'];
-                                        $item_target = $item['target'] ? $item['target'] : '_self';
+                                        $item_target = $item['target'] ? $item['target'] : '_blank';
                                 ?>
-                                        <li><a href="<?php echo $item_url ?>"><?php echo $item_title ?></a></li>
+                                        <li><a href="<?php echo $item_url ?>" target="<?php echo $item_target ?>"><?php echo $item_title ?></a></li>
                                 <?php
                                     endif;
                                 endwhile;
