@@ -42,12 +42,12 @@ get_header();
 
               <div class="staff-content">
                 <div class="staff-content__authenticated">
-                  <a href="https://www.healthykids.nsw.gov.au/campaigns-programs/munch-move-program-training/staff-development-kit-and-resource-manual/staff-development-kit.aspx" target="_blank">
+                  <a href="<?php echo site_url('/munch-move-program-training/staff-development-kit-and-resource-manual/staff-development-kit/') ?>" target="_blank">
                     <button class="btn-general">
                       Click here to access the NEW Munch & Move Staff Development Kit
                     </button>
                   </a>
-                  <a href="https://www.healthykids.nsw.gov.au/campaigns-programs/munch-move-program-training/staff-development-kit-and-resource-manual/munch-move-resource-manual.aspx" target="_blank">
+                  <a href="<?php echo site_url('/munch-move-program-training/staff-development-kit-and-resource-manual/resource-manual/') ?>" target="_blank">
                     <button class="btn-training">
                       Click here to access the Munch & Move Resource Manual
                     </button>
