@@ -41,7 +41,9 @@
                                 <input class="search-bar" type="text" name="s" id="navbar-search" value="<?php the_search_query(); ?>">
                                 <button class="btn-general" id="navbar-btn-search">Search</button>
                                 <i class="fas fa-search search-icon" id="search-icon"></i>
-                                <button class="btn-dark-blue" type="button">Service Support</button>
+                                <a href="<?php echo site_url('munch-move-support') ?>">
+                                    <button class="btn-dark-blue" type="button">Service Support</button>
+                                </a>
                             </div>
                         </form>
                         <nav class="menu-desktop">
