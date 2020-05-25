@@ -1,5 +1,5 @@
 /**
- * File mm-utilities.js.
+ * File mm-utility-bar.js.
  *
  * Contains accessibility handlers in the Utilities Bar.
  */

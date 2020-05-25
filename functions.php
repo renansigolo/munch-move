@@ -102,22 +102,6 @@ endif;
 add_action('after_setup_theme', 'munch_move_setup');
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function munch_move_content_width()
-{
-    // This variable is intended to be overruled from themes.
-    // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-    // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-    $GLOBALS['content_width'] = apply_filters('munch_move_content_width', 640);
-}
-add_action('after_setup_theme', 'munch_move_content_width', 0);
-
-/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -144,34 +128,18 @@ function munch_move_scripts()
     wp_enqueue_style('munch-move-style', get_stylesheet_uri());
 
     wp_enqueue_script(
-        'munch-move-navigation',
-        get_template_directory_uri() . '/js/navigation.js',
+        'munch-move-utility-bar',
+        get_template_directory_uri() . '/js/mm-utility-bar.js',
         array(),
-        '20151215',
-        true
-    );
-
-    wp_enqueue_script(
-        'munch-move-skip-link-focus-fix',
-        get_template_directory_uri() . '/js/skip-link-focus-fix.js',
-        array(),
-        '20151215',
-        true
-    );
-
-    wp_enqueue_script(
-        'mm-utilities',
-        get_template_directory_uri() . '/js/mm-utilities.js',
-        array(),
-        '20151215',
+        '1.0.0',
         true
     );
 
     wp_enqueue_script(
         'munch-move',
         get_template_directory_uri() . '/js/munch-move.js',
-        array(),
-        '20151215',
+        array('jquery' ),
+        '1.0.0',
         true
     );
 
