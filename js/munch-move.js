@@ -158,7 +158,7 @@ function authStaff() {
       replacement = `<${tag}>${words}</${tag}>`;
 
     return this.html(function () {
-      return $(this).html().replace(words, replacement);
+      return $(this).html().replace(/Munch &amp; Move/gi, "<i>Munch &amp; Move</i>");
     });
   };
 
