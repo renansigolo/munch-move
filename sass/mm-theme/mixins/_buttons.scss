@@ -16,6 +16,10 @@
   &:hover {
     color: #fff;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .btn-dark-blue {

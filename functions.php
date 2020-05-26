@@ -96,7 +96,7 @@ if (!function_exists('munch_move_setup')) :
          *
          * @link https://yoast.com/help/add-theme-support-for-yoast-seo-breadcrumbs/
          */
-        add_theme_support( 'yoast-seo-breadcrumbs' );
+        add_theme_support('yoast-seo-breadcrumbs');
     }
 endif;
 add_action('after_setup_theme', 'munch_move_setup');
@@ -138,7 +138,7 @@ function munch_move_scripts()
     wp_enqueue_script(
         'munch-move',
         get_template_directory_uri() . '/js/munch-move.js',
-        array('jquery' ),
+        array('jquery'),
         '1.0.0',
         true
     );
@@ -183,3 +183,17 @@ function wpdocs_custom_excerpt_length($length)
     return 40;
 }
 add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
+
+/**
+ *  Hide these three pages from search:
+ *  1. staff-development-kit
+ *  2. staff-development-kit-educator
+ *  3. resource-manual
+ */
+function wpb_search_filter($query)
+{
+    if ($query->is_search)
+        $query->set('post__not_in', array(1769, 1766, 1771));
+    return $query;
+}
+add_filter('pre_get_posts', 'wpb_search_filter');

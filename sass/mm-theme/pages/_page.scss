@@ -19,7 +19,8 @@
   }
 
   hr {
-    border: 0.5px solid var(--blue);
+    border: 0;
+    border-bottom: 1px solid var(--blue);
   }
 
   a {

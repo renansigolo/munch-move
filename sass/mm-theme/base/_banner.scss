@@ -11,6 +11,10 @@
   @include desktop {
     max-height: unset;
     height: calc(100vh - 210px);
+    
+    @media (min-height: 1080px) {
+      max-height: 50vh;
+    }
   }
 }
 
@@ -193,7 +197,7 @@
   /* The actual popup */
   .popuptext {
     visibility: hidden;
-    width: 140px;
+    width: 200px;
     background-color: var(--blue);
     border: 1px solid var(--dark-blue);
     text-align: center;
@@ -201,29 +205,31 @@
     padding: 8px 0;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
-    // top: 125%;
-    left: 50%;
+    // bottom: 125%;
+    top: 125%;
+    left: 20%;
     margin-left: -80px;
 
     /* Popup arrow */
     &::after {
       content: "";
       position: absolute;
-      top: 100%;
-      // bottom: 100%;
+      // top: 100%;
+      bottom: 100%;
       left: 50%;
       margin-left: -5px;
       border-width: 5px;
       border-style: solid;
-      border-color: var(--dark-blue) transparent transparent transparent;
-      // border-color: transparent transparent var(--dark-blue) transparent;
+      // border-color: var(--dark-blue) transparent transparent transparent;
+      border-color: transparent transparent var(--dark-blue) transparent;
     }
 
     a {
       text-decoration: none;
       font-size: 2rem;
       margin: 0 8px;
+      width: 160px;
+      margin: 5px 0;
 
       &:hover {
         cursor: pointer;
