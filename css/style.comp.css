@@ -5958,7 +5958,7 @@ img {
     .featured-image, #front-page {
       max-height: unset;
       height: calc(100vh - 210px); } }
-  @media (min-width: 1000px) and (min-height: 1080px) {
+  @media (min-width: 1000px) and (min-height: 1081px) {
     .featured-image, #front-page {
       max-height: 50vh; } }
 
