@@ -21,11 +21,11 @@ if ($banner_button) :
     <main id="main">
         <section class="hero">
             <div class="hero__desktop">
-                <div class="background-banner" style="background-image: url(<?php echo the_post_thumbnail_url() ?>)">
+                <div class="background-banner limit-height" style="background-image: url(<?php echo the_post_thumbnail_url() ?>)">
                     <div class="container">
                         <div class="row">
                             <div class="seven columns">
-                                <div class="hero-content">
+                                <div class="hero-content limit-height-70">
                                     <h1><?php the_field('banner_title') ?></h1>
                                     <a href="<?php echo $banner_button_url; ?>" target="<?php echo $banner_button_target; ?>">
                                         <button class="btn-general"><?php echo $banner_button_title ?></button>

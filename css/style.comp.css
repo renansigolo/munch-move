@@ -5962,6 +5962,14 @@ img {
     .featured-image, #front-page {
       max-height: 50vh; } }
 
+@media (min-width: 1000px) and (min-height: 1081px) {
+  .limit-height {
+    max-height: 50vh; } }
+
+@media (min-width: 1000px) and (min-height: 1081px) {
+  .limit-height-70 {
+    max-height: 70vh; } }
+
 .background-banner {
   min-height: 70vh;
   background-size: cover;

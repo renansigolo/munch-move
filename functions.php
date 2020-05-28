@@ -150,11 +150,6 @@ function munch_move_scripts()
 add_action('wp_enqueue_scripts', 'munch_move_scripts');
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';

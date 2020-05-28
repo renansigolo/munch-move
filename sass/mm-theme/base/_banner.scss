@@ -18,6 +18,22 @@
   }
 }
 
+.limit-height {
+  @include desktop {
+    @media (min-height: 1081px) {
+      max-height: 50vh;
+    }
+  }
+}
+
+.limit-height-70 {
+  @include desktop {
+    @media (min-height: 1081px) {
+      max-height: 70vh;
+    }
+  }
+}
+
 .background-banner {
   min-height: 70vh;
   background-size: cover;
