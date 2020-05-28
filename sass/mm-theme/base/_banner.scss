@@ -52,7 +52,7 @@
   }
 
   &__mobile {
-    display: contents;
+    display: inline-grid;
 
     img {
       object-fit: cover;
