@@ -18,7 +18,6 @@ $bottom_content = get_field('404_bottom_content', 'option');
 if ($main_content) {
     $image = $main_content['image'];
 }
-
 ?>
 
 <div id="primary" class="content-area">
@@ -52,7 +51,7 @@ if ($main_content) {
                                     ?>
                                         <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>">
                                 </div>
-                                <div class="card__content">
+                                <div class="card__content" style="justify-content: unset;">
                                     <h4><?php echo $title ?></h4>
                                     <ul>
                                         <?php while (have_rows('links')) : the_row(); ?>

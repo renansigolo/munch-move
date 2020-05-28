@@ -26,16 +26,8 @@
   }
 }
 
-.limit-height-70 {
-  @include desktop {
-    @media (min-height: 1081px) {
-      max-height: 70vh;
-    }
-  }
-}
-
 .background-banner {
-  min-height: 70vh;
+  min-height: 50vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -119,6 +111,10 @@
     #breadcrumbs {
       color: #fff;
       font-size: 1.2rem;
+      
+      @media screen and (min-width: 1001px) and (max-width:1364px){
+        max-width: 68%;
+      }
 
       &:first-child {
         font-weight: var(--extra-bold);

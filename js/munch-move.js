@@ -44,18 +44,17 @@ function authStaff() {
   let allRelatedLinks = document.querySelectorAll(".related-links a");
   for (const relatedLink of allRelatedLinks) {
     if (window.location.href === relatedLink.href) {
-      relatedLink.style.display = "none";
+      relatedLink.parentNode.style.display = "none";
     }
   }
 
   // Toggle Mobile Menu
   $("#btn-menu").on("click", function (e) {
     $("#mobile-menu").toggle();
-    let bodyEl = document.querySelector("body");
-    let bodyOverflow = bodyEl.style.overflow;
-
-    bodyEl.style.overflow = bodyOverflow === "hidden" ? "auto" : "hidden";
     $("#overlay").toggle();
+    // let bodyEl = document.querySelector("body");
+    // let bodyOverflow = bodyEl.style.overflow;
+    // bodyEl.style.overflow = bodyOverflow === "hidden" ? "auto" : "hidden";
   });
 
   // Mobile Menu

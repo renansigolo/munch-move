@@ -25,7 +25,7 @@ if ($banner_button) :
                     <div class="container">
                         <div class="row">
                             <div class="seven columns">
-                                <div class="hero-content limit-height-70">
+                                <div class="hero-content limit-height">
                                     <h1><?php the_field('banner_title') ?></h1>
                                     <a href="<?php echo $banner_button_url; ?>" target="<?php echo $banner_button_target; ?>">
                                         <button class="btn-general"><?php echo $banner_button_title ?></button>

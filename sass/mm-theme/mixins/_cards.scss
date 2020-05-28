@@ -19,12 +19,7 @@
   .card {
     &__heading {
       margin-bottom: 8px;
-
       margin-top: 16px;
-      
-      // &:not(:first-child) {
-      //   margin-top: 16px;
-      // }
 
       @include desktop {
         margin-bottom: 32px;
@@ -101,10 +96,6 @@ video {
   max-width: 100%;
   height: auto;
   margin-top: 10px;
-
-  // @include desktop {
-  //   margin-top: 30px;
-  // }
 }
 
 .embed-container iframe,

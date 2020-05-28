@@ -12,6 +12,11 @@
   border: none;
   padding: 14px 26px;
   margin: 0;
+  width: 100%;
+
+  @include desktop {
+    width: auto;
+  }
 
   &:hover {
     color: #fff;

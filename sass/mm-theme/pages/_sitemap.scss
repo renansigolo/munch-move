@@ -11,15 +11,16 @@
         margin-left: 0em;
       }
     }
-    li {
-      padding: 8px 0;
-      margin-bottom: 0;
-    }
 
     > li {
       color: var(--dark-blue);
       border-bottom: 3px solid var(--dark-blue);
-      // line-height: 26px;
+      margin-left: 0;
+    }
+
+    li {
+      padding: 8px 0;
+      margin-bottom: 0;
     }
 
     .page_item_has_children {
@@ -27,14 +28,6 @@
         a {
           color: var(--blue);
         }
-
-        // .page_item_has_children {
-        //   .children {
-        //     a {
-        //       color: #8c8c8c;
-        //     }
-        //   }
-        // }
       }
     }
   }

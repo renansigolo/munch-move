@@ -50,7 +50,8 @@ h6 {
   line-height: 1.6;
 }
 
-p {
+p,
+pre {
   margin: 0;
   color: var(--paragraph-text);
   font-weight: var(--regular);
@@ -82,7 +83,8 @@ a {
     font-size: 1.5rem;
   }
   p,
-  a {
+  a,
+  pre {
     font-size: 1.9rem;
   }
 }
@@ -95,6 +97,8 @@ blockquote p {
   color: var(--paragraph-text);
   font-weight: var(--medium);
   font-size: 1.6rem;
+  line-height: 24px;
+  letter-spacing: 0;
 }
 
 /* Links

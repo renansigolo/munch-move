@@ -135,6 +135,7 @@
     .menu-toggle {
       @extend %header-item;
       margin-bottom: 8px;
+      z-index: 10;
     }
   }
 }
@@ -154,7 +155,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 16px;
+    margin: 22px 16px 16px;
 
     > button {
       border-radius: unset;
@@ -166,10 +167,17 @@
   }
 
   .menu-item {
-    border-bottom: 1px solid #fff;
     margin: 0;
     padding: 16px;
     max-width: 100%;
+    
+    &:not(:last-child){
+      border-bottom: 1px solid #fff;
+    }
+
+    &:last-child {
+    line-height: 26px;
+    }
 
     a {
       display: block;
@@ -344,7 +352,7 @@
   display: none;
   width: 100%;
   height: 100%;
-  top: 114px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;

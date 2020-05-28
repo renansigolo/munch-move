@@ -43,7 +43,7 @@ get_header();
               <div class="staff-content">
                 <div class="staff-content__authenticated">
                   <a href="<?php echo site_url('/munch-move-program-training/staff-development-kit-and-resource-manual/staff-development-kit/') ?>" target="_blank">
-                    <button class="btn-general">
+                    <button class="btn-training">
                       Click here to access the NEW Munch & Move Staff Development Kit
                     </button>
                   </a>

@@ -32,7 +32,6 @@ get_header();
               </header>
 
               <div class="sitemap-content">
-                <!-- <?php the_content(); ?> -->
                 <?php
                 // Exclude the Following pages with their respectives ID
                 // - Accessibility -> 80
@@ -41,12 +40,15 @@ get_header();
                 // - Privacy -> 3
                 // - Search -> 85
                 // - Sitemap -> 89
+                // - Staff Development Kit -> 1769
+                // - Staff Development Kit: Presenter Resources -> 1766
+                // - Munch & Move Resource Manual -> 1771
 
                 $args = array(
                   'depth'        => 0,
                   'date_format'  => get_option('date_format'),
                   'child_of'     => 0,
-                  'exclude'      => '80,98,78,3,85,89',
+                  'exclude'      => '80,98,78,3,85,89,1769,1766,1771',
                   'title_li'     => __(''),
                   'echo'         => 1,
                   'sort_column'  => 'menu_order',
