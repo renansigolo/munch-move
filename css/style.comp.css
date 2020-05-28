@@ -5273,6 +5273,7 @@ there.
   @media (min-width: 1000px) {
     .grid-1 {
       grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
       grid-column-gap: 30px;
       grid-row-gap: 30px; } }
 
@@ -5285,6 +5286,7 @@ there.
   @media (min-width: 1000px) {
     .grid-2 {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
       grid-column-gap: 30px;
       grid-row-gap: 30px; } }
 
@@ -5297,6 +5299,7 @@ there.
   @media (min-width: 1000px) {
     .grid-3 {
       grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
       grid-column-gap: 30px;
       grid-row-gap: 30px; } }
 
@@ -6774,6 +6777,7 @@ div.wpcf7-mail-sent-ok {
   @media (min-width: 1000px) {
     .site-main .error-404 .section-quick-links .quick-links {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
       grid-column-gap: 30px;
       grid-row-gap: 30px; } }
   .site-main .error-404 .section-quick-links .quick-links h4 {

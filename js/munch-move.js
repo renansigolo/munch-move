@@ -40,7 +40,13 @@ function authStaff() {
 }
 
 (function ($) {
-  console.log("Init Munch Move Scripts");
+  // Remove the Related Link matching the current page
+  let allRelatedLinks = document.querySelectorAll(".related-links a");
+  for (const relatedLink of allRelatedLinks) {
+    if (window.location.href === relatedLink.href) {
+      relatedLink.style.display = "none";
+    }
+  }
 
   // Toggle Mobile Menu
   $("#btn-menu").on("click", function (e) {
@@ -158,7 +164,9 @@ function authStaff() {
       replacement = `<${tag}>${words}</${tag}>`;
 
     return this.html(function () {
-      return $(this).html().replace(/Munch &amp; Move/gi, "<i>Munch &amp; Move</i>");
+      return $(this)
+        .html()
+        .replace(/Munch &amp; Move/gi, "<i>Munch &amp; Move</i>");
     });
   };
 

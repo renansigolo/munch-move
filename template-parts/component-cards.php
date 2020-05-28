@@ -8,13 +8,13 @@
  * @package Munch_&_Move
  */
 ?>
-<div class="cards">
-    <?php if (get_row_layout() == 'cards_block') :
-        $category = get_sub_field('category');
-        $grid_rows = get_sub_field_object('cards_per_row')['value'];
-        $has_video = get_sub_field('video_cards');
-        $video_cards_heading = get_sub_field('video_cards_heading');
-    ?>
+<?php if (get_row_layout() == 'cards_block') :
+    $category = get_sub_field('category');
+    $grid_rows = get_sub_field_object('cards_per_row')['value'];
+    $has_video = get_sub_field('video_cards');
+    $video_cards_heading = get_sub_field('video_cards_heading');
+?>
+    <div class="cards">
         <div class="row">
             <?php if ($grid_rows == 1) : ?> <div class="columns eight"> <?php endif ?>
 
@@ -65,5 +65,5 @@
                 </div>
             <?php endif ?>
         </div>
-    <?php endif; ?>
-</div>
+    </div>
+<?php endif; ?>
