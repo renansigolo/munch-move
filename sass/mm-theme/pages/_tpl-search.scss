@@ -14,15 +14,15 @@
       color: var(--dark-blue);
       margin-bottom: 24px;
     }
-    &__content {
-      display: flex;
-      justify-content: space-between;
-      
+    &__content {      
       input[type='text'],
       input[type='password'] {
-        width: 84%;
         @extend %search-bar;
         height: 45px;
+      }
+
+      input[type='password']{
+        margin-bottom: 16px
       }
     }
   }

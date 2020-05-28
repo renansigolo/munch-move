@@ -34,9 +34,9 @@ get_header();
             if ($page_id  === 131) : ?>
               <div class="staff-form">
                 <h4>Enter password:</h4>
-                <div class="staff-form__content">
-                  <input type="password" name="password">
-                  <button class="btn-general" id="navbar-btn-search" onclick="authStaff()">Login</button>
+                <div class="staff-form__content row">
+                  <div class="ten columns"><input type="password" name="password"></div>
+                  <div class="two columns"><button class="btn-general" id="navbar-btn-search" onclick="authStaff()">Login</button></div>
                 </div>
               </div>
 

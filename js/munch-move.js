@@ -28,12 +28,13 @@ function authStaff() {
     ".staff-content__authenticated"
   );
   let staffError = document.querySelector(".staff-content__error");
-
   let userPassword = document.querySelector(".staff-form__content input").value;
+  let staffForm = document.querySelector(".staff-form")
 
   if (userPassword === "Oranges") {
     staffError.style.display = "none";
     staffAuthenticated.style.display = "flex";
+    staffForm.style.display = 'none';
   } else {
     staffError.style.display = "flex";
   }
