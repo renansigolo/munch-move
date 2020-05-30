@@ -17,7 +17,7 @@ select {
   border-radius: 25px;
 
   &::placeholder {
-    font-weight: var(--extra-bold);
+    font-weight: $extra-bold;
   }
 }
 
@@ -30,7 +30,7 @@ input[type='url']:focus,
 input[type='password']:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid var(--blue);
+  border: 1px solid $blue;
   outline: 0;
 }
 
@@ -53,7 +53,7 @@ select:focus {
   height: 61px;
   border: 6px solid #fff !important;
   border-radius: 16px;
-  background-color: var(--green);
+  background-color: $green;
   font-size: 2rem;
   padding: 11px 17px;
   color: #fff;

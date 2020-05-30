@@ -12,7 +12,7 @@ li {
   margin-left: 1em;
   margin-bottom: 8px;
   font-size: 1.9rem;
-  font-weight: var(--semi-bold);
+  font-weight: $semi-bold;
 }
 
 @mixin list-icon($icon) {
@@ -47,16 +47,16 @@ li {
 @mixin arrow-list {
   li {
     @include list-icon($fa-var-chevron-right);
-    color: var(--dark-blue);
+    color: $dark-blue;
   }
 
   a {
-    font-weight: var(--bold);
+    font-weight: $bold;
     text-decoration: none;
 
     &:hover {
       text-decoration: underline;
-      color: var(--dark-blue);
+      color: $dark-blue;
     }
   }
 }

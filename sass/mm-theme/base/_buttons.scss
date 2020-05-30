@@ -9,7 +9,7 @@ input[type='reset'],
 input[type='button'] {
   display: inline-block;
   border-radius: 2px;
-  font-weight: var(--extra-bold);
+  font-weight: $extra-bold;
   font-size: 1.5rem;
   cursor: pointer;
 }

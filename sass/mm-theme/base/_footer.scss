@@ -40,7 +40,7 @@
   &__navigation {
     ul {
       list-style: none;
-      font-weight: var(--bold);
+      font-weight: $bold;
 
       li {
         margin-left: 0;
@@ -57,7 +57,7 @@
         @include desktop {
           &::after {
             margin: 0 12px;
-            color: var(--dark-blue);
+            color: $dark-blue;
             content: "|";
           }
 

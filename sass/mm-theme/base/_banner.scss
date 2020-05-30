@@ -69,7 +69,7 @@
 
     .mobile-hero-content {
       padding: 24px 0;
-      background-color: var(--dark-blue);
+      background-color: $dark-blue;
       text-align: center;
 
       h1 {
@@ -90,7 +90,7 @@
 
 // Utility Bar
 .utility {
-  background-color: var(--blue);
+  background-color: $blue;
   font-size: 1.9rem;
   margin-bottom: 32px;
 
@@ -117,7 +117,7 @@
       }
 
       &:first-child {
-        font-weight: var(--extra-bold);
+        font-weight: $extra-bold;
       }
 
       @include desktop {
@@ -125,7 +125,7 @@
       }
 
       i.fas {
-        color: var(--dark-blue);
+        color: $dark-blue;
         font-size: 1.2rem;
         line-height: 15px;
         @include desktop {
@@ -135,7 +135,7 @@
 
       a {
         text-decoration: underline;
-        font-weight: var(--semi-bold);
+        font-weight: $semi-bold;
         line-height: 15px;
         color: #fff;
         font-size: 1.2rem;
@@ -149,7 +149,7 @@
 
       .breadcrumb_last {
         font-size: inherit;
-        font-weight: var(--semi-bold);
+        font-weight: $semi-bold;
         padding-left: 4px;
         @include desktop {
           padding-left: 8px;
@@ -177,8 +177,8 @@
           padding-right: 8px;
           &::before {
             content: "";
-            border-left: 1px solid var(--dark-blue);
-            color: var(--dark-blue);
+            border-left: 1px solid $dark-blue;
+            color: $dark-blue;
             padding-right: 8px;
           }
         }
@@ -210,8 +210,8 @@
   .popuptext {
     visibility: hidden;
     width: 200px;
-    background-color: var(--blue);
-    border: 1px solid var(--dark-blue);
+    background-color: $blue;
+    border: 1px solid $dark-blue;
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
@@ -232,8 +232,8 @@
       margin-left: -5px;
       border-width: 5px;
       border-style: solid;
-      // border-color: var(--dark-blue) transparent transparent transparent;
-      border-color: transparent transparent var(--dark-blue) transparent;
+      // border-color: $dark-blue transparent transparent transparent;
+      border-color: transparent transparent $dark-blue transparent;
     }
 
     a {
@@ -245,7 +245,7 @@
 
       &:hover {
         cursor: pointer;
-        color: var(--dark-blue);
+        color: $dark-blue;
       }
     }
   }

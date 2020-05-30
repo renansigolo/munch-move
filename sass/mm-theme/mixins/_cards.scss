@@ -69,15 +69,15 @@
 }
 
 .card-general {
-  @include mm-card(var(--dark-blue), var(--blue));
+  @include mm-card($dark-blue, $blue);
 }
 
 .card-training {
-  @include mm-card(var(--dark-green), var(--green));
+  @include mm-card($dark-green, $green);
 }
 
 .card-resources {
-  @include mm-card(var(--red), var(--orange));
+  @include mm-card($red, $orange);
 }
 
 /* Video

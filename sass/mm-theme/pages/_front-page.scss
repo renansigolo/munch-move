@@ -27,11 +27,11 @@
     }
     .side-article p {
       font-size: 1.5rem;
-      font-weight: var(--bold);
+      font-weight: $bold;
 
       a {
         font-size: 1.5rem;
-        color: var(--blue);
+        color: $blue;
       }
     }
 
@@ -39,7 +39,7 @@
       .side-article {
         margin-top: 20px;
         padding-top: 20px;
-        border-top: 1px solid var(--blue);
+        border-top: 1px solid $blue;
       }
     }
 
@@ -52,7 +52,7 @@
 
       .side-article {
         padding-left: 30px;
-        border-left: 1px solid var(--blue);
+        border-left: 1px solid $blue;
       }
     }
   }
@@ -77,15 +77,15 @@
       }
 
       .mascot-hr-general {
-        @include mascot-hr(var(--blue));
+        @include mascot-hr($blue);
       }
 
       .mascot-hr-resources {
-        @include mascot-hr(var(--orange));
+        @include mascot-hr($orange);
       }
 
       .mascot-hr-training {
-        @include mascot-hr(var(--green));
+        @include mascot-hr($green);
       }
 
       .columns {

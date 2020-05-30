@@ -13,8 +13,8 @@
     }
 
     > li {
-      color: var(--dark-blue);
-      border-bottom: 3px solid var(--dark-blue);
+      color: $dark-blue;
+      border-bottom: 3px solid $dark-blue;
       margin-left: 0;
     }
 
@@ -26,7 +26,7 @@
     .page_item_has_children {
       .children {
         a {
-          color: var(--blue);
+          color: $blue;
         }
       }
     }

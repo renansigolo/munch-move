@@ -186,7 +186,7 @@
       text-transform: uppercase;
       padding-left: 9px;
       font-size: 1.5rem;
-      font-weight: var(--extra-bold);
+      font-weight: $extra-bold;
     }
 
     &.menu-item-has-children {
@@ -235,7 +235,7 @@
         }
 
         a {
-          font-weight: var(--semi-bold);
+          font-weight: $semi-bold;
           line-height: 1.8rem;
         }
       }
@@ -266,7 +266,7 @@
     a {
       @include list-icon($fa-var-chevron-right);
       font-size: 1.6rem;
-      font-weight: var(--extra-bold);
+      font-weight: $extra-bold;
       padding: 16px 0;
       margin-bottom: 0;
       text-transform: uppercase;
@@ -320,18 +320,18 @@
 }
 
 .tab-general {
-  color: var(--dark-blue);
-  @include menu-tab(var(--dark-blue), var(--blue));
+  color: $dark-blue;
+  @include menu-tab($dark-blue, $blue);
 }
 
 .tab-training {
-  color: var(--dark-green);
-  @include menu-tab(var(--dark-green), var(--green));
+  color: $dark-green;
+  @include menu-tab($dark-green, $green);
 }
 
 .tab-resources {
-  color: var(--red);
-  @include menu-tab(var(--red), var(--orange));
+  color: $red;
+  @include menu-tab($red, $orange);
 }
 
 // Toggle Visibility

@@ -1,49 +1,71 @@
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
+$blue: #29abff;
+$dark-blue: #0a73b7;
+// $grey: #484848;
 
-:root {
+$orange: #f79533;
+$green: #86c555;
+$dark-green: #529f17;
+$red: #ee3436;
+
+$dark-blue-hover: #09639e;
+$blue-hover: #259ae6;
+$green-hover: #74ab4a;
+$orange-hover: #de862e;
+
+// $thin: 100;
+// $light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+$paragraph-text: #282d39;
+
+// :root {
   // Branding Colors
-  --blue: #29abff;
-  --dark-blue: #0a73b7;
-  --grey: #484848;
-  --orange: #f79533;
-  --green: #86c555;
-  --dark-green: #529f17;
-  --red: #ee3436;
+  // --blue: #29abff;
+  // --dark-blue: #0a73b7;
+  // --grey: #484848;
+  // --orange: #f79533;
+  // --green: #86c555;
+  // --dark-green: #529f17;
+  // --red: #ee3436;
 
   // Hover Colors
-  --dark-blue-hover: #09639e;
-  --blue-hover: #259ae6;
-  --green-hover: #74ab4a;
-  --orange-hover: #de862e;
+  // --dark-blue-hover: #09639e;
+  // --blue-hover: #259ae6;
+  // --green-hover: #74ab4a;
+  // --orange-hover: #de862e;
 
   // Font Weights
-  --thin: 100;
-  --light: 300;
-  --regular: 400;
-  --medium: 500;
-  --semi-bold: 600;
-  --bold: 700;
-  --extra-bold: 800;
-  --black: 900;
+  // --thin: 100;
+  // --light: 300;
+  // --regular: 400;
+  // --medium: 500;
+  // --semi-bold: 600;
+  // --bold: 700;
+  // --extra-bold: 800;
+  // --black: 900;
 
   // Branding Extra
-  --paragraph-text: #282d39;
-  --default-spacing: 8px;
-}
+  // --paragraph-text: #282d39;
+// }
 
 .bg-dark-blue {
-  background-color: var(--dark-blue);
+  background-color: $dark-blue;
 }
 .bg-blue {
-  background-color: var(--blue);
+  background-color: $blue;
 }
 .bg-dark-green {
-  background-color: var(--dark-green);
+  background-color: $dark-green;
 }
 .bg-red {
-  background-color: var(--red);
+  background-color: $red;
 }
 
 // Colors for the mobile Menu Items
@@ -62,14 +84,14 @@
 }
 
 .mm-item-dark-blue {
-  @include mm-menu-item(var(--dark-blue), var(--blue));
+  @include mm-menu-item($dark-blue, $blue);
 }
 .mm-item-dark-green {
-  @include mm-menu-item(var(--dark-green), var(--green));
+  @include mm-menu-item($dark-green, $green);
 }
 .mm-item-red {
-  @include mm-menu-item(var(--red), var(--orange));
+  @include mm-menu-item($red, $orange);
 }
 .mm-item-blue {
-  @include mm-menu-item(var(--blue), var(--dark-blue));
+  @include mm-menu-item($blue, $dark-blue);
 }

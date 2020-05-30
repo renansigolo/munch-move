@@ -5,7 +5,7 @@
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: var(--extra-bold);
+  font-weight: $extra-bold;
   font-size: 1.5rem;
   color: #fff;
   border-radius: 25px;
@@ -29,36 +29,36 @@
 
 .btn-dark-blue {
   @extend %mm-btn;
-  background-color: var(--dark-blue);
+  background-color: $dark-blue;
 
   &:hover {
-    background-color: var(--dark-blue-hover);
+    background-color: $dark-blue-hover;
   }
 }
 
 .btn-general {
   @extend %mm-btn;
-  background-color: var(--blue);
+  background-color: $blue;
 
   &:hover {
-    background-color: var(--blue-hover);
+    background-color: $blue-hover;
   }
 }
 
 .btn-training {
   @extend %mm-btn;
-  background-color: var(--green);
+  background-color: $green;
 
   &:hover {
-    background-color: var(--green-hover);
+    background-color: $green-hover;
   }
 }
 
 .btn-resources {
   @extend %mm-btn;
-  background-color: var(--orange);
+  background-color: $orange;
 
   &:hover {
-    background-color: var(--orange-hover);
+    background-color: $orange-hover;
   }
 }

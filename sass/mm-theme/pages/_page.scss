@@ -22,14 +22,14 @@
 
   hr {
     border: 0;
-    border-bottom: 1px solid var(--blue);
+    border-bottom: 1px solid $blue;
   }
 
   a {
     text-decoration: underline;
 
     &:hover {
-      color: var(--blue);
+      color: $blue;
     }
   }
 
@@ -57,11 +57,11 @@
 
   ul {
     li {
-      font-weight: var(--regular);
+      font-weight: $regular;
 
       &::before {
         content: "\2022";
-        color: var(--blue);
+        color: $blue;
         font-weight: bold;
         display: inline-block;
         width: 1em;
@@ -112,7 +112,7 @@
   @include desktop {
     display: block;
     padding-left: 32px;
-    border-left: 1px solid var(--blue);
+    border-left: 1px solid $blue;
   }
 
   h2 {
@@ -124,8 +124,8 @@
     a {
       @include list-icon($fa-var-chevron-right);
       font-size: 2.1rem;
-      font-weight: var(--bold);
-      color: var(--dark-blue);
+      font-weight: $bold;
+      color: $dark-blue;
       margin-bottom: 16px;
       line-height: 26px;
     }
@@ -166,7 +166,7 @@
       cursor: pointer;
     }
     &:not(:last-child) {
-      border-bottom: 3px solid var(--dark-blue) !important;
+      border-bottom: 3px solid $dark-blue !important;
     }
 
     td {
@@ -178,8 +178,8 @@
 
     a {
       text-decoration: none;
-      color: var(--dark-blue);
-      font-weight: var(--bold);
+      color: $dark-blue;
+      font-weight: $bold;
       line-height: 2.8rem;
 
       @include desktop {
@@ -209,7 +209,7 @@
     height: 50px;
 
     .btn-rounded {
-      background-color: var(--blue);
+      background-color: $blue;
       padding: 15px;
       margin: 0 5px;
       border-radius: 25px;
@@ -241,7 +241,7 @@
 .search-content {
   h4 {
     margin-top: 32px;
-    color: var(--dark-blue);
+    color: $dark-blue;
   }
 
   form {
@@ -284,7 +284,7 @@
   &__error {
     margin: 16px 8px;
     p {
-      color: var(--red);
+      color: $red;
     }
   }
 }
@@ -292,7 +292,7 @@
 /* Accordion
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .accordion-row:not(:last-child) {
-  border-bottom: 3px solid var(--dark-blue);
+  border-bottom: 3px solid $dark-blue;
 }
 
 .accordion {
@@ -303,8 +303,8 @@
   border: none;
   outline: none;
   transition: 1s;
-  font-weight: var(--bold);
-  color: var(--dark-blue);
+  font-weight: $bold;
+  color: $dark-blue;
   border-radius: 0;
   display: flex;
   justify-content: space-between;
@@ -335,7 +335,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
-  color: var(--blue);
+  color: $blue;
 
   ul {
     li::before {
@@ -345,9 +345,9 @@
     a {
       @include list-icon($fa-var-chevron-right);
       list-style: none;
-      color: var(--blue);
+      color: $blue;
       text-decoration: none;
-      font-weight: var(--bold);
+      font-weight: $bold;
     }
   }
 }
