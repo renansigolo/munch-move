@@ -1,18 +1,18 @@
-"use strict";
-
 /**
  * File mm-utility-bar.js.
  *
  * Contains accessibility handlers in the Utilities Bar.
  */
+
 (function () {
-  var zoom = 1;
-  var zoomStep = 0.1;
-  var btnPrint = document.getElementById("print");
-  var btnShare = document.getElementById("share");
-  var btnZoomIn = document.getElementById("zoomIn");
-  var btnZoomReset = document.getElementById("zoomReset");
-  var btnZoomOut = document.getElementById("zoomOut");
+  let zoom = 1;
+  let zoomStep = 0.1;
+
+  const btnPrint = document.getElementById("print");
+  const btnShare = document.getElementById("share");
+  const btnZoomIn = document.getElementById("zoomIn");
+  const btnZoomReset = document.getElementById("zoomReset");
+  const btnZoomOut = document.getElementById("zoomOut");
 
   function print() {
     window.print();
@@ -20,7 +20,7 @@
   }
 
   function share() {
-    var popup = document.getElementById("mmPopup");
+    let popup = document.getElementById("mmPopup");
     popup.classList.toggle("show");
   }
 
@@ -41,7 +41,7 @@
     document.body.style.zoom = zoom;
   }
 
-  window.addEventListener("load", function () {
+  window.addEventListener("load", () => {
     btnPrint.addEventListener("click", print);
     btnShare.addEventListener("click", share);
     btnZoomIn.addEventListener("click", zoomIn);

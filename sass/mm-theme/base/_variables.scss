@@ -1,20 +1,23 @@
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
+
+// Branding Colors
 $blue: #29abff;
 $dark-blue: #0a73b7;
-// $grey: #484848;
-
 $orange: #f79533;
+$red: #ee3436;
 $green: #86c555;
 $dark-green: #529f17;
-$red: #ee3436;
+$dark-gray: #282d39;
 
+// Hover Colors
 $dark-blue-hover: #09639e;
 $blue-hover: #259ae6;
 $green-hover: #74ab4a;
 $orange-hover: #de862e;
 
+// Font Weights
 // $thin: 100;
 // $light: 300;
 $regular: 400;
@@ -23,37 +26,6 @@ $semi-bold: 600;
 $bold: 700;
 $extra-bold: 800;
 $black: 900;
-$paragraph-text: #282d39;
-
-// :root {
-  // Branding Colors
-  // --blue: #29abff;
-  // --dark-blue: #0a73b7;
-  // --grey: #484848;
-  // --orange: #f79533;
-  // --green: #86c555;
-  // --dark-green: #529f17;
-  // --red: #ee3436;
-
-  // Hover Colors
-  // --dark-blue-hover: #09639e;
-  // --blue-hover: #259ae6;
-  // --green-hover: #74ab4a;
-  // --orange-hover: #de862e;
-
-  // Font Weights
-  // --thin: 100;
-  // --light: 300;
-  // --regular: 400;
-  // --medium: 500;
-  // --semi-bold: 600;
-  // --bold: 700;
-  // --extra-bold: 800;
-  // --black: 900;
-
-  // Branding Extra
-  // --paragraph-text: #282d39;
-// }
 
 .bg-dark-blue {
   background-color: $dark-blue;

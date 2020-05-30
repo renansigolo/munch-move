@@ -1,8 +1,7 @@
-"use strict";
-
 /**
  * Custom JS for Munch & Move Theme
  */
+
 function togglePlay() {
   jQuery(".play").toggle();
   jQuery(".pause").toggle();
@@ -21,14 +20,16 @@ function pauseSong() {
 }
 
 function redirectTo(url) {
-  return window.location = url;
+  return (window.location = url);
 }
 
 function authStaff() {
-  var staffAuthenticated = document.querySelector(".staff-content__authenticated");
-  var staffError = document.querySelector(".staff-content__error");
-  var userPassword = document.querySelector(".staff-form__content input").value;
-  var staffForm = document.querySelector(".staff-form");
+  let staffAuthenticated = document.querySelector(
+    ".staff-content__authenticated"
+  );
+  let staffError = document.querySelector(".staff-content__error");
+  let userPassword = document.querySelector(".staff-form__content input").value;
+  let staffForm = document.querySelector(".staff-form");
 
   if (userPassword === "Oranges") {
     staffError.style.display = "none";
@@ -41,28 +42,27 @@ function authStaff() {
 
 (function ($) {
   // Remove the Related Link matching the current page
-  var allRelatedLinks = document.querySelectorAll(".related-links a");
+  let allRelatedLinks = document.querySelectorAll(".related-links a");
 
-  for (var i = 0; i < allRelatedLinks.length; i++) {
-    var relatedLink = allRelatedLinks[i];
-
+  for (let i = 0; i < allRelatedLinks.length; i++) {
+    const relatedLink = allRelatedLinks[i];
     if (window.location.href === relatedLink.href) {
       relatedLink.parentNode.style.display = "none";
     }
-  } // Toggle Mobile Menu
+  }
 
-
-  var btnMenu = document.getElementById("btn-menu");
+  // Toggle Mobile Menu
+  const btnMenu = document.getElementById("btn-menu");
   btnMenu.addEventListener("click", function () {
     $("#mobile-menu").toggle();
     $("#overlay").toggle();
-  }); // Mobile Menu
+  });
 
+  // Mobile Menu
   $(document).ready(function () {
     $("#menu-mobile li.has-sub>a").on("click", function () {
       $(this).removeAttr("href");
-      var element = $(this).parent("li");
-
+      let element = $(this).parent("li");
       if (element.hasClass("open")) {
         element.removeClass("open");
         element.find("li").removeClass("open");
@@ -76,14 +76,16 @@ function authStaff() {
         element.siblings("li").find("ul").slideUp();
       }
     });
-  }); // Enable Click on the Navbar Logo
+  });
 
-  var navLogo = document.querySelector(".nav-logo");
+  // Enable Click on the Navbar Logo
+  const navLogo = document.querySelector(".nav-logo");
   navLogo.addEventListener("click", function () {
     window.location.href = "/";
-  }); // Toogle Search Input in the Navbar
+  });
 
-  var searchIcon = document.querySelector("#search-icon");
+  // Toogle Search Input in the Navbar
+  const searchIcon = document.querySelector("#search-icon");
 
   function showSearchBar() {
     $("#navbar-search").show();
@@ -100,48 +102,52 @@ function authStaff() {
   searchIcon.addEventListener("click", function () {
     showSearchBar();
   });
+
   $(".menu-service").mouseleave(function () {
     hideSearchBar();
-  }); // Desktop Mega Menu Tabs
-
-  $("#menu-desktop").find(".nav-tab a").mouseenter(function () {
-    var menuTab = this.parentNode; // Hide all .active classes in the Mega Menu Tabs/Links
-
-    var tabLinks = document.querySelectorAll(".menu-item");
-
-    for (var _i = 0; _i < tabLinks.length; _i++) {
-      tabLinks[_i].classList.remove("active");
-    } // Hide all Content in the Mega Menu
-
-
-    var tabContent = document.querySelectorAll(".tab-content");
-
-    for (var _i2 = 0; _i2 < tabContent.length; _i2++) {
-      tabContent[_i2].style.display = "none";
-    } // Show only the respective content
-
-
-    menuTab.classList.add("active");
-    $("#".concat(this.title)).show();
-    $("#".concat(this.title)).mouseleave(function () {
-      $(".tab-content").hide();
-      menuTab.classList.remove("active");
-    });
   });
+
+  // Desktop Mega Menu Tabs
+  $("#menu-desktop")
+    .find(".nav-tab a")
+    .mouseenter(function () {
+      let menuTab = this.parentNode;
+
+      // Hide all .active classes in the Mega Menu Tabs/Links
+      let tabLinks = document.querySelectorAll(".menu-item");
+
+      for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
+      }
+
+      // Hide all Content in the Mega Menu
+      const tabContent = document.querySelectorAll(".tab-content");
+      for (let i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+      }
+
+      // Show only the respective content
+      menuTab.classList.add("active");
+      $(`#${this.title}`).show();
+      $(`#${this.title}`).mouseleave(function () {
+        $(".tab-content").hide();
+        menuTab.classList.remove("active");
+      });
+    });
+
   /**
    * Accordion
    *
    * Toggle between adding and removing the "active" class,
    * to highlight the button that controls the panel
    */
-
   function accordion() {
-    var accElements = document.getElementsByClassName("accordion");
+    const accElements = document.getElementsByClassName("accordion");
 
-    for (var _i3 = 0; _i3 < accElements.length; _i3++) {
-      accElements[_i3].addEventListener("click", function () {
+    for (let i = 0; i < accElements.length; i++) {
+      accElements[i].addEventListener("click", function () {
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
+        let panel = this.nextElementSibling;
 
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
@@ -150,24 +156,42 @@ function authStaff() {
         }
       });
     }
-  } // Form Munch & Move to italic
+  }
 
-
+  // Form Munch & Move to italic
   $.fn.wrapInTag = function () {
     return this.html(function () {
-      return $(this).html().replace(/Munch &amp; Move/gi, "<i>Munch &amp; Move</i>");
+      return $(this)
+        .html()
+        .replace(/Munch &amp; Move/gi, "<i>Munch &amp; Move</i>");
     });
   };
 
-  var elements = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "a", "small", "span"];
+  const elements = [
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "p",
+    "a",
+    "small",
+    "span",
+  ];
+
   elements.forEach(function (element) {
     $(element).wrapInTag();
-  }); // Audio Player
+  });
+
+  // Audio Player
   // function parseTime(timestamp) {
   //   timestamp = timestamp.toFixed(0);
+
   //   let hours = Math.floor(timestamp / 60 / 60);
   //   let minutes = Math.floor(timestamp / 60) - hours * 60;
   //   let seconds = timestamp % 60;
+
   //   // let formatted = hours + ":" + minutes + ":" + seconds;
   //   let formatted =
   //     // hours.toString().padStart(2, "0") +
@@ -175,39 +199,43 @@ function authStaff() {
   //     minutes.toString().padStart(2, "0") +
   //     ":" +
   //     seconds.toString().padStart(2, "0");
+
   //   return formatted;
   // }
 
-  var songs = [];
-  var trackRows = document.querySelectorAll(".js-song-title");
+  let songs = [];
 
+  let trackRows = document.querySelectorAll(".js-song-title");
   function clearStyle() {
-    for (var _i4 = 0; _i4 < trackRows.length; _i4++) {
-      trackRows[_i4].parentNode.style.backgroundColor = "#fff";
-      trackRows[_i4].nextElementSibling.style.fontWeight = "300";
-      trackRows[_i4].style.fontWeight = "300";
+    for (let i = 0; i < trackRows.length; i++) {
+      trackRows[i].parentNode.style.backgroundColor = "#fff";
+      trackRows[i].nextElementSibling.style.fontWeight = "300";
+      trackRows[i].style.fontWeight = "300";
     }
   }
 
-  for (var _i5 = 0; _i5 < trackRows.length; _i5++) {
-    var song = trackRows[_i5];
+  for (let i = 0; i < trackRows.length; i++) {
+    const song = trackRows[i];
     songs.push({
       index: song.getAttribute("data-song-index"),
       title: song.getAttribute("data-song-title"),
-      url: song.getAttribute("data-song-url")
+      url: song.getAttribute("data-song-url"),
     });
+
     song.addEventListener("click", function () {
       clearStyle();
       this.parentNode.style.backgroundColor = "#DAF0FF";
       this.nextElementSibling.style.fontWeight = "700";
       this.style.fontWeight = "700";
-      var songUrl = this.getAttribute("data-song-url");
+      let songUrl = this.getAttribute("data-song-url");
       playAudio(songUrl);
     });
   }
 
   function playAudio(url) {
-    document.getElementById("player-container").innerHTML = "<audio src=\"".concat(url, "\" id=\"player\" controls controlsList=\"nodownload\">");
+    document.getElementById(
+      "player-container"
+    ).innerHTML = `<audio src="${url}" id="player" controls controlsList="nodownload">`;
     playSong();
   }
 
