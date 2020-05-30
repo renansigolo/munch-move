@@ -20,7 +20,7 @@
   }
 
   function share() {
-    let popup = document.getElementById("mmPopup");
+    let popup = document.getElementById("share-popup");
     popup.classList.toggle("show");
   }
 

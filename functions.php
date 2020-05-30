@@ -127,13 +127,13 @@ function munch_move_scripts()
 {
     wp_enqueue_style('munch-move-style', get_stylesheet_uri());
 
-    // wp_enqueue_script(
-    //     'mm-utility-bar',
-    //     get_template_directory_uri() . '/js/mm-utility-bar.js',
-    //     array(),
-    //     '1.0.0',
-    //     true
-    // );
+    wp_enqueue_script(
+        'mm-utility-bar',
+        get_template_directory_uri() . '/js/mm-utility-bar.js',
+        array(),
+        '1.0.0',
+        true
+    );
 
     wp_enqueue_script(
         'munch-move',
