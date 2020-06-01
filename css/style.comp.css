@@ -5952,7 +5952,7 @@ img {
   @media (min-width: 1000px) {
     .featured-image, #front-page {
       max-height: unset;
-      height: calc(100vh - 210px); } }
+      height: calc(80vh - 210px); } }
   @media (min-width: 1000px) and (min-height: 1081px) {
     .featured-image, #front-page {
       max-height: 50vh; } }
@@ -5977,7 +5977,7 @@ img {
   justify-content: center;
   align-items: flex-start;
   width: auto;
-  height: calc(100vh - 210px); }
+  height: calc(80vh - 210px); }
   .hero__desktop .hero-content h1 {
     color: #fff;
     margin-bottom: 24px;
