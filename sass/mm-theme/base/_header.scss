@@ -120,6 +120,10 @@
           a {
             color: inherit;
             text-shadow: none;
+
+            &:hover {
+              transform: none;
+            }
           }
         }
       }
@@ -170,13 +174,13 @@
     margin: 0;
     padding: 16px;
     max-width: 100%;
-    
-    &:not(:last-child){
+
+    &:not(:last-child) {
       border-bottom: 1px solid #fff;
     }
 
     &:last-child {
-    line-height: 26px;
+      line-height: 26px;
     }
 
     a {
@@ -278,6 +282,7 @@
     display: flex;
 
     img {
+      min-width: 250px;
       max-width: 55%;
       padding-right: 16px;
       object-fit: cover;

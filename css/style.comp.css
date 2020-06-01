@@ -5767,6 +5767,8 @@ img {
           .page-header .nav-desktop .menu-desktop #menu-desktop .active a {
             color: inherit;
             text-shadow: none; }
+            .page-header .nav-desktop .menu-desktop #menu-desktop .active a:hover {
+              transform: none; }
   .page-header .navbar-mobile {
     display: flex;
     justify-content: flex-end;
@@ -5876,6 +5878,7 @@ img {
 .mega-menu__article {
   display: flex; }
   .mega-menu__article img {
+    min-width: 250px;
     max-width: 55%;
     padding-right: 16px;
     object-fit: cover; }
