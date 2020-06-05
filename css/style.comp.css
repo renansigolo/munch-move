@@ -559,6 +559,7 @@ label > .label-body {
 .menu-mobile li::before,
 .mega-menu__list li::before,
 .mega-menu__list a::before,
+.utility__menu #breadcrumbs span > span:not(:first-child)::before,
 .mm-content ol li::before,
 .related-links ul li::before,
 .related-links ul a::before,
@@ -580,7 +581,7 @@ label > .label-body {
   line-height: 1; }
 
 .card-general .card__content li::before, .card-training .card__content li::before, .card-resources .card__content li::before, .menu-mobile li::before, .mega-menu__list li::before,
-.mega-menu__list a::before, .mm-content ol li::before, .related-links ul li::before,
+.mega-menu__list a::before, .utility__menu #breadcrumbs span > span:not(:first-child)::before, .mm-content ol li::before, .related-links ul li::before,
 .related-links ul a::before, .playlist__song a::before, .accordion::after, .panel ul a::before, .arrow-list ul li::before, #sitemap-template .sitemap-content a::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -668,6 +669,7 @@ label > .label-body {
 .menu-mobile li.fa-pull-left::before,
 .mega-menu__list li.fa-pull-left::before,
 .mega-menu__list a.fa-pull-left::before,
+.utility__menu #breadcrumbs span > span.fa-pull-left:not(:first-child)::before,
 .mm-content ol li.fa-pull-left::before,
 .related-links ul li.fa-pull-left::before,
 .related-links ul a.fa-pull-left::before,
@@ -689,6 +691,7 @@ label > .label-body {
 .menu-mobile li.fa-pull-right::before,
 .mega-menu__list li.fa-pull-right::before,
 .mega-menu__list a.fa-pull-right::before,
+.utility__menu #breadcrumbs span > span.fa-pull-right:not(:first-child)::before,
 .mm-content ol li.fa-pull-right::before,
 .related-links ul li.fa-pull-right::before,
 .related-links ul a.fa-pull-right::before,
@@ -5124,6 +5127,7 @@ readers do not read off random characters that represent icons */
 .menu-mobile li::before,
 .mega-menu__list li::before,
 .mega-menu__list a::before,
+.utility__menu #breadcrumbs span > span:not(:first-child)::before,
 .mm-content ol li::before,
 .related-links ul li::before,
 .related-links ul a::before,
@@ -6021,7 +6025,7 @@ img {
     .utility__menu #breadcrumbs {
       color: #fff;
       font-size: 1.2rem; }
-      @media screen and (min-width: 1001px) and (max-width: 1364px) {
+      @media screen and (min-width: 1001px) {
         .utility__menu #breadcrumbs {
           max-width: 68%; } }
       .utility__menu #breadcrumbs:first-child {
@@ -6029,31 +6033,35 @@ img {
       @media (min-width: 1000px) {
         .utility__menu #breadcrumbs {
           font-size: 1.6rem; } }
-      .utility__menu #breadcrumbs i.fas, .utility__menu #breadcrumbs i.accordion::after {
+      .utility__menu #breadcrumbs span > span:first-child {
+        padding: 0 0 0 2px; }
+      .utility__menu #breadcrumbs span > span:not(:first-child)::before {
+        display: inline;
+        content: "\f054";
         color: #0a73b7;
-        font-size: 1.2rem;
-        line-height: 15px; }
+        font-size: 1rem;
+        line-height: 15px;
+        padding: 0 4px 0 0; }
         @media (min-width: 1000px) {
-          .utility__menu #breadcrumbs i.fas, .utility__menu #breadcrumbs i.accordion::after {
-            font-size: 1.4rem; } }
-      .utility__menu #breadcrumbs a {
+          .utility__menu #breadcrumbs span > span:not(:first-child)::before {
+            font-size: 1.2rem;
+            padding: 0 8px 0 0; } }
+      .utility__menu #breadcrumbs span a {
         text-decoration: underline;
         font-weight: 600;
         line-height: 15px;
         color: #fff;
         font-size: 1.2rem;
-        padding: 0 4px; }
+        white-space: pre;
+        padding: 0 4px 0 0; }
         @media (min-width: 1000px) {
-          .utility__menu #breadcrumbs a {
-            padding: 0 8px;
+          .utility__menu #breadcrumbs span a {
+            padding: 0 8px 0 0;
             font-size: 1.6rem; } }
       .utility__menu #breadcrumbs .breadcrumb_last {
         font-size: inherit;
         font-weight: 600;
-        padding-left: 4px; }
-        @media (min-width: 1000px) {
-          .utility__menu #breadcrumbs .breadcrumb_last {
-            padding-left: 8px; } }
+        white-space: pre; }
   .utility__actions ul {
     display: inline-flex;
     color: #fff; }

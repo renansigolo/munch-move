@@ -35,7 +35,7 @@ get_header();
                             <h4>Enter keywords to search this site:</h4>
                             <form action="/" method="get">
                                 <div class="search-form__content">
-                                    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
+                                    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" style="margin-bottom: 8px"/>
                                     <button class="btn-general">Search</button>
                                 </div>
                             </form>

@@ -192,3 +192,21 @@ function wpb_search_filter($query)
     return $query;
 }
 add_filter('pre_get_posts', 'wpb_search_filter');
+
+/**
+ *  Grant editing permission to editor tole to access the privacy policy page
+ */
+add_action('map_meta_cap', 'custom_manage_privacy_options', 1, 4);
+function custom_manage_privacy_options($caps, $cap, $user_id, $args)
+{
+  if (!is_user_logged_in()) return $caps;
+
+  $user_meta = get_userdata($user_id);
+  if (array_intersect(['editor', 'administrator'], $user_meta->roles)) {
+    if ('manage_privacy_options' === $cap) {
+      $manage_name = is_multisite() ? 'manage_network' : 'manage_options';
+      $caps = array_diff($caps, [ $manage_name ]);
+    }
+  }
+  return $caps;
+}

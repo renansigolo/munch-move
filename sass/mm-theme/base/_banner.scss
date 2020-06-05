@@ -11,7 +11,7 @@
   @include desktop {
     max-height: unset;
     height: calc(80vh - 210px);
-    
+
     @media (min-height: 1081px) {
       max-height: 50vh;
     }
@@ -110,8 +110,7 @@
     #breadcrumbs {
       color: #fff;
       font-size: 1.2rem;
-      
-      @media screen and (min-width: 1001px) and (max-width:1364px){
+      @media screen and (min-width: 1001px) {
         max-width: 68%;
       }
 
@@ -123,36 +122,52 @@
         font-size: 1.6rem;
       }
 
-      i.fas {
-        color: $dark-blue;
-        font-size: 1.2rem;
-        line-height: 15px;
-        @include desktop {
-          font-size: 1.4rem;
+      // Items Starts here
+      span {
+        > span {
+          &:first-child {
+            padding: 0 0 0 2px;
+          }
+
+          &:not(:first-child) {
+            &::before {
+              display: inline;
+              @extend %fa-icon;
+              @extend .fas;
+              content: fa-content($fa-var-chevron-right);
+              color: $dark-blue;
+              font-size: 1rem;
+              line-height: 15px;
+              padding: 0 4px 0 0;
+
+              @include desktop {
+                font-size: 1.2rem;
+                padding: 0 8px 0 0;
+              }
+            }
+          }
         }
-      }
 
-      a {
-        text-decoration: underline;
-        font-weight: $semi-bold;
-        line-height: 15px;
-        color: #fff;
-        font-size: 1.2rem;
-        padding: 0 4px;
+        a {
+          text-decoration: underline;
+          font-weight: $semi-bold;
+          line-height: 15px;
+          color: #fff;
+          font-size: 1.2rem;
+          white-space: pre;
+          padding: 0 4px 0 0;
 
-        @include desktop {
-          padding: 0 8px;
-          font-size: 1.6rem;
+          @include desktop {
+            padding: 0 8px 0 0;
+            font-size: 1.6rem;
+          }
         }
       }
 
       .breadcrumb_last {
         font-size: inherit;
         font-weight: $semi-bold;
-        padding-left: 4px;
-        @include desktop {
-          padding-left: 8px;
-        }
+        white-space: pre;
       }
     }
   }

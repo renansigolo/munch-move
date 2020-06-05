@@ -15,7 +15,8 @@
             <div class="utility__menu">
                 <?php
                 if (function_exists('yoast_breadcrumb')) {
-                    yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+                    // You are here:
+                    yoast_breadcrumb('<div id="breadcrumbs">','</div>');
                 }
                 ?>
 
