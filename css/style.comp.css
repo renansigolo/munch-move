@@ -5989,12 +5989,21 @@ img {
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     line-height: 44px;
     padding-right: 12%; }
+  @media (max-height: 700px) {
+    .hero__desktop .hero-content h1 {
+      font-size: 2.5rem; }
+    .hero__desktop .hero-content button {
+      font-size: 1.25rem; } }
+  @media (max-height: 600px) and (min-width: 1000px) {
+    .hero__desktop .hero-content {
+      display: none; } }
 
 .hero__mobile {
   display: inline-grid; }
   .hero__mobile img {
     object-fit: cover;
-    height: 50vw; }
+    height: 50vw;
+    width: 100%; }
   .hero__mobile .mobile-hero-content {
     padding: 24px 0;
     background-color: #0a73b7;
