@@ -1,0 +1,8 @@
+[05-Jun-2020 03:22:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/healthykids/public_html/wp-content/themes/munch-move/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/healthykids/public_html/wp-content/themes/munch-move/index.php on line 16
+[12-Jun-2020 00:52:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/healthykids/public_html/wp-content/themes/munch-move/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/healthykids/public_html/wp-content/themes/munch-move/index.php on line 16

@@ -123,7 +123,7 @@ if ($banner_button) :
                                         if ($card_image) :
                                         ?>
                                             <div class="card__header">
-                                                <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>" class="card-image">
+                                                <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>">
                                             </div>
                                         <?php endif; ?>
                                         <div class="card__content">
