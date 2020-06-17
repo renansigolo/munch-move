@@ -1,5 +1,7 @@
 <?php
+
 /**
+ * 
  * The template for displaying 404 pages (not found)
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
@@ -7,54 +9,75 @@
  * @package Munch_&_Move
  */
 
-get_header();
-?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'munch-move' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'munch-move' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'munch-move' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$munch_move_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'munch-move' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$munch_move_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+get_header(); ?>
 
 <?php
-get_footer();
+$main_content = get_field('404_main_content', 'option');
+$quick_links = get_field('404_quick_links', 'option');
+$bottom_content = get_field('404_bottom_content', 'option');
+if ($main_content) {
+    $image = $main_content['image'];
+}
+?>
+
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
+
+        <div class="error-404 not-found container">
+            <section class="section-decomissioned-content">
+                <h1><?php echo $main_content['title']; ?></h1>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                <div class="row flex-center">
+                    <div class="eight columns">
+                        <p><?php echo $main_content['description']; ?></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-quick-links">
+                <h1><?php echo $quick_links['title'] ?></h1>
+
+                <div class="quick-links">
+                    <?php
+                    while (have_rows('404_quick_links', 'option')) : the_row();
+                        while (have_rows('cards')) : the_row();
+                            $title = get_sub_field('title');
+                    ?>
+                            <div class="card-general">
+                                <div class="card__header">
+                                    <?php
+                                    $card_image = get_sub_field('image');
+                                    if ($card_image) :
+                                    ?>
+                                        <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>">
+                                </div>
+                                <div class="card__content" style="justify-content: unset;">
+                                    <h4><?php echo $title ?></h4>
+                                    <ul>
+                                        <?php while (have_rows('links')) : the_row(); ?>
+                                            <li><a href="<?php echo get_sub_field('link')['url'] ?>" rel="noopener noreferrer"><?php echo get_sub_field('link')['title'] ?></a></li>
+                                        <?php endwhile; ?>
+                                    </ul>
+                                <?php endif; ?>
+                                </div>
+                            </div>
+
+                        <?php endwhile; ?>
+                    <?php endwhile; ?>
+
+                </div>
+            </section>
+
+            <section class="section-mascots">
+                <img src="<?php echo get_template_directory_uri() . '/images/404/divider-fruits.svg'; ?>" alt="Divider Fruits">
+                <h1><?php echo $bottom_content['title'] ?></h1>
+                <a href="<?php echo $bottom_content['button']['url']; ?>">
+                    <button class="btn-general"><?php echo $bottom_content['button']['title']; ?></button>
+                </a>
+            </section>
+        </div>
+
+    </main>
+</div>
+
+<?php get_footer();

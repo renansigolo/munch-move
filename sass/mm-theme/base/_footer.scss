@@ -3,32 +3,105 @@
 --------------------------------------------------------------*/
 
 .footer {
-  .container {
-    @extend %flex-column;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 3.3rem 0;
+
+  a,
+  p {
+    font-size: 1.4rem;
   }
 
-  &__partners {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     @include margin-y(3rem);
+=======
+    margin-bottom: 32px;
+>>>>>>> develop
 
     img {
-      @include margin-x(10px);
+      width: 100px;
+      height: auto;
+      max-height: 106px;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+
+    @include widescreen {
+      margin-right: 100px;
+    }
+  }
+
+  &__navigation {
+    ul {
+      list-style: none;
+      font-weight: $bold;
+
+      li {
+        margin-left: 0;
+      }
+
+      @include desktop {
+        display: inline-flex;
+        margin-bottom: 0;
+      }
+
+      li {
+        font-size: 1.4rem;
+
+        @include desktop {
+          &::after {
+            margin: 0 12px;
+            color: $dark-blue;
+            content: "|";
+          }
+
+          &:last-of-type::after {
+            content: "";
+          }
+        }
+      }
     }
   }
 
   &__copyright {
-    text-align: center;
+    margin-top: 24px;
+
+    @include desktop {
+      margin-top: 0;
+    }
   }
 
   @include desktop {
+<<<<<<< HEAD
+=======
+    margin-top: 7.2rem;
+    a,
+    p {
+      font-size: 1.4rem;
+    }
+
+>>>>>>> develop
     .container {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
+  }
 
-    &__partners {
+  @include widescreen {
+    .container {
       justify-content: flex-start;
+<<<<<<< HEAD
       min-width: 40%;
     }
 
@@ -39,6 +112,8 @@
 
     br {
       display: none;
+=======
+>>>>>>> develop
     }
   }
 }

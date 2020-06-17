@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying search results pages
  *
@@ -10,46 +11,69 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section id="tpl-search">
+    <main id="main">
 
-		<?php if ( have_posts() ) : ?>
+        <section>
+            <!-- Hero Banner -->
+            <img src="<?php echo get_template_directory_uri() . '/images/search.jpg' ?>" class="featured-image" alt="Search banner">
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'munch-move' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+            <!-- Utilities Bar -->
+            <?php get_template_part('template-parts/component', 'utilities'); ?>
+        </section>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+        <div class="container">
+            <div class="row">
+                <div class="eight columns">
+                    <header>
+                        <h1 class="entry-title">Search</h1>
+                    </header>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+                    <div class="mm-content">
+                        <p>To search this site, please enter your keywords in the search box below.</p>
+                        <div class="search-form">
+                            <h4>Enter keywords to search this site:</h4>
+                            <form action="/" method="get">
+                                <div class="search-form__content">
+                                    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" style="margin-bottom: 8px"/>
+                                    <button class="btn-general">Search</button>
+                                </div>
+                            </form>
+                        </div>
 
-			endwhile;
+                        <div class="search-results">
+                            <?php if (have_posts()) : ?>
+                                <?php
+                                /* Start the Loop */
+                                while (have_posts()) :
+                                    the_post();
+                                ?>
+                                    <div style="cursor: pointer;" onclick="redirectTo('<?php the_permalink() ?>')">
+                                        <?php the_title('<h2>', '</h2>'); ?>
+                                        <?php the_excerpt(); ?>
+                                    </div>
+                                <?php
+                                endwhile;
+                                ?>
+                        </div>
+                    </div>
+                </div>
 
-			the_posts_navigation();
+                <!-- Related Links -->
+                <div class="four columns">
+                    <?php get_template_part('template-parts/component', 'related-links'); ?>
+                </div>
+            </div>
 
-		else :
+        <?php
+                            else :
+                                get_template_part('template-parts/content', 'none');
+                            endif;
+        ?>
+        </div>
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+    </main>
+</section>
 
 <?php
-get_sidebar();
 get_footer();

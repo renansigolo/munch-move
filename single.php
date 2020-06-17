@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -7,33 +8,20 @@
  * @package Munch_&_Move
  */
 
-get_header();
-?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
+get_header(); ?>
 
 
+<div id="primary" class="content-area">
+  <main id="main" class="site-main">
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    <?php while (have_posts()) :
+      the_post();
+    endwhile;
+    get_template_part('template-parts/content', get_post_type());
+    ?>
+
+  </main>
+</div><!-- #ID-<?php the_ID(); ?> -->
 
 <?php
-get_sidebar();
 get_footer();

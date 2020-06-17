@@ -1,0 +1,109 @@
+/* Cards
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.cards {
+  margin: 32px 0;
+
+  @include desktop {
+    margin: 40px 0 56px 0;
+  }
+
+  &__heading {
+    margin: 56px 0 32px 0;
+  }
+}
+
+@mixin mm-card($primaryColor, $secondaryColor) {
+  @extend %flex-column-grow;
+
+  .card {
+    &__heading {
+      margin-bottom: 8px;
+      margin-top: 16px;
+
+      @include desktop {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__header {
+      line-height: 0;
+      border-bottom: 12px solid $secondaryColor;
+      img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      @extend %flex-column-grow;
+      justify-content: space-between;
+      padding: 24px 16px 32px;
+      background-color: $primaryColor;
+      color: #fff;
+
+      @include desktop {
+        padding: 24px 40px;
+      }
+
+      li {
+        @include list-icon($fa-var-chevron-right);
+      }
+
+      h4 {
+        color: inherit;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: inherit;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+.card-general {
+  @include mm-card($dark-blue, $blue);
+}
+
+.card-training {
+  @include mm-card($dark-green, $green);
+}
+
+.card-resources {
+  @include mm-card($red, $orange);
+}
+
+/* Video
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+video {
+  max-width: 100%;
+  &:focus {
+    outline: none;
+  }
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

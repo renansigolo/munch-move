@@ -1,0 +1,97 @@
+/*--------------------------------------------------------------
+# Headers
+--------------------------------------------------------------*/
+
+/* Header Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+%header-item {
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  text-shadow: 0 1px 3px #589429;
+  font-size: 1.6rem;
+  font-weight: $black;
+  box-shadow: none;
+  background-color: transparent;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+%menu-on-top {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+%search-bar {
+  background: #ffffff;
+  border: 1px solid $dark-blue;
+  border-radius: 25px;
+  font-weight: $extra-bold;
+  font-size: 1.5rem;
+  color: $blue;
+  margin-right: 8px;
+  width: 100%;
+  height: 100%;
+
+  &::placeholder {
+    color: $blue;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+.search-icon {
+  color: $dark-blue;
+  font-size: 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* Header Content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+%line-behind-title {
+  h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      border-top: 2px solid $dark-blue;
+      content: "";
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    span {
+      width: 50%;
+      background: #fff;
+      padding: 0 10px;
+
+      @include desktop {
+        width: unset;
+        padding: 0 40px;
+      }
+    }
+  }
+}
+
+.line-throught-text {
+  @extend %line-behind-title;
+}

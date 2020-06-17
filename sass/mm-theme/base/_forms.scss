@@ -1,5 +1,6 @@
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+<<<<<<< HEAD
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -38,6 +39,48 @@ select:focus {
 }
 
 // WP CONTACT FORM 7
+=======
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+textarea,
+select {
+  border-radius: 2px;
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 11px 17px;
+  max-width: 100%;
+  border-radius: 25px;
+
+  &::placeholder {
+    font-weight: $extra-bold;
+  }
+}
+
+input[type='email']:focus,
+input[type='number']:focus,
+input[type='search']:focus,
+input[type='text']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid $blue;
+  outline: 0;
+}
+
+.search {
+  align-self: flex-end;
+}
+
+/* WP Contact Form 7
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+>>>>>>> develop
 .wpcf7-response-output {
   height: 61px;
   border-radius: 16px;
@@ -51,7 +94,11 @@ select:focus {
   height: 61px;
   border: 6px solid #fff !important;
   border-radius: 16px;
+<<<<<<< HEAD
   background-color: var(--green);
+=======
+  background-color: $green;
+>>>>>>> develop
   font-size: 2rem;
   padding: 11px 17px;
   color: #fff;

@@ -1,6 +1,7 @@
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+<<<<<<< HEAD
 .button,
 button,
 input[type="submit"],
@@ -14,6 +15,18 @@ input[type="button"] {
   background-color: var(--orange);
   font-size: 2rem;
   font-weight: bold;
+=======
+// Default Styles 
+.button,
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: $extra-bold;
+  font-size: 1.5rem;
+>>>>>>> develop
   cursor: pointer;
 }
 
@@ -27,9 +40,14 @@ button:focus,
 input[type='submit']:focus,
 input[type='reset']:focus,
 input[type='button']:focus {
+<<<<<<< HEAD
   color: #fff;
   border-color: #fff;
   box-shadow: 2px 2px 5px var(--grey);
   transition: box-shadow 0.3s ease-in-out;
   outline: 0;
 }
+=======
+  transition: background-color 0.2s ease-in-out;
+}
+>>>>>>> develop

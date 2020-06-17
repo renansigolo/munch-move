@@ -2,16 +2,16 @@
 # Variables
 --------------------------------------------------------------*/
 
-:root {
-  --blue: #0a6aae;
-  --grey: #484848;
-  --orange: #f7941f;
-  --green: #8cc73f;
-  --sky-light: #d3eefd;
-  --sky-dark: #b3dafe;
-  --bg-sky: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-dark) 100%);
-}
+// Branding Colors
+$blue: #29abff;
+$dark-blue: #0a73b7;
+$orange: #f79533;
+$red: #ee3436;
+$green: #86c555;
+$dark-green: #529f17;
+$dark-gray: #282d39;
 
+<<<<<<< HEAD
 // Mixins
 %flex-column {
   display: flex;
@@ -22,10 +22,61 @@
 @mixin margin-x($margin) {
   margin-left: $margin;
   margin-right: $margin;
+=======
+// Hover Colors
+$dark-blue-hover: #09639e;
+$blue-hover: #259ae6;
+$green-hover: #74ab4a;
+$orange-hover: #de862e;
+
+// Font Weights
+// $thin: 100;
+// $light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+.bg-dark-blue {
+  background-color: $dark-blue;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-dark-green {
+  background-color: $dark-green;
+}
+.bg-red {
+  background-color: $red;
 }
 
-// y - for classes that set both *-top and *-bottom
-@mixin margin-y($margin) {
-  margin-top: $margin;
-  margin-bottom: $margin;
+// Colors for the mobile Menu Items
+@mixin mm-menu-item($primaryColor, $secondaryColor) {
+  background-color: $primaryColor;
+  .sub-menu {
+    li {
+      color: $primaryColor;
+      &:not(:last-child) {
+        &::after {
+          border-bottom: 1px solid $secondaryColor;
+        }
+      }
+    }
+  }
+>>>>>>> develop
+}
+
+.mm-item-dark-blue {
+  @include mm-menu-item($dark-blue, $blue);
+}
+.mm-item-dark-green {
+  @include mm-menu-item($dark-green, $green);
+}
+.mm-item-red {
+  @include mm-menu-item($red, $orange);
+}
+.mm-item-blue {
+  @include mm-menu-item($blue, $dark-blue);
 }

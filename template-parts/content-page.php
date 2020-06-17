@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying page content in page.php
  *
@@ -6,47 +7,62 @@
  *
  * @package Munch_&_Move
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
 
-	<?php munch_move_post_thumbnail(); ?>
+    <!-- Hero Banner -->
+    <?php get_template_part('template-parts/component', 'hero'); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content();
+    <div class="container entry-content">
+        <div class="row">
+            <!-- WP Content -->
+            <div class="eight columns">
+                <header class="entry-header">
+                    <h1 class="entry-title">
+                        <?php
+                        if (get_field('main_title')) {
+                            the_field('main_title');
+                        } else {
+                            the_title();
+                        }
+                        ?>
+                    </h1>
+                </header>
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'munch-move' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
+                <div class="mm-content">
+                    <?php
+                    // WP Default Content Block
+                    the_content();
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'munch-move' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+                    // Accordion Block
+                    while (have_rows('content_blocks')) : the_row();
+                        get_template_part('template-parts/component', 'accordion');
+                    endwhile ?>
+                </div>
+            </div>
+
+            <!-- Related Links -->
+            <div class="four columns">
+                <?php get_template_part('template-parts/component', 'related-links'); ?>
+            </div>
+        </div>
+
+        <!-- Cards Block -->
+        <?php while (have_rows('content_blocks')) : the_row();
+            get_template_part('template-parts/component', 'cards');
+        endwhile; ?>
+
+        <div class="row">
+            <div class="eight columns">
+                <div class="mm-content">
+                    <?php while (have_rows('content_blocks')) : the_row();
+                        get_template_part('template-parts/component', 'info');
+                        get_template_part('template-parts/component', 'playlist');
+                    endwhile ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </article><!-- #post-<?php the_ID(); ?> -->

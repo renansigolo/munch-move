@@ -14,6 +14,7 @@
  */
 function munch_move_body_classes($classes)
 {
+<<<<<<< HEAD
 	// Adds a class of hfeed to non-singular pages.
 	if (!is_singular()) {
 		$classes[] = 'hfeed';
@@ -23,8 +24,19 @@ function munch_move_body_classes($classes)
 	if (!is_active_sidebar('sidebar-1')) {
 		$classes[] = 'no-sidebar';
 	}
+=======
+    // Adds a class of hfeed to non-singular pages.
+    if (!is_singular()) {
+        $classes[] = 'hfeed';
+    }
 
-	return $classes;
+    // Adds a class of no-sidebar when there is no sidebar present.
+    if (!is_active_sidebar('sidebar-1')) {
+        $classes[] = 'no-sidebar';
+    }
+>>>>>>> develop
+
+    return $classes;
 }
 add_filter('body_class', 'munch_move_body_classes');
 
@@ -33,6 +45,7 @@ add_filter('body_class', 'munch_move_body_classes');
  */
 function munch_move_pingback_header()
 {
+<<<<<<< HEAD
 	if (is_singular() && pings_open()) {
 		printf('<link rel="pingback" href="%s">', esc_url(get_bloginfo('pingback_url')));
 	}
@@ -52,3 +65,13 @@ function mycustom_wp_footer()
 <?php
 }
 add_action('wp_footer', 'mycustom_wp_footer');
+=======
+    if (is_singular() && pings_open()) {
+        printf(
+            '<link rel="pingback" href="%s">',
+            esc_url(get_bloginfo('pingback_url'))
+        );
+    }
+}
+add_action('wp_head', 'munch_move_pingback_header');
+>>>>>>> develop

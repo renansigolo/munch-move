@@ -1,0 +1,64 @@
+/* Buttons Mixins
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+%mm-btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: $extra-bold;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  padding: 14px 26px;
+  margin: 0;
+  width: 100%;
+
+  @include desktop {
+    width: auto;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-dark-blue {
+  @extend %mm-btn;
+  background-color: $dark-blue;
+
+  &:hover {
+    background-color: $dark-blue-hover;
+  }
+}
+
+.btn-general {
+  @extend %mm-btn;
+  background-color: $blue;
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+}
+
+.btn-training {
+  @extend %mm-btn;
+  background-color: $green;
+
+  &:hover {
+    background-color: $green-hover;
+  }
+}
+
+.btn-resources {
+  @extend %mm-btn;
+  background-color: $orange;
+
+  &:hover {
+    background-color: $orange-hover;
+  }
+}

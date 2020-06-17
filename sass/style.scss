@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: munch-move
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 
@@ -21,6 +21,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 ----------------------------------------------------------------
 # Normalize
 # Skeleton
+# FontAwesome
 # Munch & Move Theme
 ## Variables
 ## Typography
@@ -28,6 +29,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 #### Front Page
 --------------------------------------------------------------*/
 
+<<<<<<< HEAD
 @import "../node_modules/normalize.css/normalize";
 @import "libs/skeleton/skeleton.scss";
 
@@ -59,3 +61,100 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 # Footer
 --------------------------------------------------------------*/
 @import "mm-theme/base/footer";
+=======
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import '../node_modules/normalize.css/normalize';
+
+/*--------------------------------------------------------------
+# Skeleton
+--------------------------------------------------------------*/
+@import 'mm-theme/base/grid';
+// @import 'skeleton/grid';
+
+@import 'skeleton/base';
+// @import 'skeleton/typography';
+// @import 'skeleton/links';
+// @import 'skeleton/buttons';
+@import 'skeleton/forms';
+// @import 'skeleton/lists';
+// @import 'skeleton/code';
+// @import 'skeleton/tables';
+// @import 'skeleton/spacing';
+// @import 'skeleton/utilities';
+@import 'skeleton/clearing';
+
+/*--------------------------------------------------------------
+# FontAwesome
+--------------------------------------------------------------*/
+$fa-font-path: "fonts/fontawesome/webfonts";
+@import 'fonts/fontawesome/scss/fontawesome';
+@import 'fonts/fontawesome/scss/solid';
+@import 'fonts/fontawesome/scss/brands';
+
+/*--------------------------------------------------------------
+# Reset
+--------------------------------------------------------------*/
+// @import 'reset';
+
+/*--------------------------------------------------------------
+# Munch & Move Theme
+--------------------------------------------------------------*/
+// @import 'mm-theme/base/grid';
+@import 'mm-theme/base/variables';
+
+
+// Mixins
+@import 'mm-theme/mixins/media-queries';
+@import 'mm-theme/mixins/spacing';
+@import 'mm-theme/mixins/flex';
+@import 'mm-theme/mixins/lists';
+@import 'mm-theme/mixins/buttons';
+@import 'mm-theme/mixins/cards';
+@import 'mm-theme/mixins/headers';
+
+/*--------------------------------------------------------------
+# General Styles
+--------------------------------------------------------------*/
+@import 'mm-theme/base/typography';
+@import 'mm-theme/base/scaffolding';
+@import 'mm-theme/base/header';
+@import 'mm-theme/base/banner';
+@import 'mm-theme/base/tables';
+@import 'mm-theme/base/utilities';
+
+/*--------------------------------------------------------------
+# Overwrites Skeleton Framework
+--------------------------------------------------------------*/
+@import 'mm-theme/base/buttons';
+@import 'mm-theme/base/forms';
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import 'mm-theme/pages/front-page';
+@import 'mm-theme/pages/page';
+@import 'mm-theme/pages/single';
+@import 'mm-theme/pages/tpl-munch-move-common';
+@import 'mm-theme/pages/tpl-search';
+@import 'mm-theme/pages/privacy-policy';
+@import 'mm-theme/pages/sitemap';
+@import 'mm-theme/pages/404';
+
+/*--------------------------------------------------------------
+# Template Parts
+--------------------------------------------------------------*/
+// @import 'mm-theme/template-parts/content-page';
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import 'mm-theme/base/footer';
+
+/*--------------------------------------------------------------
+# Print
+--------------------------------------------------------------*/
+@import 'mm-theme/print';
+>>>>>>> develop

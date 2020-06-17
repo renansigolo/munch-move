@@ -2,6 +2,7 @@
 # Front Page
 --------------------------------------------------------------*/
 
+<<<<<<< HEAD
 .hero {
   text-align: center;
 
@@ -60,8 +61,23 @@
         font-size: 2.8rem;
       }
     }
-  }
+=======
+// Brand Mascot Horizontal Line
+@mixin mascot-hr($color) {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  border: 1.5px solid $color;
 
+  @include desktop {
+    top: 75px;
+>>>>>>> develop
+  }
+}
+
+<<<<<<< HEAD
   &__banner {
     background: var(--sky-dark) url("images/hills.png") bottom no-repeat;
     background-size: 100% auto;
@@ -70,9 +86,36 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-  }
+=======
+#front-page {
+  @extend .featured-image;
 
+  .section-intro {
+    margin-bottom: 64px;
+
+    h1 {
+      margin-bottom: 40px;
+    }
+    .side-article p {
+      font-size: 1.5rem;
+      font-weight: $bold;
+
+      a {
+        font-size: 1.5rem;
+        color: $blue;
+      }
+    }
+
+    @include mobile-only {
+      .side-article {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid $blue;
+      }
+>>>>>>> develop
+    }
+
+<<<<<<< HEAD
   &__content {
     .row {
       @include margin-y(3rem);
@@ -88,10 +131,23 @@
     @include desktop {
       p {
         font-size: 2.6rem;
+=======
+    @include desktop {
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .side-article {
+        padding-left: 30px;
+        border-left: 1px solid $blue;
+>>>>>>> develop
       }
     }
   }
 
+<<<<<<< HEAD
   &__form,
   .hero-form-fields {
     @extend %flex-column;
@@ -104,6 +160,61 @@
       & * {
         @include margin-x(10px);
         width: calc(100% - 10px);
+=======
+  .section-category {
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+
+      img {
+        padding: 0 24px;
+        background-color: #fff;
+        max-height: 90px;
+
+        @include desktop {
+          max-height: 150px;
+        }
+      }
+
+      .mascot-hr-general {
+        @include mascot-hr($blue);
+      }
+
+      .mascot-hr-resources {
+        @include mascot-hr($orange);
+      }
+
+      .mascot-hr-training {
+        @include mascot-hr($green);
+      }
+
+      .columns {
+        margin: 0;
+      }
+    }
+
+    h1 {
+      @include margin-tb(32px, 16px);
+    }
+
+    .card__header {
+      img {
+        height: 220px;
+        object-fit: cover;
+      }
+    }
+
+    @include mobile-only {
+      .card__header {
+        img {
+          height: 50vw;
+          object-fit: cover;
+        }
+>>>>>>> develop
       }
     }
   }

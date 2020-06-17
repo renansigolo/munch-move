@@ -1,0 +1,51 @@
+/*--------------------------------------------------------------
+# Content Page / Partial template
+--------------------------------------------------------------*/
+
+.site-main {
+  .error-404 {
+    a {
+      color: #fff;
+    }
+    @extend %flex-column;
+    h1 {
+      text-align: center;
+    }
+    section {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section-decomissioned-content {
+      @include margin-tb(52px, 56px);
+
+      p {
+        text-align: center;
+      }
+
+      img {
+        @include margin-tb(61px, 44px);
+      }
+    }
+
+    .section-quick-links {
+      h1 {
+        margin-bottom: 40px;
+      }
+
+      .quick-links {
+        @include grid(2);
+        h4 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .section-mascots {
+      @include margin-tb(32px, 72px);
+      h1 {
+        @include margin-tb(32px, 40px);
+      }
+    }
+  }
+}

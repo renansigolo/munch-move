@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# Search - Page Template
+--------------------------------------------------------------*/
+
+#tpl-search {
+  .search-form,
+  .staff-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 32px;
+
+    h4 {
+      color: $dark-blue;
+      margin-bottom: 24px;
+    }
+    &__content {      
+      input[type='text'],
+      input[type='password'] {
+        @extend %search-bar;
+        height: 45px;
+      }
+
+      input[type='password']{
+        margin-bottom: 16px
+      }
+    }
+  }
+
+  .search-results {
+    margin-top: 56px;
+    padding-top: 56px;
+    border-top: 3px solid $dark-blue;
+  }
+}

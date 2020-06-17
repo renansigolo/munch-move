@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Width
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+.full-width-max {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Text Alignment
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+/* Float
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}

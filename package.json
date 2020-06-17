@@ -7,23 +7,35 @@
   "license": "ISC",
   "main": "sass/style.scss",
   "scripts": {
-    "clean": "rm -rf css/**",
+    "clean": "rm -rf css/** node_modules package-lock.json",
+    "clean:install": "npm-run-all clean install build",
+    "copy-fontawesome": "cpx node_modules/@fortawesome/fontawesome-free/scss/**/* fonts/fontawesome/scss/ && cpx node_modules/@fortawesome/fontawesome-free/webfonts/**/* fonts/fontawesome/webfonts",
     "watch-sass": "node-sass sass/style.scss css/style.css --watch",
     "compile-sass": "node-sass sass/style.scss css/style.comp.css",
-    "prefix-css": "postcss --use autoprefixer -b 'defaults' css/style.comp.css -o css/style.prefix.css",
+    "prefix-css": "AUTOPREFIXER_GRID=autoplace postcss --use autoprefixer -b 'defaults' css/style.comp.css -o css/style.prefix.css",
     "compress-css": "node-sass css/style.prefix.css ./style.css --output-style compressed",
-    "start": "node-sass sass/style.scss ./style.css --watch --output-style compressed",
+    "start": "npm run copy-fontawesome && node-sass sass/style.scss ./style.css --watch --output-style compressed",
     "build": "npm-run-all compile-sass prefix-css compress-css"
   },
   "dependencies": {
+<<<<<<< HEAD
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.1",
     "cpx": "^1.5.0",
     "node-sass": "^4.13.0",
+=======
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "cpx": "^1.5.0",
+    "node-sass": "^4.14.1",
+>>>>>>> develop
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^6.1.3"
+    "postcss-cli": "^7.1.1"
   },
   "engines": {
     "node": ">=10.15.0",

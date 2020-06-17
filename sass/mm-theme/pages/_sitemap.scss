@@ -1,0 +1,34 @@
+/*--------------------------------------------------------------
+#  Sitemap Page Template
+--------------------------------------------------------------*/
+
+#sitemap-template {
+  .sitemap-content {
+    a {
+      padding-left: 8px;
+      @include list-icon($fa-var-chevron-right);
+      &::before {
+        margin-left: 0em;
+      }
+    }
+
+    > li {
+      color: $dark-blue;
+      border-bottom: 3px solid $dark-blue;
+      margin-left: 0;
+    }
+
+    li {
+      padding: 8px 0;
+      margin-bottom: 0;
+    }
+
+    .page_item_has_children {
+      .children {
+        a {
+          color: $blue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,398 @@
+/*--------------------------------------------------------------
+# Content Page
+--------------------------------------------------------------*/
+
+/* Global Classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.entry-title {
+  margin-bottom: 24px;
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+// Defaults for the content that will be added by the user
+.mm-content {
+  p > img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 1px solid $blue;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  h2 {
+    @include margin-tb(32px, 24px);
+  }
+
+  h3 {
+    margin-bottom: 24px;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: 24px;
+  }
+
+  li {
+    font-size: 1.5rem;
+
+    @include phablet {
+      font-size: 1.9rem;
+    }
+  }
+
+  ul {
+    li {
+      font-weight: $regular;
+
+      &::before {
+        content: "\2022";
+        color: $blue;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+
+  ol {
+    @include arrow-list;
+  }
+}
+
+/* Template Partials
+      content-page.php
+      content.php
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.entry-content {
+  h6 {
+    text-align: center;
+    display: inline-flex;
+    margin-top: 8px;
+    width: 100%;
+
+    @include desktop {
+      width: auto;
+    }
+    
+    a {
+      @extend .btn-general;
+    }
+  }
+
+  .four {
+    @include desktop {
+      position: sticky;
+      top: 32px;
+    }
+  }
+}
+
+/* Template Partials Components
+      component-related-links.php
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.related-links {
+  display: none;
+
+  @include desktop {
+    display: block;
+    padding-left: 32px;
+    border-left: 1px solid $blue;
+  }
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  ul {
+    li,
+    a {
+      @include list-icon($fa-var-chevron-right);
+      font-size: 2.1rem;
+      font-weight: $bold;
+      color: $dark-blue;
+      margin-bottom: 16px;
+      line-height: 26px;
+    }
+  }
+}
+
+.playlist {
+  margin-top: 24px;
+
+  table {
+    border-collapse: collapse;
+  }
+
+  .download {
+    &__mobile {
+      @include desktop {
+        display: none;
+      }
+    }
+
+    &__desktop {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__header {
+    th {
+      padding: 0 0 16px 0;
+      border-bottom: none;
+    }
+  }
+
+  &__song {
+    .song-title:hover {
+      cursor: pointer;
+    }
+    &:not(:last-child) {
+      border-bottom: 3px solid $dark-blue !important;
+    }
+
+    td {
+      @include desktop {
+        padding: 8px 0 8px 10px;
+        font-size: 1.9rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $dark-blue;
+      font-weight: $bold;
+      line-height: 2.8rem;
+
+      @include desktop {
+        font-size: 1.9rem;
+      }
+
+      &::before {
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-chevron-right);
+        font-size: 1.4rem;
+        margin: 0 0.5em 0 -0.5em;
+        line-height: 29px;
+        color: inherit;
+      }
+    }
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  .player {
+    display: flex;
+    margin-top: 32px;
+    width: 100%;
+    height: 50px;
+
+    .btn-rounded {
+      background-color: $blue;
+      padding: 15px;
+      margin: 0 5px;
+      border-radius: 25px;
+      border: none;
+      color: #fff;
+
+      i.fas {
+        font-size: 2rem;
+        height: 21px;
+        width: 21px;
+      }
+    }
+
+    .pause {
+      display: none;
+    }
+
+    #player-container {
+      display: flex;
+      width: 100%;
+
+      #player {
+        align-self: center;
+      }
+    }
+  }
+}
+
+.search-content {
+  h4 {
+    margin-top: 32px;
+    color: $dark-blue;
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    span {
+      display: none;
+    }
+
+    label {
+      width: 100%;
+      margin: 0;
+      margin-right: 16px;
+    }
+  }
+
+  .search-submit {
+    @extend .btn-general;
+  }
+}
+
+.staff-content {
+  &__authenticated,
+  &__error {
+    display: none;
+  }
+
+  &__authenticated {
+    flex-direction: column;
+
+    button {
+      margin-top: 16px;
+      min-width: 100%;
+    }
+  }
+
+  &__error {
+    margin: 16px 8px;
+    p {
+      color: $red;
+    }
+  }
+}
+
+/* Accordion
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.accordion-row:not(:last-child) {
+  border-bottom: 3px solid $dark-blue;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 1s;
+  font-weight: $bold;
+  color: $dark-blue;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff;
+  align-items: baseline;
+
+  &::after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-plus);
+    font-size: 1.4rem;
+    margin-left: 5px;
+  }
+
+  &.active::after {
+    content: fa-content($fa-var-minus);
+    padding-bottom: 16px;
+  }
+
+  @include phablet {
+    font-size: 1.9rem;
+  }
+}
+
+.panel {
+  padding: 0 16px 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  color: $blue;
+
+  ul {
+    li::before {
+      content: "";
+    }
+
+    a {
+      @include list-icon($fa-var-chevron-right);
+      list-style: none;
+      color: $blue;
+      text-decoration: none;
+      font-weight: $bold;
+    }
+  }
+}
+
+.arrow-list {
+  ul {
+    @include arrow-list;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.content-center {
+  h1,
+  h2 {
+    text-align: center;
+  }
+}
+
+.mascots-space-around {
+  height: 388px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.article {
+  @include mobile-only {
+    &__text-area {
+      margin-top: 16px;
+    }
+  }
+  @include desktop {
+    margin: 50px 0 40px;
+  }
+}
+
+#tpl-caring {
+  h1 {
+    @extend .entry-title;
+  }
+
+  h3 {
+    @include mobile-only {
+      margin-top: 32px;
+    }
+  }
+}

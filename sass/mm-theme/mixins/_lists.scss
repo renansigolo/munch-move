@@ -1,0 +1,62 @@
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  margin-left: 1em;
+  margin-bottom: 8px;
+  font-size: 1.9rem;
+  font-weight: $semi-bold;
+}
+
+@mixin list-icon($icon) {
+  &::before {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($icon);
+    font-size: 1.6rem;
+    float: left;
+    margin-left: -1em;
+    line-height: 26px;
+    color: inherit;
+  }
+}
+
+/* List Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@mixin list-header-icon($icon) {
+  li {
+    &::before {
+      @extend %fa-icon;
+      @extend .fas;
+      content: fa-content($icon);
+      position: absolute;
+      left: 10px;
+      font-size: 1.2rem;
+      line-height: 26px;
+    }
+  }
+}
+
+@mixin arrow-list {
+  li {
+    @include list-icon($fa-var-chevron-right);
+    color: $dark-blue;
+  }
+
+  a {
+    font-weight: $bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: $dark-blue;
+    }
+  }
+}

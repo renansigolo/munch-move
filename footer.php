@@ -9,12 +9,12 @@
  *
  * @package Munch_&_Move
  */
-
 ?>
 
-</div><!-- #content -->
+<?php $logo = get_field('footer_logo', 'option');?>
 
 <footer id="colophon" class="footer">
+<<<<<<< HEAD
 
 	<div class="container">
 		<div class="footer__partners">
@@ -28,6 +28,20 @@
 
 </footer><!-- #colophon -->
 </div><!-- #page -->
+=======
+    <div class="container">
+        <div class="footer__logo">
+            <img src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['alt'] ?>">
+        </div>
+        <div class="footer__navigation">
+            <?php wp_nav_menu(array(
+                'theme_location' => 'footer_menu'
+            )); ?>
+            <p class="footer__copyright"><?php the_field('copyright', 'option'); ?></p>
+        </div>
+    </div>
+</footer>
+>>>>>>> develop
 
 <?php wp_footer(); ?>
 
