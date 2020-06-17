@@ -2,11 +2,29 @@
 # Banner
 --------------------------------------------------------------*/
 
+// #hero {
+//   height: calc(80vh - 210px);
+
+//   @include desktop {
+//     max-height: unset;
+//     height: calc(80vh - 210px);
+
+//     @media (min-height: 1081px) {
+//       max-height: 50vh;
+//     }
+
+//     @media (max-height: 800px) and (min-width: 1000px) {
+//       min-height: 430px;
+//     }
+//   }  
+// }
+
+
 .featured-image {
   width: 100%;
   box-sizing: border-box;
   object-fit: cover;
-  height: 50vw;
+  height: 50vh;
 
   @include desktop {
     max-height: unset;
@@ -14,6 +32,10 @@
 
     @media (min-height: 1081px) {
       max-height: 50vh;
+    }
+
+    @media (max-height: 800px) and (min-width: 1000px) {
+      min-height: 430px;
     }
   }
 }
@@ -54,19 +76,13 @@
         text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
         line-height: 44px;
         padding-right: 12%;
-      }
-      @media (max-height: 700px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-
-        button {
-          font-size: 1.25rem;
-        }
+        word-break: break-word;
+        word-wrap: break-word;
+        width: 100%;
       }
 
-      @media (max-height: 600px) and (min-width: 1000px) {
-        display: none;
+      @media (max-height: 800px) and (min-width: 1000px) {
+        min-height: 430px;
       }
     }
   }
