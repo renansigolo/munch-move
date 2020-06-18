@@ -6924,22 +6924,29 @@ div.wpcf7-mail-sent-ok {
   background-color: #333333;
   padding: 22px 0;
   display: none; }
-  @media (max-width: 1000px) {
-    .ie-banner {
-      display: none; } }
-  .ie-banner .container {
-    justify-content: center;
+  .ie-banner .ie-container {
+    display: flex;
     align-items: center;
-    display: flex; }
-  .ie-banner h2,
-  .ie-banner p,
-  .ie-banner span {
-    color: #fff; }
-  .ie-banner h2 {
-    font-weight: 400;
-    margin-bottom: 8px; }
-  .ie-banner p {
-    font-size: 1.6rem; }
+    justify-content: center;
+    flex-direction: row; }
+    @media (max-width: 1000px) {
+      .ie-banner .ie-container {
+        flex-direction: column; } }
+    .ie-banner .ie-container a:hover {
+      cursor: pointer;
+      text-decoration: none; }
+    .ie-banner .ie-container h2,
+    .ie-banner .ie-container p,
+    .ie-banner .ie-container span {
+      color: #fff; }
+    .ie-banner .ie-container h2 {
+      font-weight: 400;
+      margin-bottom: 8px; }
+    .ie-banner .ie-container p {
+      font-size: 1.6rem; }
+      @media (max-width: 1000px) {
+        .ie-banner .ie-container p {
+          margin-bottom: 16px; } }
   .ie-banner .browsers {
     display: flex;
     justify-content: space-around; }

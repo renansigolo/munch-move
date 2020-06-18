@@ -3,33 +3,43 @@
 --------------------------------------------------------------*/
 
 .ie-banner {
-  @include mobile-only {
-    display: none;
-  }
-
   background-color: #333333;
   padding: 22px 0;
   display: none;
 
-  .container {
-    justify-content: center;
-    align-items: center;
+  .ie-container {
     display: flex;
-  }
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 
-  h2,
-  p,
-  span {
-    color: #fff;
-  }
+    @include mobile-only {
+      flex-direction: column;
+    }
 
-  h2 {
-    font-weight: $regular;
-    margin-bottom: 8px;
-  }
+    a:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
 
-  p {
-    font-size: 1.6rem;
+    h2,
+    p,
+    span {
+      color: #fff;
+    }
+
+    h2 {
+      font-weight: $regular;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.6rem;
+
+      @include mobile-only {
+        margin-bottom: 16px;
+      }
+    }
   }
 
   .browsers {
