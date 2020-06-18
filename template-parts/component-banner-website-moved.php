@@ -22,7 +22,7 @@ $logo_healthy_kids = get_template_directory_uri() . '/images/logo/healthy-kids-l
     <div class="container">
         <div class="we-moved">
             <img src="<?php echo $logo_healthy_kids; ?>" class="we-moved__logo" alt="Healthy Kids Logo">
-            <div>
+            <div class="we-moved__content">
                 <h3 class="we-moved__title">Looking for the Healthy Kids website?</h3>
                 <p class="we-moved__text">Thank you for visiting us over the years. Our website is no longer around, but we have moved our most popular information to our partner websites.</p>
             </div>
