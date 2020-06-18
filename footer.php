@@ -11,6 +11,9 @@
  */
 ?>
 
+
+<?php get_template_part('template-parts/component', 'banner-website-moved'); ?>
+
 <?php $logo = get_field('footer_logo', 'option');?>
 
 <footer id="colophon" class="footer">
