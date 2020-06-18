@@ -34,7 +34,7 @@ if ($main_content) {
                 </div>
             </section>
 
-            <section class="section-quick-links">
+            <section class="section-quick-links" id="quick-links">
                 <h1><?php echo $quick_links['title'] ?></h1>
 
                 <div class="quick-links">

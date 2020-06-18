@@ -26,7 +26,7 @@ $logo_healthy_kids = get_template_directory_uri() . '/images/logo/healthy-kids-l
                 <h3 class="we-moved__title">Looking for the Healthy Kids website?</h3>
                 <p class="we-moved__text">Thank you for visiting us over the years. Our website is no longer around, but we have moved our most popular information to our partner websites.</p>
             </div>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="<?php echo site_url('404/#quick-links') ?>" rel="noopener noreferrer">
                 <button class="btn-general">See Quick Links</button>
             </a>
         </div>
