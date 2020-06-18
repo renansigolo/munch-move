@@ -55,9 +55,7 @@ if ($banner_button) :
         </section>
 
         <!-- Utilities Bar -->
-        <?php
-        get_template_part('template-parts/component', 'utilities');
-        ?>
+        <?php get_template_part('template-parts/component', 'utilities'); ?>
 
         <?php
         while (have_rows('content-rows')) : the_row();

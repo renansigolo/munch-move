@@ -6808,6 +6808,33 @@ div.wpcf7-mail-sent-ok {
 # Template Parts
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Banner Covid-19
+--------------------------------------------------------------*/
+.covid {
+  padding: 30px 0;
+  overflow-wrap: break-word;
+  background: #ffc000;
+  color: #282d39; }
+  .covid a {
+    text-decoration: underline;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    line-height: 24px;
+    color: inherit; }
+  .covid__heading {
+    color: inherit;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 29px;
+    margin-bottom: 8px; }
+  .covid__text {
+    color: inherit;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    line-height: 24px; }
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------

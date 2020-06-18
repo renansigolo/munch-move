@@ -36,8 +36,10 @@
     <div id="overlay"></div>
 
     <div id="page" class="site">
-        <header id="masthead" class="site-header">
 
+        <?php get_template_part('template-parts/component', 'banner-covid19'); ?>
+
+        <header id="masthead" class="site-header">
             <div class="page-header">
 
                 <div class="page-header__container">
