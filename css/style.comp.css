@@ -6837,18 +6837,14 @@ div.wpcf7-mail-sent-ok {
 /*--------------------------------------------------------------
 # Banner Website Moved
 --------------------------------------------------------------*/
-.fixed-banner {
+#toast {
   background: #fcfcfc;
   width: 100%;
   position: fixed;
   bottom: 0;
-  z-index: 1;
-  padding-top: 0 !important;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2); }
+  z-index: 99;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+  display: none; }
 
 .website-moved {
   min-height: 160px;
@@ -6859,6 +6855,8 @@ div.wpcf7-mail-sent-ok {
     justify-content: center;
     align-items: center;
     padding: 10px 0; }
+    .website-moved .dismiss:hover {
+      cursor: pointer; }
     .website-moved .dismiss__text {
       color: #fff;
       font-size: 1.6rem;
