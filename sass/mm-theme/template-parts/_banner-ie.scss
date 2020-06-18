@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+# Banner IE
+--------------------------------------------------------------*/
+
+.ie-banner {
+  @include mobile-only {
+    display: none;
+  }
+
+  background-color: #333333;
+  padding: 22px 0;
+  display: none;
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  h2,
+  p,
+  span {
+    color: #fff;
+  }
+
+  h2 {
+    font-weight: $regular;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  .browsers {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .browser-logo {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+  }
+}

@@ -44,9 +44,25 @@ function authStaff() {
 (function ($) {
   // console.log(jQuery().jquery);
   // console.log(jQuery.ui.version);
+
+  function msieversion() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+      // If Internet Explorer, return version number
+      console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+      $('#ie-banner').show()
+    }
+
+    return false;
+  }
+
+  msieversion();
+
   /*======= Toast Notifications =========*/
   function toggleToast() {
-    return $("#toast").slideToggle()
+    return $("#toast").slideToggle();
   }
 
   function checkToast() {

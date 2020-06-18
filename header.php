@@ -38,6 +38,7 @@
     <div id="page" class="site">
 
         <?php get_template_part('template-parts/component', 'banner-covid19'); ?>
+        <?php get_template_part('template-parts/component', 'banner-ie'); ?>
 
         <header id="masthead" class="site-header">
             <div class="page-header">
