@@ -5,7 +5,7 @@
 .ie-banner {
   background-color: #333333;
   padding: 22px 0;
-  display: none;
+  // display: none;
 
   .ie-container {
     display: flex;
@@ -18,8 +18,9 @@
     }
 
     a:hover {
+      color: #fff;
       cursor: pointer;
-      text-decoration: none;
+      transform: scale(1.1);
     }
 
     h2,
@@ -53,5 +54,10 @@
     justify-content: center;
     align-self: center;
     text-align: center;
+
+    img {
+      width: 88px;
+      height: auto;
+    }
   }
 }
