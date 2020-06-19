@@ -28,7 +28,7 @@ if ($showRedirectNoticeBanner) :
                     <h3 class="we-moved__title">Looking for the Healthy Kids website?</h3>
                     <p class="we-moved__text">Thank you for visiting us over the years. Our website is no longer around, but we have moved our most popular information to our partner websites.</p>
                 </div>
-                <a href="<?php echo site_url('404/#quick-links') ?>" rel="noopener noreferrer">
+                <a href="<?php echo site_url('404/#quick-links') ?>" rel="noopener noreferrer" id="btn-to-quick-links">
                     <button class="btn-general">See Quick Links</button>
                 </a>
             </div>

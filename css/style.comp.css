@@ -6866,6 +6866,9 @@ div.wpcf7-mail-sent-ok {
       text-align: right;
       text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
       margin-right: 8px; }
+      .website-moved .dismiss__text:hover {
+        color: #fff;
+        text-decoration: underline; }
     .website-moved .dismiss__icon {
       color: #fff;
       text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); }
@@ -6922,8 +6925,7 @@ div.wpcf7-mail-sent-ok {
 --------------------------------------------------------------*/
 .ie-banner {
   background-color: #333333;
-  padding: 22px 0;
-  display: none; }
+  padding: 22px 0; }
   .ie-banner .ie-container {
     display: flex;
     align-items: center;
@@ -6933,8 +6935,9 @@ div.wpcf7-mail-sent-ok {
       .ie-banner .ie-container {
         flex-direction: column; } }
     .ie-banner .ie-container a:hover {
+      color: #fff;
       cursor: pointer;
-      text-decoration: none; }
+      transform: scale(1.1); }
     .ie-banner .ie-container h2,
     .ie-banner .ie-container p,
     .ie-banner .ie-container span {
@@ -6956,6 +6959,9 @@ div.wpcf7-mail-sent-ok {
     justify-content: center;
     align-self: center;
     text-align: center; }
+    .ie-banner .browser-logo img {
+      width: 88px;
+      height: auto; }
 
 /*--------------------------------------------------------------
 # Footer

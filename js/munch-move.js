@@ -42,9 +42,10 @@ function authStaff() {
 }
 
 (function ($) {
-  // console.log(jQuery().jquery);
-  // console.log(jQuery.ui.version);
+  // console.log('jQuery:', jQuery().jquery);
+  // console.log('jQuery UI:', jQuery.ui.version);
 
+  /*======= IE Banner =========*/
   function msieversion() {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
@@ -52,7 +53,7 @@ function authStaff() {
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
       // If Internet Explorer, return version number
       console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
-      $('#ie-banner').show()
+      $("#ie-banner").show();
     }
 
     return false;
@@ -60,7 +61,20 @@ function authStaff() {
 
   msieversion();
 
-  /*======= Toast Notifications =========*/
+  /*======= Covid Banner =========*/
+  // var distance = $("#masthead").offset().top,
+  //   $window = $(window);
+
+  // $window.scroll(function () {
+  //   if ($window.scrollTop() >= distance) {
+  //     console.log("top");
+  //     var showToast = sessionStorage.getItem("showToast");
+  //     if (showToast) {
+  //       $("#toast").show()
+  //     }
+  //   }
+  // });
+
   function toggleToast() {
     return $("#toast").slideToggle();
   }
@@ -76,9 +90,15 @@ function authStaff() {
     }
   }
 
-  checkToast();
+  setTimeout(() => {
+    checkToast();
+  }, 1000);
 
   $("#toast .dismiss").on("click", function () {
+    sessionStorage.showToast = false;
+    toggleToast();
+  });
+  $("#toast #btn-to-quick-links").on("click", function () {
     sessionStorage.showToast = false;
     toggleToast();
   });
