@@ -52,12 +52,17 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
     text-align: center;
 
     img {
-      width: 88px;
+      width: 10vw;
       height: auto;
+      align-self: center;
+
+      @include desktop {
+        width: 88px;
+        height: auto;
+      }
     }
   }
 }
