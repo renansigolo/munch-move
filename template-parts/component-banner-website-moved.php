@@ -16,7 +16,7 @@ $showRedirectNoticeBanner = get_field('show_redirect_notice_banner', 'option');
 if ($showRedirectNoticeBanner) :
 ?>
 
-    <section class="website-moved animate__animated animate__slideInUp" id="toast" style="background-image: url(<?php echo $bg_banner; ?>)">
+    <section class="website-moved" id="toast" style="background-image: url(<?php echo $bg_banner; ?>)">
         <div class="dismiss">
             <p class="dismiss__text">Dismiss this message</p>
             <i class="fas fa-chevron-down dismiss__icon"></i>
@@ -28,7 +28,7 @@ if ($showRedirectNoticeBanner) :
                     <h3 class="we-moved__title">Looking for the Healthy Kids website?</h3>
                     <p class="we-moved__text">Thank you for visiting us over the years. Our website is no longer around, but we have moved our most popular information to our partner websites.</p>
                 </div>
-                <a href="<?php echo site_url('404/#quick-links') ?>" rel="noopener noreferrer" id="btn-to-quick-links">
+                <a href="<?php echo site_url('404/#quick-links') ?>" rel="noopener noreferrer" id="js-quick-links">
                     <button class="btn-general">See Quick Links</button>
                 </a>
             </div>

@@ -62,50 +62,35 @@ function authStaff() {
   msieversion();
 
   /*======= Covid Banner =========*/
-  // var distance = $("#masthead").offset().top,
-  //   $window = $(window);
+  var toast = document.querySelector(".website-moved"),
+    toastBtnDismiss = document.querySelector(".website-moved .dismiss"),
+    toastBtnQuickLinks = document.querySelector(
+      ".website-moved #js-quick-links"
+    ),
+    distance = $("#masthead").offset().top,
+    $window = $(window);
 
-  // $window.scroll(function () {
-  //   if ($window.scrollTop() >= distance) {
-  //     console.log("top");
-  //     var showToast = sessionStorage.getItem("showToast");
-  //     if (showToast) {
-  //       // $("#toast").show()
-  //     }
-  //   }
-  // });
-
-  function toggleToast() {
-    return $(".website-moved").toggle();
-  }
   function dismissToast() {
     sessionStorage.showToast = false;
-    document
-      .querySelector(".website-moved")
-      .classList.add("animate__animated", "animate__slideOutDown");
+    toast.style.transform = "translateY(360px)";
     return;
   }
 
-  function checkToast() {
-    if (typeof Storage !== "undefined") {
-      if (!sessionStorage.showToast || sessionStorage.showToast === "true") {
-        sessionStorage.setItem("showToast", true);
-        toggleToast();
-      }
-    } else {
-      console.info("Local Storage not supported");
-    }
-  }
-
-  setTimeout(() => {
-    checkToast();
-  }, 1000);
-
-  $(".website-moved .dismiss").on("click", function () {
+  toastBtnDismiss.addEventListener("click", function () {
     dismissToast();
   });
-  $(".website-moved #btn-to-quick-links").on("click", function () {
+  toastBtnQuickLinks.addEventListener("click", function () {
     dismissToast();
+  });
+
+  $window.scroll(function () {
+    var showToast = sessionStorage.getItem("showToast");
+
+    if ($window.scrollTop() <= distance || showToast) {
+      toast.style.transform = "translateY(360px)";
+    } else {
+      toast.style.transform = "translateY(0)";
+    }
   });
 
   // Remove the Related Link matching the current page

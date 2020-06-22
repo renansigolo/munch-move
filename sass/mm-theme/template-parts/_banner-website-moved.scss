@@ -10,8 +10,9 @@
   z-index: 99;
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
   z-index: 99;
-  transition: all 0.2s ease-in-out;
-  display: none;
+  transition: transform 1s ease-in-out;
+  transform: translateY(360px); // display: none;
+
 
   .dismiss {
     display: flex;
