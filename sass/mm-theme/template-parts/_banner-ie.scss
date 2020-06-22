@@ -20,6 +20,14 @@
     a:hover {
       color: #fff;
       cursor: pointer;
+    }
+
+    img {
+      transition: all 0.2s ease-in-out;
+    }
+
+    img:hover {
+      transition: all 0.2s ease-in-out;
       transform: scale(1.1);
     }
 
@@ -32,9 +40,11 @@
     h2 {
       font-weight: $regular;
       margin-bottom: 8px;
+      font-size: 3rem;
     }
 
-    p {
+    p,
+    a {
       font-size: 1.6rem;
 
       @include mobile-only {
@@ -45,7 +55,7 @@
 
   .browsers {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .browser-logo {
@@ -63,6 +73,10 @@
         width: 88px;
         height: auto;
       }
+    }
+
+    span {
+      margin-top: 8px;
     }
   }
 }

@@ -153,7 +153,7 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_sub_page('Footer');
     acf_add_options_sub_page('404 Page');
     acf_add_options_sub_page('Related Links');
-    acf_add_options_sub_page('Banners');
+    acf_add_options_sub_page('Alert Banners');
 }
 /**
  * Filter the except length to 20 words.
