@@ -20,6 +20,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Animate.css
 # Skeleton
 # FontAwesome
 # Munch & Move Theme
@@ -34,6 +35,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 # Normalize
 --------------------------------------------------------------*/
 @import '../node_modules/normalize.css/normalize';
+
+/*--------------------------------------------------------------
+# Animate.css
+--------------------------------------------------------------*/
+@import '../node_modules/animate.css/animate.min';
 
 /*--------------------------------------------------------------
 # Skeleton

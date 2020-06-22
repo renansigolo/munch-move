@@ -70,13 +70,20 @@ function authStaff() {
   //     console.log("top");
   //     var showToast = sessionStorage.getItem("showToast");
   //     if (showToast) {
-  //       $("#toast").show()
+  //       // $("#toast").show()
   //     }
   //   }
   // });
 
   function toggleToast() {
-    return $("#toast").slideToggle();
+    return $(".website-moved").toggle();
+  }
+  function dismissToast() {
+    sessionStorage.showToast = false;
+    document
+      .querySelector(".website-moved")
+      .classList.add("animate__animated", "animate__slideOutDown");
+    return;
   }
 
   function checkToast() {
@@ -94,14 +101,13 @@ function authStaff() {
     checkToast();
   }, 1000);
 
-  $("#toast .dismiss").on("click", function () {
-    sessionStorage.showToast = false;
-    toggleToast();
+  $(".website-moved .dismiss").on("click", function () {
+    dismissToast();
   });
-  $("#toast #btn-to-quick-links").on("click", function () {
-    sessionStorage.showToast = false;
-    toggleToast();
+  $(".website-moved #btn-to-quick-links").on("click", function () {
+    dismissToast();
   });
+
   // Remove the Related Link matching the current page
   var allRelatedLinks = document.querySelectorAll(".related-links a");
 

@@ -16,7 +16,7 @@ $showRedirectNoticeBanner = get_field('show_redirect_notice_banner', 'option');
 if ($showRedirectNoticeBanner) :
 ?>
 
-    <section class="website-moved" id="toast" style="background-image: url(<?php echo $bg_banner; ?>)">
+    <section class="website-moved animate__animated animate__slideInUp" id="toast" style="background-image: url(<?php echo $bg_banner; ?>)">
         <div class="dismiss">
             <p class="dismiss__text">Dismiss this message</p>
             <i class="fas fa-chevron-down dismiss__icon"></i>
