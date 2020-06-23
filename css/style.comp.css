@@ -9966,7 +9966,8 @@ div.wpcf7-mail-sent-ok {
 --------------------------------------------------------------*/
 .ie-banner {
   background-color: #333333;
-  padding: 22px 0; }
+  padding: 22px 0;
+  display: none; }
   .ie-banner .ie-container {
     display: flex;
     align-items: center;
