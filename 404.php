@@ -34,7 +34,11 @@ if ($main_content) {
                 </div>
             </section>
 
+<<<<<<< HEAD
             <section class="section-quick-links">
+=======
+            <section class="section-quick-links" id="quick-links">
+>>>>>>> staging
                 <h1><?php echo $quick_links['title'] ?></h1>
 
                 <div class="quick-links">

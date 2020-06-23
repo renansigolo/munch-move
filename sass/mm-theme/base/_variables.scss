@@ -12,6 +12,7 @@ $dark-green: #529f17;
 $dark-gray: #282d39;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Mixins
 %flex-column {
   display: flex;
@@ -39,6 +40,24 @@ $bold: 700;
 $extra-bold: 800;
 $black: 900;
 
+=======
+// Hover Colors
+$dark-blue-hover: #09639e;
+$blue-hover: #259ae6;
+$green-hover: #74ab4a;
+$orange-hover: #de862e;
+
+// Font Weights
+// $thin: 100;
+// $light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+>>>>>>> staging
 .bg-dark-blue {
   background-color: $dark-blue;
 }
@@ -65,7 +84,10 @@ $black: 900;
       }
     }
   }
+<<<<<<< HEAD
 >>>>>>> develop
+=======
+>>>>>>> staging
 }
 
 .mm-item-dark-blue {

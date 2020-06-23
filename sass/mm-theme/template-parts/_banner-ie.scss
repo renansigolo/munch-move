@@ -1,0 +1,82 @@
+/*--------------------------------------------------------------
+# Banner IE
+--------------------------------------------------------------*/
+
+.ie-banner {
+  background-color: #333333;
+  padding: 22px 0;
+  // display: none;
+
+  .ie-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    @include mobile-only {
+      flex-direction: column;
+    }
+
+    a:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+
+    img {
+      transition: all 0.2s ease-in-out;
+    }
+
+    img:hover {
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.1);
+    }
+
+    h2,
+    p,
+    span {
+      color: #fff;
+    }
+
+    h2 {
+      font-weight: $regular;
+      margin-bottom: 8px;
+      font-size: 3rem;
+    }
+
+    p,
+    a {
+      font-size: 1.6rem;
+
+      @include mobile-only {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .browsers {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .browser-logo {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    img {
+      width: 10vw;
+      height: auto;
+      align-self: center;
+
+      @include desktop {
+        width: 88px;
+        height: auto;
+      }
+    }
+
+    span {
+      margin-top: 8px;
+    }
+  }
+}

@@ -2,6 +2,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .button,
 button,
 input[type="submit"],
@@ -16,6 +17,8 @@ input[type="button"] {
   font-size: 2rem;
   font-weight: bold;
 =======
+=======
+>>>>>>> staging
 // Default Styles 
 .button,
 button,
@@ -26,7 +29,10 @@ input[type='button'] {
   border-radius: 2px;
   font-weight: $extra-bold;
   font-size: 1.5rem;
+<<<<<<< HEAD
 >>>>>>> develop
+=======
+>>>>>>> staging
   cursor: pointer;
 }
 
@@ -41,6 +47,7 @@ input[type='submit']:focus,
 input[type='reset']:focus,
 input[type='button']:focus {
 <<<<<<< HEAD
+<<<<<<< HEAD
   color: #fff;
   border-color: #fff;
   box-shadow: 2px 2px 5px var(--grey);
@@ -51,3 +58,7 @@ input[type='button']:focus {
   transition: background-color 0.2s ease-in-out;
 }
 >>>>>>> develop
+=======
+  transition: background-color 0.2s ease-in-out;
+}
+>>>>>>> staging

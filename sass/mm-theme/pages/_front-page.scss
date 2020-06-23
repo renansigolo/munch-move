@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .hero {
   text-align: center;
 
@@ -62,6 +63,8 @@
       }
     }
 =======
+=======
+>>>>>>> staging
 // Brand Mascot Horizontal Line
 @mixin mascot-hr($color) {
   position: absolute;
@@ -73,6 +76,7 @@
 
   @include desktop {
     top: 75px;
+<<<<<<< HEAD
 >>>>>>> develop
   }
 }
@@ -90,6 +94,14 @@
 #front-page {
   @extend .featured-image;
 
+=======
+  }
+}
+
+#front-page {
+  @extend .featured-image;
+
+>>>>>>> staging
   .section-intro {
     margin-bottom: 64px;
 
@@ -104,6 +116,7 @@
         font-size: 1.5rem;
         color: $blue;
       }
+<<<<<<< HEAD
     }
 
     @include mobile-only {
@@ -132,6 +145,18 @@
       p {
         font-size: 2.6rem;
 =======
+=======
+    }
+
+    @include mobile-only {
+      .side-article {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid $blue;
+      }
+    }
+
+>>>>>>> staging
     @include desktop {
       .row {
         display: flex;
@@ -142,11 +167,15 @@
       .side-article {
         padding-left: 30px;
         border-left: 1px solid $blue;
+<<<<<<< HEAD
 >>>>>>> develop
+=======
+>>>>>>> staging
       }
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   &__form,
   .hero-form-fields {
@@ -161,6 +190,8 @@
         @include margin-x(10px);
         width: calc(100% - 10px);
 =======
+=======
+>>>>>>> staging
   .section-category {
     &__header {
       display: flex;
@@ -214,7 +245,10 @@
           height: 50vw;
           object-fit: cover;
         }
+<<<<<<< HEAD
 >>>>>>> develop
+=======
+>>>>>>> staging
       }
     }
   }

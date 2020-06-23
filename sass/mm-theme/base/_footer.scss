@@ -21,10 +21,14 @@
     display: flex;
     justify-content: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
     @include margin-y(3rem);
 =======
     margin-bottom: 32px;
 >>>>>>> develop
+=======
+    margin-bottom: 32px;
+>>>>>>> staging
 
     img {
       width: 100px;
@@ -83,14 +87,20 @@
 
   @include desktop {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> staging
     margin-top: 7.2rem;
     a,
     p {
       font-size: 1.4rem;
     }
 
+<<<<<<< HEAD
 >>>>>>> develop
+=======
+>>>>>>> staging
     .container {
       flex-direction: row;
       justify-content: space-between;
@@ -101,6 +111,7 @@
   @include widescreen {
     .container {
       justify-content: flex-start;
+<<<<<<< HEAD
 <<<<<<< HEAD
       min-width: 40%;
     }
@@ -114,6 +125,8 @@
       display: none;
 =======
 >>>>>>> develop
+=======
+>>>>>>> staging
     }
   }
 }

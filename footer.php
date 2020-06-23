@@ -11,6 +11,7 @@
  */
 ?>
 
+<<<<<<< HEAD
 <?php $logo = get_field('footer_logo', 'option');?>
 
 <footer id="colophon" class="footer">
@@ -29,6 +30,14 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 =======
+=======
+
+<?php get_template_part('template-parts/component', 'banner-website-moved'); ?>
+
+<?php $logo = get_field('footer_logo', 'option');?>
+
+<footer id="colophon" class="footer">
+>>>>>>> staging
     <div class="container">
         <div class="footer__logo">
             <img src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['alt'] ?>">
@@ -41,7 +50,10 @@
         </div>
     </div>
 </footer>
+<<<<<<< HEAD
 >>>>>>> develop
+=======
+>>>>>>> staging
 
 <?php wp_footer(); ?>
 

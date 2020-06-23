@@ -24,12 +24,16 @@
 }
 
 /* For devices larger than 550px */
+<<<<<<< HEAD
 <<<<<<< HEAD:sass/libs/skeleton/_grid.scss
 // Adjusted to 576px to match the new breakpoints
 @media (min-width: 576px) {
 =======
 @media (min-width: 750px) {
 >>>>>>> develop:sass/skeleton/_grid.scss
+=======
+@media (min-width: 750px) {
+>>>>>>> staging
   .container {
     width: 80%;
   }

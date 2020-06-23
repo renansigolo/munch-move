@@ -8,7 +8,11 @@
   "main": "sass/style.scss",
   "scripts": {
     "clean": "rm -rf css/** node_modules package-lock.json",
+<<<<<<< HEAD
     "clean:install": "npm-run-all clean install build",
+=======
+    "clean:install": "npm run clean && npm i && npm run build",
+>>>>>>> staging
     "copy-fontawesome": "cpx node_modules/@fortawesome/fontawesome-free/scss/**/* fonts/fontawesome/scss/ && cpx node_modules/@fortawesome/fontawesome-free/webfonts/**/* fonts/fontawesome/webfonts",
     "watch-sass": "node-sass sass/style.scss css/style.css --watch",
     "compile-sass": "node-sass sass/style.scss css/style.comp.css",
@@ -18,6 +22,7 @@
     "build": "npm-run-all compile-sass prefix-css compress-css"
   },
   "dependencies": {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "normalize.css": "^8.0.1"
   },
@@ -34,6 +39,16 @@
     "cpx": "^1.5.0",
     "node-sass": "^4.14.1",
 >>>>>>> develop
+=======
+    "@fortawesome/fontawesome-free": "^5.13.1",
+    "animate.css": "^4.1.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.2",
+    "cpx": "^1.5.0",
+    "node-sass": "^4.14.1",
+>>>>>>> staging
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1"
   },

@@ -7,6 +7,7 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 get_header();
 ?>
 
@@ -58,6 +59,9 @@ get_header();
 =======
 get_header(); ?>
 >>>>>>> develop
+=======
+get_header(); ?>
+>>>>>>> staging
 
 <?php
 $banner_button = get_field('banner_button');
@@ -106,9 +110,13 @@ if ($banner_button) :
         </section>
 
         <!-- Utilities Bar -->
+<<<<<<< HEAD
         <?php
         get_template_part('template-parts/component', 'utilities');
         ?>
+=======
+        <?php get_template_part('template-parts/component', 'utilities'); ?>
+>>>>>>> staging
 
         <?php
         while (have_rows('content-rows')) : the_row();
