@@ -70,7 +70,7 @@ function authStaff() {
       (!isStaff && urlSlug === "munch-move-staff-development-kit-self-delivered")
     ) {
       window.location =
-        "https://munch-move.giantsquidstaging.com//munch-move-program-training/staff-development-kit-and-resource-manual/";
+        "https://healthykids.nsw.gov.au/munch-move-program-training/staff-development-kit-and-resource-manual/";
     } else {
       if (isStaff) {
         showStaffContent();
