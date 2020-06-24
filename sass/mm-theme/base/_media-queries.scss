@@ -1,0 +1,50 @@
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+// HOW TO USE IT
+// .my-box {
+//   @include for-desktop-up {
+//     padding: 20px;
+//   }
+// }
+
+// Small devices (landscape phones, 576px and up)
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin widescreen {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+/* Super large devices (large monitors, 1800px and up) */
+@mixin fullhd {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
