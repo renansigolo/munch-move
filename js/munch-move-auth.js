@@ -27,9 +27,12 @@ function authStaff() {
 }
 
 (function () {
+  
   var staffAuthenticated = document.querySelector("#js-authenticated"),
     staffError = document.querySelector(".staff-content__error"),
     staffForm = document.querySelector(".staff-form");
+    // staffFormMessage = document.querySelector(".post-password-form p");
+    // staffFormMessage.innerHTML = 'Please enter the password supplied to you by your Munch & Move Support Officer to access the Munch & Move Staff Development Kit and Munch & Move Resource Manual.'
 
   function showStaffContent() {
     staffError.style.display = "none";
@@ -62,11 +65,12 @@ function authStaff() {
     console.log(isStaff);
 
     if (
-      !isStaff &&
-      urlSlug === ("staff-development-kit" || "munch-move-resource-manual")
+      (!isStaff && urlSlug === "staff-development-kit") ||
+      (!isStaff && urlSlug === "munch-move-resource-manual") ||
+      (!isStaff && urlSlug === "munch-move-staff-development-kit-self-delivered")
     ) {
       window.location =
-        "http://munch-move-dev.local/munch-move-program-training/staff-development-kit-and-resource-manual/";
+        "https://munch-move.giantsquidstaging.com//munch-move-program-training/staff-development-kit-and-resource-manual/";
     } else {
       if (isStaff) {
         showStaffContent();

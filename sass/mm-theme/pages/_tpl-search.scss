@@ -10,19 +10,21 @@
     width: 100%;
     margin-top: 32px;
 
-    h4 {
+    h4,
+    label {
       color: $dark-blue;
       margin-bottom: 24px;
     }
-    &__content {      
-      input[type='text'],
-      input[type='password'] {
+
+    &__content {
+      input[type="text"],
+      input[type="password"] {
         @extend %search-bar;
         height: 45px;
       }
 
-      input[type='password']{
-        margin-bottom: 16px
+      input[type="password"] {
+        margin-bottom: 16px;
       }
     }
   }
@@ -33,3 +35,35 @@
     border-top: 3px solid $dark-blue;
   }
 }
+
+.post-password-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 32px;
+
+  > p:not(:first-child) {
+    label {
+      input[type="password"] {
+        @extend %search-bar;
+      }
+    }
+    input[type="submit"] {
+      @extend .btn-general;
+    }
+  }
+
+  input {
+    border-radius: 25px;
+  }
+}
+
+// .pass-label {
+//   color: $dark-blue;
+//   margin-bottom: 24px;
+// }
+
+// .post-password {
+//   @extend %search-bar;
+//   height: 45px;
+// }

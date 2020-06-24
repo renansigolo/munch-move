@@ -107,20 +107,17 @@ function munch_move_widgets_init()
     ));
 }
 add_action('widgets_init', 'munch_move_widgets_init');
-/**
- * Enqueue scripts and styles.
- */
-// function replace_core_jquery_version() {
-//     wp_deregister_script( 'jquery-core' );
-//     wp_register_script( 'jquery-core', "https://code.jquery.com/jquery-3.5.1.min.js", array(), '3.1.1' );
-//     wp_deregister_script( 'jquery-migrate' );
-//     wp_register_script( 'jquery-migrate', "https://code.jquery.com/jquery-migrate-3.0.0.min.js", array(), '3.0.0' );
-// }
-// add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
 
 function munch_move_scripts()
 {
     wp_enqueue_style('munch-move-style', get_stylesheet_uri());
+    wp_enqueue_script(
+        'munch-move-auth',
+        get_template_directory_uri() . '/js/munch-move-auth.js',
+        array(),
+        '1.0.0',
+        true
+    );
     wp_enqueue_script(
         'mm-utility-bar',
         get_template_directory_uri() . '/js/mm-utility-bar.js',
@@ -131,13 +128,6 @@ function munch_move_scripts()
     wp_enqueue_script(
         'munch-move',
         get_template_directory_uri() . '/js/munch-move.js',
-        array('jquery'),
-        '1.0.0',
-        true
-    );
-    wp_enqueue_script(
-        'munch-move-auth',
-        get_template_directory_uri() . '/js/munch-move-auth.js',
         array('jquery'),
         '1.0.0',
         true
@@ -174,19 +164,6 @@ function wpdocs_custom_excerpt_length($length)
 }
 add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
 /**
- *  Hide these three pages from search:
- *  1. staff-development-kit
- *  2. staff-development-kit-educator
- *  3. resource-manual
- */
-function wpb_search_filter($query)
-{
-    if ($query->is_search)
-        $query->set('post__not_in', array(1769, 1766, 1771));
-    return $query;
-}
-add_filter('pre_get_posts', 'wpb_search_filter');
-/**
  *  Grant editing permission to editor tole to access the privacy policy page
  */
 add_action('map_meta_cap', 'custom_manage_privacy_options', 1, 4);
@@ -203,3 +180,39 @@ function custom_manage_privacy_options($caps, $cap, $user_id, $args)
   }
   return $caps;
 }
+
+
+// function custom_password_form() {
+//     global $post;
+//     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+//     $o = '<form class="protected-post-form" action="' . get_option('siteurl') . '/wp-pass.php" method="post">
+//     ' . __( "Please enter the password supplied to you by your Munch & Move Support Officer to access the Munch & Move Staff Development Kit and Munch & Move Resource Manual." ) . '
+//     <h4 class="pass-label" for="' . $label . '">' . __( "Enter Password:" ) . ' </h4>
+//     <div class="row">
+//         <div class="ten columns">
+//         <input name="post_password" id="' . $label . '" type="password" style="background: #ffffff; border:1px solid #259ae6; color: #259ae6; padding:10px; width: 100%;     height: 45px;" size="20" />
+//         </div>
+//         <div class="two columns">
+//         <input type="submit" name="Submit" class="btn-general" value="' . esc_attr__( "Submit" ) . '" />
+//         </div>
+//     </div>
+//     </form>
+//     ';
+//     return $o;
+// }
+// add_filter( 'the_password_form', 'custom_password_form' );
+
+
+/**
+ *  Hide these three pages from search:
+ *  1. staff-development-kit
+ *  2. staff-development-kit-educator
+ *  3. resource-manual
+ */
+// function wpb_search_filter($query)
+// {
+//     if ($query->is_search)
+//         $query->set('post__not_in', array(1769, 1766, 1771));
+//     return $query;
+// }
+// add_filter('pre_get_posts', 'wpb_search_filter');

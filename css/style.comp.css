@@ -8346,7 +8346,7 @@ li {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Buttons Mixins
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.btn-dark-blue, .btn-general, .entry-content h6 a, .search-content .search-submit, .btn-training, .btn-resources {
+.btn-dark-blue, .btn-general, .entry-content h6 a, .search-content .search-submit, .post-password-form > p:not(:first-child) input[type="submit"], .btn-training, .btn-resources {
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
@@ -8359,11 +8359,11 @@ li {
   margin: 0;
   width: 100%; }
   @media (min-width: 1000px) {
-    .btn-dark-blue, .btn-general, .entry-content h6 a, .search-content .search-submit, .btn-training, .btn-resources {
+    .btn-dark-blue, .btn-general, .entry-content h6 a, .search-content .search-submit, .post-password-form > p:not(:first-child) input[type="submit"], .btn-training, .btn-resources {
       width: auto; } }
-  .btn-dark-blue:hover, .btn-general:hover, .entry-content h6 a:hover, .search-content .search-submit:hover, .btn-training:hover, .btn-resources:hover {
+  .btn-dark-blue:hover, .btn-general:hover, .entry-content h6 a:hover, .search-content .search-submit:hover, .post-password-form > p:not(:first-child) input:hover[type="submit"], .btn-training:hover, .btn-resources:hover {
     color: #fff; }
-  .btn-dark-blue:focus, .btn-general:focus, .entry-content h6 a:focus, .search-content .search-submit:focus, .btn-training:focus, .btn-resources:focus {
+  .btn-dark-blue:focus, .btn-general:focus, .entry-content h6 a:focus, .search-content .search-submit:focus, .post-password-form > p:not(:first-child) input:focus[type="submit"], .btn-training:focus, .btn-resources:focus {
     outline: none; }
 
 .btn-dark-blue {
@@ -8371,9 +8371,9 @@ li {
   .btn-dark-blue:hover {
     background-color: #09639e; }
 
-.btn-general, .entry-content h6 a, .search-content .search-submit {
+.btn-general, .entry-content h6 a, .search-content .search-submit, .post-password-form > p:not(:first-child) input[type="submit"] {
   background-color: #29abff; }
-  .btn-general:hover, .entry-content h6 a:hover, .search-content .search-submit:hover {
+  .btn-general:hover, .entry-content h6 a:hover, .search-content .search-submit:hover, .post-password-form > p:not(:first-child) input:hover[type="submit"] {
     background-color: #259ae6; }
 
 .btn-training {
@@ -8560,10 +8560,10 @@ video {
   background-color: #fff;
   z-index: 1; }
 
-.page-header .nav-desktop .menu-service .search-bar, .menu-mobile .mobile-search-bar .search-bar, #tpl-search .search-form__content input[type='text'],
-#tpl-search .search-form__content input[type='password'],
-#tpl-search .staff-form__content input[type='text'],
-#tpl-search .staff-form__content input[type='password'] {
+.page-header .nav-desktop .menu-service .search-bar, .menu-mobile .mobile-search-bar .search-bar, #tpl-search .search-form__content input[type="text"],
+#tpl-search .search-form__content input[type="password"],
+#tpl-search .staff-form__content input[type="text"],
+#tpl-search .staff-form__content input[type="password"], .post-password-form > p:not(:first-child) label input[type="password"] {
   background: #ffffff;
   border: 1px solid #0a73b7;
   border-radius: 25px;
@@ -8573,10 +8573,10 @@ video {
   margin-right: 8px;
   width: 100%;
   height: 100%; }
-  .page-header .nav-desktop .menu-service .search-bar::placeholder, .menu-mobile .mobile-search-bar .search-bar::placeholder, #tpl-search .search-form__content input[type='text']::placeholder,
-  #tpl-search .search-form__content input[type='password']::placeholder,
-  #tpl-search .staff-form__content input[type='text']::placeholder,
-  #tpl-search .staff-form__content input[type='password']::placeholder {
+  .page-header .nav-desktop .menu-service .search-bar::placeholder, .menu-mobile .mobile-search-bar .search-bar::placeholder, #tpl-search .search-form__content input[type="text"]::placeholder,
+  #tpl-search .search-form__content input[type="password"]::placeholder,
+  #tpl-search .staff-form__content input[type="text"]::placeholder,
+  #tpl-search .staff-form__content input[type="password"]::placeholder, .post-password-form > p:not(:first-child) label input[type="password"]::placeholder {
     color: #29abff; }
 
 .btn {
@@ -9750,22 +9750,32 @@ div.wpcf7-mail-sent-ok {
   width: 100%;
   margin-top: 32px; }
   #tpl-search .search-form h4,
-  #tpl-search .staff-form h4 {
+  #tpl-search .search-form label,
+  #tpl-search .staff-form h4,
+  #tpl-search .staff-form label {
     color: #0a73b7;
     margin-bottom: 24px; }
-  #tpl-search .search-form__content input[type='text'],
-  #tpl-search .search-form__content input[type='password'],
-  #tpl-search .staff-form__content input[type='text'],
-  #tpl-search .staff-form__content input[type='password'] {
+  #tpl-search .search-form__content input[type="text"],
+  #tpl-search .search-form__content input[type="password"],
+  #tpl-search .staff-form__content input[type="text"],
+  #tpl-search .staff-form__content input[type="password"] {
     height: 45px; }
-  #tpl-search .search-form__content input[type='password'],
-  #tpl-search .staff-form__content input[type='password'] {
+  #tpl-search .search-form__content input[type="password"],
+  #tpl-search .staff-form__content input[type="password"] {
     margin-bottom: 16px; }
 
 #tpl-search .search-results {
   margin-top: 56px;
   padding-top: 56px;
   border-top: 3px solid #0a73b7; }
+
+.post-password-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 32px; }
+  .post-password-form input {
+    border-radius: 25px; }
 
 /*--------------------------------------------------------------
 #  Privacy Policy Page Template
@@ -10018,6 +10028,9 @@ div.wpcf7-mail-sent-ok {
     .ie-banner .browser-logo span {
       margin-top: 8px; }
 
+/*--------------------------------------------------------------
+# Content Page
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
