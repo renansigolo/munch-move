@@ -30,42 +30,41 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 #### Front Page
 --------------------------------------------------------------*/
 
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-@import '../node_modules/normalize.css/normalize';
+@import "../node_modules/normalize.css/normalize";
 
 /*--------------------------------------------------------------
 # Animate.css
 --------------------------------------------------------------*/
-@import '../node_modules/animate.css/animate.min';
+@import "../node_modules/animate.css/animate.min";
 
 /*--------------------------------------------------------------
 # Skeleton
 --------------------------------------------------------------*/
-@import 'mm-theme/base/grid';
+@import "mm-theme/base/grid";
 // @import 'skeleton/grid';
 
-@import 'skeleton/base';
+@import "skeleton/base";
 // @import 'skeleton/typography';
 // @import 'skeleton/links';
 // @import 'skeleton/buttons';
-@import 'skeleton/forms';
+@import "skeleton/forms";
 // @import 'skeleton/lists';
 // @import 'skeleton/code';
 // @import 'skeleton/tables';
 // @import 'skeleton/spacing';
 // @import 'skeleton/utilities';
-@import 'skeleton/clearing';
+@import "skeleton/clearing";
 
 /*--------------------------------------------------------------
 # FontAwesome
 --------------------------------------------------------------*/
 $fa-font-path: "fonts/fontawesome/webfonts";
-@import 'fonts/fontawesome/scss/fontawesome';
-@import 'fonts/fontawesome/scss/solid';
-@import 'fonts/fontawesome/scss/brands';
+@import "fonts/fontawesome/scss/fontawesome";
+@import "fonts/fontawesome/scss/solid";
+@import "fonts/fontawesome/scss/brands";
 
 /*--------------------------------------------------------------
 # Reset
@@ -76,60 +75,59 @@ $fa-font-path: "fonts/fontawesome/webfonts";
 # Munch & Move Theme
 --------------------------------------------------------------*/
 // @import 'mm-theme/base/grid';
-@import 'mm-theme/base/variables';
-
+@import "mm-theme/base/variables";
 
 // Mixins
-@import 'mm-theme/mixins/media-queries';
-@import 'mm-theme/mixins/spacing';
-@import 'mm-theme/mixins/flex';
-@import 'mm-theme/mixins/lists';
-@import 'mm-theme/mixins/buttons';
-@import 'mm-theme/mixins/cards';
-@import 'mm-theme/mixins/headers';
+@import "mm-theme/mixins/media-queries";
+@import "mm-theme/mixins/spacing";
+@import "mm-theme/mixins/flex";
+@import "mm-theme/mixins/lists";
+@import "mm-theme/mixins/buttons";
+@import "mm-theme/mixins/cards";
+@import "mm-theme/mixins/headers";
 
 /*--------------------------------------------------------------
 # General Styles
 --------------------------------------------------------------*/
-@import 'mm-theme/base/typography';
-@import 'mm-theme/base/scaffolding';
-@import 'mm-theme/base/header';
-@import 'mm-theme/base/banner';
-@import 'mm-theme/base/tables';
-@import 'mm-theme/base/utilities';
+@import "mm-theme/base/typography";
+@import "mm-theme/base/scaffolding";
+@import "mm-theme/base/header";
+@import "mm-theme/base/banner";
+@import "mm-theme/base/tables";
+@import "mm-theme/base/utilities";
 
 /*--------------------------------------------------------------
 # Overwrites Skeleton Framework
 --------------------------------------------------------------*/
-@import 'mm-theme/base/buttons';
-@import 'mm-theme/base/forms';
+@import "mm-theme/base/buttons";
+@import "mm-theme/base/forms";
 
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
-@import 'mm-theme/pages/front-page';
-@import 'mm-theme/pages/page';
-@import 'mm-theme/pages/single';
-@import 'mm-theme/pages/tpl-munch-move-common';
-@import 'mm-theme/pages/tpl-search';
-@import 'mm-theme/pages/privacy-policy';
-@import 'mm-theme/pages/sitemap';
-@import 'mm-theme/pages/404';
+@import "mm-theme/pages/front-page";
+@import "mm-theme/pages/page";
+@import "mm-theme/pages/single";
+@import "mm-theme/pages/tpl-munch-move-common";
+@import "mm-theme/pages/tpl-search";
+@import "mm-theme/pages/privacy-policy";
+@import "mm-theme/pages/sitemap";
+@import "mm-theme/pages/404";
 
 /*--------------------------------------------------------------
 # Template Parts
 --------------------------------------------------------------*/
-@import 'mm-theme/template-parts/banner-covid19';
-@import 'mm-theme/template-parts/banner-website-moved';
-@import 'mm-theme/template-parts/banner-ie';
-@import 'mm-theme/template-parts/content-page';
+@import "mm-theme/template-parts/banner-covid19";
+@import "mm-theme/template-parts/banner-website-moved";
+@import "mm-theme/template-parts/banner-ie";
+@import "mm-theme/template-parts/content-page";
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-@import 'mm-theme/base/footer';
+@import "mm-theme/base/footer";
 
 /*--------------------------------------------------------------
 # Print
 --------------------------------------------------------------*/
-@import 'mm-theme/print';
+@import "mm-theme/print";

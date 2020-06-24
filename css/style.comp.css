@@ -8405,7 +8405,9 @@ li {
 
 .card-general .card__header {
   line-height: 0;
-  border-bottom: 12px solid #29abff; }
+  border-bottom: 12px solid #29abff;
+  width: 100%;
+  height: 220px; }
   .card-general .card__header img {
     width: 100%;
     height: 220px;
@@ -8444,7 +8446,9 @@ li {
 
 .card-training .card__header {
   line-height: 0;
-  border-bottom: 12px solid #86c555; }
+  border-bottom: 12px solid #86c555;
+  width: 100%;
+  height: 220px; }
   .card-training .card__header img {
     width: 100%;
     height: 220px;
@@ -8483,7 +8487,9 @@ li {
 
 .card-resources .card__header {
   line-height: 0;
-  border-bottom: 12px solid #f79533; }
+  border-bottom: 12px solid #f79533;
+  width: 100%;
+  height: 220px; }
   .card-resources .card__header img {
     width: 100%;
     height: 220px;
@@ -8536,6 +8542,12 @@ video {
   left: 0;
   width: 100%;
   height: 100%; }
+
+.compat-object-fit {
+  background-size: cover;
+  background-position: center center; }
+  .compat-object-fit img {
+    opacity: 0; }
 
 /*--------------------------------------------------------------
 # Headers
@@ -9199,6 +9211,26 @@ img {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+#hero.compat-object-fit {
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 72px; }
+  @media (min-width: 1000px) {
+    #hero.compat-object-fit {
+      max-height: unset;
+      padding-bottom: 50px;
+      height: calc(80vh - 210px); } }
+  @media (min-width: 1000px) and (min-height: 1081px) {
+    #hero.compat-object-fit {
+      max-height: 50vh; } }
+  @media (min-width: 1000px) and (max-height: 800px) and (min-width: 1000px) {
+    #hero.compat-object-fit {
+      min-height: 430px; } }
+  #hero.compat-object-fit img {
+    opacity: 0; }
+  #hero.compat-object-fit .utility {
+    margin-bottom: 0; }
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

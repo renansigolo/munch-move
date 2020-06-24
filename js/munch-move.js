@@ -25,6 +25,28 @@ function redirectTo(url) {
 }
 
 (function ($) {
+  if (!Modernizr.objectfit) {
+    $(".card__header").each(function () {
+      var $container = $(this),
+        imgUrl = $container.find("img").prop("src");
+      if (imgUrl) {
+        $container
+          .css("backgroundImage", "url(" + imgUrl + ")")
+          .addClass("compat-object-fit");
+      }
+    });
+
+    $('#hero').each(function () {
+      var $container = $(this),
+          imgUrl = $container.find('img').prop('src');
+      if (imgUrl) {
+        $container
+          .css('backgroundImage', 'url(' + imgUrl + ')')
+          .addClass('compat-object-fit');
+      }
+    });
+  }
+
   // console.log('jQuery:', jQuery().jquery);
   // console.log('jQuery UI:', jQuery.ui.version);
 
@@ -35,7 +57,6 @@ function redirectTo(url) {
 
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
       // If Internet Explorer, return version number
-      console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
       $("#ie-banner").show();
     }
 

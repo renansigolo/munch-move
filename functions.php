@@ -112,6 +112,13 @@ function munch_move_scripts()
 {
     wp_enqueue_style('munch-move-style', get_stylesheet_uri());
     wp_enqueue_script(
+        'modernizr',
+        get_template_directory_uri() . '/js/modernizr.js',
+        array(),
+        '3.6.0',
+        true
+    );
+    wp_enqueue_script(
         'munch-move-auth',
         get_template_directory_uri() . '/js/munch-move-auth.js',
         array(),
