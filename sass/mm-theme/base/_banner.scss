@@ -16,9 +16,8 @@
 //     @media (max-height: 800px) and (min-width: 1000px) {
 //       min-height: 430px;
 //     }
-//   }  
+//   }
 // }
-
 
 .featured-image {
   width: 100%;
@@ -318,5 +317,34 @@
     to {
       opacity: 1;
     }
+  }
+}
+
+#hero.compat-object-fit {
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 72px;
+
+  @include desktop {
+    max-height: unset;
+    padding-bottom: 50px;
+    height: calc(80vh - 210px);
+
+    @media (min-height: 1081px) {
+      max-height: 50vh;
+    }
+
+    @media (max-height: 800px) and (min-width: 1000px) {
+      min-height: 430px;
+    }
+  }
+
+  img {
+    // hide image if object fit is not supported - opacity to 0 for the link area
+    opacity: 0;
+  }
+
+  .utility {
+    margin-bottom: 0;
   }
 }

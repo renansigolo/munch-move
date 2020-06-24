@@ -21,33 +21,32 @@ function pauseSong() {
 }
 
 function redirectTo(url) {
-  return window.location = url;
-}
-
-function authStaff() {
-  var staffAuthenticated = document.querySelector(".staff-content__authenticated");
   return (window.location = url);
 }
 
-
-function authStaff() {
-  var staffAuthenticated = document.querySelector(
-    ".staff-content__authenticated"
-  );
-  var staffError = document.querySelector(".staff-content__error");
-  var userPassword = document.querySelector(".staff-form__content input").value;
-  var staffForm = document.querySelector(".staff-form");
-
-  if (userPassword === "Oranges") {
-    staffError.style.display = "none";
-    staffAuthenticated.style.display = "flex";
-    staffForm.style.display = "none";
-  } else {
-    staffError.style.display = "flex";
-  }
-}
-
 (function ($) {
+  if (!Modernizr.objectfit) {
+    $(".card__header").each(function () {
+      var $container = $(this),
+        imgUrl = $container.find("img").prop("src");
+      if (imgUrl) {
+        $container
+          .css("backgroundImage", "url(" + imgUrl + ")")
+          .addClass("compat-object-fit");
+      }
+    });
+
+    $('#hero').each(function () {
+      var $container = $(this),
+          imgUrl = $container.find('img').prop('src');
+      if (imgUrl) {
+        $container
+          .css('backgroundImage', 'url(' + imgUrl + ')')
+          .addClass('compat-object-fit');
+      }
+    });
+  }
+
   // console.log('jQuery:', jQuery().jquery);
   // console.log('jQuery UI:', jQuery.ui.version);
 
@@ -58,7 +57,6 @@ function authStaff() {
 
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
       // If Internet Explorer, return version number
-      console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
       $("#ie-banner").show();
     }
 
@@ -99,7 +97,6 @@ function authStaff() {
     }
   });
 
->>>>>>> staging
   // Remove the Related Link matching the current page
   var allRelatedLinks = document.querySelectorAll(".related-links a");
 

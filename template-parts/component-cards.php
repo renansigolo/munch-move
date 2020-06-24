@@ -34,7 +34,7 @@
                                 <?php $card_image = get_sub_field('image'); ?>
 
                                 <?php if (!$has_video) : ?>
-                                    <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>">
+                                    <img src="<?php echo $card_image['url'];  ?>" alt="<?php echo $card_image['alt'];  ?>" class="card-image">
                                 <?php else :  ?>
                                     <div class="embed-container">
                                         <?php the_sub_field('video'); ?>

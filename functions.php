@@ -112,6 +112,13 @@ function munch_move_scripts()
 {
     wp_enqueue_style('munch-move-style', get_stylesheet_uri());
     wp_enqueue_script(
+        'modernizr',
+        get_template_directory_uri() . '/js/modernizr.js',
+        array(),
+        '3.6.0',
+        true
+    );
+    wp_enqueue_script(
         'munch-move-auth',
         get_template_directory_uri() . '/js/munch-move-auth.js',
         array(),
@@ -181,6 +188,7 @@ function custom_manage_privacy_options($caps, $cap, $user_id, $args)
   return $caps;
 }
 
+
 // function custom_password_form() {
 //     global $post;
 //     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
@@ -200,6 +208,7 @@ function custom_manage_privacy_options($caps, $cap, $user_id, $args)
 //     return $o;
 // }
 // add_filter( 'the_password_form', 'custom_password_form' );
+
 
 /**
  *  Hide these three pages from search:
