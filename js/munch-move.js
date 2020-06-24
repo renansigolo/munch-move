@@ -21,21 +21,19 @@ function pauseSong() {
 }
 
 function redirectTo(url) {
-<<<<<<< HEAD
   return window.location = url;
 }
 
 function authStaff() {
   var staffAuthenticated = document.querySelector(".staff-content__authenticated");
-=======
   return (window.location = url);
 }
+
 
 function authStaff() {
   var staffAuthenticated = document.querySelector(
     ".staff-content__authenticated"
   );
->>>>>>> staging
   var staffError = document.querySelector(".staff-content__error");
   var userPassword = document.querySelector(".staff-form__content input").value;
   var staffForm = document.querySelector(".staff-form");
@@ -50,8 +48,6 @@ function authStaff() {
 }
 
 (function ($) {
-<<<<<<< HEAD
-=======
   // console.log('jQuery:', jQuery().jquery);
   // console.log('jQuery UI:', jQuery.ui.version);
 
@@ -113,27 +109,16 @@ function authStaff() {
     if (window.location.href === relatedLink.href) {
       relatedLink.parentNode.style.display = "none";
     }
-<<<<<<< HEAD
-  } // Toggle Mobile Menu
-
-
-=======
   }
 
   // Toggle Mobile Menu
->>>>>>> staging
   var btnMenu = document.getElementById("btn-menu");
   btnMenu.addEventListener("click", function () {
     $("#mobile-menu").toggle();
     $("#overlay").toggle();
-<<<<<<< HEAD
-  }); // Mobile Menu
-
-=======
   });
 
   // Mobile Menu
->>>>>>> staging
   $(document).ready(function () {
     $("#menu-mobile li.has-sub>a").on("click", function () {
       $(this).removeAttr("href");
@@ -152,15 +137,6 @@ function authStaff() {
         element.siblings("li").find("ul").slideUp();
       }
     });
-<<<<<<< HEAD
-  }); // Enable Click on the Navbar Logo
-
-  var navLogo = document.querySelector(".nav-logo");
-  navLogo.addEventListener("click", function () {
-    window.location.href = "/";
-  }); // Toogle Search Input in the Navbar
-
-=======
   });
 
   // Enable Click on the Navbar Logo
@@ -170,7 +146,6 @@ function authStaff() {
   });
 
   // Toogle Search Input in the Navbar
->>>>>>> staging
   var searchIcon = document.querySelector("#search-icon");
 
   function showSearchBar() {
@@ -190,34 +165,6 @@ function authStaff() {
   });
   $(".menu-service").mouseleave(function () {
     hideSearchBar();
-<<<<<<< HEAD
-  }); // Desktop Mega Menu Tabs
-
-  $("#menu-desktop").find(".nav-tab a").mouseenter(function () {
-    var menuTab = this.parentNode; // Hide all .active classes in the Mega Menu Tabs/Links
-
-    var tabLinks = document.querySelectorAll(".menu-item");
-
-    for (var _i = 0; _i < tabLinks.length; _i++) {
-      tabLinks[_i].classList.remove("active");
-    } // Hide all Content in the Mega Menu
-
-
-    var tabContent = document.querySelectorAll(".tab-content");
-
-    for (var _i2 = 0; _i2 < tabContent.length; _i2++) {
-      tabContent[_i2].style.display = "none";
-    } // Show only the respective content
-
-
-    menuTab.classList.add("active");
-    $("#".concat(this.title)).show();
-    $("#".concat(this.title)).mouseleave(function () {
-      $(".tab-content").hide();
-      menuTab.classList.remove("active");
-    });
-  });
-=======
   });
 
   // Desktop Mega Menu Tabs
@@ -247,17 +194,12 @@ function authStaff() {
       });
     });
 
->>>>>>> staging
   /**
    * Accordion
    *
    * Toggle between adding and removing the "active" class,
    * to highlight the button that controls the panel
    */
-<<<<<<< HEAD
-
-=======
->>>>>>> staging
   function accordion() {
     var accElements = document.getElementsByClassName("accordion");
 
@@ -273,35 +215,6 @@ function authStaff() {
         }
       });
     }
-<<<<<<< HEAD
-  } // Form Munch & Move to italic
-
-
-  $.fn.wrapInTag = function () {
-    return this.html(function () {
-      return $(this).html().replace(/Munch &amp; Move/gi, "<i>Munch &amp; Move</i>");
-    });
-  };
-
-  var elements = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "a", "small", "span"];
-  elements.forEach(function (element) {
-    $(element).wrapInTag();
-  }); // Audio Player
-  // function parseTime(timestamp) {
-  //   timestamp = timestamp.toFixed(0);
-  //   let hours = Math.floor(timestamp / 60 / 60);
-  //   let minutes = Math.floor(timestamp / 60) - hours * 60;
-  //   let seconds = timestamp % 60;
-  //   // let formatted = hours + ":" + minutes + ":" + seconds;
-  //   let formatted =
-  //     // hours.toString().padStart(2, "0") +
-  //     // ":" +
-  //     minutes.toString().padStart(2, "0") +
-  //     ":" +
-  //     seconds.toString().padStart(2, "0");
-  //   return formatted;
-  // }
-=======
   }
 
   // Form Munch & Move to italic
@@ -328,7 +241,6 @@ function authStaff() {
   elements.forEach(function (element) {
     $(element).wrapInTag();
   });
->>>>>>> staging
 
   var songs = [];
   var trackRows = document.querySelectorAll(".js-song-title");
@@ -346,11 +258,7 @@ function authStaff() {
     songs.push({
       index: song.getAttribute("data-song-index"),
       title: song.getAttribute("data-song-title"),
-<<<<<<< HEAD
-      url: song.getAttribute("data-song-url")
-=======
       url: song.getAttribute("data-song-url"),
->>>>>>> staging
     });
     song.addEventListener("click", function () {
       clearStyle();
@@ -363,22 +271,14 @@ function authStaff() {
   }
 
   function playAudio(url) {
-<<<<<<< HEAD
-    document.getElementById("player-container").innerHTML = "<audio src=\"".concat(url, "\" id=\"player\" controls controlsList=\"nodownload\">");
-=======
     document.getElementById(
       "player-container"
     ).innerHTML = '<audio src="'.concat(
       url,
       '" id="player" controls controlsList="nodownload">'
     );
->>>>>>> staging
     playSong();
   }
 
   accordion();
-<<<<<<< HEAD
 })(jQuery);
-=======
-})(jQuery);
->>>>>>> staging

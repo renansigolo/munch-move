@@ -32,7 +32,7 @@ get_header();
             <?php
             $page_id = get_the_ID();
             if ($page_id  === 131) : ?>
-              <div class="staff-form">
+              <div class="staff-form" id="js-staff-form">
                 <h4>Enter password:</h4>
                 <div class="staff-form__content row">
                   <div class="ten columns"><input type="password" name="password"></div>
@@ -41,7 +41,7 @@ get_header();
               </div>
 
               <div class="staff-content">
-                <div class="staff-content__authenticated">
+                <div class="staff-content__authenticated" id="js-authenticated">
                   <a href="<?php echo site_url('/munch-move-program-training/staff-development-kit-and-resource-manual/staff-development-kit/') ?>" target="_blank">
                     <button class="btn-training">
                       Click here to access the NEW Munch & Move Staff Development Kit
@@ -53,7 +53,7 @@ get_header();
                     </button>
                   </a>
                 </div>
-                <div class="staff-content__error">
+                <div class="staff-content__error" id="js-auth-error">
                   <p>It looks like this password is not valid</p>
                 </div>
               </div>

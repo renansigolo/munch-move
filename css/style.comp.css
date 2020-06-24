@@ -9,15 +9,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: munch-move
-<<<<<<< HEAD
-<<<<<<< HEAD
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-=======
 Tags: custom-background, custom-logo, custom-menu, threaded-comments, translation-ready
->>>>>>> develop
-=======
-Tags: custom-background, custom-logo, custom-menu, threaded-comments, translation-ready
->>>>>>> staging
 
 This theme, like WordPress, is licensed under the GPL.
 
@@ -28,35 +20,18 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
-<<<<<<< HEAD
-# Skeleton
-<<<<<<< HEAD
-=======
-# FontAwesome
->>>>>>> develop
-=======
 # Animate.css
 # Skeleton
 # FontAwesome
->>>>>>> staging
 # Munch & Move Theme
 ## Variables
 ## Typography
 ### Pages
 #### Front Page
 --------------------------------------------------------------*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
->>>>>>> develop
-=======
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
->>>>>>> staging
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -64,13 +39,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-@import url("https://use.typekit.net/wws1hcf.css");
-=======
->>>>>>> develop
-=======
->>>>>>> staging
 html {
   line-height: 1.15;
   /* 1 */
@@ -369,44 +337,6 @@ template {
 [hidden] {
   display: none; }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
-/* Imports
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-=======
-=======
 /*--------------------------------------------------------------
 # Animate.css
 --------------------------------------------------------------*/
@@ -3419,7 +3349,6 @@ template {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
 
->>>>>>> staging
 /*--------------------------------------------------------------
 # Skeleton
 --------------------------------------------------------------*/
@@ -3433,10 +3362,6 @@ template {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
-<<<<<<< HEAD
->>>>>>> develop
-=======
->>>>>>> staging
   box-sizing: border-box; }
 
 .column,
@@ -3451,23 +3376,10 @@ template {
     width: 85%;
     padding: 0; } }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* For devices larger than 550px */
-@media (min-width: 550px) {
-  .container {
-    width: 80%; }
-=======
-=======
->>>>>>> staging
 /* For devices larger than 1000px */
 @media (min-width: 1000px) {
   .container {
     width: 82%; }
-<<<<<<< HEAD
->>>>>>> develop
-=======
->>>>>>> staging
   .column,
   .columns {
     margin-left: 4%; }
@@ -3550,7 +3462,6 @@ template {
   .offset-by-one-half.columns {
     margin-left: 52%; } }
 
-<<<<<<< HEAD
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* NOTE
@@ -3636,451 +3547,6 @@ label > .label-body {
   margin-left: 0.5rem;
   font-weight: normal; }
 
-<<<<<<< HEAD
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul {
-  list-style: circle inside; }
-
-ol {
-  list-style: decimal inside; }
-
-ol,
-ul {
-  padding-left: 0;
-  margin-top: 0; }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%; }
-
-li {
-  margin-bottom: 1rem; }
-
-/* Tables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #e1e1e1; }
-
-th:first-child,
-td:first-child {
-  padding-left: 0; }
-
-th:last-child,
-td:last-child {
-  padding-right: 0; }
-
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-button,
-.button {
-  margin-bottom: 1rem; }
-
-input,
-textarea,
-select,
-fieldset {
-  margin-bottom: 1.5rem; }
-
-pre,
-blockquote,
-dl,
-figure,
-table,
-p,
-ul,
-ol,
-form {
-  margin-bottom: 2.5rem; }
-
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.u-full-width {
-  width: 100%;
-  box-sizing: border-box; }
-
-.u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box; }
-
-.u-pull-right {
-  float: right; }
-
-.u-pull-left {
-  float: left; }
-
-/* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Self Clearing Goodness */
-.container:after,
-.row:after,
-.u-cf {
-  content: '';
-  display: table;
-  clear: both; }
-
-/*--------------------------------------------------------------
-# Munch & Move Theme
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Variables
---------------------------------------------------------------*/
-:root {
-  --blue: #0a6aae;
-  --grey: #484848;
-  --orange: #f7941f;
-  --green: #8cc73f;
-  --sky-light: #d3eefd;
-  --sky-dark: #b3dafe;
-  --bg-sky: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-dark) 100%); }
-
-.footer .container, .hero__title, .hero__content .row, .hero__form {
-  display: flex;
-  flex-direction: column; }
-
-/*--------------------------------------------------------------
-# General Styles
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: 300; }
-
-h1 {
-  font-size: 3.6rem;
-  line-height: 1.2;
-  letter-spacing: -0.1rem; }
-
-h2 {
-  font-size: 2.5rem;
-  line-height: 1.25;
-  letter-spacing: -0.1rem; }
-
-h3 {
-  font-size: 3rem;
-  line-height: 1.3;
-  letter-spacing: -0.1rem; }
-
-h4 {
-  font-size: 2.4rem;
-  line-height: 1.35;
-  letter-spacing: -0.08rem; }
-
-h5 {
-  font-size: 1.8rem;
-  line-height: 1.5;
-  letter-spacing: -0.05rem; }
-
-h6 {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  letter-spacing: 0; }
-
-p {
-  margin-top: 0;
-  font-size: 1.6rem; }
-
-/* Larger than phablet */
-@media (min-width: 576px) {
-  h1 {
-    font-size: 5rem; }
-  h2 {
-    font-size: 4.2rem; }
-  h3 {
-    font-size: 3.6rem; }
-  h4 {
-    font-size: 3rem; }
-  h5 {
-    font-size: 2.4rem; }
-  h6 {
-    font-size: 1.5rem; } }
-
-p {
-  margin-top: 0; }
-
-body {
-  font-family: "proxima-nova", sans-serif, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial; }
-
-/*--------------------------------------------------------------
-# Global Elements
---------------------------------------------------------------*/
-section {
-  display: flex;
-  flex-direction: column; }
-
-img {
-  max-width: 100%; }
-
-/*--------------------------------------------------------------
-# Overwrites Skeleton Framework
---------------------------------------------------------------*/
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  display: inline-block;
-  height: 61px;
-  border: 6px solid #ffffff;
-  color: #fff;
-  background-color: var(--orange);
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer; }
-
-.button:hover,
-button:hover,
-input[type='submit']:hover,
-input[type='reset']:hover,
-input[type='button']:hover,
-.button:focus,
-button:focus,
-input[type='submit']:focus,
-input[type='reset']:focus,
-input[type='button']:focus {
-  color: #fff;
-  border-color: #888;
-  outline: 0; }
-=======
-/* Base Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
-html {
-  font-size: 62.5%; }
-
-body {
-  font-size: 1.5em;
-  /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #222; }
->>>>>>> staging
-
-/* Forms
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-input[type='email'],
-input[type='number'],
-input[type='search'],
-input[type='text'],
-input[type='tel'],
-input[type='url'],
-input[type='password'],
-textarea,
-select {
-<<<<<<< HEAD
-  height: 61px;
-  border: 1px solid #fff;
-  border-radius: 16px;
-  background-color: transparent;
-  font-size: 2rem;
-  padding: 11px 17px;
-  color: #fff; }
-  input[type="email"]::placeholder,
-  input[type="number"]::placeholder,
-  input[type="search"]::placeholder,
-  input[type="text"]::placeholder,
-  input[type="tel"]::placeholder,
-  input[type="url"]::placeholder,
-  input[type="password"]::placeholder,
-  textarea::placeholder,
-  select::placeholder {
-    color: #fff;
-    font-weight: bold; }
-=======
-  height: 38px;
-  padding: 6px 10px;
-  /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
-  border: 1px solid #d1d1d1;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box; }
-
-/* Removes awkward default styles on some inputs for iOS */
-input[type='email'],
-input[type='number'],
-input[type='search'],
-input[type='text'],
-input[type='tel'],
-input[type='url'],
-input[type='password'],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
-
-textarea {
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px; }
->>>>>>> staging
-
-input[type='email']:focus,
-input[type='number']:focus,
-input[type='search']:focus,
-input[type='text']:focus,
-input[type='tel']:focus,
-input[type='url']:focus,
-input[type='password']:focus,
-textarea:focus,
-select:focus {
-<<<<<<< HEAD
-  border: 1px solid var(--orange);
-  outline: 0; }
-
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
-/* Super large devices (large monitors, 1800px and up) */
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-.footer__partners {
-  display: flex;
-  justify-content: center;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem; }
-  .footer__partners img {
-    margin-left: 10px;
-    margin-right: 10px; }
-
-.footer__copyright {
-  text-align: center; }
-
-@media (min-width: 992px) {
-  .footer .container {
-    flex-direction: row;
-    justify-content: space-between; }
-  .footer__partners {
-    justify-content: flex-start;
-    min-width: 40%; }
-  .footer__copyright p {
-    text-align: justify;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem; }
-  .footer br {
-    display: none; } }
-
-/*--------------------------------------------------------------
-# Pages
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Front Page
---------------------------------------------------------------*/
-.hero {
-  text-align: center; }
-  .hero__clouds {
-    background-color: var(--sky-light); }
-    .hero__clouds div {
-      width: 200px;
-      height: 200px;
-      background-image: url("images/cloud-1.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      position: relative;
-      animation: left-to-right 10s linear 1s infinite;
-      overflow: hidden; }
-
-@keyframes left-to-right {
-  0% {
-    left: 0px;
-    top: 0px; }
-  100% {
-    left: 100%;
-    top: 0px; } }
-  .hero__title {
-    justify-content: center;
-    align-items: center;
-    padding-top: 33px;
-    background: var(--bg-sky); }
-    @media (min-width: 992px) {
-      .hero__title {
-        padding-top: 125px; }
-        .hero__title h1 {
-          font-size: 9.9rem; } }
-    .hero__title h1,
-    .hero__title p {
-      color: var(--blue);
-      font-weight: bold; }
-  .hero__banner {
-    background: var(--sky-dark) url("images/hills.png") bottom no-repeat;
-    background-size: 100% auto; }
-    .hero__banner .row {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-  .hero__content {
-    color: #fff;
-    background-color: var(--green); }
-    .hero__content .row {
-      align-items: center; }
-    .hero__content h3 {
-      font-weight: bold; }
-  @media (min-width: 992px) {
-    .hero__form {
-      flex-direction: row;
-      justify-content: space-between; }
-      .hero__form * {
-        margin-left: 10px;
-        margin-right: 10px;
-        width: calc(100% - 10px); } }
-  .hero__form button {
-    border: 6px solid #ffffff;
-    border-radius: 16px;
-    background-color: var(--orange); }
-=======
-=======
-  border: 1px solid #33c3f0;
-  outline: 0; }
-
-label,
-legend {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600; }
-
-fieldset {
-  padding: 0;
-  border-width: 0; }
-
-input[type='checkbox'],
-input[type='radio'] {
-  display: inline; }
-
-label > .label-body {
-  display: inline-block;
-  margin-left: 0.5rem;
-  font-weight: normal; }
-
->>>>>>> staging
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Self Clearing Goodness */
@@ -4095,11 +3561,7 @@ label > .label-body {
 # FontAwesome
 --------------------------------------------------------------*/
 /*!
-<<<<<<< HEAD
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
-=======
  * Font Awesome Free 5.13.1 by @fontawesome - https://fontawesome.com
->>>>>>> staging
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
@@ -4578,15 +4040,12 @@ readers do not read off random characters that represent icons */
 .fa-bacon:before {
   content: "\f7e5"; }
 
-<<<<<<< HEAD
-=======
 .fa-bacteria:before {
   content: "\f959"; }
 
 .fa-bacterium:before {
   content: "\f95a"; }
 
->>>>>>> staging
 .fa-bahai:before {
   content: "\f666"; }
 
@@ -5364,12 +4823,9 @@ readers do not read off random characters that represent icons */
 .fa-deaf:before {
   content: "\f2a4"; }
 
-<<<<<<< HEAD
-=======
 .fa-deezer:before {
   content: "\f977"; }
 
->>>>>>> staging
 .fa-delicious:before {
   content: "\f1a5"; }
 
@@ -5553,12 +5009,9 @@ readers do not read off random characters that represent icons */
 .fa-edge:before {
   content: "\f282"; }
 
-<<<<<<< HEAD
-=======
 .fa-edge-legacy:before {
   content: "\f978"; }
 
->>>>>>> staging
 .fa-edit:before {
   content: "\f044"; }
 
@@ -6051,12 +5504,9 @@ readers do not read off random characters that represent icons */
 .fa-google-drive:before {
   content: "\f3aa"; }
 
-<<<<<<< HEAD
-=======
 .fa-google-pay:before {
   content: "\f979"; }
 
->>>>>>> staging
 .fa-google-play:before {
   content: "\f3ab"; }
 
@@ -7479,12 +6929,9 @@ readers do not read off random characters that represent icons */
 .fa-rupee-sign:before {
   content: "\f156"; }
 
-<<<<<<< HEAD
-=======
 .fa-rust:before {
   content: "\f97a"; }
 
->>>>>>> staging
 .fa-sad-cry:before {
   content: "\f5b3"; }
 
@@ -7641,12 +7088,9 @@ readers do not read off random characters that represent icons */
 .fa-simplybuilt:before {
   content: "\f215"; }
 
-<<<<<<< HEAD
-=======
 .fa-sink:before {
   content: "\f96d"; }
 
->>>>>>> staging
 .fa-sistrix:before {
   content: "\f3ee"; }
 
@@ -8133,12 +7577,9 @@ readers do not read off random characters that represent icons */
 .fa-ticket-alt:before {
   content: "\f3ff"; }
 
-<<<<<<< HEAD
-=======
 .fa-tiktok:before {
   content: "\f97b"; }
 
->>>>>>> staging
 .fa-times:before {
   content: "\f00d"; }
 
@@ -8325,12 +7766,9 @@ readers do not read off random characters that represent icons */
 .fa-unlock-alt:before {
   content: "\f13e"; }
 
-<<<<<<< HEAD
-=======
 .fa-unsplash:before {
   content: "\f97c"; }
 
->>>>>>> staging
 .fa-untappd:before {
   content: "\f405"; }
 
@@ -8421,12 +7859,9 @@ readers do not read off random characters that represent icons */
 .fa-users-cog:before {
   content: "\f509"; }
 
-<<<<<<< HEAD
-=======
 .fa-users-slash:before {
   content: "\f973"; }
 
->>>>>>> staging
 .fa-usps:before {
   content: "\f7e1"; }
 
@@ -8716,11 +8151,7 @@ readers do not read off random characters that represent icons */
   width: auto; }
 
 /*!
-<<<<<<< HEAD
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
-=======
  * Font Awesome Free 5.13.1 by @fontawesome - https://fontawesome.com
->>>>>>> staging
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -8752,11 +8183,7 @@ readers do not read off random characters that represent icons */
   font-weight: 900; }
 
 /*!
-<<<<<<< HEAD
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
-=======
  * Font Awesome Free 5.13.1 by @fontawesome - https://fontawesome.com
->>>>>>> staging
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -8919,7 +8346,7 @@ li {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Buttons Mixins
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.btn-dark-blue, .btn-general, .entry-content h6 a, .search-content .search-submit, .btn-training, .btn-resources {
+.btn-dark-blue, .btn-general, .entry-content h6 a, .search-content .search-submit, .post-password-form > p:not(:first-child) input[type="submit"], .btn-training, .btn-resources {
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
@@ -8932,11 +8359,11 @@ li {
   margin: 0;
   width: 100%; }
   @media (min-width: 1000px) {
-    .btn-dark-blue, .btn-general, .entry-content h6 a, .search-content .search-submit, .btn-training, .btn-resources {
+    .btn-dark-blue, .btn-general, .entry-content h6 a, .search-content .search-submit, .post-password-form > p:not(:first-child) input[type="submit"], .btn-training, .btn-resources {
       width: auto; } }
-  .btn-dark-blue:hover, .btn-general:hover, .entry-content h6 a:hover, .search-content .search-submit:hover, .btn-training:hover, .btn-resources:hover {
+  .btn-dark-blue:hover, .btn-general:hover, .entry-content h6 a:hover, .search-content .search-submit:hover, .post-password-form > p:not(:first-child) input:hover[type="submit"], .btn-training:hover, .btn-resources:hover {
     color: #fff; }
-  .btn-dark-blue:focus, .btn-general:focus, .entry-content h6 a:focus, .search-content .search-submit:focus, .btn-training:focus, .btn-resources:focus {
+  .btn-dark-blue:focus, .btn-general:focus, .entry-content h6 a:focus, .search-content .search-submit:focus, .post-password-form > p:not(:first-child) input:focus[type="submit"], .btn-training:focus, .btn-resources:focus {
     outline: none; }
 
 .btn-dark-blue {
@@ -8944,9 +8371,9 @@ li {
   .btn-dark-blue:hover {
     background-color: #09639e; }
 
-.btn-general, .entry-content h6 a, .search-content .search-submit {
+.btn-general, .entry-content h6 a, .search-content .search-submit, .post-password-form > p:not(:first-child) input[type="submit"] {
   background-color: #29abff; }
-  .btn-general:hover, .entry-content h6 a:hover, .search-content .search-submit:hover {
+  .btn-general:hover, .entry-content h6 a:hover, .search-content .search-submit:hover, .post-password-form > p:not(:first-child) input:hover[type="submit"] {
     background-color: #259ae6; }
 
 .btn-training {
@@ -9133,10 +8560,10 @@ video {
   background-color: #fff;
   z-index: 1; }
 
-.page-header .nav-desktop .menu-service .search-bar, .menu-mobile .mobile-search-bar .search-bar, #tpl-search .search-form__content input[type='text'],
-#tpl-search .search-form__content input[type='password'],
-#tpl-search .staff-form__content input[type='text'],
-#tpl-search .staff-form__content input[type='password'] {
+.page-header .nav-desktop .menu-service .search-bar, .menu-mobile .mobile-search-bar .search-bar, #tpl-search .search-form__content input[type="text"],
+#tpl-search .search-form__content input[type="password"],
+#tpl-search .staff-form__content input[type="text"],
+#tpl-search .staff-form__content input[type="password"], .post-password-form > p:not(:first-child) label input[type="password"] {
   background: #ffffff;
   border: 1px solid #0a73b7;
   border-radius: 25px;
@@ -9146,10 +8573,10 @@ video {
   margin-right: 8px;
   width: 100%;
   height: 100%; }
-  .page-header .nav-desktop .menu-service .search-bar::placeholder, .menu-mobile .mobile-search-bar .search-bar::placeholder, #tpl-search .search-form__content input[type='text']::placeholder,
-  #tpl-search .search-form__content input[type='password']::placeholder,
-  #tpl-search .staff-form__content input[type='text']::placeholder,
-  #tpl-search .staff-form__content input[type='password']::placeholder {
+  .page-header .nav-desktop .menu-service .search-bar::placeholder, .menu-mobile .mobile-search-bar .search-bar::placeholder, #tpl-search .search-form__content input[type="text"]::placeholder,
+  #tpl-search .search-form__content input[type="password"]::placeholder,
+  #tpl-search .staff-form__content input[type="text"]::placeholder,
+  #tpl-search .staff-form__content input[type="password"]::placeholder, .post-password-form > p:not(:first-child) label input[type="password"]::placeholder {
     color: #29abff; }
 
 .btn {
@@ -10323,22 +9750,32 @@ div.wpcf7-mail-sent-ok {
   width: 100%;
   margin-top: 32px; }
   #tpl-search .search-form h4,
-  #tpl-search .staff-form h4 {
+  #tpl-search .search-form label,
+  #tpl-search .staff-form h4,
+  #tpl-search .staff-form label {
     color: #0a73b7;
     margin-bottom: 24px; }
-  #tpl-search .search-form__content input[type='text'],
-  #tpl-search .search-form__content input[type='password'],
-  #tpl-search .staff-form__content input[type='text'],
-  #tpl-search .staff-form__content input[type='password'] {
+  #tpl-search .search-form__content input[type="text"],
+  #tpl-search .search-form__content input[type="password"],
+  #tpl-search .staff-form__content input[type="text"],
+  #tpl-search .staff-form__content input[type="password"] {
     height: 45px; }
-  #tpl-search .search-form__content input[type='password'],
-  #tpl-search .staff-form__content input[type='password'] {
+  #tpl-search .search-form__content input[type="password"],
+  #tpl-search .staff-form__content input[type="password"] {
     margin-bottom: 16px; }
 
 #tpl-search .search-results {
   margin-top: 56px;
   padding-top: 56px;
   border-top: 3px solid #0a73b7; }
+
+.post-password-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 32px; }
+  .post-password-form input {
+    border-radius: 25px; }
 
 /*--------------------------------------------------------------
 #  Privacy Policy Page Template
@@ -10424,8 +9861,6 @@ div.wpcf7-mail-sent-ok {
 # Template Parts
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-<<<<<<< HEAD
-=======
 # Banner Covid-19
 --------------------------------------------------------------*/
 .covid {
@@ -10541,7 +9976,8 @@ div.wpcf7-mail-sent-ok {
 --------------------------------------------------------------*/
 .ie-banner {
   background-color: #333333;
-  padding: 22px 0; }
+  padding: 22px 0;
+  display: none; }
   .ie-banner .ie-container {
     display: flex;
     align-items: center;
@@ -10593,7 +10029,9 @@ div.wpcf7-mail-sent-ok {
       margin-top: 8px; }
 
 /*--------------------------------------------------------------
->>>>>>> staging
+# Content Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -10720,7 +10158,3 @@ div.wpcf7-mail-sent-ok {
   .nav-logo,
   #colophon {
     display: none; } }
-<<<<<<< HEAD
->>>>>>> develop
-=======
->>>>>>> staging
